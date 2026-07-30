@@ -1,0 +1,22 @@
+<p class="lede">
+Public dashboards built by DawnLabs on top of public Solana data. Every page is plain static HTML with
+no external dependencies, rebuilt daily, and versioned in the repository together with the raw snapshot
+it was generated from — so any past figure can be reproduced or diffed.
+</p>
+
+<div class="cards">{{& cards }}</div>
+
+<h2>How these are built</h2>
+<div class="notes">
+<p>
+Each dashboard fetches from a public API, writes a machine-readable snapshot to
+<code>docs/data/&lt;name&gt;.json</code>, and renders a page from it. If a day's snapshot is byte-identical to the
+previous one nothing is committed, so the "Data as of" stamp on a page always marks the last time the
+underlying data actually changed — not the last time the job ran.
+</p>
+<p>
+All aggregation happens in the browser from the embedded snapshot, so the window, sorting, filtering and
+CSV export work with no server and no tracking. Source and build scripts:
+<a href="{{ repo_url }}" target="_blank" rel="noopener">{{ repo_name }}</a>.
+</p>
+</div>

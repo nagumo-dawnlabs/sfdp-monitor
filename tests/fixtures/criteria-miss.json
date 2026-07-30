@@ -1,0 +1,205 @@
+{
+ "cluster": "mainnet-beta",
+ "dashboard": "criteria-miss",
+ "missing_code": "-",
+ "participant_states": "Approved",
+ "state_codes": {
+  "B": "Bonus",
+  "H": "NoneHighThirdPartyStake",
+  "L": "Baseline",
+  "N": "None"
+ },
+ "validators": [
+  {
+   "f": 33113,
+   "i": 1,
+   "k": 53666,
+   "n": "01node",
+   "p": "3KNGMiXwhy2CAWVNpLoUt25sNngFnX1mZpaiEeVccBA6",
+   "s": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+   "t": "Approved"
+  },
+  {
+   "f": 72026,
+   "i": 1,
+   "k": 191719,
+   "n": "0base.vc 🇰🇷 | MEV 🔥",
+   "p": "zeroT6PTAEjipvZuACTh1mbGCqTHgA6i1ped9DcuidX",
+   "s": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+   "t": "Approved"
+  },
+  {
+   "f": 55265,
+   "k": 121598,
+   "n": "0node.io",
+   "p": "6NDen7aDi65apHo8m1Vea4nuS6LyjQeM6pDNqcW4Q5Pg",
+   "s": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+   "t": "Approved"
+  },
+  {
+   "f": 70985,
+   "k": 179954,
+   "n": "1000X.sh",
+   "p": "1KXvrkPXwkGF6NK1zyzVuJqbXfpenPVPP6hoiK9bsK3",
+   "s": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+   "t": "Approved"
+  },
+  {
+   "f": 68030,
+   "k": 159466,
+   "n": "11ama Validator",
+   "p": "11AMA4mnNbsrPQeuoNN7uiZVJZtqEzQHrTfa5vnbcjk",
+   "s": "BBBBBBBBBBLLBBNBBBBBBNBBBBBBBBBBBBBBBBBBBBBBBBBNBBBLLLNNNNBBBLLL",
+   "t": "Approved"
+  },
+  {
+   "f": 70222,
+   "k": 307131,
+   "n": "1dad | Solfege",
+   "p": "FyrwfMaomErzqrFUXMjCJ7mA4u81DsiDdrzC3MJD6d4j",
+   "s": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+   "t": "Approved"
+  },
+  {
+   "f": 39843,
+   "k": 73382,
+   "n": "3SDK",
+   "p": "Fy7RCjDdFLG8wLn7TBKbccaKwYX1FetdSoVDREdUHf5o",
+   "s": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+   "t": "Approved"
+  },
+  {
+   "f": 66050,
+   "k": 138709,
+   "n": "4CRYPTO",
+   "p": "9dH6wfdJVgnDcbCUjT8rkmejAzTnGQaFarmLfvBYXANK",
+   "s": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+   "t": "Approved"
+  },
+  {
+   "f": 0,
+   "k": 1234,
+   "n": "</script><img src=x onerror=alert(1)>",
+   "p": "TESTxssTESTxssTESTxssTESTxssTESTxssTESTxs",
+   "s": "BNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBN------------------------",
+   "t": "Approved"
+  },
+  {
+   "f": 0,
+   "k": 273957,
+   "n": "Aursen",
+   "p": "AurseT3W3tk1dATBWAXtWR6oubBgECqintfcvP74teU3",
+   "s": "NNNNNNNNNNNNNNNNNNNNNNNNNBBBBBBBBB------------------------------",
+   "t": "Approved"
+  },
+  {
+   "f": 10208,
+   "k": 10219,
+   "n": "Axis",
+   "p": "GHQsq6bAdgooi998uKhwdzFubsJ7R3SuhTE9gJ83gctU",
+   "s": "BBBN------------------------------------------------------------",
+   "t": "Approved"
+  },
+  {
+   "f": 0,
+   "k": 82203,
+   "n": "Bay3",
+   "p": "bay3wXfJsu9ds1zQBoQQ4DUwFGs3NP6q4gca9WM5G1z",
+   "s": "NNNNNNBBBBBBBBBBBBBBBBBBBBBBNNBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+   "t": "Approved"
+  },
+  {
+   "f": 72304,
+   "k": 414042,
+   "n": "Chainode Tech & MEV(0% Fee)",
+   "p": "3RXKQBRv7xKTQeNdLSPhCiD4QcUfxEQ12rtgUkMf5LnS",
+   "s": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBNBBBBBBBBB",
+   "t": "Approved"
+  },
+  {
+   "f": 46393,
+   "k": 95036,
+   "n": "Hodl & Hodl LLLP",
+   "p": "hnhCMmnrmod4rcyc3QRKkLEC9XnPTvYJ2gBvjgFiV4o",
+   "s": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+   "t": "Approved"
+  },
+  {
+   "f": 0,
+   "k": 92458,
+   "n": "Hypo Nyms",
+   "p": "nymsHergYedT9CJMgtGMvqXUTGcbs5o3MiWTJUbqTGY",
+   "s": "BBNNNNNNNNNNNBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+   "t": "Approved"
+  },
+  {
+   "f": 51047,
+   "k": 107800,
+   "n": "MAVAN Infrastructure",
+   "p": "38zm5bBgDaNRSQBDUAL72kMH3RsX4UKmZiNmmrjuTq8W",
+   "s": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB----------------------------------",
+   "t": "Approved"
+  },
+  {
+   "f": 45920,
+   "k": 93667,
+   "n": "Mice Stakin'",
+   "p": "D8xKNftHzFcCekENuTEcFC1eoL9y8wNHEg4Q5z57KK4e",
+   "s": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+   "t": "Approved"
+  },
+  {
+   "f": 0,
+   "k": 139074,
+   "n": "MX Validator",
+   "p": "mXv18ov8qCiQGs3ieoen981LdgZzYJjJak6reK6fpNC",
+   "s": "NNNNNNNNNNNBBBBBBBBBNNBBBBBNNNNNNNNBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+   "t": "Approved"
+  },
+  {
+   "f": 67150,
+   "k": 823797,
+   "n": "Pier Two",
+   "p": "6M53yM6dsE6hiaHgxWvYa4fsfzQTGyAZn7rM6JrzbqJV",
+   "s": "---------------------------------BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+   "t": "Approved"
+  },
+  {
+   "f": 72313,
+   "k": 637811,
+   "n": "Quicknode",
+   "p": "4SsMncJdtKiUcDtukkX15mqei7WiuQ9yvRtQrQW4reWC",
+   "s": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBHBBBBBBBBBB",
+   "t": "Approved"
+  },
+  {
+   "f": 0,
+   "k": 3188,
+   "n": "SLC Validator | Jito+MEV",
+   "p": "FLVgaCPvSGFguumN9ao188izB4K4rxSWzkHneQMtkwQJ",
+   "s": "-------------------NNNNNNNBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBL",
+   "t": "Approved"
+  },
+  {
+   "f": 0,
+   "k": 1757,
+   "n": "",
+   "p": "RLMS1pv3YKi7CSUCKTNcFN5fFkXJc2SmCwPhbQpqZJo",
+   "s": "NNNNNBBBBBBBBBBBBBBBBBBBBBBBBNLLLLNBBBBBBBBBBBBBBBBBBBBBBNNNNNNB",
+   "t": "Approved"
+  },
+  {
+   "f": 0,
+   "k": 61,
+   "n": "",
+   "p": "13DmVBcyrSdsSsLWaKH9x1dwxDf48Wu5wprwxMmLshrk",
+   "s": "---------NNNNNBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+   "t": "Approved"
+  }
+ ],
+ "window": {
+  "end": 1007,
+  "history": 64,
+  "start": 944
+ }
+}

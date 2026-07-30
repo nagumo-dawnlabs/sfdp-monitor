@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ description }}">
+<meta property="og:title" content="{{ og_title }}">
+<meta property="og:description" content="{{ description }}">
+<link rel="stylesheet" href="{{ asset_prefix }}assets/theme.css?v={{ theme_version }}">
+</head>
+<body>
+<div class="wrap">
+
+<div class="masthead">
+  <div>
+    {{& breadcrumb }}
+    <h1>{{ heading }}</h1>
+  </div>
+  <a class="powered" href="{{ dawnlabs_x }}" target="_blank" rel="noopener">
+    <span class="pb">Powered by</span>
+    <img src="{{ logo_src }}" alt="DawnLabs" width="118" height="34">
+  </a>
+</div>
+
+{{& freshness }}
+{{& body }}
+
+<footer>
+<div class="fbar">
+  <a class="built" href="{{ dawnlabs_x }}" target="_blank" rel="noopener">
+    <span>Powered by</span><img src="{{ logo_src }}" alt="DawnLabs" width="90" height="26">
+  </a>
+  <div><a href="{{ repo_url }}" target="_blank" rel="noopener">Source on GitHub</a></div>
+</div>
+{{& footer_note }}
+</footer>
+</div>
+{{& script_tags }}
+</body>
+</html>

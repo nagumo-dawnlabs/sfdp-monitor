@@ -1,0 +1,46 @@
+name: CI
+
+# API を一切叩かないので数秒で終わる。テンプレートを実ファイルに分離したため、
+# fixture からのスモークビルドが最も効く回帰チェックになっている。
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install dev tools
+        # 実行時の依存はゼロ。lint / テスト / ロゴ縮小のためだけに入れる
+        run: pip install --disable-pip-version-check ruff pytest pillow
+
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: pytest
+
+      - name: Smoke build from fixture
+        run: |
+          python3 build.py --fixture tests/fixtures/criteria-miss.json --out /tmp/site --history 64
+
+      - name: Assert no unreplaced template tokens
+        run: |
+          if grep -rn '{{' /tmp/site --include='*.html'; then
+            echo "::error::未置換のテンプレートトークンが残っている"
+            exit 1
+          fi

@@ -1,0 +1,35 @@
+# 実行時の依存パッケージはゼロ（Python 3.10+ の標準ライブラリのみ）。
+# ここにあるのは開発ツール (ruff / pytest) の設定だけで、CI でのみインストールする。
+
+[project]
+name = "sfdp-monitor"
+version = "0.2.0"
+description = "SFDP validator criteria miss-rate aggregator and public dashboards"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # bugbear
+    "C4",  # comprehensions
+    "SIM", # simplify
+    "RUF",
+]
+ignore = [
+    "E501",   # 行長は formatter に任せる
+    "RUF001", # 全角括弧などを含む日本語コメントを許可
+    "RUF002",
+    "RUF003",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

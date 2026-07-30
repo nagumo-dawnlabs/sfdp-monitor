@@ -1,4 +1,4 @@
-name: Update dashboard
+name: Update dashboards
 
 # SFDP のデータは epoch 単位（約2〜2.5日）でしか変わらず、さらに API 反映が
 # 2 epoch ほど遅れるため 1 日 1 回で十分。データに差分がない日は commit しない。
@@ -14,9 +14,10 @@ on:
 
 permissions:
   contents: write
+  issues: write   # 失敗を issue で通知するため
 
 concurrency:
-  group: update-dashboard
+  group: update-dashboards
   cancel-in-progress: false
 
 jobs:
@@ -30,20 +31,43 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Build dashboard
-        # GitHub Runner の IP は共有なので api.solana.org の 429 を避けて rps を落とす
+      - name: Install build-time deps
+        # バリデータロゴを 48px に縮小するためだけに使う。公開ファイル側は
+        # 自己完結のままで、実行時の依存は増えない
+        run: pip install --disable-pip-version-check pillow
+
+      - name: Build dashboards
+        # GitHub Runner の IP は共有なので api.solana.org の 429 を避けて rps を落とす。
+        # 取得失敗が 2% を超えたら build.py が異常終了し、欠けたページを公開しない
         run: |
-          python3 build_site.py --rps 2 --concurrency 3 \
+          python3 build.py --rps 2 --concurrency 3 \
             ${{ inputs.force && ' ' || '--skip-unchanged' }}
 
       - name: Commit and push if changed
         run: |
-          if git diff --quiet -- docs/index.html; then
+          if git diff --quiet -- docs; then
             echo "no change — skipping commit"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/index.html
+          git add docs
           git commit -m "update dashboard data ($(date -u +%Y-%m-%d))"
           git push
+
+      # 日次ジョブが静かに死ぬのを防ぐ。同じ issue が open なら追記だけして重複させない
+      - name: Report failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TITLE="Dashboard update job is failing"
+          BODY="Daily dashboard build failed: $RUN_URL"
+          EXISTING=$(gh issue list --state open --label automation --search "$TITLE in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            gh label create automation --color ededed --description "Automated job reports" 2>/dev/null || true
+            gh issue create --title "$TITLE" --label automation --body "$BODY"
+          fi
