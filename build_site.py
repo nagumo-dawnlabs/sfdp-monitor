@@ -263,6 +263,7 @@ returned by the Solana Foundation API. This page aggregates those states directl
 <strong>Miss rate</strong> = <code>None</code> epochs ÷ epochs with data.
 <strong>not_bonus rate</strong> = (<code>None</code> + <code>Baseline</code>) ÷ epochs with data.
 <strong>Streak</strong> = consecutive misses ending at the most recent epoch.
+Miss rates of 20% or higher are shown in red, 10% or higher in yellow.
 Epochs absent from the API are treated as pre-onboarding or delinquent and excluded from the denominator.
 Newly onboarded validators have a small denominator, so by default only validators with data for at
 least half the window are shown.
@@ -287,7 +288,7 @@ This page is an unofficial aggregation of public API data, not a Solana Foundati
 const DATA = __DATA__;
 const HISTORY = __HISTORY__;
 const END_EPOCH = __END__;
-const PRESETS = [5, 10, 30, 64, HISTORY];
+const PRESETS = [30, 64, HISTORY];
 const SPARK_MAX = 40;  // max cells drawn; longer windows show only the most recent ones
 
 const COLS = [
@@ -302,7 +303,7 @@ const COLS = [
   {key:'spark', label:'Trend (newest \\u2192 oldest)', cls:'spark', sortable:false},
 ];
 
-let win = 10, sortKey = 'rate', sortDir = -1;
+let win = 64, sortKey = 'rate', sortDir = -1;
 
 const el = id => document.getElementById(id);
 const fmt = n => n.toLocaleString('en-US');
@@ -354,8 +355,8 @@ function filtered() {
 
 function rateClass(r) {
   if (r === 0) return 'r-zero';
-  if (r >= 50) return 'r-hi';
-  if (r >= 10) return 'r-mid';
+  if (r >= 20) return 'r-hi';   // red
+  if (r >= 10) return 'r-mid';  // yellow
   return 'r-lo';
 }
 
