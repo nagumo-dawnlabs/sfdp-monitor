@@ -33,3 +33,6 @@ ignore = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+# パッケージをリポジトリ直下に置いているので、`pytest` を直接呼んでも import できるようにする
+# （`python -m pytest` は cwd が入るが、素の `pytest` は入らない）
+pythonpath = ["."]
