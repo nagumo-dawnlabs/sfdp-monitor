@@ -1,0 +1,849 @@
+{
+  "cluster": "mainnet-beta",
+  "window": {
+    "start": 998,
+    "end": 1007,
+    "epochs": 10
+  },
+  "state_icon_map": {
+    "Bonus": "green-star",
+    "Baseline": "orange-check",
+    "None": "red-x",
+    "NoneHighThirdPartyStake": "green-party-popper"
+  },
+  "validators": [
+    {
+      "pubkey": "XAqHfPFsqTfAJHBRHAcEECkMSykXjkUj2Rta16Qshrk",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 821,
+      "unmet_rate_pct": 100.0,
+      "not_bonus_rate_pct": 100.0,
+      "unmet": 10,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 10
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "6c6RrC9TWNgiVXnbZ6hehNuhyh81pZK1yAj5w2nXZTwi",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 735,
+      "unmet_rate_pct": 100.0,
+      "not_bonus_rate_pct": 100.0,
+      "unmet": 10,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 10
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "AurseT3W3tk1dATBWAXtWR6oubBgECqintfcvP74teU3",
+      "name": "Aursen",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 974,
+      "unmet_rate_pct": 100.0,
+      "not_bonus_rate_pct": 100.0,
+      "unmet": 10,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 10
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "mXv18ov8qCiQGs3ieoen981LdgZzYJjJak6reK6fpNC",
+      "name": "MX Validator",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 728,
+      "unmet_rate_pct": 100.0,
+      "not_bonus_rate_pct": 100.0,
+      "unmet": 10,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 10
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "SyndicAgdEphcy5xhAKZAomTYhcF8xhC7za2UD9xeug",
+      "name": "Syndica",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 786,
+      "unmet_rate_pct": 100.0,
+      "not_bonus_rate_pct": 100.0,
+      "unmet": 10,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 10
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "SaV6UWBaE8M3kwMBfAhQ6Tmvd2qdJRm94NTwLqtoyGd",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 700,
+      "unmet_rate_pct": 100.0,
+      "not_bonus_rate_pct": 100.0,
+      "unmet": 6,
+      "evaluated": 6,
+      "missing": 4,
+      "counts": {
+        "None": 6
+      },
+      "unmet_epochs": [
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "BitokuDHQiAhpUKrwx1VssAAoW5Rst8zB6gpfoaxM3Kh",
+      "name": "Xandeum Labs low fee + MEV = 🔥APY %",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 587,
+      "unmet_rate_pct": 90.0,
+      "not_bonus_rate_pct": 90.0,
+      "unmet": 9,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 9,
+        "Bonus": 1
+      },
+      "unmet_epochs": [
+        1006,
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "nymsHergYedT9CJMgtGMvqXUTGcbs5o3MiWTJUbqTGY",
+      "name": "Hypo Nyms",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 616,
+      "unmet_rate_pct": 80.0,
+      "not_bonus_rate_pct": 80.0,
+      "unmet": 8,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 8,
+        "Bonus": 2
+      },
+      "unmet_epochs": [
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "mrgn4sJJu5GBa5wbKyjuASzhyCifvcedGoLtpKjB3Wf",
+      "name": "Project 0 Meridian",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 778,
+      "unmet_rate_pct": 80.0,
+      "not_bonus_rate_pct": 80.0,
+      "unmet": 8,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 8,
+        "Bonus": 2
+      },
+      "unmet_epochs": [
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "Ste1115xFGdAYK5jaWA3dEFcUc1S5jEbVvD8e327zty",
+      "name": "Stellium",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 838,
+      "unmet_rate_pct": 80.0,
+      "not_bonus_rate_pct": 80.0,
+      "unmet": 8,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 8,
+        "Bonus": 2
+      },
+      "unmet_epochs": [
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "BCS95L5JHBWHvWkcEJBEF3BH5QHxKcPeaTgoYmHLvfFh",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 728,
+      "unmet_rate_pct": 62.5,
+      "not_bonus_rate_pct": 62.5,
+      "unmet": 5,
+      "evaluated": 8,
+      "missing": 2,
+      "counts": {
+        "Bonus": 3,
+        "None": 5
+      },
+      "unmet_epochs": [
+        1005,
+        1004,
+        1003,
+        1002,
+        1001
+      ]
+    },
+    {
+      "pubkey": "KoLibrJsbABbtmtFPc7nPvDxT81rc4UPM7mY9xSLjpo",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 793,
+      "unmet_rate_pct": 60.0,
+      "not_bonus_rate_pct": 60.0,
+      "unmet": 6,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "Bonus": 4,
+        "None": 6
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003,
+        1002
+      ]
+    },
+    {
+      "pubkey": "bay3wXfJsu9ds1zQBoQQ4DUwFGs3NP6q4gca9WM5G1z",
+      "name": "Bay3",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 725,
+      "unmet_rate_pct": 60.0,
+      "not_bonus_rate_pct": 60.0,
+      "unmet": 6,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "Bonus": 4,
+        "None": 6
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003,
+        1002
+      ]
+    },
+    {
+      "pubkey": "KTMkUG8WCw9FdH44jLMBpc1teGafnYL6SgP4fHHbsNM",
+      "name": "ERPC",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 605,
+      "unmet_rate_pct": 60.0,
+      "not_bonus_rate_pct": 60.0,
+      "unmet": 6,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 6,
+        "Bonus": 4
+      },
+      "unmet_epochs": [
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "RLMS1pv3YKi7CSUCKTNcFN5fFkXJc2SmCwPhbQpqZJo",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 827,
+      "unmet_rate_pct": 50.0,
+      "not_bonus_rate_pct": 50.0,
+      "unmet": 5,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "Bonus": 5,
+        "None": 5
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003
+      ]
+    },
+    {
+      "pubkey": "8cnksBVjDPspn3AvmxJd8JKUdh4uWDDXzDemPmDctaHi",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 722,
+      "unmet_rate_pct": 50.0,
+      "not_bonus_rate_pct": 50.0,
+      "unmet": 5,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "Bonus": 5,
+        "None": 5
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003
+      ]
+    },
+    {
+      "pubkey": "fhsM2sxME8cHrrk3qvtMsRRDv5AoLFja7NjNnHeYZxe",
+      "name": "Fountainhead 🌱 Funding Dev WITH max APY",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 845,
+      "unmet_rate_pct": 50.0,
+      "not_bonus_rate_pct": 50.0,
+      "unmet": 5,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 5,
+        "Bonus": 5
+      },
+      "unmet_epochs": [
+        1002,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "GkFT5nmcFVmJiLwuE98PjdF3LReMeq4WbejFHfwrnsgw",
+      "name": "KAST",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 693,
+      "unmet_rate_pct": 50.0,
+      "not_bonus_rate_pct": 50.0,
+      "unmet": 5,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 5,
+        "Bonus": 5
+      },
+      "unmet_epochs": [
+        1002,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "HcZvwZ83PfjrQDiq3GLHxisTs17aGURs6bJ2LwtmL4qv",
+      "name": "SolGuardian",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 646,
+      "unmet_rate_pct": 50.0,
+      "not_bonus_rate_pct": 50.0,
+      "unmet": 5,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 5,
+        "Bonus": 5
+      },
+      "unmet_epochs": [
+        1007,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "CpuDNi3iVoHXbaT8gHpzKe6rqeBasoYjEKi21q7NRVJS",
+      "name": "val37",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 50.0,
+      "not_bonus_rate_pct": 50.0,
+      "unmet": 5,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 5,
+        "Bonus": 5
+      },
+      "unmet_epochs": [
+        1002,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "idCE5k2BtTpwXdwAC7Var1enT9reut9fWECcxQP7LY7",
+      "name": "🔥💃🇸🇬 CeriumXYZ",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 815,
+      "unmet_rate_pct": 50.0,
+      "not_bonus_rate_pct": 50.0,
+      "unmet": 5,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 5,
+        "Bonus": 5
+      },
+      "unmet_epochs": [
+        1002,
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "3V2xaccDpFib4DbTksdiveNDmiwpXBqSWyjSof3w1Bg7",
+      "name": "Aurora Validator",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 579,
+      "unmet_rate_pct": 40.0,
+      "not_bonus_rate_pct": 40.0,
+      "unmet": 4,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 4,
+        "Bonus": 6
+      },
+      "unmet_epochs": [
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "H9ENbtmy2tWFtAJNmpC8xQtbcr1NTp4FXLdphRaG8L2T",
+      "name": "Bubbles",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 737,
+      "unmet_rate_pct": 40.0,
+      "not_bonus_rate_pct": 40.0,
+      "unmet": 4,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 4,
+        "Bonus": 6
+      },
+      "unmet_epochs": [
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "CaveyttUBTKttncu1e4RF814XjuoGfYv8cEsiKGDNCPX",
+      "name": "Cavey Cool",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 649,
+      "unmet_rate_pct": 40.0,
+      "not_bonus_rate_pct": 40.0,
+      "unmet": 4,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 4,
+        "Bonus": 6
+      },
+      "unmet_epochs": [
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "1ggyZGbYtEo1WrV1kmXfnvhPeSPxrYAXoDBeApnszLT",
+      "name": "Iggyz",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 938,
+      "unmet_rate_pct": 40.0,
+      "not_bonus_rate_pct": 40.0,
+      "unmet": 4,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "Bonus": 6,
+        "None": 4
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004
+      ]
+    },
+    {
+      "pubkey": "LiFiDJwJjW98MB8wxcnXpafKYsuz1hwpUkuszkERiX6",
+      "name": "LI.FI",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 846,
+      "unmet_rate_pct": 40.0,
+      "not_bonus_rate_pct": 40.0,
+      "unmet": 4,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "Bonus": 6,
+        "None": 4
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004
+      ]
+    },
+    {
+      "pubkey": "5marvipGzf98hxnoJFXsZbGHSXcEQ3yRGJ4ps7D3V4ou",
+      "name": "MARVEL+MEV!",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 40.0,
+      "not_bonus_rate_pct": 40.0,
+      "unmet": 4,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "Bonus": 6,
+        "None": 4
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004
+      ]
+    },
+    {
+      "pubkey": "DiFeTctQSaNczJNmZ5121kYqLaBe9wDpM9sjCzTELJLE",
+      "name": "Serhio911",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 40.0,
+      "not_bonus_rate_pct": 40.0,
+      "unmet": 4,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "Bonus": 6,
+        "None": 4
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004
+      ]
+    },
+    {
+      "pubkey": "7nzTzRZzezmugqE5ZjHRMxarhXunpwZ2PUdjV7uYzt7A",
+      "name": "Solar | Empowering Youth | 0% Fee + MEV Rewards",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 863,
+      "unmet_rate_pct": 40.0,
+      "not_bonus_rate_pct": 40.0,
+      "unmet": 4,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 4,
+        "Bonus": 6
+      },
+      "unmet_epochs": [
+        1001,
+        1000,
+        999,
+        998
+      ]
+    },
+    {
+      "pubkey": "BirdeyeK5yooepHNNgaW2bGGDD2jmib4oSRFTHyELbZ1",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 722,
+      "unmet_rate_pct": 30.0,
+      "not_bonus_rate_pct": 30.0,
+      "unmet": 3,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "Bonus": 7,
+        "None": 3
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005
+      ]
+    },
+    {
+      "pubkey": "3YX7PQuESmR2h95FDgjahEQjyCBhmY1Ts2MsrM1Kg9DS",
+      "name": "Banana Business (BB)",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 818,
+      "unmet_rate_pct": 20.0,
+      "not_bonus_rate_pct": 20.0,
+      "unmet": 2,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "Bonus": 8,
+        "None": 2
+      },
+      "unmet_epochs": [
+        1007,
+        1006
+      ]
+    },
+    {
+      "pubkey": "ChaossRPGKnsVhX1GfPC78yq5Sqju4cMThcAsKZNz5d6",
+      "name": "Udder Chaos 🐄",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 739,
+      "unmet_rate_pct": 20.0,
+      "not_bonus_rate_pct": 20.0,
+      "unmet": 2,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 2,
+        "Bonus": 8
+      },
+      "unmet_epochs": [
+        1007,
+        998
+      ]
+    },
+    {
+      "pubkey": "ByszyWdqC3rVMWy8f6jwK5cmwkpwYdwsr7UL58xS5vnm",
+      "name": "ILY♡ Validator ➕ Firedancer🔥 ||neochibi culture X:@ILY_validator",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 596,
+      "unmet_rate_pct": 10.0,
+      "not_bonus_rate_pct": 10.0,
+      "unmet": 1,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "Bonus": 9,
+        "None": 1
+      },
+      "unmet_epochs": [
+        1007
+      ]
+    },
+    {
+      "pubkey": "jagBNeXYncnn1hzwSq1JJ16XhWTgQ7DCFVqndSJZ6vT",
+      "name": "Jaguar",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 712,
+      "unmet_rate_pct": 10.0,
+      "not_bonus_rate_pct": 10.0,
+      "unmet": 1,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "Bonus": 9,
+        "None": 1
+      },
+      "unmet_epochs": [
+        1001
+      ]
+    },
+    {
+      "pubkey": "mALL2W6DUgDDtcyurC9v5YTF2CMMeuRwPBkf6tEoG3y",
+      "name": "mallow",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 817,
+      "unmet_rate_pct": 10.0,
+      "not_bonus_rate_pct": 10.0,
+      "unmet": 1,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "Bonus": 9,
+        "None": 1
+      },
+      "unmet_epochs": [
+        1005
+      ]
+    },
+    {
+      "pubkey": "ECZx4Dfyn2o55KTYbM9r3Dt4VZRcrdfdrst7sUbWgrdU",
+      "name": "Orca",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 858,
+      "unmet_rate_pct": 10.0,
+      "not_bonus_rate_pct": 10.0,
+      "unmet": 1,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "Bonus": 9,
+        "None": 1
+      },
+      "unmet_epochs": [
+        1005
+      ]
+    },
+    {
+      "pubkey": "PKdLMugp1Mf88Ji1GkdqRDBewaUh2cqg79CBEo6eJoQ",
+      "name": "PK",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 845,
+      "unmet_rate_pct": 10.0,
+      "not_bonus_rate_pct": 40.0,
+      "unmet": 1,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "None": 1,
+        "Baseline": 3,
+        "Bonus": 6
+      },
+      "unmet_epochs": [
+        998
+      ]
+    },
+    {
+      "pubkey": "5pZvwjSpGYCxpJeySwSbSAji7kZe4YntL7rQvXM3YcNT",
+      "name": "Solstice",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 797,
+      "unmet_rate_pct": 10.0,
+      "not_bonus_rate_pct": 10.0,
+      "unmet": 1,
+      "evaluated": 10,
+      "missing": 0,
+      "counts": {
+        "Bonus": 9,
+        "None": 1
+      },
+      "unmet_epochs": [
+        1005
+      ]
+    }
+  ]
+}

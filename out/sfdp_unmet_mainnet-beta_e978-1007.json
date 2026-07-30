@@ -1,0 +1,2041 @@
+{
+  "cluster": "mainnet-beta",
+  "window": {
+    "start": 978,
+    "end": 1007,
+    "epochs": 30
+  },
+  "state_icon_map": {
+    "Bonus": "green-star",
+    "Baseline": "orange-check",
+    "None": "red-x",
+    "NoneHighThirdPartyStake": "green-party-popper"
+  },
+  "validators": [
+    {
+      "pubkey": "SyndicAgdEphcy5xhAKZAomTYhcF8xhC7za2UD9xeug",
+      "name": "Syndica",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 786,
+      "unmet_rate_pct": 90.0,
+      "not_bonus_rate_pct": 90.0,
+      "unmet": 27,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "None": 27,
+        "Bonus": 3
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995,
+        994,
+        993,
+        992,
+        991,
+        990,
+        989,
+        988,
+        987,
+        986,
+        982,
+        981,
+        980,
+        979,
+        978
+      ]
+    },
+    {
+      "pubkey": "AurseT3W3tk1dATBWAXtWR6oubBgECqintfcvP74teU3",
+      "name": "Aursen",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 974,
+      "unmet_rate_pct": 83.33,
+      "not_bonus_rate_pct": 83.33,
+      "unmet": 25,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 5,
+        "None": 25
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995,
+        994,
+        993,
+        992,
+        991,
+        990,
+        989,
+        988,
+        987,
+        986,
+        985,
+        984,
+        983
+      ]
+    },
+    {
+      "pubkey": "6c6RrC9TWNgiVXnbZ6hehNuhyh81pZK1yAj5w2nXZTwi",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 735,
+      "unmet_rate_pct": 80.0,
+      "not_bonus_rate_pct": 80.0,
+      "unmet": 24,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 6,
+        "None": 24
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995,
+        994,
+        993,
+        992,
+        991,
+        990,
+        989,
+        988,
+        987,
+        986,
+        985,
+        984
+      ]
+    },
+    {
+      "pubkey": "SaV6UWBaE8M3kwMBfAhQ6Tmvd2qdJRm94NTwLqtoyGd",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 700,
+      "unmet_rate_pct": 69.23,
+      "not_bonus_rate_pct": 69.23,
+      "unmet": 18,
+      "evaluated": 26,
+      "missing": 4,
+      "counts": {
+        "Bonus": 8,
+        "None": 18
+      },
+      "unmet_epochs": [
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995,
+        994,
+        993,
+        992,
+        991,
+        990,
+        989,
+        988,
+        987,
+        986
+      ]
+    },
+    {
+      "pubkey": "PuRposE4utktenW49N8DCtVzdVEwYrmsrroboEUram4",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 808,
+      "unmet_rate_pct": 54.17,
+      "not_bonus_rate_pct": 54.17,
+      "unmet": 13,
+      "evaluated": 24,
+      "missing": 6,
+      "counts": {
+        "None": 13,
+        "Bonus": 11
+      },
+      "unmet_epochs": [
+        997,
+        996,
+        994,
+        993,
+        992,
+        991,
+        990,
+        983,
+        982,
+        981,
+        980,
+        979,
+        978
+      ]
+    },
+    {
+      "pubkey": "mXv18ov8qCiQGs3ieoen981LdgZzYJjJak6reK6fpNC",
+      "name": "MX Validator",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 728,
+      "unmet_rate_pct": 53.33,
+      "not_bonus_rate_pct": 53.33,
+      "unmet": 16,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "None": 16,
+        "Bonus": 14
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        987,
+        986,
+        980,
+        979,
+        978
+      ]
+    },
+    {
+      "pubkey": "XAqHfPFsqTfAJHBRHAcEECkMSykXjkUj2Rta16Qshrk",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 821,
+      "unmet_rate_pct": 43.33,
+      "not_bonus_rate_pct": 43.33,
+      "unmet": 13,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 17,
+        "None": 13
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995
+      ]
+    },
+    {
+      "pubkey": "HcZvwZ83PfjrQDiq3GLHxisTs17aGURs6bJ2LwtmL4qv",
+      "name": "SolGuardian",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 646,
+      "unmet_rate_pct": 43.33,
+      "not_bonus_rate_pct": 43.33,
+      "unmet": 13,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 17,
+        "None": 13
+      },
+      "unmet_epochs": [
+        1007,
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995,
+        994,
+        993,
+        992,
+        991,
+        990
+      ]
+    },
+    {
+      "pubkey": "KTMkUG8WCw9FdH44jLMBpc1teGafnYL6SgP4fHHbsNM",
+      "name": "ERPC",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 605,
+      "unmet_rate_pct": 40.0,
+      "not_bonus_rate_pct": 40.0,
+      "unmet": 12,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 18,
+        "None": 12
+      },
+      "unmet_epochs": [
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995,
+        994,
+        993,
+        986
+      ]
+    },
+    {
+      "pubkey": "H9ENbtmy2tWFtAJNmpC8xQtbcr1NTp4FXLdphRaG8L2T",
+      "name": "Bubbles",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 737,
+      "unmet_rate_pct": 36.67,
+      "not_bonus_rate_pct": 36.67,
+      "unmet": 11,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 19,
+        "None": 11
+      },
+      "unmet_epochs": [
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995,
+        987,
+        986,
+        985,
+        979
+      ]
+    },
+    {
+      "pubkey": "nymsHergYedT9CJMgtGMvqXUTGcbs5o3MiWTJUbqTGY",
+      "name": "Hypo Nyms",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 616,
+      "unmet_rate_pct": 36.67,
+      "not_bonus_rate_pct": 36.67,
+      "unmet": 11,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 19,
+        "None": 11
+      },
+      "unmet_epochs": [
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995
+      ]
+    },
+    {
+      "pubkey": "GkFT5nmcFVmJiLwuE98PjdF3LReMeq4WbejFHfwrnsgw",
+      "name": "KAST",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 693,
+      "unmet_rate_pct": 36.67,
+      "not_bonus_rate_pct": 36.67,
+      "unmet": 11,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 19,
+        "None": 11
+      },
+      "unmet_epochs": [
+        1002,
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995,
+        994,
+        993,
+        992
+      ]
+    },
+    {
+      "pubkey": "mrgn4sJJu5GBa5wbKyjuASzhyCifvcedGoLtpKjB3Wf",
+      "name": "Project 0 Meridian",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 778,
+      "unmet_rate_pct": 36.67,
+      "not_bonus_rate_pct": 36.67,
+      "unmet": 11,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 19,
+        "None": 11
+      },
+      "unmet_epochs": [
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995
+      ]
+    },
+    {
+      "pubkey": "fhsM2sxME8cHrrk3qvtMsRRDv5AoLFja7NjNnHeYZxe",
+      "name": "Fountainhead 🌱 Funding Dev WITH max APY",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 845,
+      "unmet_rate_pct": 33.33,
+      "not_bonus_rate_pct": 33.33,
+      "unmet": 10,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 20,
+        "None": 10
+      },
+      "unmet_epochs": [
+        1002,
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995,
+        994,
+        993
+      ]
+    },
+    {
+      "pubkey": "Ste1115xFGdAYK5jaWA3dEFcUc1S5jEbVvD8e327zty",
+      "name": "Stellium",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 838,
+      "unmet_rate_pct": 33.33,
+      "not_bonus_rate_pct": 33.33,
+      "unmet": 10,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 20,
+        "None": 10
+      },
+      "unmet_epochs": [
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996
+      ]
+    },
+    {
+      "pubkey": "ChaossRPGKnsVhX1GfPC78yq5Sqju4cMThcAsKZNz5d6",
+      "name": "Udder Chaos 🐄",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 739,
+      "unmet_rate_pct": 33.33,
+      "not_bonus_rate_pct": 33.33,
+      "unmet": 10,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "None": 10,
+        "Bonus": 20
+      },
+      "unmet_epochs": [
+        1007,
+        998,
+        997,
+        996,
+        987,
+        986,
+        981,
+        980,
+        979,
+        978
+      ]
+    },
+    {
+      "pubkey": "BitokuDHQiAhpUKrwx1VssAAoW5Rst8zB6gpfoaxM3Kh",
+      "name": "Xandeum Labs low fee + MEV = 🔥APY %",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 587,
+      "unmet_rate_pct": 33.33,
+      "not_bonus_rate_pct": 33.33,
+      "unmet": 10,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 20,
+        "None": 10
+      },
+      "unmet_epochs": [
+        1006,
+        1005,
+        1004,
+        1003,
+        1002,
+        1001,
+        1000,
+        999,
+        998,
+        997
+      ]
+    },
+    {
+      "pubkey": "sZAqxCSN5kkVfG2s65Bje4jzCkD2aLyk21qU95PMf2Y",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 615,
+      "unmet_rate_pct": 33.33,
+      "not_bonus_rate_pct": 33.33,
+      "unmet": 8,
+      "evaluated": 24,
+      "missing": 6,
+      "counts": {
+        "Bonus": 16,
+        "None": 8
+      },
+      "unmet_epochs": [
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995,
+        994
+      ]
+    },
+    {
+      "pubkey": "12i8gndWWWMTRzJBFhnYkobNgZB3XMUUJq75HeUrshrk",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 821,
+      "unmet_rate_pct": 33.33,
+      "not_bonus_rate_pct": 57.14,
+      "unmet": 7,
+      "evaluated": 21,
+      "missing": 9,
+      "counts": {
+        "Bonus": 9,
+        "None": 7,
+        "Baseline": 5
+      },
+      "unmet_epochs": [
+        998,
+        997,
+        996,
+        995,
+        994,
+        989,
+        987
+      ]
+    },
+    {
+      "pubkey": "forb5u56XgvzxiKfRt4FVNFQKJrd2LWAfNCsCqL6P7q",
+      "name": "Forbole",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 30.0,
+      "not_bonus_rate_pct": 30.0,
+      "unmet": 9,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "None": 9,
+        "Bonus": 21
+      },
+      "unmet_epochs": [
+        996,
+        995,
+        985,
+        983,
+        982,
+        981,
+        980,
+        979,
+        978
+      ]
+    },
+    {
+      "pubkey": "7nzTzRZzezmugqE5ZjHRMxarhXunpwZ2PUdjV7uYzt7A",
+      "name": "Solar | Empowering Youth | 0% Fee + MEV Rewards",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 863,
+      "unmet_rate_pct": 30.0,
+      "not_bonus_rate_pct": 30.0,
+      "unmet": 9,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 21,
+        "None": 9
+      },
+      "unmet_epochs": [
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995,
+        994,
+        993
+      ]
+    },
+    {
+      "pubkey": "D2RV1q6FgePVVjrMa7AMzVbvvAeg5oS7TAV7qdNKSDsX",
+      "name": "Validatore",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 30.0,
+      "not_bonus_rate_pct": 40.0,
+      "unmet": 9,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 18,
+        "None": 9,
+        "Baseline": 3
+      },
+      "unmet_epochs": [
+        997,
+        996,
+        992,
+        991,
+        990,
+        989,
+        988,
+        987,
+        986
+      ]
+    },
+    {
+      "pubkey": "stacheBmGG5zMKuetUevAbc4m4dLbve1VPcpSur3voH",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 659,
+      "unmet_rate_pct": 28.57,
+      "not_bonus_rate_pct": 28.57,
+      "unmet": 6,
+      "evaluated": 21,
+      "missing": 9,
+      "counts": {
+        "Bonus": 15,
+        "None": 6
+      },
+      "unmet_epochs": [
+        998,
+        997,
+        996,
+        995,
+        994,
+        993
+      ]
+    },
+    {
+      "pubkey": "KoLibrJsbABbtmtFPc7nPvDxT81rc4UPM7mY9xSLjpo",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 793,
+      "unmet_rate_pct": 26.67,
+      "not_bonus_rate_pct": 26.67,
+      "unmet": 8,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 22,
+        "None": 8
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003,
+        1002,
+        986,
+        985
+      ]
+    },
+    {
+      "pubkey": "3V2xaccDpFib4DbTksdiveNDmiwpXBqSWyjSof3w1Bg7",
+      "name": "Aurora Validator",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 579,
+      "unmet_rate_pct": 26.67,
+      "not_bonus_rate_pct": 26.67,
+      "unmet": 8,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 22,
+        "None": 8
+      },
+      "unmet_epochs": [
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995,
+        994
+      ]
+    },
+    {
+      "pubkey": "bay3wXfJsu9ds1zQBoQQ4DUwFGs3NP6q4gca9WM5G1z",
+      "name": "Bay3",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 725,
+      "unmet_rate_pct": 26.67,
+      "not_bonus_rate_pct": 26.67,
+      "unmet": 8,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "None": 8,
+        "Bonus": 22
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003,
+        1002,
+        979,
+        978
+      ]
+    },
+    {
+      "pubkey": "CaveyttUBTKttncu1e4RF814XjuoGfYv8cEsiKGDNCPX",
+      "name": "Cavey Cool",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 649,
+      "unmet_rate_pct": 26.67,
+      "not_bonus_rate_pct": 26.67,
+      "unmet": 8,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 22,
+        "None": 8
+      },
+      "unmet_epochs": [
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995,
+        986
+      ]
+    },
+    {
+      "pubkey": "idCE5k2BtTpwXdwAC7Var1enT9reut9fWECcxQP7LY7",
+      "name": "🔥💃🇸🇬 CeriumXYZ",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 815,
+      "unmet_rate_pct": 26.67,
+      "not_bonus_rate_pct": 26.67,
+      "unmet": 8,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 22,
+        "None": 8
+      },
+      "unmet_epochs": [
+        1002,
+        1001,
+        1000,
+        999,
+        998,
+        997,
+        996,
+        995
+      ]
+    },
+    {
+      "pubkey": "4SgoyAwN26iu9Gpf12Bk1rnzp4G4yDUM3XVv4w7VQcAf",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 817,
+      "unmet_rate_pct": 25.0,
+      "not_bonus_rate_pct": 25.0,
+      "unmet": 5,
+      "evaluated": 20,
+      "missing": 10,
+      "counts": {
+        "Bonus": 15,
+        "None": 5
+      },
+      "unmet_epochs": [
+        997,
+        996,
+        995,
+        994,
+        993
+      ]
+    },
+    {
+      "pubkey": "13DmVBcyrSdsSsLWaKH9x1dwxDf48Wu5wprwxMmLshrk",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 821,
+      "unmet_rate_pct": 23.81,
+      "not_bonus_rate_pct": 23.81,
+      "unmet": 5,
+      "evaluated": 21,
+      "missing": 9,
+      "counts": {
+        "Bonus": 16,
+        "None": 5
+      },
+      "unmet_epochs": [
+        998,
+        997,
+        996,
+        995,
+        994
+      ]
+    },
+    {
+      "pubkey": "BSMe78Jk1BfeJDdHQj1aXVjrT2aMAYidyNAGQsTshrk",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 821,
+      "unmet_rate_pct": 23.81,
+      "not_bonus_rate_pct": 23.81,
+      "unmet": 5,
+      "evaluated": 21,
+      "missing": 9,
+      "counts": {
+        "Bonus": 16,
+        "None": 5
+      },
+      "unmet_epochs": [
+        998,
+        997,
+        996,
+        995,
+        994
+      ]
+    },
+    {
+      "pubkey": "uxqVAFQfox97HazsPtkKiwhypQH6jEGXkQBHDtXshrk",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 821,
+      "unmet_rate_pct": 23.81,
+      "not_bonus_rate_pct": 23.81,
+      "unmet": 5,
+      "evaluated": 21,
+      "missing": 9,
+      "counts": {
+        "Bonus": 16,
+        "None": 5
+      },
+      "unmet_epochs": [
+        998,
+        997,
+        996,
+        995,
+        994
+      ]
+    },
+    {
+      "pubkey": "U82KEYMnuCiZSQbvuCJTZ652HX9NQ63uNSnxyucshrk",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 821,
+      "unmet_rate_pct": 23.81,
+      "not_bonus_rate_pct": 23.81,
+      "unmet": 5,
+      "evaluated": 21,
+      "missing": 9,
+      "counts": {
+        "Bonus": 16,
+        "None": 5
+      },
+      "unmet_epochs": [
+        998,
+        997,
+        996,
+        995,
+        994
+      ]
+    },
+    {
+      "pubkey": "kREnNfJrPEHbrjSQDxmxZdGmN6hi7ewXZ3UZTURshrk",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 821,
+      "unmet_rate_pct": 23.81,
+      "not_bonus_rate_pct": 23.81,
+      "unmet": 5,
+      "evaluated": 21,
+      "missing": 9,
+      "counts": {
+        "Bonus": 16,
+        "None": 5
+      },
+      "unmet_epochs": [
+        998,
+        997,
+        996,
+        995,
+        994
+      ]
+    },
+    {
+      "pubkey": "q1yPXLsYcJhzxhUYLewFDjYmsBh2gDFnYqrZ9VPshrk",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 821,
+      "unmet_rate_pct": 23.81,
+      "not_bonus_rate_pct": 23.81,
+      "unmet": 5,
+      "evaluated": 21,
+      "missing": 9,
+      "counts": {
+        "Bonus": 16,
+        "None": 5
+      },
+      "unmet_epochs": [
+        998,
+        997,
+        996,
+        995,
+        994
+      ]
+    },
+    {
+      "pubkey": "5LNEDitSMhApT2uFnmtN7FmjCiGuatpnb2uU4f3shrk",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 821,
+      "unmet_rate_pct": 23.81,
+      "not_bonus_rate_pct": 23.81,
+      "unmet": 5,
+      "evaluated": 21,
+      "missing": 9,
+      "counts": {
+        "Bonus": 16,
+        "None": 5
+      },
+      "unmet_epochs": [
+        998,
+        997,
+        996,
+        995,
+        994
+      ]
+    },
+    {
+      "pubkey": "CiR8HNCfkjtcongPmP2DRdZPnFgjSbN5gsXdjmsXXHcB",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 615,
+      "unmet_rate_pct": 22.73,
+      "not_bonus_rate_pct": 22.73,
+      "unmet": 5,
+      "evaluated": 22,
+      "missing": 8,
+      "counts": {
+        "Bonus": 17,
+        "None": 5
+      },
+      "unmet_epochs": [
+        999,
+        998,
+        997,
+        996,
+        995
+      ]
+    },
+    {
+      "pubkey": "RLMS1pv3YKi7CSUCKTNcFN5fFkXJc2SmCwPhbQpqZJo",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 827,
+      "unmet_rate_pct": 20.0,
+      "not_bonus_rate_pct": 20.0,
+      "unmet": 6,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "None": 6,
+        "Bonus": 24
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003,
+        978
+      ]
+    },
+    {
+      "pubkey": "3YX7PQuESmR2h95FDgjahEQjyCBhmY1Ts2MsrM1Kg9DS",
+      "name": "Banana Business (BB)",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 818,
+      "unmet_rate_pct": 20.0,
+      "not_bonus_rate_pct": 20.0,
+      "unmet": 6,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "None": 6,
+        "Bonus": 24
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        987,
+        986,
+        979,
+        978
+      ]
+    },
+    {
+      "pubkey": "CVvaeDPR2o7P1eawG5c9TPFLzSXAewwPovPmREaEL4Cm",
+      "name": "Lion3d | 0% Forever + Block Rewards Sharing",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 20.0,
+      "not_bonus_rate_pct": 20.0,
+      "unmet": 6,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "None": 6,
+        "Bonus": 24
+      },
+      "unmet_epochs": [
+        996,
+        987,
+        986,
+        980,
+        979,
+        978
+      ]
+    },
+    {
+      "pubkey": "8AkVj5aAtJ27tYXeq89cnSf68V43NarFHMx2iSDjZv7c",
+      "name": "Theta",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 632,
+      "unmet_rate_pct": 20.0,
+      "not_bonus_rate_pct": 20.0,
+      "unmet": 6,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 24,
+        "None": 6
+      },
+      "unmet_epochs": [
+        989,
+        988,
+        987,
+        986,
+        985,
+        984
+      ]
+    },
+    {
+      "pubkey": "CpuDNi3iVoHXbaT8gHpzKe6rqeBasoYjEKi21q7NRVJS",
+      "name": "val37",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 20.0,
+      "not_bonus_rate_pct": 20.0,
+      "unmet": 6,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 24,
+        "None": 6
+      },
+      "unmet_epochs": [
+        1002,
+        1001,
+        1000,
+        999,
+        998,
+        997
+      ]
+    },
+    {
+      "pubkey": "2Rv9npqdWE1mLPsT1r2obn3xtKmA5afkxt8GsWeLnKoc",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 19.05,
+      "not_bonus_rate_pct": 19.05,
+      "unmet": 4,
+      "evaluated": 21,
+      "missing": 9,
+      "counts": {
+        "Bonus": 17,
+        "None": 4
+      },
+      "unmet_epochs": [
+        998,
+        997,
+        996,
+        995
+      ]
+    },
+    {
+      "pubkey": "BCS95L5JHBWHvWkcEJBEF3BH5QHxKcPeaTgoYmHLvfFh",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 728,
+      "unmet_rate_pct": 17.86,
+      "not_bonus_rate_pct": 17.86,
+      "unmet": 5,
+      "evaluated": 28,
+      "missing": 2,
+      "counts": {
+        "Bonus": 23,
+        "None": 5
+      },
+      "unmet_epochs": [
+        1005,
+        1004,
+        1003,
+        1002,
+        1001
+      ]
+    },
+    {
+      "pubkey": "8cnksBVjDPspn3AvmxJd8JKUdh4uWDDXzDemPmDctaHi",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 722,
+      "unmet_rate_pct": 16.67,
+      "not_bonus_rate_pct": 16.67,
+      "unmet": 5,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 25,
+        "None": 5
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004,
+        1003
+      ]
+    },
+    {
+      "pubkey": "1ggyZGbYtEo1WrV1kmXfnvhPeSPxrYAXoDBeApnszLT",
+      "name": "Iggyz",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 938,
+      "unmet_rate_pct": 13.33,
+      "not_bonus_rate_pct": 13.33,
+      "unmet": 4,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 26,
+        "None": 4
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004
+      ]
+    },
+    {
+      "pubkey": "LiFiDJwJjW98MB8wxcnXpafKYsuz1hwpUkuszkERiX6",
+      "name": "LI.FI",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 846,
+      "unmet_rate_pct": 13.33,
+      "not_bonus_rate_pct": 13.33,
+      "unmet": 4,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 26,
+        "None": 4
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004
+      ]
+    },
+    {
+      "pubkey": "5marvipGzf98hxnoJFXsZbGHSXcEQ3yRGJ4ps7D3V4ou",
+      "name": "MARVEL+MEV!",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 13.33,
+      "not_bonus_rate_pct": 13.33,
+      "unmet": 4,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 26,
+        "None": 4
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004
+      ]
+    },
+    {
+      "pubkey": "ECZx4Dfyn2o55KTYbM9r3Dt4VZRcrdfdrst7sUbWgrdU",
+      "name": "Orca",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 858,
+      "unmet_rate_pct": 13.33,
+      "not_bonus_rate_pct": 13.33,
+      "unmet": 4,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 26,
+        "None": 4
+      },
+      "unmet_epochs": [
+        1005,
+        989,
+        988,
+        987
+      ]
+    },
+    {
+      "pubkey": "PKdLMugp1Mf88Ji1GkdqRDBewaUh2cqg79CBEo6eJoQ",
+      "name": "PK",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 845,
+      "unmet_rate_pct": 13.33,
+      "not_bonus_rate_pct": 23.33,
+      "unmet": 4,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 23,
+        "None": 4,
+        "Baseline": 3
+      },
+      "unmet_epochs": [
+        998,
+        997,
+        996,
+        995
+      ]
+    },
+    {
+      "pubkey": "DiFeTctQSaNczJNmZ5121kYqLaBe9wDpM9sjCzTELJLE",
+      "name": "Serhio911",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 13.33,
+      "not_bonus_rate_pct": 13.33,
+      "unmet": 4,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 26,
+        "None": 4
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005,
+        1004
+      ]
+    },
+    {
+      "pubkey": "TREEir31FswHK7JZBS5oFQteS72dobi6inpmQha88dA",
+      "name": "Tree Validator",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 973,
+      "unmet_rate_pct": 13.33,
+      "not_bonus_rate_pct": 13.33,
+      "unmet": 4,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 26,
+        "None": 4
+      },
+      "unmet_epochs": [
+        997,
+        996,
+        986,
+        980
+      ]
+    },
+    {
+      "pubkey": "BirdeyeK5yooepHNNgaW2bGGDD2jmib4oSRFTHyELbZ1",
+      "name": "",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 722,
+      "unmet_rate_pct": 10.0,
+      "not_bonus_rate_pct": 10.0,
+      "unmet": 3,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 27,
+        "None": 3
+      },
+      "unmet_epochs": [
+        1007,
+        1006,
+        1005
+      ]
+    },
+    {
+      "pubkey": "CkCMabrc3HgBgDkeKPXkbWuQpUuSqW7zs1Mg3HFArx61",
+      "name": "Sygnum Validators",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 941,
+      "unmet_rate_pct": 8.33,
+      "not_bonus_rate_pct": 8.33,
+      "unmet": 2,
+      "evaluated": 24,
+      "missing": 6,
+      "counts": {
+        "None": 2,
+        "Bonus": 22
+      },
+      "unmet_epochs": [
+        979,
+        978
+      ]
+    },
+    {
+      "pubkey": "11AMA4mnNbsrPQeuoNN7uiZVJZtqEzQHrTfa5vnbcjk",
+      "name": "11ama Validator",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 809,
+      "unmet_rate_pct": 6.67,
+      "not_bonus_rate_pct": 13.33,
+      "unmet": 2,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 26,
+        "None": 2,
+        "Baseline": 2
+      },
+      "unmet_epochs": [
+        993,
+        986
+      ]
+    },
+    {
+      "pubkey": "PAD9aPiKJGcbGxuVLbc8o4Vf65GPq3fJQ7PkHWuX6a8",
+      "name": "BlueLotus 👩‍💻",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 6.67,
+      "not_bonus_rate_pct": 6.67,
+      "unmet": 2,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 28,
+        "None": 2
+      },
+      "unmet_epochs": [
+        997,
+        996
+      ]
+    },
+    {
+      "pubkey": "capyS1jerxhFp1RehdWRG6kbWi8bnWF3fkEG2RGLsQf",
+      "name": "capy",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 915,
+      "unmet_rate_pct": 6.67,
+      "not_bonus_rate_pct": 6.67,
+      "unmet": 2,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 28,
+        "None": 2
+      },
+      "unmet_epochs": [
+        989,
+        988
+      ]
+    },
+    {
+      "pubkey": "2mMGsb5uy1Q4Dvezr8HK2E8SJoChcb2X7b61tJPaVHHd",
+      "name": "Chainflow",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 616,
+      "unmet_rate_pct": 6.67,
+      "not_bonus_rate_pct": 6.67,
+      "unmet": 2,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "None": 2,
+        "Bonus": 28
+      },
+      "unmet_epochs": [
+        979,
+        978
+      ]
+    },
+    {
+      "pubkey": "ByszyWdqC3rVMWy8f6jwK5cmwkpwYdwsr7UL58xS5vnm",
+      "name": "ILY♡ Validator ➕ Firedancer🔥 ||neochibi culture X:@ILY_validator",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 596,
+      "unmet_rate_pct": 6.67,
+      "not_bonus_rate_pct": 16.67,
+      "unmet": 2,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 25,
+        "None": 2,
+        "Baseline": 3
+      },
+      "unmet_epochs": [
+        1007,
+        979
+      ]
+    },
+    {
+      "pubkey": "jagBNeXYncnn1hzwSq1JJ16XhWTgQ7DCFVqndSJZ6vT",
+      "name": "Jaguar",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 712,
+      "unmet_rate_pct": 6.67,
+      "not_bonus_rate_pct": 6.67,
+      "unmet": 2,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 28,
+        "None": 2
+      },
+      "unmet_epochs": [
+        1001,
+        997
+      ]
+    },
+    {
+      "pubkey": "omeg2wsojzB7tfyAxsFhp8npxHL8yxVnaf51poXCwSd",
+      "name": "OmegaNode Validator",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 725,
+      "unmet_rate_pct": 6.67,
+      "not_bonus_rate_pct": 20.0,
+      "unmet": 2,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 24,
+        "None": 2,
+        "Baseline": 4
+      },
+      "unmet_epochs": [
+        992,
+        979
+      ]
+    },
+    {
+      "pubkey": "ReFiqMfGnc7tW8WQtFFcJRPZSDAWDBnAsdoFYF2QnfR",
+      "name": "ReFi Hub",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 860,
+      "unmet_rate_pct": 6.67,
+      "not_bonus_rate_pct": 6.67,
+      "unmet": 2,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "None": 2,
+        "Bonus": 28
+      },
+      "unmet_epochs": [
+        979,
+        978
+      ]
+    },
+    {
+      "pubkey": "SA1LFXr4os2P4VKGUyRv84uFfuUYgcQkFh2uA4SmRcr",
+      "name": "Salmon Wallet",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 974,
+      "unmet_rate_pct": 6.67,
+      "not_bonus_rate_pct": 6.67,
+      "unmet": 2,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "None": 2,
+        "Bonus": 28
+      },
+      "unmet_epochs": [
+        979,
+        978
+      ]
+    },
+    {
+      "pubkey": "3CKKAoVi94EnfX8QcVxEmk8CAvZTc6nAYzXp1WkSUofX",
+      "name": "Solid State Nodes",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 6.67,
+      "not_bonus_rate_pct": 6.67,
+      "unmet": 2,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "None": 2,
+        "Bonus": 28
+      },
+      "unmet_epochs": [
+        979,
+        978
+      ]
+    },
+    {
+      "pubkey": "vahMVcSS3v6uwyFormV7FDAUbQSHwmy6vUedp1P7L42",
+      "name": "StakeITeasy🚀High APY + 0% fee✅ + MEV🔥",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 6.67,
+      "not_bonus_rate_pct": 6.67,
+      "unmet": 2,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 28,
+        "None": 2
+      },
+      "unmet_epochs": [
+        987,
+        986
+      ]
+    },
+    {
+      "pubkey": "23SUe5fzmLws1M58AnGnvnUBRUKJmzCpnFQwv4M4b9Er",
+      "name": "Stakin by The Tie",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 6.67,
+      "not_bonus_rate_pct": 6.67,
+      "unmet": 2,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "None": 2,
+        "Bonus": 28
+      },
+      "unmet_epochs": [
+        979,
+        978
+      ]
+    },
+    {
+      "pubkey": "5t4shVsKnUqgjmhK3fFNsvyju2E6Rd7cc4S5pmqqEVEW",
+      "name": "SteakStache",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 739,
+      "unmet_rate_pct": 6.67,
+      "not_bonus_rate_pct": 6.67,
+      "unmet": 2,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "None": 2,
+        "Bonus": 28
+      },
+      "unmet_epochs": [
+        979,
+        978
+      ]
+    },
+    {
+      "pubkey": "2X7WoaXX9KPqNrNfvguhnwo3rjFPNsfw2t75fGjWRthz",
+      "name": "Stakely | 0% fee",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 5.88,
+      "not_bonus_rate_pct": 5.88,
+      "unmet": 1,
+      "evaluated": 17,
+      "missing": 13,
+      "counts": {
+        "None": 1,
+        "Bonus": 16
+      },
+      "unmet_epochs": [
+        984
+      ]
+    },
+    {
+      "pubkey": "AccReGBNBdUCEJ7ZyP231jw7uVJ3eF9u4cLBFAyqQuWm",
+      "name": "Accretion | r0bre",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 726,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 16.67,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 25,
+        "Baseline": 4,
+        "None": 1
+      },
+      "unmet_epochs": [
+        984
+      ]
+    },
+    {
+      "pubkey": "rsbp8zMHbGCpLoRktmsjspYv77VcjxAzH1KxPCD9BiU",
+      "name": "Albert is Great",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 772,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        988
+      ]
+    },
+    {
+      "pubkey": "97jbhVBYcSmwGXjrx5PPWXucDsVBqwyoQ6rzP3B6eeMt",
+      "name": "anarcheuz",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 832,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        986
+      ]
+    },
+    {
+      "pubkey": "ANC1u9sY36q3mi2MyVhtz71un8yLgTsFBUuyLcSPzKsk",
+      "name": "Anchorage Digital",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 825,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "None": 1,
+        "Bonus": 29
+      },
+      "unmet_epochs": [
+        978
+      ]
+    },
+    {
+      "pubkey": "anza1rXDVhy1NfVNtsbT3kSBh2jgB1BGZUKuUibSAJd",
+      "name": "Anza",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 793,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        986
+      ]
+    },
+    {
+      "pubkey": "grptonHnt7YSmJokGK9TJJTBXDT8ca4LSWMHCCfzzPa",
+      "name": "gripto",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 804,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        992
+      ]
+    },
+    {
+      "pubkey": "huinBRP3muBuqZLMW8ARjdn4mBnEmFFcxiBzrkQz553",
+      "name": "Huisky Staking",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 614,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        986
+      ]
+    },
+    {
+      "pubkey": "c3rtoMCHSbFrLRTAdw4iRowKSn4BrDtvSPbuyJwkHwx",
+      "name": "Latitude.sh",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        979
+      ]
+    },
+    {
+      "pubkey": "mALL2W6DUgDDtcyurC9v5YTF2CMMeuRwPBkf6tEoG3y",
+      "name": "mallow",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 817,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        1005
+      ]
+    },
+    {
+      "pubkey": "NdMV1C3XMCRqSBwBtNmoUNnKctYh95Ug4xb6FSTcAWr",
+      "name": "Neodyme",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 676,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        986
+      ]
+    },
+    {
+      "pubkey": "novaeuhY2JH2WHhc9KVTHDx2cyJZdXJC6faf4CtARZn",
+      "name": "Nova Consortium",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 797,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        986
+      ]
+    },
+    {
+      "pubkey": "CZanBzZHFzrGY5qKzaX3CNhJ5smHEMTWFFnoeUi4J6dr",
+      "name": "Omakase",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 775,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 6.67,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Baseline": 1,
+        "Bonus": 28,
+        "None": 1
+      },
+      "unmet_epochs": [
+        995
+      ]
+    },
+    {
+      "pubkey": "E99w1XfS4UNM1xUKXWEuDmj8Mduy7u65jm2NCULTspSV",
+      "name": "Project Super",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 693,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        981
+      ]
+    },
+    {
+      "pubkey": "8pyp3vfVPRziYdAYEyqkwytdBbdVbQmHqfQAVDcRV3w",
+      "name": "Rustiq Technology",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        984
+      ]
+    },
+    {
+      "pubkey": "5pZvwjSpGYCxpJeySwSbSAji7kZe4YntL7rQvXM3YcNT",
+      "name": "Solstice",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 797,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        1005
+      ]
+    },
+    {
+      "pubkey": "5AsoSeQtLoN8eLsf3wKrR3LwxHME4sTBGR6dpTCP1k3H",
+      "name": "some name",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        996
+      ]
+    },
+    {
+      "pubkey": "fishfishrD9BwrQQiAcG6YeYZVUYVJf3tb9QGQPMJqF",
+      "name": "stakefish 🐟",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 840,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        991
+      ]
+    },
+    {
+      "pubkey": "3x9nibnhgBHWKMRiGnsXJELRBjviQpKyigfrXtKW27KJ",
+      "name": "Staking kiwi validator",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 10.0,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 27,
+        "None": 1,
+        "Baseline": 2
+      },
+      "unmet_epochs": [
+        979
+      ]
+    },
+    {
+      "pubkey": "91oPXTs2oq8VvJpQ5TnvXakFGnnJSpEB6HFWDtSctwMt",
+      "name": "Stronghold",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 621,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        986
+      ]
+    },
+    {
+      "pubkey": "7MTjmteQHhthwwTZhUzsc2dP4NBvGNRqj8jzdqNxHFGE",
+      "name": "WEB34EVER ∞ POSTHUMAN",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 577,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        995
+      ]
+    },
+    {
+      "pubkey": "xLabscif2DLnYg39rQThqi7A9E45L9qiysRZhmZ1ARE",
+      "name": "xLabs",
+      "state": "Approved",
+      "sfdp2OnboardingEpoch": 690,
+      "unmet_rate_pct": 3.33,
+      "not_bonus_rate_pct": 3.33,
+      "unmet": 1,
+      "evaluated": 30,
+      "missing": 0,
+      "counts": {
+        "Bonus": 29,
+        "None": 1
+      },
+      "unmet_epochs": [
+        995
+      ]
+    }
+  ]
+}
