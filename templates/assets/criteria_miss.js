@@ -10,13 +10,16 @@
   const END_EPOCH = DATA.window.end;
   const HISTORY = DATA.window.history;
 
-  // 埋め込み履歴が短い場合はプリセットが重複するので畳む
-  const PRESETS = [...new Set([30, 64, HISTORY].filter((v) => v <= HISTORY))].sort((a, b) => a - b);
+  // 埋め込み履歴 (既定 128 epoch) より長い窓は選べない。
+  // 全部外れる短い履歴でビルドしたときのために HISTORY 自体を残す
+  const WINDOWS = [30, 60, 90];
+  const PRESETS = WINDOWS.filter((v) => v <= HISTORY).length ? WINDOWS.filter((v) => v <= HISTORY) : [HISTORY];
+  const DEFAULT_WIN = PRESETS.includes(60) ? 60 : PRESETS[PRESETS.length - 1];
   const SPARK_MAX = 40; // 描画するセルの上限。これより長い窓は直近分だけ見せる
   const PAGE_SIZE = 50; // 初期表示の行数。残りは「Show all」で開く（0% の行が延々と続くのを防ぐ）
   const LOGO_DIR = '../assets/logos/'; // ロゴは同居配信（外部リクエストなし）
 
-  let win = Math.min(64, HISTORY);
+  let win = DEFAULT_WIN;
 
   /* ---- 集計 -------------------------------------------------------------
    * dashboards/criteria_miss.py の aggregate() と同一アルゴリズム。

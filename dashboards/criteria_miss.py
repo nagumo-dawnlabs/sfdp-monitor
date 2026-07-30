@@ -18,8 +18,9 @@ from solanaorg import sfdp
 
 SLUG = "criteria-miss"
 
-# ハブのカードに出す KPI を計算する窓。ダッシュボードの初期表示と揃えてある
-HUB_WINDOW = 64
+# ハブのカードに出す KPI を計算する窓。ダッシュボードの初期表示
+# (templates/assets/criteria_miss.js の DEFAULT_WIN) と揃えてある
+HUB_WINDOW = 60
 
 
 @dataclass(frozen=True)
