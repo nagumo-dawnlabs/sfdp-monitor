@@ -3,7 +3,7 @@
 
 直近 HISTORY epoch 分の state を 1 文字コードの文字列として埋め込み、
 集計期間 (直近 X epoch) の切り替え・ソート・フィルタはすべてブラウザ側で行う。
-外部依存ゼロの単一 HTML なので GitHub Pages にそのまま置ける。
+ロゴも data URI で埋め込むため、外部依存ゼロの単一 HTML として配布できる。
 
     python3 build_site.py                # キャッシュを使って生成
     python3 build_site.py --history 128  # 埋め込む epoch 数
@@ -12,6 +12,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import sys
 import time
@@ -21,6 +22,8 @@ from pathlib import Path
 import sfdp_status as S
 
 LAMPORTS = 1_000_000_000
+
+DAWNLABS_X = "https://x.com/dawnlabs00"
 
 # state -> 埋め込み用 1 文字コード
 CODE = {
@@ -32,12 +35,14 @@ CODE = {
 MISSING = "-"
 
 HTML_TEMPLATE = """<!doctype html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SFDP 基準未達率ダッシュボード</title>
-<meta name="description" content="Solana Foundation Delegation Program 参加バリデータの epoch 別基準達成状況を集計したダッシュボード。">
+<title>SFDP Criteria Miss Rate — Powered by DawnLabs</title>
+<meta name="description" content="How often each Solana Foundation Delegation Program validator failed to meet program criteria, epoch by epoch.">
+<meta property="og:title" content="SFDP Criteria Miss Rate">
+<meta property="og:description" content="How often each Solana Foundation Delegation Program validator failed to meet program criteria, epoch by epoch. Powered by DawnLabs.">
 <style>
 :root{
   --bg:#050508; --accent:#ff7300; --accent-hover:#e66800;
@@ -56,11 +61,30 @@ body::before{
   background-image:radial-gradient(circle at 2px 2px, rgb(255 255 255 / 3%) 1px, transparent 0);
   background-size:24px 24px;
 }
-.wrap{position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:48px 24px 96px}
+.wrap{position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:40px 24px 96px}
+.masthead{display:flex; justify-content:space-between; align-items:flex-start; gap:24px; flex-wrap:wrap; margin-bottom:8px}
 h1{font-size:clamp(1.75rem,5vw,2.5rem); line-height:1.1; letter-spacing:-0.03em; font-weight:800; margin:0 0 8px}
-.lede{color:var(--text-2); max-width:800px; margin:0 0 32px; font-size:1rem}
+.lede{color:var(--text-2); max-width:820px; margin:0 0 32px; font-size:1rem}
 .lede a{color:var(--accent); text-decoration:none}
 .lede a:hover{color:var(--accent-hover); text-decoration:underline}
+
+/* Powered by DawnLabs */
+.powered{
+  display:inline-flex; align-items:center; gap:18px; flex:0 0 auto; text-decoration:none;
+  padding:14px 26px; border-radius:999px;
+  background:linear-gradient(135deg, rgb(255 115 0 / 22%), rgb(255 115 0 / 6%));
+  border:1px solid rgb(255 115 0 / 40%);
+  box-shadow:0 8px 32px rgb(255 115 0 / 12%);
+  transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.powered:hover{border-color:var(--accent); box-shadow:0 12px 32px rgb(255 115 0 / 28%); transform:translateY(-1px)}
+.powered .pb{
+  font-size:0.6875rem; text-transform:uppercase; letter-spacing:0.2em; font-weight:600;
+  color:var(--text-2); line-height:1; white-space:nowrap;
+}
+.powered:hover .pb{color:var(--text)}
+.powered img{display:block; height:34px; width:auto}
+
 .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-bottom:28px}
 .stat{
   background:linear-gradient(135deg,var(--card) 60%, rgb(255 115 0 / 8%));
@@ -82,15 +106,15 @@ button.chip,.seg button{
   border-radius:999px; padding:6px 14px; font:inherit; font-size:0.875rem; cursor:pointer;
   transition:background .2s ease,border-color .2s ease,color .2s ease;
 }
-.seg button:hover{background:rgb(255 115 0 / 14%)}
+.seg button:hover,button.chip:hover{background:rgb(255 115 0 / 14%)}
 .seg button[aria-pressed=true]{background:rgb(255 115 0 / 38%); border-color:var(--accent); font-weight:600}
-input[type=text],input[type=number],select{
+input[type=text],input[type=number]{
   background:rgb(255 255 255 / 4%); color:var(--text); border:1px solid var(--border);
   border-radius:8px; padding:8px 12px; font:inherit; font-size:0.9375rem;
 }
-input:focus,select:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgb(255 115 0 / 12%)}
-input[type=text]{min-width:230px}
-input[type=number]{width:92px}
+input:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgb(255 115 0 / 12%)}
+input[type=text]{min-width:240px}
+input[type=number]{width:96px}
 .check{display:flex; align-items:center; gap:8px; font-size:0.875rem; color:var(--text-2); cursor:pointer}
 .check input{accent-color:var(--accent); width:16px; height:16px}
 .tablewrap{
@@ -122,23 +146,30 @@ tbody tr:last-child td{border-bottom:none}
 .spark i{width:7px; height:16px; border-radius:2px; display:block; flex:0 0 auto}
 .s-B{background:var(--ok)} .s-N{background:var(--bad)} .s-L{background:var(--warn)}
 .s-H{background:var(--party); opacity:.55} .s-x{background:rgb(255 255 255 / 8%)}
-.badge{display:inline-block; font-size:0.6875rem; letter-spacing:0.06em; padding:2px 8px; border-radius:999px;
-  background:rgb(255 255 255 / 6%); color:var(--text-2)}
 .legend{display:flex; flex-wrap:wrap; gap:18px; margin:14px 0 26px; font-size:0.8125rem; color:var(--text-2)}
 .legend span{display:flex; align-items:center; gap:7px}
 .legend i{width:11px; height:11px; border-radius:3px; display:inline-block}
 .meta{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin:0 0 12px;
   font-size:0.8125rem; color:var(--text-2)}
 .empty{padding:56px 24px; text-align:center; color:var(--text-muted)}
-footer{margin-top:40px; padding-top:24px; border-top:1px solid var(--border); font-size:0.8125rem; color:var(--text-muted)}
-footer a{color:var(--text-2)}
 h2{font-size:1.5rem; letter-spacing:-0.02em; margin:44px 0 10px}
-.notes{font-size:0.875rem; color:var(--text-2); max-width:800px}
+.notes{font-size:0.875rem; color:var(--text-2); max-width:820px}
 .notes code{background:rgb(255 255 255 / 6%); padding:1px 6px; border-radius:4px; font-size:0.8125rem}
 .notes table{font-size:0.8125rem; margin:14px 0; width:auto}
-.notes td,.notes th{padding:6px 16px 6px 0; border-bottom:1px solid var(--border); text-align:left}
+.notes td,.notes th{padding:6px 20px 6px 0; border-bottom:1px solid var(--border); text-align:left; white-space:normal}
+.notes thead th{position:static; background:none; cursor:default}
+
+footer{margin-top:48px; padding-top:26px; border-top:1px solid var(--border); font-size:0.8125rem; color:var(--text-muted)}
+footer a{color:var(--text-2)}
+footer .fbar{display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap; margin-bottom:18px}
+footer .built{display:inline-flex; align-items:center; gap:12px; text-decoration:none; color:var(--text-2);
+  transition:color .2s ease}
+footer .built:hover{color:var(--text)}
+footer .built img{height:26px; width:auto; display:block}
+footer .built span{font-size:0.6875rem; text-transform:uppercase; letter-spacing:0.2em; font-weight:600}
 @media(max-width:768px){
-  .wrap{padding:32px 16px 64px}
+  .wrap{padding:28px 16px 64px}
+  .masthead{flex-direction:column-reverse; align-items:flex-start; gap:18px}
   .controls{gap:14px}
   input[type=text]{min-width:0; width:100%}
   .field{flex:1 1 100%}
@@ -148,88 +179,107 @@ h2{font-size:1.5rem; letter-spacing:-0.02em; margin:44px 0 10px}
 </head>
 <body>
 <div class="wrap">
-<h1>SFDP 基準未達率</h1>
+
+<div class="masthead">
+  <div>
+    <h1>SFDP Criteria Miss Rate</h1>
+  </div>
+  <a class="powered" href="__DLX__" target="_blank" rel="noopener">
+    <span class="pb">Powered by</span>
+    <img src="__LOGO__" alt="DawnLabs">
+  </a>
+</div>
+
 <p class="lede">
-Solana Foundation Delegation Program 参加バリデータが、直近 X epoch のうち何割で
-プログラム基準を満たさなかったか（<a href="https://solana.org/sfdp-validators/__SAMPLE__" target="_blank" rel="noopener">solana.org
-の各バリデータページ</a>で赤いバツになっている epoch の割合）。
-epoch <strong>__START__</strong> – <strong>__END__</strong> のデータを収録。__GENERATED__ 時点。
+For each validator in the Solana Foundation Delegation Program, what share of the last X epochs did it
+<strong>fail to meet program criteria</strong> — that is, the share of epochs marked with a red X on its
+<a href="https://solana.org/sfdp-validators/__SAMPLE__" target="_blank" rel="noopener">solana.org validator page</a>.
+Covers epochs <strong>__START__</strong>–<strong>__END__</strong>. Data as of __GENERATED__.
 </p>
 
 <div class="stats" id="stats"></div>
 
 <div class="controls">
   <div class="field">
-    <label>集計期間（直近 epoch 数）</label>
+    <label>Window (last N epochs)</label>
     <div class="seg" id="winseg"></div>
   </div>
   <div class="field">
-    <label for="custom">任意の epoch 数</label>
-    <input type="number" id="custom" min="1" max="__HISTORY__" step="1" placeholder="例 20">
+    <label for="custom">Custom</label>
+    <input type="number" id="custom" min="1" max="__HISTORY__" step="1" placeholder="e.g. 20">
   </div>
   <div class="field">
-    <label for="q">名前 / pubkey 検索</label>
-    <input type="text" id="q" placeholder="Syndica, mXv18... など" autocomplete="off">
+    <label for="q">Search name / pubkey</label>
+    <input type="text" id="q" placeholder="Syndica, mXv18..." autocomplete="off">
   </div>
   <div class="field">
-    <label for="minrate">未達率の下限 (%)</label>
+    <label for="minrate">Min miss rate (%)</label>
     <input type="number" id="minrate" min="0" max="100" step="1" value="0">
   </div>
   <div class="field">
-    <label>表示条件</label>
-    <label class="check"><input type="checkbox" id="minev" checked> データが期間の半分以上ある行のみ</label>
+    <label>Filter</label>
+    <label class="check"><input type="checkbox" id="minev" checked> Only validators with data for half the window or more</label>
   </div>
   <div class="field">
     <label>&nbsp;</label>
-    <button class="chip" id="dl">CSV ダウンロード</button>
+    <button class="chip" id="dl">Download CSV</button>
   </div>
 </div>
 
 <div class="legend">
-  <span><i class="s-B"></i>Bonus（緑の星 / 基準達成）</span>
-  <span><i class="s-L"></i>Baseline（オレンジのチェック / matching 未達）</span>
-  <span><i class="s-N"></i>None（赤いバツ / 基準未達）</span>
-  <span><i class="s-H"></i>NoneHighThirdPartyStake（緑のクラッカー）</span>
-  <span><i class="s-x"></i>データなし（オンボード前 / delinquent）</span>
+  <span><i class="s-B"></i>Bonus — green star, criteria met</span>
+  <span><i class="s-L"></i>Baseline — orange check, matching unmet</span>
+  <span><i class="s-N"></i>None — red X, criteria not met</span>
+  <span><i class="s-H"></i>NoneHighThirdPartyStake — green party popper</span>
+  <span><i class="s-x"></i>No data — pre-onboarding or delinquent</span>
 </div>
 
-<div class="meta"><div id="count"></div><div>列見出しをクリックでソート</div></div>
+<div class="meta"><div id="count"></div><div>Click a column header to sort</div></div>
 
 <div class="tablewrap">
 <table>
 <thead><tr id="head"></tr></thead>
 <tbody id="body"></tbody>
 </table>
-<div class="empty" id="empty" hidden>条件に合うバリデータがありません</div>
+<div class="empty" id="empty" hidden>No validators match the current filters</div>
 </div>
 
-<h2>判定方法</h2>
+<h2>How this is measured</h2>
 <div class="notes">
 <p>
-solana.org のバリデータページに並ぶ epoch 別アイコンは、Solana Foundation の API が返す
-epoch ごとの state と 1:1 で対応する。本ページはその state をそのまま集計している。
+The per-epoch icons on a solana.org validator page map one-to-one onto the epoch <code>state</code> values
+returned by the Solana Foundation API. This page aggregates those states directly.
 </p>
 <table>
-<tr><th>state</th><th>solana.org のアイコン</th><th>本ページの扱い</th></tr>
-<tr><td><code>Bonus</code></td><td>緑の星</td><td>達成</td></tr>
-<tr><td><code>Baseline</code></td><td>オレンジのチェック</td><td>未達に数えない（matching 未達・residual 達成のため。not_bonus 率に計上）</td></tr>
-<tr><td><code>None</code></td><td>赤いバツ</td><td><strong>未達</strong></td></tr>
-<tr><td><code>NoneHighThirdPartyStake</code></td><td>緑のクラッカー</td><td>達成扱い（third party stake が十分で SFDP stake 不要）</td></tr>
+<thead><tr><th>state</th><th>Icon on solana.org</th><th>Treated here as</th></tr></thead>
+<tbody>
+<tr><td><code>Bonus</code></td><td>Green star</td><td>Met</td></tr>
+<tr><td><code>Baseline</code></td><td>Orange check</td><td>Not counted as a miss — matching unmet but residual met. Counted in the not_bonus rate.</td></tr>
+<tr><td><code>None</code></td><td>Red X</td><td><strong>Miss</strong></td></tr>
+<tr><td><code>NoneHighThirdPartyStake</code></td><td>Green party popper</td><td>Met — third-party stake is high enough that no SFDP stake is needed</td></tr>
+</tbody>
 </table>
 <p>
-<strong>未達率</strong> = <code>None</code> の epoch 数 ÷ データのある epoch 数。
-<strong>not_bonus 率</strong> = (<code>None</code> + <code>Baseline</code>) ÷ データのある epoch 数。
-epoch がマップに存在しない場合はオンボード前または delinquent とみなし、分母から除外する。
-新規参加バリデータは母数が小さく率が極端になるため、既定では「データが期間の半分以上ある行」に絞っている。
+<strong>Miss rate</strong> = <code>None</code> epochs ÷ epochs with data.
+<strong>not_bonus rate</strong> = (<code>None</code> + <code>Baseline</code>) ÷ epochs with data.
+<strong>Streak</strong> = consecutive misses ending at the most recent epoch.
+Epochs absent from the API are treated as pre-onboarding or delinquent and excluded from the denominator.
+Newly onboarded validators have a small denominator, so by default only validators with data for at
+least half the window are shown.
 </p>
 </div>
 
 <footer>
-データ出典: <a href="https://solana.org/delegation-api-docs" target="_blank" rel="noopener">Solana Foundation Delegation Program API</a>
-（<code>sfdp_participants</code> および各バリデータの epoch 別 state）。
-対象は participant state = <code>__STATES__</code>、cluster = <code>__CLUSTER__</code>。
-本ページは Solana Foundation の公式発表ではなく、公開 API を集計した非公式の資料。
-生成元: <a href="__REPO__" target="_blank" rel="noopener">sfdp-monitor</a> by DawnLabs
+<div class="fbar">
+  <a class="built" href="__DLX__" target="_blank" rel="noopener">
+    <span>Powered by</span><img src="__LOGO__" alt="DawnLabs">
+  </a>
+  <div><a href="__REPO__" target="_blank" rel="noopener">Source on GitHub</a></div>
+</div>
+Data source: <a href="https://solana.org/delegation-api-docs" target="_blank" rel="noopener">Solana Foundation Delegation Program API</a>
+(<code>sfdp_participants</code> plus each validator's per-epoch state).
+Scope: participant state = <code>__STATES__</code>, cluster = <code>__CLUSTER__</code>.
+This page is an unofficial aggregation of public API data, not a Solana Foundation publication.
 </footer>
 </div>
 
@@ -238,18 +288,18 @@ const DATA = __DATA__;
 const HISTORY = __HISTORY__;
 const END_EPOCH = __END__;
 const PRESETS = [5, 10, 30, 64, HISTORY];
-const SPARK_MAX = 40;  // 描画するマス数の上限（期間がこれより長いと直近分のみ表示）
+const SPARK_MAX = 40;  // max cells drawn; longer windows show only the most recent ones
 
 const COLS = [
-  {key:'rank',  label:'#',            cls:'rank', sortable:false},
-  {key:'name',  label:'Validator',    cls:'name'},
-  {key:'rate',  label:'未達率',        cls:'rate', desc:true},
-  {key:'unmet', label:'未達 / 評価',   cls:'num',  desc:true},
-  {key:'nb',    label:'not_bonus率',  cls:'num',  desc:true},
-  {key:'streak',label:'連続未達',      cls:'num',  desc:true},
-  {key:'stake', label:'Stake (SOL)',  cls:'num',  desc:true},
-  {key:'fdn',   label:'SFDP stake',   cls:'num',  desc:true},
-  {key:'spark', label:'期間内の推移 (新 → 旧)', cls:'spark', sortable:false},
+  {key:'rank',  label:'#',               cls:'rank', sortable:false},
+  {key:'name',  label:'Validator',       cls:'name'},
+  {key:'rate',  label:'Miss rate',       cls:'rate', desc:true},
+  {key:'unmet', label:'Missed / rated',  cls:'num',  desc:true},
+  {key:'nb',    label:'not_bonus rate',  cls:'num',  desc:true},
+  {key:'streak',label:'Streak',          cls:'num',  desc:true},
+  {key:'stake', label:'Stake (SOL)',     cls:'num',  desc:true},
+  {key:'fdn',   label:'SFDP stake',      cls:'num',  desc:true},
+  {key:'spark', label:'Trend (newest \\u2192 oldest)', cls:'spark', sortable:false},
 ];
 
 let win = 10, sortKey = 'rate', sortDir = -1;
@@ -259,7 +309,7 @@ const fmt = n => n.toLocaleString('en-US');
 
 function compute(w) {
   return DATA.map(v => {
-    // states は新しい epoch が先頭
+    // states: newest epoch first
     const s = v.s.slice(0, w);
     let bonus = 0, baseline = 0, none = 0, party = 0, missing = 0, streak = 0, streakOpen = true;
     for (const c of s) {
@@ -340,14 +390,14 @@ function render() {
   const totalEval = poolRows.reduce((s, r) => s + r.evaluated, 0);
 
   el('stats').innerHTML = [
-    [`直近 ${win}`, 'EPOCH'],
-    [fmt(pool), '対象バリデータ'],
-    [fmt(flagged), '未達 1 回以上'],
-    [fmt(perfect), '全 epoch 達成'],
-    [(totalEval ? 100 * totalNone / totalEval : 0).toFixed(2) + '%', '全体の未達率'],
+    [`Last ${win}`, 'epoch window'],
+    [fmt(pool), 'validators'],
+    [fmt(flagged), 'missed \\u2265 1 epoch'],
+    [fmt(perfect), 'clean record'],
+    [(totalEval ? 100 * totalNone / totalEval : 0).toFixed(2) + '%', 'aggregate miss rate'],
   ].map(([v, k]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join('');
 
-  el('count').textContent = `${fmt(out.length)} 件を表示 / epoch ${END_EPOCH - win + 1}–${END_EPOCH}`;
+  el('count').textContent = `${fmt(out.length)} shown \\u00b7 epochs ${END_EPOCH - win + 1}\\u2013${END_EPOCH}`;
   el('empty').hidden = out.length > 0;
 
   el('body').innerHTML = out.map((r, i) => `
@@ -355,14 +405,14 @@ function render() {
       <td class="rank">${i + 1}</td>
       <td class="name">
         <a href="https://solana.org/sfdp-validators/${r.pk}" target="_blank" rel="noopener">${esc(r.name)}</a>
-        <div class="pk">${r.pk.slice(0, 8)}…${r.pk.slice(-6)}</div>
+        <div class="pk">${r.pk.slice(0, 8)}\\u2026${r.pk.slice(-6)}</div>
       </td>
       <td class="rate ${rateClass(r.rate)}">${r.rate.toFixed(1)}%</td>
       <td class="num">${r.none} / ${r.evaluated}</td>
       <td class="num">${r.nb.toFixed(1)}%</td>
-      <td class="num">${r.streak || '–'}</td>
+      <td class="num">${r.streak || '\\u2013'}</td>
       <td class="num">${fmt(Math.round(r.stake))}</td>
-      <td class="num">${r.fdn ? fmt(Math.round(r.fdn)) : '–'}</td>
+      <td class="num">${r.fdn ? fmt(Math.round(r.fdn)) : '\\u2013'}</td>
       <td><div class="spark">${[...r.s.slice(0, SPARK_MAX)].map((c, idx) =>
         `<i class="s-${c === '-' ? 'x' : c}" title="epoch ${END_EPOCH - idx}"></i>`).join('')}</div></td>
     </tr>`).join('');
@@ -382,8 +432,8 @@ function renderSeg() {
 
 function downloadCsv() {
   const {out} = filtered();
-  const head = ['rank','name','pubkey','participant_state','unmet_rate_pct','unmet','evaluated','missing',
-    'not_bonus_rate_pct','consecutive_unmet','bonus','baseline','none','none_high_third_party_stake',
+  const head = ['rank','name','pubkey','participant_state','miss_rate_pct','missed','rated','no_data',
+    'not_bonus_rate_pct','current_streak','bonus','baseline','none','none_high_third_party_stake',
     'activated_stake_sol','sfdp_stake_sol','window_start_epoch','window_end_epoch'];
   const start = END_EPOCH - win + 1;
   const lines = [head.join(',')].concat(out.map((r, i) => [
@@ -394,7 +444,7 @@ function downloadCsv() {
   const blob = new Blob(['\\ufeff' + lines.join('\\n')], {type:'text/csv;charset=utf-8'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = `sfdp_unmet_e${start}-${END_EPOCH}.csv`;
+  a.download = `sfdp_miss_rate_e${start}-${END_EPOCH}.csv`;
   a.click();
   URL.revokeObjectURL(a.href);
 }
@@ -459,6 +509,10 @@ def collect(cluster: str, states: set[str], history: int, concurrency: int):
     return rows, end
 
 
+def data_uri(path: Path) -> str:
+    return "data:image/png;base64," + base64.b64encode(path.read_bytes()).decode()
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--history", type=int, default=128, help="埋め込む epoch 数 (default: 128)")
@@ -467,6 +521,7 @@ def main() -> int:
     ap.add_argument("--concurrency", type=int, default=4)
     ap.add_argument("--rps", type=float, default=4.0)
     ap.add_argument("--out", default="docs/index.html")
+    ap.add_argument("--logo", default="assets/logo-dawnlabs.png", help="data URI で埋め込む DawnLabs ロゴ")
     ap.add_argument("--repo", default="https://github.com/nagumo-dawnlabs/sfdp-monitor")
     args = ap.parse_args()
 
@@ -486,6 +541,8 @@ def main() -> int:
         ("__CLUSTER__", args.cluster),
         ("__GENERATED__", time.strftime("%Y-%m-%d %H:%M %Z")),
         ("__REPO__", args.repo),
+        ("__DLX__", DAWNLABS_X),
+        ("__LOGO__", data_uri(Path(args.logo))),
         # データは最後に差し込む（バリデータ名がトークン文字列を含んでいても壊れないように）
         ("__DATA__", json.dumps(rows, ensure_ascii=False, separators=(",", ":"))),
     ]:
@@ -494,7 +551,11 @@ def main() -> int:
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html, encoding="utf-8")
-    print(f"wrote {out} ({out.stat().st_size / 1024:.0f} KB, {len(rows)} validators, epoch {end - args.history + 1}-{end})", file=sys.stderr)
+    print(
+        f"wrote {out} ({out.stat().st_size / 1024:.0f} KB, {len(rows)} validators, "
+        f"epoch {end - args.history + 1}-{end})",
+        file=sys.stderr,
+    )
     return 0
 
 

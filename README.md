@@ -44,8 +44,9 @@ python3 sfdp_status.py --epochs 64 --states Approved,TestnetOnboarded
 
 https://nagumo-dawnlabs.github.io/sfdp-monitor/
 
-外部共有用の単一 HTML（依存ゼロ・約110KB）。直近 128 epoch 分の state を埋め込んでいるので、
-集計期間の切り替え・列ソート・検索・未達率フィルタ・CSV書き出しはすべてブラウザ内で完結する。
+外部共有用の単一 HTML（依存ゼロ・約205KB、ロゴも data URI で内包）。**UI は英語**。
+直近 128 epoch 分の state を埋め込んでいるので、集計期間の切り替え・列ソート・検索・
+未達率フィルタ・CSV書き出しはすべてブラウザ内で完結する。
 
 ```bash
 python3 build_site.py                 # docs/index.html を生成
@@ -53,8 +54,9 @@ python3 build_site.py --history 200   # 埋め込む epoch 数を変える
 ```
 
 - 集計期間プリセット: 5 / 10 / 30 / 64 / 128 epoch（任意の数値も指定可）
-- ソート可能列: 未達率 / 未達数 / not_bonus率 / 連続未達 / stake / SFDP stake / 名前
+- ソート可能列: Miss rate / Missed-rated / not_bonus rate / Streak / Stake / SFDP stake / Validator
 - 各行から solana.org の該当バリデータページにリンク（出典を辿れる）
+- ヘッダーとフッターに "Powered by DawnLabs"（ロゴは `assets/logo-dawnlabs.png`、リンク先 https://x.com/dawnlabs00 ）
 - GitHub Pages は `main` ブランチの `/docs` を公開する設定
 
 更新は `python3 build_site.py && git commit && git push` のみ。
