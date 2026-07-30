@@ -62,15 +62,20 @@ const DL = (() => {
   /* cols の各要素:
    *   key       ソートキー兼識別子
    *   label     見出し文字列
+   *   title     見出しの tooltip（略した見出しの補足）
    *   cls       td に付けるクラス（見た目を持つので th とは共有しない）
    *   right     true なら見出しも右寄せ（数値列向け）
    *   desc      true なら初回クリックで降順（数値列向け）
    *   sortable  false で固定列（# など）
    *   value(r)  ソートに使う値。既定は r[key]
    *   cell(r,i) セルの innerHTML。i は表示順（0 起点）
+   *
+   * pageSize / more: 初期表示を先頭 pageSize 行に切り、残りは more ボタンで開く。
+   * 数百行を一度に描くと縦に延々と続いて読めなくなるため、既定は「上位だけ」。
+   * CSV とソートは常に全行が対象（sorted() は切らない）。
    */
   class SortableTable {
-    constructor({ head, body, empty, count, cols, sortKey, rows }) {
+    constructor({ head, body, empty, count, cols, sortKey, rows, pageSize, more }) {
       this.head = el(head);
       this.body = el(body);
       this.empty = empty ? el(empty) : null;
@@ -80,6 +85,16 @@ const DL = (() => {
       this.sortDir = this._colOf(sortKey)?.desc ? -1 : 1;
       this.rows = rows; // () => 表示対象の行配列を返す
       this.countLabel = null; // () => 件数欄に出す文字列
+      this.pageSize = pageSize || 0; // 0 なら制限なし
+      this.limit = this.pageSize;
+      this.more = more ? el(more) : null;
+      if (this.more) {
+        // 一度「全件」を選んだらそのまま。ソートやフィルタのたびに畳み直さない
+        this.more.onclick = () => {
+          this.limit = 0;
+          this.render();
+        };
+      }
       this._renderHead();
     }
 
@@ -92,12 +107,13 @@ const DL = (() => {
         .map((c) => {
           const active = this.sortKey === c.key;
           const cls = c.right ? ' class="th-r"' : '';
-          if (c.sortable === false) return `<th${cls}><span class="static">${c.label}</span></th>`;
+          const tip = c.title ? ` title="${esc(c.title)}"` : '';
+          if (c.sortable === false) return `<th${cls}><span class="static"${tip}>${c.label}</span></th>`;
           const arrow = active ? (this.sortDir === -1 ? '↓' : '↑') : '↕';
           const sort = active ? ` aria-sort="${this.sortDir === -1 ? 'descending' : 'ascending'}"` : '';
           return (
             `<th${cls}${sort}>` +
-            `<button type="button" class="sort" data-key="${c.key}">` +
+            `<button type="button" class="sort" data-key="${c.key}"${tip}>` +
             `${c.label}<span class="arrow" aria-hidden="true">${arrow}</span></button></th>`
           );
         })
@@ -138,11 +154,16 @@ const DL = (() => {
 
     render() {
       const out = this.sorted();
-      this.body.innerHTML = out
+      const shown = this.limit ? out.slice(0, this.limit) : out;
+      this.body.innerHTML = shown
         .map((r, i) => `<tr>${this.cols.map((c) => `<td class="${c.cls || ''}">${c.cell(r, i)}</td>`).join('')}</tr>`)
         .join('');
       if (this.empty) this.empty.hidden = out.length > 0;
-      if (this.count && this.countLabel) this.count.textContent = this.countLabel(out);
+      if (this.more) {
+        this.more.hidden = shown.length >= out.length;
+        this.more.textContent = `Show all ${fmt(out.length)}`;
+      }
+      if (this.count && this.countLabel) this.count.textContent = this.countLabel(shown, out);
       return out;
     }
   }

@@ -13,6 +13,7 @@
   // 埋め込み履歴が短い場合はプリセットが重複するので畳む
   const PRESETS = [...new Set([30, 64, HISTORY].filter((v) => v <= HISTORY))].sort((a, b) => a - b);
   const SPARK_MAX = 40; // 描画するセルの上限。これより長い窓は直近分だけ見せる
+  const PAGE_SIZE = 50; // 初期表示の行数。残りは「Show all」で開く（0% の行が延々と続くのを防ぐ）
   const LOGO_DIR = '../assets/logos/'; // ロゴは同居配信（外部リクエストなし）
 
   let win = Math.min(64, HISTORY);
@@ -115,19 +116,45 @@
     },
     {
       key: 'unmet',
-      label: 'Missed / rated',
+      label: 'Missed',
+      title: 'Missed epochs / epochs with data',
       cls: 'num',
       right: true,
       desc: true,
       value: (r) => r.none,
       cell: (r) => `${r.none} / ${r.evaluated}`,
     },
-    { key: 'nb', label: 'not_bonus rate', cls: 'num', right: true, desc: true, cell: (r) => `${r.nb.toFixed(1)}%` },
-    { key: 'streak', label: 'Streak', cls: 'num', right: true, desc: true, cell: (r) => r.streak || '–' },
-    { key: 'stake', label: 'Stake (SOL)', cls: 'num', right: true, desc: true, cell: (r) => fmt(Math.round(r.stake)) },
+    {
+      key: 'nb',
+      label: 'Not bonus',
+      title: 'None + Baseline as a share of epochs with data',
+      cls: 'num',
+      right: true,
+      desc: true,
+      cell: (r) => `${r.nb.toFixed(1)}%`,
+    },
+    {
+      key: 'streak',
+      label: 'Streak',
+      title: 'Consecutive misses ending at the most recent epoch',
+      cls: 'num',
+      right: true,
+      desc: true,
+      cell: (r) => r.streak || '–',
+    },
+    {
+      key: 'stake',
+      label: 'Stake',
+      title: 'Activated stake (SOL)',
+      cls: 'num',
+      right: true,
+      desc: true,
+      cell: (r) => fmt(Math.round(r.stake)),
+    },
     {
       key: 'fdn',
-      label: 'SFDP stake',
+      label: 'SFDP',
+      title: 'Stake delegated by the Solana Foundation (SOL)',
       cls: 'num',
       right: true,
       desc: true,
@@ -135,7 +162,8 @@
     },
     {
       key: 'spark',
-      label: 'Trend (newest → oldest)',
+      label: 'Trend',
+      title: 'Per-epoch state, newest on the left',
       sortable: false,
       cell: (r) =>
         `<div class="spark">${[...r.s.slice(0, SPARK_MAX)]
@@ -149,11 +177,15 @@
     body: 'body',
     empty: 'empty',
     count: 'count',
+    more: 'more',
+    pageSize: PAGE_SIZE,
     cols: COLS,
     sortKey: 'rate',
     rows: visible,
   });
-  table.countLabel = (out) => `${fmt(out.length)} shown · epochs ${END_EPOCH - win + 1}–${END_EPOCH}`;
+  table.countLabel = (shown, all) =>
+    `${shown.length < all.length ? `${fmt(shown.length)} of ${fmt(all.length)}` : fmt(all.length)}` +
+    ` · epochs ${END_EPOCH - win + 1}–${END_EPOCH}`;
 
   /* ---- 描画 -------------------------------------------------------------- */
 
@@ -164,10 +196,9 @@
     const totalEval = p.reduce((s, r) => s + r.evaluated, 0);
 
     DL.renderStats('stats', [
-      [`Last ${win}`, 'epoch window'],
       [fmt(p.length), 'validators'],
-      [fmt(flagged), 'missed ≥ 1 epoch'],
-      [fmt(p.length - flagged), 'clean record'],
+      [fmt(flagged), 'missed ≥ 1'],
+      [fmt(p.length - flagged), 'clean'],
       [(totalEval ? (100 * totalNone) / totalEval : 0).toFixed(2) + '%', 'aggregate miss rate'],
     ]);
     table.render();

@@ -1,47 +1,46 @@
 <p class="lede">
-For each validator in the Solana Foundation Delegation Program, what share of the last X epochs did it
-<strong>fail to meet program criteria</strong> — that is, the share of epochs marked with a red X on its
-<a href="https://solana.org/sfdp-validators/{{ sample_pubkey }}" target="_blank" rel="noopener">solana.org validator page</a>.
+Share of the last N epochs each SFDP validator <strong>failed to meet program criteria</strong> — the red X on its
+<a href="https://solana.org/sfdp-validators/{{ sample_pubkey }}" target="_blank" rel="noopener">solana.org page</a>.
 </p>
 
 <div class="stats" id="stats"></div>
 
 <div class="controls">
   <div class="field">
-    <label>Window (last N epochs)</label>
+    <label>Window</label>
     <div class="seg" id="winseg"></div>
   </div>
   <div class="field">
     <label for="custom">Custom</label>
-    <input type="number" id="custom" min="1" max="{{ history }}" step="1" placeholder="e.g. 20">
+    <input type="number" id="custom" min="1" max="{{ history }}" step="1" placeholder="20">
   </div>
   <div class="field">
-    <label for="q">Search name / pubkey</label>
+    <label for="q">Search</label>
     <input type="text" id="q" placeholder="Syndica, mXv18..." autocomplete="off">
   </div>
   <div class="field">
-    <label for="minrate">Min miss rate (%)</label>
+    <label for="minrate">Min rate %</label>
     <input type="number" id="minrate" min="0" max="100" step="1" value="0">
   </div>
-  <div class="field">
-    <label>Filter</label>
-    <label class="check"><input type="checkbox" id="minev" checked> Only validators with data for half the window or more</label>
+  <div class="field spacer">
+    <label class="check" title="Hide validators onboarded mid-window, whose denominator is too small to read">
+      <input type="checkbox" id="minev" checked> Half-window data
+    </label>
   </div>
   <div class="field">
-    <label>&nbsp;</label>
     <button type="button" class="chip" id="dl">Download CSV</button>
   </div>
 </div>
 
-<div class="legend">
-  <span><i class="s-B"></i>Bonus — green star, criteria met</span>
-  <span><i class="s-L"></i>Baseline — orange check, matching unmet</span>
-  <span><i class="s-N"></i>None — red X, criteria not met</span>
-  <span><i class="s-H"></i>NoneHighThirdPartyStake — green party popper</span>
-  <span><i class="s-x"></i>No data — pre-onboarding or delinquent</span>
+<div class="meta">
+  <div id="count"></div>
+  <div class="legend">
+    <span title="Bonus / NoneHighThirdPartyStake — criteria met"><i class="s-B"></i>Met</span>
+    <span title="Baseline — matching unmet, residual met"><i class="s-L"></i>Baseline</span>
+    <span title="None — criteria not met"><i class="s-N"></i>Miss</span>
+    <span title="No data — pre-onboarding or delinquent"><i class="s-x"></i>No data</span>
+  </div>
 </div>
-
-<div class="meta"><div id="count"></div><div>Click a column header to sort</div></div>
 
 <div class="tablewrap">
 <table>
@@ -50,9 +49,10 @@ For each validator in the Solana Foundation Delegation Program, what share of th
 </table>
 <div class="empty" id="empty" hidden>No validators match the current filters</div>
 </div>
+<button type="button" class="chip more" id="more" hidden></button>
 
-<h2>How this is measured</h2>
-<div class="notes">
+<details class="notes">
+<summary>How this is measured</summary>
 <p>
 The per-epoch icons on a solana.org validator page map one-to-one onto the epoch <code>state</code> values
 returned by the Solana Foundation API. This page aggregates those states directly.
@@ -68,7 +68,7 @@ returned by the Solana Foundation API. This page aggregates those states directl
 </table>
 <p>
 <strong>Miss rate</strong> = <code>None</code> epochs ÷ epochs with data.
-<strong>not_bonus rate</strong> = (<code>None</code> + <code>Baseline</code>) ÷ epochs with data.
+<strong>Not bonus</strong> = (<code>None</code> + <code>Baseline</code>) ÷ epochs with data.
 <strong>Streak</strong> = consecutive misses ending at the most recent epoch; epochs with no data do not break a streak.
 Miss rates of 20% or higher are shown in <span class="r-hi">red</span>, 15% or higher in
 <span class="r-orange">orange</span>, 10% or higher in <span class="r-mid">yellow</span>.
@@ -81,4 +81,4 @@ The full snapshot behind this page is published as
 <a href="{{ asset_prefix }}{{ data_file }}">{{ data_file }}</a> and is versioned in the repository, so any
 epoch's numbers can be reproduced or diffed later.
 </p>
-</div>
+</details>

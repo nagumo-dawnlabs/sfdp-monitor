@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-<!-- build: b007b591be3e5f1cbcd9bc34d93799416e864bddcbc4e72090916e70a5c04ce7 -->
+<!-- build: bb2367779e0530126eb01f2c4955fedfee7cda2d548aa82a4ea2c1ea778fd004 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DawnLabs Dashboards — Powered by DawnLabs</title>
 <meta name="description" content="Public dashboards built by DawnLabs on top of public Solana data.">
 <meta property="og:title" content="DawnLabs Dashboards">
 <meta property="og:description" content="Public dashboards built by DawnLabs on top of public Solana data.">
-<link rel="stylesheet" href="assets/theme.css?v=f1977b4b">
+<link rel="stylesheet" href="assets/theme.css?v=c8b8dcb9">
 </head>
 <body>
 <div class="wrap">
@@ -26,9 +26,7 @@
 
 
 <p class="lede">
-Public dashboards built by DawnLabs on top of public Solana data. Every page is plain static HTML with
-no external dependencies, rebuilt daily, and versioned in the repository together with the raw snapshot
-it was generated from — so any past figure can be reproduced or diffed.
+Public dashboards built by DawnLabs on top of public Solana data — static, no tracking, rebuilt daily.
 </p>
 
 <div class="cards"><a class="card" href="criteria-miss/">
@@ -42,8 +40,8 @@ it was generated from — so any past figure can be reproduced or diffed.
 </a>
 </div>
 
-<h2>How these are built</h2>
-<div class="notes">
+<details class="notes">
+<summary>How these are built</summary>
 <p>
 Each dashboard fetches from a public API, writes a machine-readable snapshot to
 <code>docs/data/&lt;name&gt;.json</code>, and renders a page from it. If a day's snapshot is byte-identical to the
@@ -55,7 +53,7 @@ All aggregation happens in the browser from the embedded snapshot, so the window
 CSV export work with no server and no tracking. Source and build scripts:
 <a href="https://github.com/nagumo-dawnlabs/sfdp-monitor" target="_blank" rel="noopener">sfdp-monitor</a>.
 </p>
-</div>
+</details>
 
 
 <footer>
@@ -65,9 +63,9 @@ CSV export work with no server and no tracking. Source and build scripts:
   </a>
   <div><a href="https://github.com/nagumo-dawnlabs/sfdp-monitor" target="_blank" rel="noopener">Source on GitHub</a></div>
 </div>
-These pages are unofficial aggregations of public API data, published by
-<a href="https://x.com/dawnlabs00" target="_blank" rel="noopener">DawnLabs</a>. They are not affiliated with, or
-published by, the Solana Foundation. Last built 2026-07-30 03:11 UTC.
+Unofficial aggregations of public API data, published by
+<a href="https://x.com/dawnlabs00" target="_blank" rel="noopener">DawnLabs</a> · not affiliated with the Solana
+Foundation · last built 2026-07-30 15:49 UTC.
 
 </footer>
 </div>

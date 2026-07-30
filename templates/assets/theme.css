@@ -83,6 +83,8 @@ h1{font-size:clamp(1.75rem,5vw,2.5rem); line-height:1.1; letter-spacing:-0.03em;
 }
 .field{display:flex; flex-direction:column; gap:7px}
 .field > label{font-size:0.6875rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--text-muted)}
+/* 絞り込みの本体から離して、トグルと書き出しを右端に寄せる */
+.controls .spacer{margin-left:auto}
 .seg{display:flex; gap:6px; flex-wrap:wrap}
 button.chip,.seg button{
   background:rgb(255 115 0 / 6%); color:var(--text); border:1px solid rgb(255 115 0 / 12%);
@@ -157,12 +159,15 @@ td.name{min-width:230px}
 .spark i{width:7px; height:16px; border-radius:2px; display:block; flex:0 0 auto}
 .s-B{background:var(--ok)} .s-N{background:var(--bad)} .s-L{background:var(--warn)}
 .s-H{background:var(--party); opacity:.55} .s-x{background:rgb(255 255 255 / 8%)}
-.legend{display:flex; flex-wrap:wrap; gap:18px; margin:14px 0 26px; font-size:0.8125rem; color:var(--text-2)}
-.legend span{display:flex; align-items:center; gap:7px}
-.legend i{width:11px; height:11px; border-radius:3px; display:inline-block}
+/* 凡例は語だけにして、正式な state 名は title 属性と「How this is measured」に置く */
+.legend{display:flex; flex-wrap:wrap; gap:14px; color:var(--text-2)}
+.legend span{display:flex; align-items:center; gap:6px; cursor:help}
+.legend i{width:10px; height:10px; border-radius:3px; display:inline-block}
 .meta{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin:0 0 12px;
   font-size:0.8125rem; color:var(--text-2)}
 .empty{padding:56px 24px; text-align:center; color:var(--text-muted)}
+/* 表の続きを開くボタン。既定では上位だけ出して縦の長さを抑える */
+button.chip.more{display:block; width:100%; margin-top:10px; padding:11px; border-radius:12px}
 h2{font-size:1.5rem; letter-spacing:-0.02em; margin:44px 0 10px}
 .notes{font-size:0.875rem; color:var(--text-2); max-width:820px}
 .notes a{color:var(--accent); text-decoration:none}
@@ -171,6 +176,20 @@ h2{font-size:1.5rem; letter-spacing:-0.02em; margin:44px 0 10px}
 .notes table{font-size:0.8125rem; margin:14px 0; width:auto}
 .notes td,.notes th{padding:6px 20px 6px 0; border-bottom:1px solid var(--border); text-align:left; white-space:normal}
 .notes thead th{position:static; background:none; padding:6px 20px 6px 0}
+
+/* 補足説明は既定で畳んでおく。数字を見に来た人の視界から本文を外し、
+   読みたい人だけが開く。見出し行はページ幅いっぱい、中身は読みやすい幅で止める */
+details.notes{max-width:none; margin-top:36px; border-top:1px solid var(--border); padding-top:6px}
+details.notes > *:not(summary){max-width:820px}
+details.notes > summary{
+  list-style:none; cursor:pointer; padding:12px 0; font-size:0.9375rem; font-weight:600; color:var(--text-2);
+  display:flex; align-items:center; gap:8px; transition:color .2s ease;
+}
+details.notes > summary::-webkit-details-marker{display:none}
+details.notes > summary::before{content:'+'; color:var(--accent); font-weight:700; width:12px}
+details.notes[open] > summary::before{content:'–'}
+details.notes > summary:hover{color:var(--text)}
+details.notes > summary:focus-visible{outline:2px solid var(--accent); outline-offset:4px; border-radius:4px}
 
 /* ハブ: ダッシュボード一覧のカード */
 .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:18px; margin:8px 0 32px}

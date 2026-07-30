@@ -45,7 +45,7 @@ templates/                  HTML / CSS / JS の実ファイル
   hub.html                    トップのダッシュボード一覧
   criteria_miss.html          本文
   assets/theme.css            全ページ共通のデザイントークンとコンポーネント
-  assets/table.js             ソート / フィルタ / CSV 書き出しの共通実装
+  assets/table.js             ソート / フィルタ / 段階表示 / CSV 書き出しの共通実装
   assets/criteria_miss.js     このページ固有の集計と行描画
 
 docs/                       生成物（GitHub Pages が main の /docs を公開）
