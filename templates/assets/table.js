@@ -24,13 +24,43 @@ const DL = (() => {
     return 'r-lo';
   }
 
-  /* 「Data as of」の横に相対時間を出す。JS が無効でも絶対時刻は HTML 側に出ている */
+  /* 「2026-07-31 00:13 GMT+9」の形。ロケールで日付の並びが変わらないよう en-CA に固定する */
+  function localStamp(d) {
+    try {
+      const parts = Object.fromEntries(
+        new Intl.DateTimeFormat('en-CA', {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          hourCycle: 'h23',
+          timeZoneName: 'short',
+        })
+          .formatToParts(d)
+          .map((p) => [p.type, p.value]),
+      );
+      return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute} ${parts.timeZoneName}`;
+    } catch {
+      return null;
+    }
+  }
+
+  /* 更新時刻の表示。HTML には UTC の絶対時刻が入っているので JS が無効でも読める。
+   * JS があるときは閲覧者のタイムゾーンに直したうえで相対時間を添える。UTC のまま出すと
+   * 日付が 1 日ずれて見え、「updated 4 minutes ago」と矛盾しているように読めるため。
+   * 元の UTC 表記は title に残す。 */
   function renderFreshness(ageId, timeSelector) {
     const t = document.querySelector(timeSelector);
     const age = el(ageId);
     if (!t || !age) return;
     const then = new Date(t.getAttribute('datetime'));
     if (isNaN(then)) return;
+    const local = localStamp(then);
+    if (local) {
+      t.title = t.textContent;
+      t.textContent = local;
+    }
     const mins = Math.max(0, Math.round((Date.now() - then) / 60000));
     const days = Math.floor(mins / 1440);
     const hours = Math.floor(mins / 60);
@@ -40,7 +70,7 @@ const DL = (() => {
     else if (hours < 24) rel = `${hours} hour${hours === 1 ? '' : 's'} ago`;
     else rel = `${days} day${days === 1 ? '' : 's'} ago`;
     // 前後に空白を入れて、コピーや読み上げでも文として成立させる
-    age.textContent = ` · updated ${rel}`;
+    age.textContent = ` · ${rel}`;
   }
 
   /* ロゴがあれば画像、無ければ名前の頭文字。地色は seed（pubkey）から決めるので

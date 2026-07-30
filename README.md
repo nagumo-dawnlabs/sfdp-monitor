@@ -131,9 +131,10 @@ changed, commits and pushes `docs/` (Pages redeploys on its own).
   substituted in) plus the data JSON is written into `<!-- build: … -->`, and `--skip-unchanged` skips
   writing when it matches. Editing a template or the CSS changes the hash, so pages still update even
   when the data did not.
-- As a result the **Data as of badge** at the top of a page means "when the data last changed". The
-  absolute UTC time is in the HTML (readable with JS disabled) and JS fills in the relative time
-  ("updated 3 hours ago") from `<time datetime>`.
+- As a result the **Updated badge** at the top of a page means "when the data last changed". The
+  absolute UTC time is in the HTML (readable with JS disabled); JS rewrites it into the viewer's own
+  timezone — keeping the UTC value in `title` — and appends the relative time ("3 hours ago") from
+  `<time datetime>`.
 - **The build aborts if more than 2% of fetches fail** (`--max-missing-pct`). This keeps a page where
   some validators were dropped by a 429 from being published and making the count move for no visible
   reason.
