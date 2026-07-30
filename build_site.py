@@ -13,7 +13,9 @@ from __future__ import annotations
 
 import argparse
 import base64
+import hashlib
 import json
+import re
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -37,6 +39,7 @@ MISSING = "-"
 HTML_TEMPLATE = """<!doctype html>
 <html lang="en">
 <head>
+<!-- data-hash: __HASH__ -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SFDP Criteria Miss Rate — Powered by DawnLabs</title>
@@ -514,6 +517,17 @@ def data_uri(path: Path) -> str:
     return "data:image/png;base64," + base64.b64encode(path.read_bytes()).decode()
 
 
+HASH_RE = re.compile(r"<!-- data-hash: ([0-9a-f]{16,}) -->")
+
+
+def existing_hash(path: Path) -> str | None:
+    """既存 HTML に埋め込まれている data-hash を取り出す。"""
+    if not path.exists():
+        return None
+    m = HASH_RE.search(path.read_text(encoding="utf-8"))
+    return m.group(1) if m else None
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--history", type=int, default=128, help="埋め込む epoch 数 (default: 128)")
@@ -524,6 +538,11 @@ def main() -> int:
     ap.add_argument("--out", default="docs/index.html")
     ap.add_argument("--logo", default="assets/logo-dawnlabs.png", help="data URI で埋め込む DawnLabs ロゴ")
     ap.add_argument("--repo", default="https://github.com/nagumo-dawnlabs/sfdp-monitor")
+    ap.add_argument(
+        "--skip-unchanged",
+        action="store_true",
+        help="データに差分がなければ書き込まない（生成時刻だけの差分で commit しないため。CI 用）",
+    )
     args = ap.parse_args()
 
     S.LIMITER = S.RateLimiter(args.rps)
@@ -532,8 +551,20 @@ def main() -> int:
     rows, end = collect(args.cluster, states, args.history, args.concurrency)
     rows.sort(key=lambda r: (r["n"] or "\uffff").lower())
 
+    payload = json.dumps(rows, ensure_ascii=False, separators=(",", ":"))
+    # 生成時刻を除いた「中身」の指紋。HTML 内にコメントとして埋め込み、次回の差分判定に使う
+    fingerprint = hashlib.sha256(
+        "|".join([payload, str(args.history), str(end), args.states, args.cluster]).encode()
+    ).hexdigest()
+
+    out = Path(args.out)
+    if args.skip_unchanged and existing_hash(out) == fingerprint:
+        print(f"unchanged: {out} は最新（data-hash {fingerprint[:12]}）", file=sys.stderr)
+        return 0
+
     html = HTML_TEMPLATE
     for token, value in [
+        ("__HASH__", fingerprint),
         ("__HISTORY__", str(args.history)),
         ("__END__", str(end)),
         ("__START__", str(end - args.history + 1)),
@@ -545,11 +576,10 @@ def main() -> int:
         ("__DLX__", DAWNLABS_X),
         ("__LOGO__", data_uri(Path(args.logo))),
         # データは最後に差し込む（バリデータ名がトークン文字列を含んでいても壊れないように）
-        ("__DATA__", json.dumps(rows, ensure_ascii=False, separators=(",", ":"))),
+        ("__DATA__", payload),
     ]:
         html = html.replace(token, value)
 
-    out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html, encoding="utf-8")
     print(

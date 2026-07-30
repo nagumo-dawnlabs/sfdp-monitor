@@ -1,0 +1,49 @@
+name: Update dashboard
+
+# SFDP のデータは epoch 単位（約2〜2.5日）でしか変わらず、さらに API 反映が
+# 2 epoch ほど遅れるため 1 日 1 回で十分。データに差分がない日は commit しない。
+on:
+  schedule:
+    - cron: "0 3 * * *"   # 毎日 03:00 UTC = 12:00 JST
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "データに差分がなくても再生成してコミットする"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-dashboard
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build dashboard
+        # GitHub Runner の IP は共有なので api.solana.org の 429 を避けて rps を落とす
+        run: |
+          python3 build_site.py --rps 2 --concurrency 3 \
+            ${{ inputs.force && ' ' || '--skip-unchanged' }}
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet -- docs/index.html; then
+            echo "no change — skipping commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/index.html
+          git commit -m "update dashboard data ($(date -u +%Y-%m-%d))"
+          git push

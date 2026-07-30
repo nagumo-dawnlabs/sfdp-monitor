@@ -59,7 +59,19 @@ python3 build_site.py --history 200   # 埋め込む epoch 数を変える
 - ヘッダーとフッターに "Powered by DawnLabs"（ロゴは `assets/logo-dawnlabs.png`、リンク先 https://x.com/dawnlabs00 ）
 - GitHub Pages は `main` ブランチの `/docs` を公開する設定
 
-更新は `python3 build_site.py && git commit && git push` のみ。
+### 自動更新
+
+`.github/workflows/update.yml` が **毎日 03:00 UTC（12:00 JST）** に `build_site.py` を実行し、
+データに差分があれば `docs/index.html` をコミット・push する（Pages が自動で再デプロイ）。
+
+- SFDP のデータは epoch 単位（約2〜2.5日）でしか変わらず、さらに API 反映が約2 epoch 遅れるため 1 日 1 回で十分
+- **差分がない日はコミットしない**。HTML の `<!-- data-hash: … -->` に生成内容の SHA-256 を埋め込んでおり、
+  `--skip-unchanged` はこのハッシュが一致したら書き込みをスキップする（生成時刻だけの空コミットを防ぐ）
+- 結果として、ページの `Data as of` は「最後にデータが変わった時刻」を意味する
+- Runner の IP は共有なので 429 を避けて `--rps 2 --concurrency 3` で実行（所要 5〜10 分）
+- 手動実行は Actions タブの **Run workflow**（`force` を on にすると差分がなくても再生成）
+
+手動でローカルから更新する場合は `python3 build_site.py && git commit -am "update data" && git push`。
 
 ## 判定ロジック
 
