@@ -71,6 +71,8 @@
       stake: v.k,
       fdn: v.f,
       ibrl: v.i,
+      client: v.c || '',
+      version: v.cv || '',
       slot: v.b,
       vote: v.v,
       nonvote: v.nv,
@@ -97,20 +99,37 @@
     const q = el('q').value.trim().toLowerCase();
     const max = parseFloat(el('maxscore').value);
     const cap = isNaN(max) ? Infinity : max;
+    const client = el('client').value;
     return pool().filter(
-      (r) => r.ibrl <= cap && (!q || r.name.toLowerCase().includes(q) || r.pk.toLowerCase().includes(q)),
+      (r) =>
+        r.ibrl <= cap &&
+        (!client || r.client === client) &&
+        (!q || r.name.toLowerCase().includes(q) || r.pk.toLowerCase().includes(q)),
     );
+  }
+
+  /* クライアントの絞り込み。多い順に並べ、件数を添えて分布そのものも読めるようにする */
+  function fillClientFilter() {
+    const counts = new Map();
+    for (const r of ROWS) counts.set(r.client, (counts.get(r.client) || 0) + 1);
+    const opts = [...counts.entries()]
+      .filter(([name]) => name)
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .map(([name, n]) => `<option value="${esc(name)}">${esc(name)} (${n})</option>`)
+      .join('');
+    el('client').innerHTML = `<option value="">All clients</option>${opts}`;
   }
 
   /* ---- 列定義 ------------------------------------------------------------ */
 
+  /* スコア列は昇順（悪い順）から始める。このページは「下がっている先」を探すためのもので、
+     満点付近が 50 行続く画面には用が無い。desc を立てないので初期表示もクリック後も同じ向き */
   const score = (key, label, title) => ({
     key,
     label,
     title,
     cls: 'num',
     right: true,
-    desc: true,
     cell: (r) => `<span class="${scoreClass(r[key])}">${r[key].toFixed(1)}</span>`,
   });
 
@@ -132,8 +151,20 @@
       title: `IBRL score for epoch ${EPOCH}`,
       cls: 'rate',
       right: true,
-      desc: true,
       cell: (r) => `<span class="${scoreClass(r.ibrl)}">${r.ibrl.toFixed(1)}</span>`,
+    },
+    {
+      key: 'client',
+      label: 'Client',
+      title: 'Validator client reported over gossip, and its version',
+      cls: 'client',
+      // 名前が同じときはバージョンで並ぶようにしておくと、版の遅れが固まって見える
+      value: (r) => `${r.client || '￿'} ${r.version}`,
+      cell: (r) =>
+        r.client
+          ? `<span class="cname">${esc(r.client)}</span>` +
+            (r.version ? `<span class="cver">${esc(r.version)}</span>` : '')
+          : '<span class="cver">unknown</span>',
     },
     {
       key: 'avg',
@@ -141,7 +172,6 @@
       title: `Mean IBRL score over the last ${HISTORY} epochs, skipping epochs with no blocks`,
       cls: 'num',
       right: true,
-      desc: true,
       cell: (r) => (r.sampled ? `<span class="${scoreClass(r.avg)}">${r.avg.toFixed(1)}</span>` : '–'),
     },
     {
@@ -240,6 +270,8 @@
         'name',
         'pubkey',
         'participant_state',
+        'client',
+        'client_version',
         'ibrl_score',
         `avg_ibrl_${HISTORY}_epochs`,
         'epochs_sampled',
@@ -258,6 +290,8 @@
         r.name,
         r.pk,
         r.state,
+        r.client,
+        r.version,
         r.ibrl.toFixed(2),
         r.sampled ? r.avg.toFixed(2) : '',
         r.sampled,
@@ -277,8 +311,10 @@
   el('q').oninput = render;
   el('maxscore').oninput = render;
   el('minblocks').onchange = render;
+  el('client').onchange = render;
   el('dl').onclick = downloadCsv;
 
   DL.renderFreshness('freshage', '.freshness time');
+  fillClientFilter();
   render();
 })();

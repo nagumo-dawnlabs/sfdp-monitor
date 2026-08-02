@@ -13,9 +13,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
+import solanarpc
 from dashboards import DASHBOARDS
 from sitegen.build import SiteConfig, build_site
 from sitegen.registry import BuildEnv
@@ -40,6 +42,11 @@ def parse_args(argv=None):
     ap.add_argument("--templates", default="templates")
     ap.add_argument("--logo", default="assets/logo-dawnlabs.png")
     ap.add_argument("--repo", default=DEFAULT_REPO)
+    ap.add_argument(
+        "--rpc-url",
+        default=os.environ.get("SOLANA_RPC_URL") or solanarpc.DEFAULT_RPC_URL,
+        help="クライアント種別を引く Solana JSON-RPC (環境変数 SOLANA_RPC_URL でも指定可)",
+    )
     ap.add_argument("--no-cache", action="store_true", help=".cache/ を使わず必ず API を叩く")
     ap.add_argument("--only", action="append", metavar="SLUG", help="指定した slug だけビルドする（複数可）")
     ap.add_argument(
@@ -106,6 +113,7 @@ def main(argv=None) -> int:
         concurrency=args.concurrency,
         max_missing_pct=args.max_missing_pct,
         make_client=make_client if needs_api else None,
+        rpc_url=args.rpc_url,
         fixtures=fixtures,
         log=log,
     )
@@ -115,6 +123,8 @@ def main(argv=None) -> int:
         logo=Path(args.logo),
         repo_url=args.repo,
         skip_unchanged=args.skip_unchanged,
+        # ハブは今回ビルドした分だけで作り直されるので、一部だけのときは触らせない
+        write_hub=len(dashboards) == len(DASHBOARDS),
     )
 
     result = build_site(dashboards, env, cfg)

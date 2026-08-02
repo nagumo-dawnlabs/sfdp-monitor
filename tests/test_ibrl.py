@@ -13,6 +13,7 @@ from pathlib import Path
 import pytest
 
 from dashboards.ibrl_criteria import SCORE_TIERS, score_class, summarize
+from solanarpc import Node, client_label
 
 JS = Path(__file__).resolve().parent.parent / "templates" / "assets" / "ibrl_criteria.js"
 
@@ -81,3 +82,46 @@ def test_js_carries_the_same_fallback_class():
     source = JS.read_text(encoding="utf-8")
     assert "return 'v-bad';" in source
     assert score_class(0.0) == "v-bad"
+
+
+# --- クライアント種別の判定 -------------------------------------------------
+
+BAM_ROSTER = frozenset({"onroster"})
+
+
+def _node(client_id: str, identity: str = "someone") -> Node:
+    return Node(identity=identity, client_id=client_id, version="4.1.2")
+
+
+@pytest.mark.parametrize(
+    ("client_id", "expected"),
+    [
+        ("Agave", "Agave"),
+        ("JitoLabs", "Jito"),
+        ("Frankendancer", "Frankendancer"),
+        ("Firedancer", "Firedancer"),
+        ("AgavePaladin", "Paladin"),
+        ("Unknown(8)", "Rakurai"),
+        ("Unknown(10)", "Harmonic Agave"),
+        ("Unknown(11)", "Harmonic Frankendancer"),
+    ],
+)
+def test_client_names_are_resolved(client_id, expected):
+    assert client_label(_node(client_id), BAM_ROSTER) == expected
+
+
+@pytest.mark.parametrize("client_id", ["AgaveBam", "Unknown(6)"])
+def test_bam_binary_counts_as_bam_only_when_on_the_roster(client_id):
+    """BAM のバイナリを動かしていても、名簿に無ければ BAM とは呼ばない。"""
+    assert client_label(_node(client_id, "onroster"), BAM_ROSTER) == "BAM"
+    assert client_label(_node(client_id, "elsewhere"), BAM_ROSTER) == "Jito"
+
+
+def test_unmapped_client_ids_are_kept_verbatim():
+    """知らない番号を既知のクライアントに丸めない（誤った断定をしない）。"""
+    assert client_label(_node("Unknown(99)"), BAM_ROSTER) == "Unknown(99)"
+
+
+def test_missing_node_or_client_id_is_empty():
+    assert client_label(None, BAM_ROSTER) == ""
+    assert client_label(_node(""), BAM_ROSTER) == ""

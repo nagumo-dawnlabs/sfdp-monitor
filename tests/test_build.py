@@ -152,3 +152,32 @@ def test_skip_unchanged_is_a_noop_on_second_run(site, tmp_path):
 
 def test_unknown_slug_is_an_error(tmp_path):
     assert build_cli.main(["--only", "nope", "--out", str(tmp_path)]) == 2
+
+
+def test_partial_build_does_not_drop_other_cards_from_the_hub(site):
+    """--only でハブを作り直すと、ビルドしなかったカードが消えてしまう。
+
+    ハブは「今回ビルドしたダッシュボード」だけを並べて組み立てるので、部分ビルドの
+    ときは据え置くのが正しい。
+    """
+    before = (site / "index.html").read_text(encoding="utf-8")
+    assert 'href="criteria-miss/"' in before
+
+    rc = build_cli.main(
+        [
+            "--only",
+            "ibrl-criteria",
+            "--fixture",
+            str(FIXTURES["ibrl-criteria"]),
+            "--out",
+            str(site),
+            "--history",
+            "64",
+            "--templates",
+            str(REPO / "templates"),
+        ]
+    )
+    assert rc == 0
+    after = (site / "index.html").read_text(encoding="utf-8")
+    assert after == before, "部分ビルドがハブを書き換えている"
+    assert 'href="criteria-miss/"' in after

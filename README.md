@@ -32,8 +32,12 @@ solanaorg/                  data access for api.solana.org
   client.py                   ApiClient: rate limiting + disk cache + retries (shared by bam/ too)
   sfdp.py                     SFDP endpoints, state definitions, state-string assembly
 
-bam/                        data access for explorer.bam.dev (the API behind ibrl.wtf)
-  ibrl.py                     IBRL score endpoints and score definitions
+bam/                        data access for Jito's BAM APIs (what ibrl.wtf calls)
+  ibrl.py                     IBRL score endpoints and score definitions (explorer.bam.dev)
+  roster.py                   the BAM validator roster (kobe.mainnet.jito.network)
+
+solanarpc/                  data access for the Solana JSON-RPC
+  nodes.py                    getClusterNodes: validator client id / version, and the name table
 
 sitegen/                    data-agnostic static site generator
   render.py                   minimal dependency-free template expansion
@@ -165,8 +169,12 @@ changed, commits and pushes `docs/` (Pages redeploys on its own).
   (5–10 minutes).
 - **The IBRL page moves every day, not every epoch.** Its current-epoch scores are still accumulating
   while the epoch runs, so unlike the SFDP page it will normally produce a commit each day.
-- The IBRL dashboard adds only about 30 requests (one per epoch of history) plus a re-read of the
-  validator details that `criteria-miss` already pulled into `.cache/` earlier in the same job.
+- The IBRL dashboard adds only about 30 requests (one per epoch of history), two more for the client
+  column (`getClusterNodes` and the BAM roster), plus a re-read of the validator details that
+  `criteria-miss` already pulled into `.cache/` earlier in the same job.
+- If the public Solana RPC turns out to be unreliable from the runner, set a `SOLANA_RPC_URL` secret
+  and pass it through as an environment variable — no code change needed. Until then a failure there
+  only empties the Client column.
 - To run it by hand use **Run workflow** on the Actions tab (turning on `force` regenerates even with
   no change).
 - **A failing job opens an issue automatically** (or comments on the existing open one).
@@ -282,6 +290,27 @@ Naming: what the page and the site call **Slot Time Score** is `build_time_score
 - A score built from very few blocks swings a lot between epochs, which is what the **≥ 32 blocks**
   filter is for.
 
+### The Client column
+
+What the validator advertises over gossip, read from `getClusterNodes` (one request for the whole
+cluster) and shown with the version it reports.
+
+`clientId` is an enum, and clients without a registered name arrive as `Unknown(<n>)`. The number-to-name
+table in `solanarpc/nodes.py` is the same one ibrl.wtf uses — that is where *Rakurai* and *Harmonic* come
+from. Numbers absent from the table are printed verbatim (`Unknown(12)`) rather than folded into Agave,
+so a new client shows up as unrecognised instead of silently mislabelled.
+
+**BAM needs a second source.** Running the BAM binary does not by itself make a validator an active BAM
+validator, so a node advertising `AgaveBam` / `Unknown(6)` is labelled `BAM` only when its identity is
+also on Jito's BAM roster, and `Jito` otherwise. This is what ibrl.wtf does, and the two agreed on all
+15 validators spot-checked against the live site.
+
+The RPC defaults to `https://api.mainnet-beta.solana.com`; override it with `--rpc-url` or the
+`SOLANA_RPC_URL` environment variable. **The Client column degrades on its own**: if the RPC or the
+roster cannot be fetched, the build logs a warning, leaves the column empty and still publishes the
+page. It is one supplementary column, so it is not worth failing a build over — unlike the scores
+themselves, which do abort the build.
+
 ---
 
 ## Data sources
@@ -300,6 +329,11 @@ Naming: what the page and the site call **Slot Time Score** is `build_time_score
 - Per-validator detail, including `recent_blocks`, is available at
   `GET https://explorer.bam.dev/api/v1/ibrl_validators/<identity>` but is not used — the bulk endpoint
   answers the same question in one request instead of several hundred
+- Validator client and version: `POST https://api.mainnet-beta.solana.com` `getClusterNodes`
+  (`clientId` + `version` per identity, whole cluster in one request)
+- BAM roster: `GET https://kobe.mainnet.jito.network/api/v1/bam_validators?epoch=<n>` — used only to
+  separate `BAM` from `Jito`; `is_eligible` is deliberately not filtered on, since being on the roster
+  and being reward-eligible are different questions
 
 The `explorer.bam.dev` endpoints are the ones ibrl.wtf itself calls; they are public and unauthenticated
 but not formally documented, so treat their shape as subject to change.

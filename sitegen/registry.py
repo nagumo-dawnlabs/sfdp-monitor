@@ -32,6 +32,8 @@ class BuildEnv:
     # ビルドのレート設定・キャッシュ設定を引き継いだクライアントが返る
     # （fixture ビルド時は None）
     make_client: Callable[[str], Any] | None = None
+    # gossip からクライアント種別を引くための Solana JSON-RPC
+    rpc_url: str = ""
     # slug -> スナップショット。API を叩かずにビルドしたいとき（テスト・CI）に使う
     fixtures: dict[str, dict] = field(default_factory=dict)
     log: Callable[[str], None] = lambda msg: None

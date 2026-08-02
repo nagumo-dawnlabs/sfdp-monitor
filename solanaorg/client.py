@@ -74,10 +74,22 @@ class ApiClient:
         url = self.base_url + path
         if query:
             url += "?" + urllib.parse.urlencode(query)
+        return self._request(url)
+
+    def post_json(self, path: str, payload: dict):
+        """JSON を POST する。Solana の JSON-RPC がこれを要る。"""
+        return self._request(self.base_url + path, payload=payload)
+
+    def _request(self, url: str, payload: dict | None = None):
         last: Exception | None = None
+        headers = {"User-Agent": USER_AGENT}
+        body: bytes | None = None
+        if payload is not None:
+            body = json.dumps(payload).encode()
+            headers["Content-Type"] = "application/json"
         for attempt in range(self.retries):
             self._limiter.acquire()
-            req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            req = urllib.request.Request(url, data=body, headers=headers)
             try:
                 with urllib.request.urlopen(req, timeout=self.timeout) as resp:
                     return json.loads(resp.read().decode())

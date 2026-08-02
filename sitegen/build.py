@@ -43,6 +43,9 @@ class SiteConfig:
     repo_url: str = "https://github.com/nagumo-dawnlabs/sfdp-monitor"
     dawnlabs_x: str = "https://x.com/dawnlabs00"
     skip_unchanged: bool = False
+    # ハブは「今回ビルドしたダッシュボード」だけを並べて作り直すので、一部だけを
+    # ビルドしたときに書くと、残りのカードが黙って消える。--only のときは False
+    write_hub: bool = True
 
 
 @dataclass
@@ -104,10 +107,18 @@ def build_site(dashboards: list[Dashboard], env: BuildEnv, cfg: SiteConfig) -> B
             env.log(f"[{dash.slug}] unchanged")
 
     # ハブはどれか 1 つでも更新されたときだけ書き直す（生成時刻だけの差分を避ける）
-    if result.changed or not (out / "index.html").exists():
+    hub = out / "index.html"
+    if not cfg.write_hub:
+        # 部分ビルド。ここで書くと、ビルドしなかったダッシュボードのカードが消える
+        result.unchanged.append("index")
+        if not hub.exists():
+            env.log("warning: 部分ビルドなのでハブを書いていない。全体をビルドし直すこと")
+        else:
+            env.log("note: 部分ビルドのためハブは据え置き")
+    elif result.changed or not hub.exists():
         _emit_hub(tpl, cfg, versions, collected, out, stamps)
         result.written.append("index")
-        env.log(f"wrote {out / 'index.html'}")
+        env.log(f"wrote {hub}")
     else:
         result.unchanged.append("index")
 

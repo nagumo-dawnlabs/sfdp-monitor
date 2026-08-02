@@ -20,9 +20,11 @@ import statistics
 from dataclasses import dataclass
 
 import bam
+import solanarpc
 from sitegen.logos import available_logos
 from sitegen.registry import Dashboard, DashboardData
 from solanaorg import sfdp
+from solanaorg.client import FetchError
 
 SLUG = "ibrl-criteria"
 
@@ -110,6 +112,8 @@ def _fetch_snapshot(env) -> dict:
     if not profiles:
         raise RuntimeError("no validator profiles collected")
 
+    clients = _fetch_clients(env, epoch)
+
     epochs_desc = [epoch - i for i in range(history)]
     current = scores[epoch]
     # ロゴは criteria-miss 側が取り込んだものを使う（ここでは同期しない。
@@ -121,11 +125,14 @@ def _fetch_snapshot(env) -> dict:
         score = current.get(p.pubkey)
         if score is None:
             continue  # この epoch にブロックを作っていない。数字が出せないので表には出さない
+        client, version = clients.get(p.pubkey, ("", ""))
         rows.append(
             {
                 "p": p.pubkey,
                 "n": p.name,
                 "t": p.participant_state,
+                "c": client,
+                "cv": version,
                 "k": p.stake_sol,
                 "f": p.foundation_stake_sol,
                 "i": round(score.ibrl, 2),
@@ -158,6 +165,26 @@ def _fetch_snapshot(env) -> dict:
         "coverage": {"sfdp": len(profiles), "scored": len(rows), "unscored": len(profiles) - len(rows)},
         "validators": rows,
     }
+
+
+def _fetch_clients(env, epoch: int) -> dict[str, tuple[str, str]]:
+    """identity -> (クライアント表示名, バージョン)。
+
+    スコアと違って補助的な列なので、ここが取れなくてもページは出す。gossip の RPC は
+    公開エンドポイントで落ちることがあり、Client 列 1 つのためにダッシュボード全体を
+    止めるのは割に合わない。取れなければ空にして、その旨をログに出す。
+    """
+    try:
+        nodes = solanarpc.fetch_cluster_nodes(env.make_client(env.rpc_url))
+        bam_ids = bam.fetch_bam_identities(env.make_client(bam.roster.BASE_URL), epoch)
+    except (FetchError, RuntimeError, OSError, KeyError, TypeError, ValueError) as exc:
+        env.log(f"warning: クライアント情報を取得できなかった。Client 列は空になる: {exc}")
+        return {}
+
+    labelled = {pk: (solanarpc.client_label(n, bam_ids), n.version) for pk, n in nodes.items()}
+    named = sum(1 for name, _ in labelled.values() if name)
+    env.log(f"clients: {len(nodes)} gossip nodes, {named} identified, {len(bam_ids)} on the BAM roster")
+    return labelled
 
 
 def _context(snapshot: dict) -> dict:

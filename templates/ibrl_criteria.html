@@ -16,6 +16,10 @@ Network average across all {{ network_validators }} scored validators is {{ netw
     <label for="maxscore">Score at most</label>
     <input type="number" id="maxscore" min="0" max="100" step="1" placeholder="100">
   </div>
+  <div class="field">
+    <label for="client">Client</label>
+    <select id="client"></select>
+  </div>
   <div class="field spacer">
     <label class="check" title="A score from a handful of blocks is noisy. Hides validators with fewer than 32 blocks in this epoch">
       <input type="checkbox" id="minblocks"> ≥ 32 blocks
@@ -68,6 +72,14 @@ produced no blocks. <strong>Δ</strong> is the change from the previous epoch. <
 Scores of 95 or above are shown in <span class="v-hi">green</span>, 90 to 95 <span class="v-good">plain</span>,
 80 to 90 in <span class="v-mid">yellow</span>, 70 to 80 in <span class="v-low">orange</span> and below 70 in
 <span class="v-bad">red</span>.
+</p>
+<p>
+<strong>Client</strong> is what the validator advertises over gossip (<code>getClusterNodes</code>), with the version
+it reports. Client IDs that have no registered name arrive as <code>Unknown(n)</code> and are resolved with the same
+table ibrl.wtf uses — that is where <em>Rakurai</em> and <em>Harmonic</em> come from. One case needs more than
+gossip: running the BAM binary does not by itself make a validator an active BAM validator, so a node advertising
+BAM is labelled <strong>BAM</strong> only when it also appears on Jito's BAM roster, and <strong>Jito</strong>
+otherwise. Anything still unrecognised is left as its raw <code>Unknown(n)</code> rather than folded into Agave.
 </p>
 <p>
 This page covers the {{ sfdp_total }} validators in SFDP <code>{{ participant_states }}</code> state.

@@ -93,11 +93,12 @@ button.chip,.seg button{
 }
 .seg button:hover,button.chip:hover{background:rgb(255 115 0 / 14%)}
 .seg button[aria-pressed=true]{background:rgb(255 115 0 / 38%); border-color:var(--accent); font-weight:600}
-input[type=text],input[type=number]{
+input[type=text],input[type=number],select{
   background:rgb(255 255 255 / 4%); color:var(--text); border:1px solid var(--border);
   border-radius:8px; padding:8px 12px; font:inherit; font-size:0.9375rem;
 }
-input:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgb(255 115 0 / 12%)}
+select{cursor:pointer}
+input:focus,select:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgb(255 115 0 / 12%)}
 input[type=text]{min-width:240px}
 input[type=number]{width:96px}
 .check{display:flex; align-items:center; gap:8px; font-size:0.875rem; color:var(--text-2); cursor:pointer}
@@ -159,6 +160,14 @@ td.name{min-width:230px}
 .spark i{width:7px; height:16px; border-radius:2px; display:block; flex:0 0 auto}
 .s-B{background:var(--ok)} .s-N{background:var(--bad)} .s-L{background:var(--warn)}
 .s-H{background:var(--party); opacity:.55} .s-x{background:rgb(255 255 255 / 8%)}
+
+/* バリデータクライアント。名前を主、バージョンを従にして 1 セルに収める。
+   横に並べると "Harmonic Frankendancer 0.1006.40100" で 300px を超えるので、
+   バリデータ名 / pubkey と同じく 2 行にする（行の高さは変わらない） */
+.client{white-space:nowrap}
+.client .cname{color:var(--text); display:block}
+.client .cver{color:var(--text-muted); font-size:0.75rem; display:block;
+  font-family:'SF Mono',Monaco,Inconsolata,'Roboto Mono',monospace}
 
 /* スコア（0-100、高いほど良い）の段階色。率の r-* とは向きが逆なので別に持つ。
    しきい値は JS 側の SCORE_TIERS と dashboards/ibrl_criteria.py が持つ */
