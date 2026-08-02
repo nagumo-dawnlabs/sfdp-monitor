@@ -86,7 +86,13 @@ def main(argv=None) -> int:
 
     # fixture だけで全ダッシュボードが埋まるなら API クライアントは要らない
     needs_api = any(d.slug not in fixtures for d in dashboards)
-    client = ApiClient(rps=args.rps, cache_dir=None if args.no_cache else DEFAULT_CACHE_DIR) if needs_api else None
+    cache_dir = None if args.no_cache else DEFAULT_CACHE_DIR
+
+    def make_client(base_url: str) -> ApiClient:
+        """レート・キャッシュ設定を 1 か所に保ったまま、別ホスト用の口を作る。"""
+        return ApiClient(base_url=base_url, rps=args.rps, cache_dir=cache_dir)
+
+    client = make_client("https://api.solana.org") if needs_api else None
 
     env = BuildEnv(
         client=client,
@@ -99,6 +105,7 @@ def main(argv=None) -> int:
         history=args.history,
         concurrency=args.concurrency,
         max_missing_pct=args.max_missing_pct,
+        make_client=make_client if needs_api else None,
         fixtures=fixtures,
         log=log,
     )

@@ -17,7 +17,7 @@ from typing import Any
 class BuildEnv:
     """1 回のビルド全体に共通する設定。`collect` に渡される。"""
 
-    client: Any | None  # solanaorg.ApiClient（fixture ビルド時は None）
+    client: Any | None  # api.solana.org 用の solanaorg.ApiClient（fixture ビルド時は None）
     # 出力先。ロゴのようにページから参照する副生成物を書くダッシュボードが使う
     out_dir: Path
     cluster: str
@@ -28,6 +28,10 @@ class BuildEnv:
     max_missing_pct: float
     # ページから参照する画像などの副生成物を取り込むか。CLI レポートだけなら不要
     want_assets: bool = True
+    # api.solana.org 以外のホストを読むダッシュボード用。base_url を渡すと、その
+    # ビルドのレート設定・キャッシュ設定を引き継いだクライアントが返る
+    # （fixture ビルド時は None）
+    make_client: Callable[[str], Any] | None = None
     # slug -> スナップショット。API を叩かずにビルドしたいとき（テスト・CI）に使う
     fixtures: dict[str, dict] = field(default_factory=dict)
     log: Callable[[str], None] = lambda msg: None

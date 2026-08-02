@@ -126,6 +126,18 @@ def sync_logos(
     return set(keep)
 
 
+def available_logos(dest: Path) -> set[str]:
+    """既に `dest` に取り込まれているロゴの pubkey を返す（読むだけ）。
+
+    ロゴを取り込む責務は `sync_logos()` を呼ぶダッシュボード 1 つに任せ、同じ
+    バリデータを扱う別のダッシュボードはこの関数で「あるものを使う」に徹する。
+    2 つのダッシュボードが同じディレクトリに `sync_logos()` すると、後から走った
+    側が自分の対象外のロゴを「参加者から外れた」とみなして消してしまうため。
+    """
+    manifest = _load_manifest(dest / MANIFEST_NAME)
+    return {pk for pk in manifest if (dest / f"{pk}.webp").is_file()}
+
+
 def _pillow_available() -> bool:
     try:
         import PIL.Image  # noqa: F401

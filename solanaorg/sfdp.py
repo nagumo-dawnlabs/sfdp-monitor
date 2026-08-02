@@ -107,13 +107,24 @@ def _sol(lamports) -> int:
     return round(int(lamports or 0) / LAMPORTS)
 
 
-def _build(client: ApiClient, participant: dict, cluster: str, epochs_desc: list[int]) -> ValidatorStates | None:
-    """取得できなければ FetchError を投げる。epoch データが無い参加者は None。"""
+def _build(
+    client: ApiClient,
+    participant: dict,
+    cluster: str,
+    epochs_desc: list[int],
+    *,
+    require_history: bool = True,
+) -> ValidatorStates | None:
+    """取得できなければ FetchError を投げる。epoch データが無い参加者は None。
+
+    `require_history=False` なら履歴の無い参加者も（state 列を空にして）返す。
+    名前やロゴだけが要る呼び出し向け。
+    """
     mn = participant["mainnetBetaPubkey"]
     detail = fetch_validator(client, mn)
 
     epoch_map = (detail.get(stats_key(cluster)) or {}).get("epochs") or {}
-    if not epoch_map:
+    if not epoch_map and require_history:
         return None  # オンボード前などで履歴なし。集計対象外
 
     calc = detail.get(calc_stats_key(cluster)) or {}
@@ -145,6 +156,7 @@ def collect_states(
     *,
     concurrency: int = 4,
     retry_rounds: int = 3,
+    require_history: bool = True,
     log=lambda msg: print(msg, file=sys.stderr),
 ) -> tuple[list[ValidatorStates], list[str]]:
     """全参加者の state 列を取得する。
@@ -160,7 +172,7 @@ def collect_states(
     def one(p: dict) -> tuple[dict, ValidatorStates | None, bool]:
         """(参加者, 取得できた行, 失敗したか) を返す。行が None かつ失敗でなければ履歴なし。"""
         try:
-            return p, _build(client, p, cluster, epochs_desc), False
+            return p, _build(client, p, cluster, epochs_desc, require_history=require_history), False
         except FetchError:
             return p, None, True
 
@@ -189,3 +201,29 @@ def collect_states(
     if no_history:
         log(f"note: {len(no_history)} validators have no epoch history (excluded)")
     return list(by_pk.values()), [p["mainnetBetaPubkey"] for p in pending]
+
+
+def collect_profiles(
+    client: ApiClient,
+    participants: list[dict],
+    cluster: str,
+    *,
+    concurrency: int = 4,
+    log=lambda msg: print(msg, file=sys.stderr),
+) -> tuple[list[ValidatorStates], list[str]]:
+    """名前・ロゴ・stake だけを取る。epoch の state 列は空になる。
+
+    SFDP 以外を主データにするダッシュボードが、pubkey に人が読める名前を
+    付けるために使う。`fetch_validator` はディスクキャッシュ越しなので、同じ
+    ビルドで criteria-miss が先に走っていれば追加の API 呼び出しは発生しない。
+    """
+    return collect_states(
+        client,
+        participants,
+        cluster,
+        end_epoch=0,
+        history=0,  # state 列は要らない
+        concurrency=concurrency,
+        require_history=False,  # まだ 1 epoch も記録が無い参加者も名前は引ける
+        log=log,
+    )

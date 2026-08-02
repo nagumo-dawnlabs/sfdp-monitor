@@ -7,6 +7,7 @@ Dashboards published by DawnLabs on top of public Solana data, plus the generato
 | Dashboard | What it shows |
 |---|---|
 | [SFDP Criteria Miss Rate](https://nagumo-dawnlabs.github.io/sfdp-monitor/criteria-miss/) | What share of the last X epochs each SFDP validator failed to meet program criteria |
+| [IBRL Criteria](https://nagumo-dawnlabs.github.io/sfdp-monitor/ibrl-criteria/) | The IBRL score of each SFDP validator, with its slot time and packing components |
 
 No runtime dependencies (Python 3.10+ standard library only). The pages themselves load nothing from
 third parties either — validator logos are fetched at build time and served from the same origin, so a
@@ -28,8 +29,11 @@ build.py                    the one entry point for a build
 sfdp_status.py              ad-hoc reporting CLI (writes CSV / Markdown / JSON)
 
 solanaorg/                  data access for api.solana.org
-  client.py                   ApiClient: rate limiting + disk cache + retries
+  client.py                   ApiClient: rate limiting + disk cache + retries (shared by bam/ too)
   sfdp.py                     SFDP endpoints, state definitions, state-string assembly
+
+bam/                        data access for explorer.bam.dev (the API behind ibrl.wtf)
+  ibrl.py                     IBRL score endpoints and score definitions
 
 sitegen/                    data-agnostic static site generator
   render.py                   minimal dependency-free template expansion
@@ -38,21 +42,25 @@ sitegen/                    data-agnostic static site generator
   logos.py                    fetching, downscaling and manifesting external images
 
 dashboards/                 one module per dashboard
-  __init__.py                 DASHBOARDS (the registry)
+  __init__.py                 DASHBOARDS (the registry, and therefore the build order)
   criteria_miss.py            collection, aggregation, CLI report
+  ibrl_criteria.py            collection and aggregation for the IBRL page
 
 templates/                  the actual HTML / CSS / JS files
   base.html                   shared layout (masthead / footer / Powered by DawnLabs)
   hub.html                    the dashboard index on the front page
   criteria_miss.html          page body
+  ibrl_criteria.html          page body
   assets/theme.css            design tokens and components shared by every page
   assets/table.js             shared sorting / filtering / paging / CSV export
   assets/criteria_miss.js     aggregation and row rendering specific to this page
+  assets/ibrl_criteria.js     same, for the IBRL page
 
 docs/                       build output (GitHub Pages serves /docs from main)
   index.html                  hub
   criteria-miss/index.html    dashboard
-  data/criteria-miss.json     machine-readable snapshot (the source of truth for change detection)
+  ibrl-criteria/index.html    dashboard
+  data/*.json                 machine-readable snapshots (the source of truth for change detection)
   assets/                     theme.css / *.js / the DawnLabs logo (shared by every page)
   assets/logos/               validator logos as 48px WebP + index.json (recording source URLs)
 
@@ -65,7 +73,15 @@ tests/                      pytest (never touches the API)
   linting and syntax highlighting all work, and the design does not fork as pages are added.
 - **One aggregation algorithm.** `aggregate()` in `dashboards/criteria_miss.py` is the definition;
   `templates/assets/criteria_miss.js` carries the same algorithm to the browser (each references the
-  other in a comment). The CLI and the dashboard cannot structurally disagree on a number.
+  other in a comment). The CLI and the dashboard cannot structurally disagree on a number. The IBRL
+  page does the same with `summarize()` / `score_class()`, and `tests/test_ibrl.py` additionally
+  asserts that the JS colour thresholds still match the Python ones.
+- **Data sources are packages, dashboards are pages.** `solanaorg/` and `bam/` only know how to fetch
+  and shape data; `dashboards/` decides what a page means. A dashboard may read from both — the IBRL
+  page takes scores from `bam/` and validator names, logos and stake from `solanaorg/`, joining them
+  on the identity pubkey. `solanaorg/client.py` is the generic HTTP layer (rate limiting, disk cache,
+  retries) and is used for both hosts; `BuildEnv.make_client(base_url)` hands out a client that
+  inherits the build's rate and cache settings.
 - **Shared assets.** One copy of each lands in `docs/assets/` and every page references it with
   `?v=<content hash>`. Embedding the logo as a data URI per page is gone, so nothing duplicates as
   pages are added.
@@ -77,6 +93,11 @@ tests/                      pytest (never touches the API)
   `docs/assets/logos/`. At full size 355 logos would be roughly 15MB; downscaled they total under 1MB.
   `index.json` records the source URL of each, so nothing is re-downloaded while the URL is unchanged
   and the daily job only ever diffs the logos that actually changed.
+- **Only one dashboard owns the logo directory.** `sync_logos()` deletes logos outside the set it was
+  given, so a second dashboard syncing the same directory would delete the first one's files. The IBRL
+  page therefore calls `available_logos()`, which only reads the manifest. That is why `criteria-miss`
+  comes first in `DASHBOARDS`; running `--only ibrl-criteria` against an empty `docs/` just falls back
+  to initial-letter avatars.
 
 ---
 
@@ -87,6 +108,8 @@ tests/                      pytest (never touches the API)
    (sources and disclaimer).
 3. If the page needs its own JS, add `templates/assets/<name>.js` and list it in `Dashboard.scripts`.
 4. Register it in `DASHBOARDS` in `dashboards/__init__.py`.
+5. Add `tests/fixtures/<slug>.json` and list it in `FIXTURES` in `tests/test_build.py`, so the tests
+   and the CI smoke build keep working without the network.
 
 Layout, shared assets, change detection, the hub listing and deployment are all handled by `sitegen`.
 Whatever you put in `DashboardData.stats` as `(value, label)` becomes the KPIs on the hub card.
@@ -140,6 +163,10 @@ changed, commits and pushes `docs/` (Pages redeploys on its own).
   reason.
 - Runner IPs are shared, so the job runs at `--rps 2 --concurrency 3` to stay under the rate limit
   (5–10 minutes).
+- **The IBRL page moves every day, not every epoch.** Its current-epoch scores are still accumulating
+  while the epoch runs, so unlike the SFDP page it will normally produce a commit each day.
+- The IBRL dashboard adds only about 30 requests (one per epoch of history) plus a re-read of the
+  validator details that `criteria-miss` already pulled into `.cache/` earlier in the same job.
 - To run it by hand use **Run workflow** on the Actions tab (turning on `force` regenerates even with
   no change).
 - **A failing job opens an issue automatically** (or comments on the existing open one).
@@ -222,16 +249,63 @@ exactly one place, `solanaorg/sfdp.py`.
 
 ---
 
+## How the IBRL score is measured
+
+The score is not computed here — it is published by [ibrl.wtf](https://ibrl.wtf/), a community tool from
+Jito that watches leader behaviour block by block. This site reads it and joins it to the SFDP validator
+set. The definition, from [ibrl.wtf/methodology](https://ibrl.wtf/methodology/):
+
+```
+IBRL = 0.40 x Slot Time + 0.15 x Vote Packing + 0.45 x Non-Vote Packing
+```
+
+| Component | Weight | Field in the API | What earns a perfect score |
+|---|---|---|---|
+| Slot Time | 40% | `build_time_score` | 550ms or less on a handoff slot, 400ms on a continuation slot. Past that it decays exponentially |
+| Vote Packing | 15% | `vote_packing_score` | 90% of vote transactions inside the first 48 PoH ticks. Including no votes at all scores 0 |
+| Non-Vote Packing | 45% | `non_vote_packing_score` | Half from spending 50% of the block's compute in the first 32 ticks, half from an even compute distribution across the 64 ticks (Gini coefficient) |
+
+Naming: what the page and the site call **Slot Time Score** is `build_time_score` in the API, and
+**Median Block Build** is `median_block_build_ms` (verified against live validator pages).
+
+- Only validators that **produced at least one block** in the epoch appear in the IBRL data. SFDP
+  validators with no blocks that epoch are left out of the table rather than shown as a zero, and the
+  count is stated in the page's notes. At epoch 1009 that was 9 of 369.
+- `epoch_trend` is the API's own change-from-previous-epoch and is shown as **Δ**; it is not
+  recomputed here.
+- **Avg** is the mean over the last 30 epochs, skipping epochs with no blocks. 30 epochs of history are
+  embedded per validator so the browser can draw the trend without another request; one epoch costs one
+  request, so the depth is cheap to change (`HISTORY` in `dashboards/ibrl_criteria.py`).
+- Scores are coloured green at 95, plain at 90, yellow at 80, orange at 70 and red below that.
+  `SCORE_TIERS` is defined in `dashboards/ibrl_criteria.py` and mirrored in
+  `templates/assets/ibrl_criteria.js`; a test fails if the two drift apart.
+- A score built from very few blocks swings a lot between epochs, which is what the **≥ 32 blocks**
+  filter is for.
+
+---
+
 ## Data sources
 
 - Participant list: `GET https://api.solana.org/api/community/v1/sfdp_participants`
   ([official docs](https://solana.org/delegation-api-docs#sfdp-participants))
-  - Breakdown by state (as of 2026-07): Approved 404 / TestnetOnboarded 123 / Pending 11 /
-    Retired 3,450 / Rejected 6,974
+  - Breakdown by state (as of 2026-08): Approved 369 / TestnetOnboarded 120 / Pending 12 /
+    Retired 3,477 / Rejected 6,985
 - Validator detail: `GET https://api.solana.org/api/validators/<pubkey>?cacheStatus=enable`
   (used internally by solana.org; outside the official docs)
+- IBRL scores, all validators for one epoch:
+  `GET https://explorer.bam.dev/api/v1/ibrl_validators[?epoch=<n>]` — one request covers every
+  validator, and history reaches back to roughly epoch 906
+- IBRL network averages: `GET https://explorer.bam.dev/api/v1/ibrl_stats` (also reports the current
+  epoch)
+- Per-validator detail, including `recent_blocks`, is available at
+  `GET https://explorer.bam.dev/api/v1/ibrl_validators/<identity>` but is not used — the bulk endpoint
+  answers the same question in one request instead of several hundred
 
-This site is an unofficial aggregation of public API data, not a Solana Foundation publication.
+The `explorer.bam.dev` endpoints are the ones ibrl.wtf itself calls; they are public and unauthenticated
+but not formally documented, so treat their shape as subject to change.
+
+This site is an unofficial aggregation of public API data, published by neither the Solana Foundation
+nor Jito.
 
 ---
 
@@ -242,13 +316,18 @@ python3 -m venv .venv && .venv/bin/pip install ruff pytest pillow
 .venv/bin/ruff check . && .venv/bin/ruff format --check .
 .venv/bin/pytest
 
-# smoke build that never calls the API
-python3 build.py --fixture tests/fixtures/criteria-miss.json --out /tmp/site --history 64
+# smoke build that never calls the API (every dashboard needs its fixture passed)
+python3 build.py --out /tmp/site --history 64 \
+  --fixture tests/fixtures/criteria-miss.json \
+  --fixture tests/fixtures/ibrl-criteria.json
 ```
 
 `pillow` is needed only for downscaling logos (the build works without it, keeping the logos already on
 disk). The tests use no network at all.
 
-`tests/fixtures/criteria-miss.json` is 22 characteristic records pulled from real data plus one
-synthetic record whose name contains `</script>`. It covers regressions in template expansion and in
-script injection at the same time.
+Each fixture is a couple of dozen characteristic records pulled from real data — the extremes of every
+column, rows with gaps in their history, a validator with no name and one with no logo — plus one
+synthetic record whose name contains `</script>`. That covers regressions in template expansion and in
+script injection at the same time. **A new dashboard needs a fixture**: without one the smoke build and
+the tests fall through to the live API, and `test_every_registered_dashboard_has_a_fixture` fails to
+remind you.

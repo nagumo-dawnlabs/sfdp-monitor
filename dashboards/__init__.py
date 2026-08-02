@@ -12,10 +12,14 @@
 レイアウト・アセット・差分判定・デプロイは `sitegen` 側が共通で面倒を見る。
 """
 
-from . import criteria_miss
+from . import criteria_miss, ibrl_criteria
 
+# 並び順はハブでのカードの並びで、ビルド順でもある。criteria-miss を先に置くのは、
+# ibrl-criteria が「criteria-miss が取り込んだロゴ」と「バリデータ詳細のキャッシュ」に
+# 相乗りしているため（単体で走らせても動くが、その分だけ API を余計に叩く）。
 DASHBOARDS = [
     criteria_miss.DASHBOARD,
+    ibrl_criteria.DASHBOARD,
 ]
 
-__all__ = ["DASHBOARDS", "criteria_miss"]
+__all__ = ["DASHBOARDS", "criteria_miss", "ibrl_criteria"]

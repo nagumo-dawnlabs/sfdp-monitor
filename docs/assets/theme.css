@@ -159,6 +159,26 @@ td.name{min-width:230px}
 .spark i{width:7px; height:16px; border-radius:2px; display:block; flex:0 0 auto}
 .s-B{background:var(--ok)} .s-N{background:var(--bad)} .s-L{background:var(--warn)}
 .s-H{background:var(--party); opacity:.55} .s-x{background:rgb(255 255 255 / 8%)}
+
+/* スコア（0-100、高いほど良い）の段階色。率の r-* とは向きが逆なので別に持つ。
+   しきい値は JS 側の SCORE_TIERS と dashboards/ibrl_criteria.py が持つ */
+.v-hi{color:var(--ok)} .v-good{color:var(--text)} .v-mid{color:var(--rate-yellow)}
+.v-low{color:var(--rate-orange)} .v-bad{color:var(--rate-red)}
+/* 前 epoch からの増減 */
+.d-up{color:var(--ok)} .d-down{color:var(--rate-red)} .d-flat{color:var(--text-muted)}
+/* 数値に添える単位。数字より一段落とす */
+.unit{color:var(--text-muted); font-size:0.75rem; margin-left:2px}
+
+/* 数値のスパークライン。棒の高さが値、色は .v-* が currentColor 経由で決める。
+   縦軸の範囲は JS 側で全行共通に固定してあるので、行をまたいで高さを比べられる */
+.sparkbar{display:flex; align-items:flex-end; gap:1px; height:20px; min-width:100px}
+.sparkbar i{width:3px; border-radius:1px; display:block; flex:0 0 auto; background:currentColor; opacity:.85}
+/* データの無い epoch。高さを持たせると低スコアと紛れるので、下端の点で「不在」を示す */
+.sparkbar i.b-x{height:3px; background:rgb(255 255 255 / 14%); opacity:1}
+
+.legend i.lg-hi{background:var(--ok)} .legend i.lg-good{background:var(--text)}
+.legend i.lg-mid{background:var(--rate-yellow)} .legend i.lg-low{background:var(--rate-orange)}
+.legend i.lg-bad{background:var(--rate-red)}
 /* 凡例は語だけにして、正式な state 名は title 属性と「How this is measured」に置く */
 .legend{display:flex; flex-wrap:wrap; gap:14px; color:var(--text-2)}
 .legend span{display:flex; align-items:center; gap:6px; cursor:help}

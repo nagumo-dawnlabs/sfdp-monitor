@@ -35,8 +35,12 @@ jobs:
       - run: pytest
 
       - name: Smoke build from fixture
+        # 全ダッシュボード分の fixture を渡す。1 つでも欠けるとそこだけ API を
+        # 叩きにいってしまい、CI がネットワークに依存する
         run: |
-          python3 build.py --fixture tests/fixtures/criteria-miss.json --out /tmp/site --history 64
+          python3 build.py --out /tmp/site --history 64 \
+            --fixture tests/fixtures/criteria-miss.json \
+            --fixture tests/fixtures/ibrl-criteria.json
 
       - name: Assert no unreplaced template tokens
         run: |

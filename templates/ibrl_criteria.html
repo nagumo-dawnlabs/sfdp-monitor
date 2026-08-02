@@ -1,0 +1,87 @@
+<p class="lede">
+The <strong>IBRL score</strong> of every SFDP validator for epoch {{ epoch }} — how fast it builds blocks and how
+evenly it packs them, as measured by
+<a href="https://ibrl.wtf/validator/{{ sample_pubkey }}/" target="_blank" rel="noopener">ibrl.wtf</a>.
+Network average across all {{ network_validators }} scored validators is {{ network_score }}.
+</p>
+
+<div class="stats" id="stats"></div>
+
+<div class="controls">
+  <div class="field">
+    <label for="q">Search</label>
+    <input type="text" id="q" placeholder="Syndica, mXv18..." autocomplete="off">
+  </div>
+  <div class="field">
+    <label for="maxscore">Score at most</label>
+    <input type="number" id="maxscore" min="0" max="100" step="1" placeholder="100">
+  </div>
+  <div class="field spacer">
+    <label class="check" title="A score from a handful of blocks is noisy. Hides validators with fewer than 32 blocks in this epoch">
+      <input type="checkbox" id="minblocks"> ≥ 32 blocks
+    </label>
+  </div>
+  <div class="field">
+    <button type="button" class="chip" id="dl">Download CSV</button>
+  </div>
+</div>
+
+<div class="meta">
+  <div id="count"></div>
+  <div class="legend">
+    <span title="95 and above"><i class="lg-hi"></i>95+</span>
+    <span title="90 to 95"><i class="lg-good"></i>90+</span>
+    <span title="80 to 90"><i class="lg-mid"></i>80+</span>
+    <span title="70 to 80"><i class="lg-low"></i>70+</span>
+    <span title="Below 70"><i class="lg-bad"></i>&lt;70</span>
+  </div>
+</div>
+
+<div class="tablewrap">
+<table>
+<thead><tr id="head"></tr></thead>
+<tbody id="body"></tbody>
+</table>
+<div class="empty" id="empty" hidden>No validators match the current filters</div>
+</div>
+<button type="button" class="chip more" id="more" hidden></button>
+
+<details class="notes">
+<summary>How this is measured</summary>
+<p>
+The IBRL score is published by <a href="https://ibrl.wtf/" target="_blank" rel="noopener">ibrl.wtf</a>, a community
+tool from Jito that analyses leader behaviour block by block. It combines three independent components:
+</p>
+<table>
+<thead><tr><th>Component</th><th>Weight</th><th>What it rewards</th></tr></thead>
+<tbody>
+<tr><td>Slot Time</td><td>40%</td><td>Building blocks quickly — a perfect score needs 550ms or less on a handoff slot, 400ms on a continuation slot. Past that the score decays exponentially.</td></tr>
+<tr><td>Vote Packing</td><td>15%</td><td>Processing votes early — a perfect score needs 90% of vote transactions inside the first 48 PoH ticks. Including no votes at all scores 0.</td></tr>
+<tr><td>Non-Vote Packing</td><td>45%</td><td>Spreading work across the block — half from using 50% of compute in the first 32 ticks, half from an even compute distribution across the 64 ticks (Gini coefficient).</td></tr>
+</tbody>
+</table>
+<p>
+<strong>IBRL</strong> = 0.40 × Slot Time + 0.15 × Vote Packing + 0.45 × Non-Vote Packing.
+<strong>Avg</strong> is the mean IBRL score over the last {{ history }} epochs, skipping epochs where the validator
+produced no blocks. <strong>Δ</strong> is the change from the previous epoch. <strong>Trend</strong> plots the same
+{{ history }} epochs, newest on the left; a gap means no blocks that epoch.
+Scores of 95 or above are shown in <span class="v-hi">green</span>, 90 to 95 <span class="v-good">plain</span>,
+80 to 90 in <span class="v-mid">yellow</span>, 70 to 80 in <span class="v-low">orange</span> and below 70 in
+<span class="v-bad">red</span>.
+</p>
+<p>
+This page covers the {{ sfdp_total }} validators in SFDP <code>{{ participant_states }}</code> state.
+{{ scored }} of them have a score for epoch {{ epoch }}; the remaining {{ unscored }} produced no blocks in this
+epoch, so there is nothing to measure and they are left out of the table rather than shown as a zero. Validator
+names, logos and stake come from the Solana Foundation API and are matched to IBRL on the identity pubkey.
+</p>
+<p>
+A score built from a handful of blocks moves a lot epoch to epoch. The <strong>≥ 32 blocks</strong> filter drops
+those rows when you want a steadier read.
+</p>
+<p>
+The full snapshot behind this page is published as
+<a href="{{ asset_prefix }}{{ data_file }}">{{ data_file }}</a> and is versioned in the repository, so any
+epoch's numbers can be reproduced or diffed later.
+</p>
+</details>

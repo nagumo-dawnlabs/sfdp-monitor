@@ -24,6 +24,12 @@ GitHub Pages が `main` の `/docs` をそのまま配信しているので、pu
 - 実行時の依存パッケージなし。lint / test / ロゴ縮小にだけ ruff・pytest・Pillow を使う
   （手元に無ければ `uv run --with pytest --with pillow --with ruff --python 3.12 ...`）
 - ページ側も外部リソースを読まない。CDN・Web フォント・外部画像を足さないこと
-- 集計ロジックは `dashboards/criteria_miss.py` の `aggregate()` と
-  `templates/assets/criteria_miss.js` の `aggregate()` の二重実装。片方を変えたら必ず両方直す
+- 集計ロジックは Python とブラウザの二重実装。片方を変えたら必ず両方直す
+  - `dashboards/criteria_miss.py` の `aggregate()` ⇔ `templates/assets/criteria_miss.js` の `aggregate()`
+  - `dashboards/ibrl_criteria.py` の `summarize()` / `score_class()` ⇔
+    `templates/assets/ibrl_criteria.js` の `summarize()` / `scoreClass()`
+- ダッシュボードを追加したら `tests/fixtures/<slug>.json` も足し、`tests/test_build.py` の
+  `FIXTURES` に登録する。忘れるとテストと CI が本番 API を叩きにいく
+- ロゴを `docs/assets/logos/` に同期してよいのは criteria-miss だけ。`sync_logos()` は対象外の
+  ファイルを消すので、他のダッシュボードは読むだけの `available_logos()` を使う
 - ディレクトリ構成と各ファイルの役割は `README.md` を参照
