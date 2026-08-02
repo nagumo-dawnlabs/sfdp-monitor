@@ -5,16 +5,18 @@
 補助として IBRL の内訳スコア（Slot Time / Vote Packing / Non-Vote Packing）と
 クライアント種別を添える。IBRL の総合スコアは表には出さない。
 
-データ源が 4 つあるのがこのダッシュボードの特徴:
+表に出る数字は epoch も含めてすべて **Trillium 1 か所**から取る。内訳スコアは
+ibrl.wtf と同じ値が Trillium にそのまま入っているため（epoch 1009 の SFDP 358 件で
+小数 4 桁まで全件一致を確認）、わざわざ 2 か所から引く理由が無い。列ごとに違う
+epoch や違う出所の数字が混ざることが、構造的に起きないようにしてある。
 
-- median slot time: api.trillium.so（主軸）
-- 内訳スコア: explorer.bam.dev（ibrl.wtf の裏の API）
-- 名前・ロゴ・stake: api.solana.org。他はどれも pubkey しか返さないため
+数字以外は別の源が要る:
+
+- 名前・ロゴ・stake: api.solana.org（Trillium にも name はあるが、SFDP の
+  participant state で対象を決めている以上こちらが正）
 - クライアント種別: Solana の gossip + Jito の BAM 名簿
 
 突き合わせのキーはすべて identity pubkey で、SFDP の `mainnetBetaPubkey` と同じ値。
-epoch は IBRL が最新としている確定 epoch に統一して取るので、列ごとに違う epoch の
-数字が混ざることはない。
 
 その epoch のスロット所要時間が無いバリデータ（ブロックを作っていない等）は、
 数字が出せないだけで「悪い」わけではないので、表には出さず件数だけを注記に出す。
@@ -107,24 +109,20 @@ def collect(env) -> DashboardData:
 
 def _fetch_snapshot(env) -> dict:
     if env.make_client is None:
-        raise RuntimeError("IBRL データの取得には API クライアントが要る")
-    ibrl = env.make_client(bam.BASE_URL)
+        raise RuntimeError("データの取得には API クライアントが要る")
 
-    network = bam.fetch_stats(ibrl)
-    epoch = bam.latest_epoch(ibrl, network["epoch"])
-    history = max(1, min(HISTORY, env.history))
-    env.log(f"IBRL: epoch {epoch} (history {history}), network score {network['ibrl_score']:.2f}")
-
-    current = bam.fetch_epoch(ibrl, epoch, cached=False)
-    env.log(f"IBRL: {len(current)} validators scored at epoch {epoch}")
-
-    # 主軸の median slot time は Trillium 側。IBRL が最新としている epoch に
-    # 揃えて取るので、表の中で epoch が混ざることはない
+    # 表に出る数字はすべて Trillium 1 か所から取る。epoch も Trillium 基準なので、
+    # 列ごとに違う epoch や違う出所の数字が混ざることが原理的に起きない
     tril = env.make_client(trillium.BASE_URL)
-    durations = {epoch: trillium.fetch_epoch(tril, epoch, cached=False)}
+    epoch = trillium.latest_epoch(tril)
+    history = max(1, min(HISTORY, env.history))
+    env.log(f"Trillium: epoch {epoch} (history {history})")
+
+    # 最新 epoch はまだ値が動くのでキャッシュしない。過去 epoch は確定値
+    stats = {epoch: trillium.fetch_epoch(tril, epoch, cached=False)}
     for past in range(epoch - 1, epoch - history, -1):
-        durations[past] = trillium.fetch_epoch(tril, past)
-    env.log(f"Trillium: {len(durations[epoch])} validators with a slot duration at epoch {epoch}")
+        stats[past] = trillium.fetch_epoch(tril, past)
+    env.log(f"Trillium: {len(stats[epoch])} validators with a slot duration at epoch {epoch}")
 
     # 名前・ロゴ・stake は SFDP 側から。ディスクキャッシュ越しなので、同じビルドで
     # criteria-miss が先に走っていれば追加の API 呼び出しはほぼ発生しない
@@ -152,12 +150,14 @@ def _fetch_snapshot(env) -> dict:
     # 同じディレクトリに 2 つのダッシュボードが同期すると互いのロゴを消すため）
     logos = available_logos(env.out_dir / "assets" / "logos") if env.want_assets else set()
 
+    def _round(value, digits):
+        return round(value, digits) if value is not None else None
+
     rows = []
     for p in profiles:
-        duration = durations[epoch].get(p.pubkey)
-        if duration is None:
+        stat = stats[epoch].get(p.pubkey)
+        if stat is None:
             continue  # この epoch のスロット所要時間が無い。主軸が出せないので表に出さない
-        score = current.get(p.pubkey)
         client, version = clients.get(p.pubkey, ("", ""))
         rows.append(
             {
@@ -168,21 +168,21 @@ def _fetch_snapshot(env) -> dict:
                 "cv": version,
                 "k": p.stake_sol,
                 "f": p.foundation_stake_sol,
-                # 主軸。Trillium の slot_duration_median (ms)
-                "m": round(duration.median, 1),
-                # IBRL 側の内訳スコア。取れないバリデータもあるので null を許す
-                "b": round(score.slot_time, 2) if score else None,
-                "v": round(score.vote_packing, 2) if score else None,
-                "nv": round(score.non_vote_packing, 2) if score else None,
-                "bp": score.blocks_produced if score else 0,
+                # 主軸。slot_duration_median (ms)
+                "m": round(stat.median_ms, 1),
+                # IBRL の内訳スコア（ibrl.wtf と同じ値が Trillium に入っている）
+                "b": _round(stat.slot_time, 2),
+                "v": _round(stat.vote_packing, 2),
+                "nv": _round(stat.non_vote_packing, 2),
+                "bp": stat.blocks_produced,
+                # Trillium 自身の「遅れている」判定。1 のときだけ持たせる
+                **({"lag": 1} if stat.is_lagging else {}),
                 # 表には出さないが、スナップショットとしては残す
-                # （IBRL スコアと、測り方の違う IBRL 側の中央値）
-                "i": round(score.ibrl, 2) if score else None,
-                "mb": score.median_block_ms if score else None,
+                "i": _round(stat.ibrl, 2),
                 # median slot time の履歴。新しい epoch が先頭で、その epoch に
                 # 記録が無ければ null。平均・増減・スパークラインはこれから作る
                 "h": [
-                    round(durations[e][p.pubkey].median, 1) if p.pubkey in durations.get(e, {}) else None
+                    round(stats[e][p.pubkey].median_ms, 1) if p.pubkey in stats.get(e, {}) else None
                     for e in epochs_desc
                 ],
                 # 1 のときだけ assets/logos/<pubkey>.webp が存在する
@@ -195,9 +195,12 @@ def _fetch_snapshot(env) -> dict:
 
     # 比較用のネットワーク中央値は SFDP に限らず Trillium 全件から出す
     # （表と同じ指標・同じ epoch でないと並べる意味がない）
-    all_medians = sorted(d.median for d in durations[epoch].values())
-    network["slot_ms"] = round(statistics.median(all_medians), 1) if all_medians else 0.0
-    network["slot_validators"] = len(all_medians)
+    all_medians = sorted(s.median_ms for s in stats[epoch].values())
+    network = {
+        "slot_ms": round(statistics.median(all_medians), 1) if all_medians else 0.0,
+        "slot_validators": len(all_medians),
+        "lagging": sum(1 for s in stats[epoch].values() if s.is_lagging),
+    }
 
     return {
         "dashboard": SLUG,
@@ -206,6 +209,7 @@ def _fetch_snapshot(env) -> dict:
         "epoch": epoch,
         "history": history,
         "network": network,
+        # 内訳スコアの重み。IBRL の定義で、注記に出すためだけの定数
         "weights": bam.WEIGHTS,
         "slow_ms": SLOW_MS,
         "coverage": {"sfdp": len(profiles), "measured": len(rows), "unmeasured": len(profiles) - len(rows)},
@@ -247,6 +251,7 @@ def _context(snapshot: dict) -> dict:
         "sfdp_total": f"{cov['sfdp']:,}",
         "network_ms": _ms(net.get("slot_ms", 0.0)),
         "network_validators": f"{net.get('slot_validators', 0):,}",
+        "lagging": f"{sum(1 for v in validators if v.get('lag')):,}",
         "slow_ms": _ms(SLOW_MS),
         # 鮮度バッジに出す「何をどこまで見ているか」の 1 行
         "coverage": f"Epoch {snapshot['epoch']} · {cov['measured']:,} of {cov['sfdp']:,} SFDP validators measured",

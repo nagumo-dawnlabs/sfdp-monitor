@@ -92,6 +92,7 @@
       vote: v.v,
       nonvote: v.nv,
       ms: v.m,
+      lagging: !!v.lag,
       blocks: v.bp,
       delta: prev === null || prev === undefined ? null : v.m - prev,
       hist: v.h,
@@ -107,7 +108,10 @@
   /* 統計カードの母数。検索は受けないが、ノイズ除外の切り替えは反映する
      （「今この表が何を母数にしているか」と KPI をずらさないため） */
   function pool() {
-    return el('minblocks').checked ? ROWS.filter((r) => r.blocks >= NOISY_BLOCKS) : ROWS;
+    let rows = ROWS;
+    if (el('minblocks').checked) rows = rows.filter((r) => r.blocks >= NOISY_BLOCKS);
+    if (el('lagging').checked) rows = rows.filter((r) => r.lagging);
+    return rows;
   }
 
   function visible() {
@@ -170,7 +174,9 @@
       cls: 'rate',
       right: true,
       desc: true, // 遅い順。このページは遅れている先を探すためのもの
-      cell: (r) => `<span class="${msClass(r.ms)}">${ms(r.ms)}</span><span class="unit">ms</span>`,
+      cell: (r) =>
+        `<span class="${msClass(r.ms)}"${r.lagging ? ' title="Trillium flags this validator as lagging"' : ''}>` +
+        `${ms(r.ms)}</span><span class="unit">ms</span>`,
     },
     {
       key: 'client',
@@ -291,6 +297,7 @@
         'client',
         'client_version',
         'slot_duration_median_ms',
+        'slot_duration_is_lagging',
         `avg_slot_duration_median_ms_${HISTORY}_epochs`,
         'epochs_sampled',
         'slot_duration_delta_ms',
@@ -310,6 +317,7 @@
         r.client,
         r.version,
         num(r.ms, 1),
+        r.lagging,
         r.sampled ? num(r.avg, 1) : '',
         r.sampled,
         num(r.delta, 1),
@@ -327,6 +335,7 @@
   el('q').oninput = render;
   el('slowerthan').oninput = render;
   el('minblocks').onchange = render;
+  el('lagging').onchange = render;
   el('client').onchange = render;
   el('dl').onclick = downloadCsv;
 

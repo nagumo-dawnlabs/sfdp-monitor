@@ -20,7 +20,12 @@ network median across all {{ network_validators }} measured validators is {{ net
     <select id="client"></select>
   </div>
   <div class="field spacer">
-    <label class="check" title="A score from a handful of blocks is noisy. Hides validators with fewer than 32 blocks in this epoch">
+    <label class="check" title="Only validators Trillium flags as lagging (slot_duration_is_lagging)">
+      <input type="checkbox" id="lagging"> Lagging only
+    </label>
+  </div>
+  <div class="field">
+    <label class="check" title="A median over a handful of blocks is noisy. Hides validators with fewer than 32 blocks in this epoch">
       <input type="checkbox" id="minblocks"> ≥ 32 blocks
     </label>
   </div>
@@ -71,9 +76,16 @@ methodology gives a continuation slot for a perfect slot time score, and the val
 either side of it.
 </p>
 <p>
-The three score columns come from <a href="https://ibrl.wtf/" target="_blank" rel="noopener">ibrl.wtf</a>, a
-community tool from Jito that analyses leader behaviour block by block. They are the components of its IBRL score,
-kept here as context for <em>why</em> a validator is slow rather than as the ranking itself:
+Trillium also publishes its own <code>slot_duration_is_lagging</code> verdict. It is not shown as a column because
+{{ lagging }} of the {{ measured }} validators here carry it, which makes it a broad grouping rather than an alarm —
+but the <strong>Lagging only</strong> filter selects them, the flagged rows say so on hover, and the CSV carries the
+field.
+</p>
+<p>
+The three score columns are the components of the IBRL score from
+<a href="https://ibrl.wtf/" target="_blank" rel="noopener">ibrl.wtf</a>, a community tool from Jito that analyses
+leader behaviour block by block. Trillium republishes those same values, so this page reads them from Trillium too
+rather than from a second API. They are kept as context for <em>why</em> a validator is slow, not as the ranking:
 </p>
 <table>
 <thead><tr><th>Component</th><th>Weight in IBRL</th><th>What it rewards</th></tr></thead>
@@ -84,9 +96,8 @@ kept here as context for <em>why</em> a validator is slow rather than as the ran
 </tbody>
 </table>
 <p>
-Note that IBRL publishes its own median block build time, measured differently from Trillium's slot duration. The
-two usually agree within a few milliseconds but not always, and this page deliberately shows only Trillium's. Both
-are kept in the snapshot below if you want to compare them.
+The composite IBRL score is not displayed. It is still in the snapshot below, as is every other field this page
+reads, so nothing shown here has to be recomputed from a second source to be checked.
 </p>
 <p>
 <strong>Client</strong> is what the validator advertises over gossip (<code>getClusterNodes</code>), with the version
@@ -100,8 +111,9 @@ otherwise. Anything still unrecognised is left as its raw <code>Unknown(n)</code
 This page covers the {{ sfdp_total }} validators in SFDP <code>{{ participant_states }}</code> state.
 {{ measured }} of them have a slot time for epoch {{ epoch }}; the remaining {{ unmeasured }} have no record for this
 epoch, so there is nothing to measure and they are left out of the table rather than shown as a zero. Validator
-names, logos and stake come from the Solana Foundation API. Every source is joined on the identity pubkey and read
-for the same epoch, so no column is describing a different point in time from its neighbours.
+names, logos and stake come from the Solana Foundation API, and the client from gossip; every number in the table
+itself comes from Trillium, for one epoch, so no column is describing a different point in time — or a different
+methodology — from its neighbours.
 </p>
 <p>
 A median taken over a handful of blocks moves a lot epoch to epoch. The <strong>≥ 32 blocks</strong> filter drops

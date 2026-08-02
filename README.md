@@ -33,7 +33,7 @@ solanaorg/                  data access for api.solana.org
   sfdp.py                     SFDP endpoints, state definitions, state-string assembly
 
 trillium/                   data access for api.trillium.so
-  rewards.py                  slot_duration_median per validator per epoch
+  rewards.py                  every figure the IBRL page tabulates, per validator per epoch
 
 bam/                        data access for Jito's BAM APIs (what ibrl.wtf calls)
   ibrl.py                     IBRL score endpoints and score definitions (explorer.bam.dev)
@@ -174,10 +174,10 @@ changed, commits and pushes `docs/` (Pages redeploys on its own).
 - **The IBRL page moves every day, not every epoch.** Its current-epoch scores are still accumulating
   while the epoch runs, so unlike the SFDP page it will normally produce a commit each day.
 - The IBRL dashboard adds 15 Trillium requests (one per epoch of history, ~6MB each — the bulk of its
-  build time), one IBRL request, two more for the client column (`getClusterNodes` and the BAM roster),
-  plus a re-read of the validator details that `criteria-miss` already pulled into `.cache/` earlier in
-  the same job. Raising `HISTORY` raises the Trillium transfer linearly, so treat it as a real cost
-  borne by someone else's free API rather than a free knob.
+  build time), one tiny request for the epoch number, two more for the client column (`getClusterNodes`
+  and the BAM roster), plus a re-read of the validator details that `criteria-miss` already pulled into
+  `.cache/` earlier in the same job. Raising `HISTORY` raises the Trillium transfer linearly, so treat
+  it as a real cost borne by someone else's free API rather than a free knob.
 - If the public Solana RPC turns out to be unreliable from the runner, set a `SOLANA_RPC_URL` secret
   and pass it through as an environment variable — no code change needed. Until then a failure there
   only empties the Client column.
@@ -285,12 +285,19 @@ the page exists to surface.
   test fails if the two drift apart.
 - A median over very few blocks swings a lot, which is what the **≥ 32 blocks** filter is for.
 
+- Trillium's own `slot_duration_is_lagging` verdict is carried as `lag` and exposed through the
+  **Lagging only** filter, a hover title on flagged rows and the CSV — but **not** as a column: 244 of
+  358 validators carry it, so it groups rather than alarms, and the number in the Slot time column
+  already says the same thing more precisely.
+
 ### The component scores alongside it
 
-The three score columns are published by [ibrl.wtf](https://ibrl.wtf/), a community tool from Jito that
-watches leader behaviour block by block. They are the components of its IBRL score, kept as context for
-*why* a validator is slow. **The composite IBRL score itself is not displayed** (it is still in the
-snapshot JSON). From [ibrl.wtf/methodology](https://ibrl.wtf/methodology/):
+The three score columns are the components of the IBRL score from [ibrl.wtf](https://ibrl.wtf/), a
+community tool from Jito that watches leader behaviour block by block. **Trillium republishes those exact
+values** — verified identical to 4 decimal places for all 358 SFDP validators at epoch 1009 — so this
+page reads them from Trillium rather than calling a second API for numbers it can already get. They are
+kept as context for *why* a validator is slow. **The composite IBRL score itself is not displayed** (it
+is still in the snapshot JSON). From [ibrl.wtf/methodology](https://ibrl.wtf/methodology/):
 
 ```
 IBRL = 0.40 x Slot Time + 0.15 x Vote Packing + 0.45 x Non-Vote Packing
@@ -304,11 +311,14 @@ IBRL = 0.40 x Slot Time + 0.15 x Vote Packing + 0.45 x Non-Vote Packing
 
 **Two different medians exist and they are not the same number.** IBRL publishes `median_block_build_ms`
 and Trillium publishes `slot_duration_median`; they measure the same idea differently and usually agree
-within a few ms, but not always (up to ~40ms apart at epoch 1009). Only Trillium's is displayed. IBRL's
-is kept in the snapshot as `mb` so the two can be compared without refetching.
+within a few ms, but not always (up to ~40ms apart at epoch 1009). This page shows Trillium's, and does
+not display or store IBRL's — mixing two similarly-named medians in one table is a trap worth avoiding.
 
-- Every source is read **for the same epoch** — the one IBRL reports as its latest settled epoch — so no
-  column describes a different point in time from its neighbours.
+- **Every number in the table comes from one source, for one epoch.** The epoch is Trillium's own latest
+  (`GET /api/epochs`, 52 bytes — no need to pull 6MB just to learn the epoch number), so no column can
+  describe a different point in time, or a different methodology, from its neighbours.
+- `explorer.bam.dev` is therefore no longer called by this dashboard. `bam/roster.py` still is, for the
+  BAM-versus-Jito client distinction, and `bam.WEIGHTS` remains as a constant for the notes table.
 - Validators with no slot duration for the epoch are left out of the table rather than shown as a zero,
   and the count is stated in the page's notes. At epoch 1010 that was 11 of 369.
 - Scores are coloured green at 95, plain at 90, yellow at 80, orange at 70 and red below (`SCORE_TIERS`,
@@ -345,18 +355,18 @@ themselves, which do abort the build.
     Retired 3,477 / Rejected 6,985
 - Validator detail: `GET https://api.solana.org/api/validators/<pubkey>?cacheStatus=enable`
   (used internally by solana.org; outside the official docs)
-- Median slot time: `GET https://api.trillium.so/validator_rewards/<epoch>` — `slot_duration_median`
-  (ms, as a string) per `identity_pubkey`, one request per epoch. **Roughly 6MB per epoch**, of which
-  this site uses a handful of the 279 fields; that cost is why `HISTORY` is 15 rather than 30. The
-  `epoch_validators_slim` route is far smaller but carries no slot duration, so it is not usable here.
-- IBRL scores, all validators for one epoch:
-  `GET https://explorer.bam.dev/api/v1/ibrl_validators[?epoch=<n>]` — one request covers every
-  validator, and history reaches back to roughly epoch 906
-- IBRL network averages: `GET https://explorer.bam.dev/api/v1/ibrl_stats` (also reports the current
-  epoch)
-- Per-validator detail, including `recent_blocks`, is available at
-  `GET https://explorer.bam.dev/api/v1/ibrl_validators/<identity>` but is not used — the bulk endpoint
-  answers the same question in one request instead of several hundred
+- Everything the IBRL page tabulates:
+  `GET https://api.trillium.so/validator_rewards/<epoch>` — `slot_duration_median` (ms, as a string),
+  `slot_duration_is_lagging`, the three component scores and `blocks_produced`, per `identity_pubkey`,
+  one request per epoch. **Roughly 6MB per epoch**, of which this site uses a handful of the 279 fields;
+  that cost is why `HISTORY` is 15 rather than 30. The `epoch_validators_slim` route is far smaller but
+  carries no slot duration, so it is not usable here.
+- Latest epoch: `GET https://api.trillium.so/api/epochs` — 52 bytes. It lists only the last 10 epochs,
+  but `validator_rewards/<epoch>` still serves considerably older ones, so treat it as "what is newest",
+  not "what is available".
+- `explorer.bam.dev` (`ibrl_validators`, `ibrl_stats`) is **no longer called by any dashboard** —
+  Trillium carries the same score values. `bam/ibrl.py` is kept because it is the written-down
+  definition of what those scores mean.
 - Validator client and version: `POST https://api.mainnet-beta.solana.com` `getClusterNodes`
   (`clientId` + `version` per identity, whole cluster in one request)
 - BAM roster: `GET https://kobe.mainnet.jito.network/api/v1/bam_validators?epoch=<n>` — used only to
