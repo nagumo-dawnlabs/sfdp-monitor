@@ -10,14 +10,16 @@
   const EPOCH = DATA.epoch;
   const HISTORY = DATA.history;
   const NETWORK = DATA.network;
+  const SLOW_MS = DATA.slow_ms; // 「遅い」の目安。Python 側と 1 か所で共有する
 
   const PAGE_SIZE = 50; // 初期表示の行数。残りは「Show all」で開く
   const LOGO_DIR = '../assets/logos/'; // criteria-miss が取り込んだものに相乗り（外部リクエストなし）
-  const NOISY_BLOCKS = 32; // これ未満のブロック数だとスコアが epoch ごとに大きく振れる
+  const NOISY_BLOCKS = 32; // これ未満のブロック数だと数値が epoch ごとに大きく振れる
 
-  /* スパークラインの縦軸。全バリデータで同じ範囲に固定しないと高さが比較できない */
-  const SPARK_MIN = 50;
-  const SPARK_MAX = 100;
+  /* スパークラインの縦軸 (ms)。全バリデータで同じ範囲に固定しないと高さが比較できない。
+     棒が高い = 遅い = 悪い。実データがだいたい 350-455ms に収まるのでこの範囲 */
+  const SPARK_MIN = 350;
+  const SPARK_MAX = 460;
 
   /* ---- スコアの色分け ----------------------------------------------------
    * dashboards/ibrl_criteria.py の SCORE_TIERS / score_class() と同じ値。
@@ -35,19 +37,31 @@
     return 'v-bad';
   }
 
-  /* Median Block Build は「低いほど良い」ので別のしきい値を持つ */
+  /* median slot time は「低いほど良い」ので向きが逆。
+   * dashboards/ibrl_criteria.py の MS_TIERS / ms_class() と同じ値。
+   * 400ms は IBRL の方法論が「継続スロットなら満点」としている許容値。 */
+  const MS_TIERS = [
+    [400, 'v-hi'],
+    [420, 'v-good'],
+    [440, 'v-mid'],
+    [470, 'v-low'],
+  ];
+
   function msClass(ms) {
-    if (ms <= 380) return 'v-hi';
-    if (ms <= 430) return 'v-good';
-    if (ms <= 500) return 'v-mid';
-    return 'v-low';
+    for (const [max, cls] of MS_TIERS) if (ms <= max) return cls;
+    return 'v-bad';
+  }
+
+  /* 403.0 -> "403"、420.5 -> "420.5" */
+  function ms(value) {
+    return value.toFixed(1).replace(/\.0$/, '');
   }
 
   /* ---- 集計 -------------------------------------------------------------
    * dashboards/ibrl_criteria.py の summarize() と同一アルゴリズム。
    * 片方を変えたら必ずもう片方も変えること（tests/test_ibrl.py が Python 側を固定）。
    *
-   * history は「新しい epoch が先頭」の IBRL スコア列。ブロックを作っていない
+   * history は「新しい epoch が先頭」の median slot time 列 (ms)。記録の無い
    * epoch は null で入っているので、平均の分母から外す。
    */
   function summarize(history) {
@@ -63,6 +77,8 @@
 
   const ROWS = VALIDATORS.map((v) => {
     const { average, sampled } = summarize(v.h);
+    // 前 epoch との差。API 側の増減は IBRL スコアのものなので使わず、履歴から出す
+    const prev = v.h.length > 1 ? v.h[1] : null;
     return {
       name: v.n || '(no name)',
       rawName: v.n || '',
@@ -70,7 +86,6 @@
       state: v.t,
       stake: v.k,
       fdn: v.f,
-      ibrl: v.i,
       client: v.c || '',
       version: v.cv || '',
       slot: v.b,
@@ -78,7 +93,7 @@
       nonvote: v.nv,
       ms: v.m,
       blocks: v.bp,
-      delta: v.tr,
+      delta: prev === null || prev === undefined ? null : v.m - prev,
       hist: v.h,
       avg: average,
       sampled,
@@ -97,12 +112,12 @@
 
   function visible() {
     const q = el('q').value.trim().toLowerCase();
-    const max = parseFloat(el('maxscore').value);
-    const cap = isNaN(max) ? Infinity : max;
+    const min = parseFloat(el('slowerthan').value);
+    const floor = isNaN(min) ? -Infinity : min;
     const client = el('client').value;
     return pool().filter(
       (r) =>
-        r.ibrl <= cap &&
+        r.ms >= floor &&
         (!client || r.client === client) &&
         (!q || r.name.toLowerCase().includes(q) || r.pk.toLowerCase().includes(q)),
     );
@@ -124,13 +139,16 @@
 
   /* スコア列は昇順（悪い順）から始める。このページは「下がっている先」を探すためのもので、
      満点付近が 50 行続く画面には用が無い。desc を立てないので初期表示もクリック後も同じ向き */
+  /* IBRL の内訳スコア列。主軸ではないので補助扱いだが、向きはスコアのまま
+     （昇順 = 悪い順）。IBRL 側に行が無いバリデータは null になりうる */
   const score = (key, label, title) => ({
     key,
     label,
     title,
     cls: 'num',
     right: true,
-    cell: (r) => `<span class="${scoreClass(r[key])}">${r[key].toFixed(1)}</span>`,
+    value: (r) => (r[key] === null ? Infinity : r[key]),
+    cell: (r) => (r[key] === null ? '–' : `<span class="${scoreClass(r[key])}">${r[key].toFixed(1)}</span>`),
   });
 
   const COLS = [
@@ -146,12 +164,13 @@
         `<div class="pk">${r.pk.slice(0, 8)}…${r.pk.slice(-6)}</div></div></div>`,
     },
     {
-      key: 'ibrl',
-      label: 'IBRL',
-      title: `IBRL score for epoch ${EPOCH}`,
+      key: 'ms',
+      label: 'Slot time',
+      title: `Median slot time for epoch ${EPOCH} (lower is better)`,
       cls: 'rate',
       right: true,
-      cell: (r) => `<span class="${scoreClass(r.ibrl)}">${r.ibrl.toFixed(1)}</span>`,
+      desc: true, // 遅い順。このページは遅れている先を探すためのもの
+      cell: (r) => `<span class="${msClass(r.ms)}">${ms(r.ms)}</span><span class="unit">ms</span>`,
     },
     {
       key: 'client',
@@ -169,40 +188,36 @@
     {
       key: 'avg',
       label: `Avg ${HISTORY}e`,
-      title: `Mean IBRL score over the last ${HISTORY} epochs, skipping epochs with no blocks`,
+      title: `Mean median slot time over the last ${HISTORY} epochs, skipping epochs with no record`,
       cls: 'num',
       right: true,
-      cell: (r) => (r.sampled ? `<span class="${scoreClass(r.avg)}">${r.avg.toFixed(1)}</span>` : '–'),
+      desc: true,
+      cell: (r) => (r.sampled ? `<span class="${msClass(r.avg)}">${ms(r.avg)}</span>` : '–'),
     },
     {
       key: 'delta',
       label: 'Δ',
-      title: 'Change in IBRL score from the previous epoch',
+      title: 'Change in median slot time from the previous epoch. Positive means it got slower',
       cls: 'num',
       right: true,
-      desc: true,
+      desc: true, // 悪化幅の大きい順
+      // 前 epoch が無い行は並べ替えでも最後に回す
+      value: (r) => (r.delta === null ? -Infinity : r.delta),
       cell: (r) => {
-        const cls = r.delta > 0.05 ? 'd-up' : r.delta < -0.05 ? 'd-down' : 'd-flat';
+        if (r.delta === null) return '<span class="d-flat">–</span>';
+        // 遅くなった = 悪い。スコアと違って符号の意味が逆になる
+        const cls = r.delta > 0.5 ? 'd-down' : r.delta < -0.5 ? 'd-up' : 'd-flat';
         const sign = r.delta > 0 ? '+' : '';
-        return `<span class="${cls}">${sign}${r.delta.toFixed(1)}</span>`;
+        return `<span class="${cls}">${sign}${ms(r.delta)}</span>`;
       },
     },
-    score('slot', 'Slot time', 'Slot Time Score — 40% of IBRL. Rewards fast block builds'),
-    score('vote', 'Vote pack', 'Vote Packing Score — 15% of IBRL. Rewards processing votes early in the block'),
-    score('nonvote', 'Non-vote', 'Non-Vote Packing Score — 45% of IBRL. Rewards spreading compute evenly'),
-    {
-      key: 'ms',
-      label: 'Build',
-      title: 'Median block build time in this epoch (lower is better)',
-      cls: 'num',
-      right: true,
-      desc: true,
-      cell: (r) => `<span class="${msClass(r.ms)}">${fmt(r.ms)}</span><span class="unit">ms</span>`,
-    },
+    score('slot', 'Slot score', 'Slot Time Score from IBRL — rewards fast block builds'),
+    score('vote', 'Vote pack', 'Vote Packing Score from IBRL — rewards processing votes early in the block'),
+    score('nonvote', 'Non-vote', 'Non-Vote Packing Score from IBRL — rewards spreading compute evenly'),
     {
       key: 'blocks',
       label: 'Blocks',
-      title: 'Blocks produced in this epoch. A score from very few blocks is noisy',
+      title: 'Blocks produced in this epoch. A median over very few blocks is noisy',
       cls: 'num',
       right: true,
       desc: true,
@@ -211,15 +226,16 @@
     {
       key: 'spark',
       label: 'Trend',
-      title: `IBRL score over the last ${HISTORY} epochs, newest on the left`,
+      title: `Median slot time over the last ${HISTORY} epochs, newest on the left. Taller means slower`,
       sortable: false,
       cell: (r) =>
         `<div class="sparkbar">${r.hist
           .map((v, i) => {
             const epoch = EPOCH - i;
-            if (v === null || v === undefined) return `<i class="b-x" title="epoch ${epoch}: no blocks"></i>`;
+            if (v === null || v === undefined) return `<i class="b-x" title="epoch ${epoch}: no record"></i>`;
+            // 高さは所要時間そのもの。高い棒 = 遅い = 悪い（色も同じ向き）
             const pct = Math.max(6, Math.min(100, ((v - SPARK_MIN) / (SPARK_MAX - SPARK_MIN)) * 100));
-            return `<i class="${scoreClass(v)}" style="height:${pct.toFixed(0)}%" title="epoch ${epoch}: ${v.toFixed(1)}"></i>`;
+            return `<i class="${msClass(v)}" style="height:${pct.toFixed(0)}%" title="epoch ${epoch}: ${ms(v)} ms"></i>`;
           })
           .join('')}</div>`,
     },
@@ -233,7 +249,7 @@
     more: 'more',
     pageSize: PAGE_SIZE,
     cols: COLS,
-    sortKey: 'ibrl',
+    sortKey: 'ms', // 主軸。列側の desc により既定は降順（遅い順）
     rows: visible,
   });
   table.countLabel = (shown, all) =>
@@ -250,21 +266,23 @@
 
   function render() {
     const p = pool();
-    const med = median(p.map((r) => r.ibrl));
-    const below = p.filter((r) => r.ibrl < 85).length;
+    const med = median(p.map((r) => r.ms));
+    const slow = p.filter((r) => r.ms > SLOW_MS).length;
 
     DL.renderStats('stats', [
-      [fmt(p.length), 'validators scored'],
-      [med.toFixed(1), 'median IBRL score'],
-      [fmt(below), 'scoring below 85'],
-      [NETWORK.ibrl_score.toFixed(1), 'network average'],
+      [fmt(p.length), 'validators measured'],
+      [`${ms(med)} ms`, 'median slot time'],
+      [fmt(slow), `slower than ${ms(SLOW_MS)} ms`],
+      [`${ms(NETWORK.slot_ms)} ms`, 'network median'],
     ]);
     table.render();
   }
 
+  const num = (v, digits) => (v === null || v === undefined ? '' : v.toFixed(digits));
+
   function downloadCsv() {
     DL.downloadCsv(
-      `sfdp_ibrl_e${EPOCH}.csv`,
+      `sfdp_slot_time_e${EPOCH}.csv`,
       [
         'rank',
         'name',
@@ -272,14 +290,13 @@
         'participant_state',
         'client',
         'client_version',
-        'ibrl_score',
-        `avg_ibrl_${HISTORY}_epochs`,
+        'slot_duration_median_ms',
+        `avg_slot_duration_median_ms_${HISTORY}_epochs`,
         'epochs_sampled',
-        'epoch_delta',
+        'slot_duration_delta_ms',
         'slot_time_score',
         'vote_packing_score',
         'non_vote_packing_score',
-        'median_block_build_ms',
         'blocks_produced',
         'activated_stake_sol',
         'sfdp_stake_sol',
@@ -292,14 +309,13 @@
         r.state,
         r.client,
         r.version,
-        r.ibrl.toFixed(2),
-        r.sampled ? r.avg.toFixed(2) : '',
+        num(r.ms, 1),
+        r.sampled ? num(r.avg, 1) : '',
         r.sampled,
-        r.delta.toFixed(2),
-        r.slot.toFixed(2),
-        r.vote.toFixed(2),
-        r.nonvote.toFixed(2),
-        r.ms,
+        num(r.delta, 1),
+        num(r.slot, 2),
+        num(r.vote, 2),
+        num(r.nonvote, 2),
         r.blocks,
         Math.round(r.stake),
         Math.round(r.fdn),
@@ -309,7 +325,7 @@
   }
 
   el('q').oninput = render;
-  el('maxscore').oninput = render;
+  el('slowerthan').oninput = render;
   el('minblocks').onchange = render;
   el('client').onchange = render;
   el('dl').onclick = downloadCsv;

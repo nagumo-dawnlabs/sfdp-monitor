@@ -99,9 +99,14 @@ def test_freshness_badge_carries_a_machine_readable_timestamp(site, slug):
 
 
 def test_freshness_badge_states_what_is_covered(site):
-    # 何をどこまで見ているかもバッジに出す
+    # 何をどこまで見ているかもバッジに出す。epoch は fixture から取る
+    # （固定値で書くと、fixture を取り直すたびにテストが落ちる）
     assert "Epochs 944–1007" in (site / "criteria-miss" / "index.html").read_text(encoding="utf-8")
-    assert "Epoch 1009" in (site / "ibrl-criteria" / "index.html").read_text(encoding="utf-8")
+
+    snapshot = json.loads(FIXTURES["ibrl-criteria"].read_text(encoding="utf-8"))
+    page = (site / "ibrl-criteria" / "index.html").read_text(encoding="utf-8")
+    assert f"Epoch {snapshot['epoch']}" in page
+    assert f"{len(snapshot['validators'])} of {snapshot['coverage']['sfdp']} SFDP validators measured" in page
 
 
 def test_hub_has_no_freshness_badge(site):

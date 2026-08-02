@@ -1,17 +1,23 @@
 """IBRL Criteria ダッシュボード。
 
-SFDP バリデータ 1 件ごとに、現在 epoch の IBRL スコア（と内訳の Slot Time /
-Vote Packing / Non-Vote Packing、Median Block Build）を並べる。
+主軸は **median slot time**（Trillium の `slot_duration_median`, ms）。SFDP
+バリデータ 1 件ごとに、その epoch のスロット所要時間の中央値を遅い順に並べ、
+補助として IBRL の内訳スコア（Slot Time / Vote Packing / Non-Vote Packing）と
+クライアント種別を添える。IBRL の総合スコアは表には出さない。
 
-データ源が 2 つあるのがこのダッシュボードの特徴:
+データ源が 4 つあるのがこのダッシュボードの特徴:
 
-- スコアそのもの: explorer.bam.dev（ibrl.wtf の裏の API）。identity pubkey 引き
-- 名前・ロゴ・stake: api.solana.org。IBRL 側は pubkey しか返さないため
+- median slot time: api.trillium.so（主軸）
+- 内訳スコア: explorer.bam.dev（ibrl.wtf の裏の API）
+- 名前・ロゴ・stake: api.solana.org。他はどれも pubkey しか返さないため
+- クライアント種別: Solana の gossip + Jito の BAM 名簿
 
-突き合わせのキーは identity pubkey で、SFDP の `mainnetBetaPubkey` と同じ値。
+突き合わせのキーはすべて identity pubkey で、SFDP の `mainnetBetaPubkey` と同じ値。
+epoch は IBRL が最新としている確定 epoch に統一して取るので、列ごとに違う epoch の
+数字が混ざることはない。
 
-ブロックを 1 つも作っていない epoch のバリデータは IBRL 側に行が無い。数字が
-出せないだけで「悪い」わけではないので、表には出さず件数だけを注記に出す。
+その epoch のスロット所要時間が無いバリデータ（ブロックを作っていない等）は、
+数字が出せないだけで「悪い」わけではないので、表には出さず件数だけを注記に出す。
 """
 
 from __future__ import annotations
@@ -21,6 +27,7 @@ from dataclasses import dataclass
 
 import bam
 import solanarpc
+import trillium
 from sitegen.logos import available_logos
 from sitegen.registry import Dashboard, DashboardData
 from solanaorg import sfdp
@@ -28,12 +35,22 @@ from solanaorg.client import FetchError
 
 SLUG = "ibrl-criteria"
 
-# 埋め込む epoch 数。スパークラインと平均に使うだけなので短くてよい
-# （1 epoch = 1 リクエストなので取得は軽いが、ページの重さは行数 x これで効く）
-HISTORY = 30
+# 埋め込む epoch 数。平均とスパークラインに使う。
+# Trillium は 1 epoch あたり 6MB 前後を返すので、ここを増やすと取得量がそのまま
+# 効く（30 にすると 1 日 190MB を他所の公開 API から引くことになる）。
+# 平均をならすには十分で、かつ相手に迷惑をかけない範囲としてこの値にしてある。
+HISTORY = 15
 
 # スコアの色分けのしきい値（高いほど良い）。JS 側の SCORE_TIERS と同じ値を持つ
 SCORE_TIERS = ((95.0, "v-hi"), (90.0, "v-good"), (80.0, "v-mid"), (70.0, "v-low"))
+
+# median slot time の色分け（低いほど良い）。JS 側の MS_TIERS と同じ値を持つ。
+# 400ms は IBRL の方法論が「継続スロットなら満点」としている許容値で、実データも
+# この前後で二山に割れる。恣意的な刻みではなくこの許容値を緑の境目にしてある。
+MS_TIERS = ((400.0, "v-hi"), (420.0, "v-good"), (440.0, "v-mid"), (470.0, "v-low"))
+
+# 「遅い」と見なす目安。KPI の件数に使う（現状 360 件中 40 件ほどが該当）
+SLOW_MS = 420.0
 
 
 @dataclass(frozen=True)
@@ -65,6 +82,17 @@ def score_class(score: float) -> str:
     return "v-bad"
 
 
+def ms_class(ms: float) -> str:
+    """median slot time に対応する色クラス。低いほど良いので向きが逆。
+
+    JS 側の msClass() と同一。
+    """
+    for threshold, cls in MS_TIERS:
+        if ms <= threshold:
+            return cls
+    return "v-bad"
+
+
 # --- 収集 ------------------------------------------------------------------
 
 
@@ -87,11 +115,16 @@ def _fetch_snapshot(env) -> dict:
     history = max(1, min(HISTORY, env.history))
     env.log(f"IBRL: epoch {epoch} (history {history}), network score {network['ibrl_score']:.2f}")
 
-    # 最新 epoch はまだ値が動くのでキャッシュしない。過去 epoch は確定値
-    scores = {epoch: bam.fetch_epoch(ibrl, epoch, cached=False)}
+    current = bam.fetch_epoch(ibrl, epoch, cached=False)
+    env.log(f"IBRL: {len(current)} validators scored at epoch {epoch}")
+
+    # 主軸の median slot time は Trillium 側。IBRL が最新としている epoch に
+    # 揃えて取るので、表の中で epoch が混ざることはない
+    tril = env.make_client(trillium.BASE_URL)
+    durations = {epoch: trillium.fetch_epoch(tril, epoch, cached=False)}
     for past in range(epoch - 1, epoch - history, -1):
-        scores[past] = bam.fetch_epoch(ibrl, past)
-    env.log(f"IBRL: {len(scores[epoch])} validators scored at epoch {epoch}")
+        durations[past] = trillium.fetch_epoch(tril, past)
+    env.log(f"Trillium: {len(durations[epoch])} validators with a slot duration at epoch {epoch}")
 
     # 名前・ロゴ・stake は SFDP 側から。ディスクキャッシュ越しなので、同じビルドで
     # criteria-miss が先に走っていれば追加の API 呼び出しはほぼ発生しない
@@ -115,16 +148,16 @@ def _fetch_snapshot(env) -> dict:
     clients = _fetch_clients(env, epoch)
 
     epochs_desc = [epoch - i for i in range(history)]
-    current = scores[epoch]
     # ロゴは criteria-miss 側が取り込んだものを使う（ここでは同期しない。
     # 同じディレクトリに 2 つのダッシュボードが同期すると互いのロゴを消すため）
     logos = available_logos(env.out_dir / "assets" / "logos") if env.want_assets else set()
 
     rows = []
     for p in profiles:
+        duration = durations[epoch].get(p.pubkey)
+        if duration is None:
+            continue  # この epoch のスロット所要時間が無い。主軸が出せないので表に出さない
         score = current.get(p.pubkey)
-        if score is None:
-            continue  # この epoch にブロックを作っていない。数字が出せないので表には出さない
         client, version = clients.get(p.pubkey, ("", ""))
         rows.append(
             {
@@ -135,16 +168,22 @@ def _fetch_snapshot(env) -> dict:
                 "cv": version,
                 "k": p.stake_sol,
                 "f": p.foundation_stake_sol,
-                "i": round(score.ibrl, 2),
-                "b": round(score.slot_time, 2),
-                "v": round(score.vote_packing, 2),
-                "nv": round(score.non_vote_packing, 2),
-                "m": score.median_block_ms,
-                "bp": score.blocks_produced,
-                "tr": round(score.trend, 2),
-                # 新しい epoch が先頭。その epoch にデータが無ければ null
+                # 主軸。Trillium の slot_duration_median (ms)
+                "m": round(duration.median, 1),
+                # IBRL 側の内訳スコア。取れないバリデータもあるので null を許す
+                "b": round(score.slot_time, 2) if score else None,
+                "v": round(score.vote_packing, 2) if score else None,
+                "nv": round(score.non_vote_packing, 2) if score else None,
+                "bp": score.blocks_produced if score else 0,
+                # 表には出さないが、スナップショットとしては残す
+                # （IBRL スコアと、測り方の違う IBRL 側の中央値）
+                "i": round(score.ibrl, 2) if score else None,
+                "mb": score.median_block_ms if score else None,
+                # median slot time の履歴。新しい epoch が先頭で、その epoch に
+                # 記録が無ければ null。平均・増減・スパークラインはこれから作る
                 "h": [
-                    round(scores[e][p.pubkey].ibrl, 1) if p.pubkey in scores.get(e, {}) else None for e in epochs_desc
+                    round(durations[e][p.pubkey].median, 1) if p.pubkey in durations.get(e, {}) else None
+                    for e in epochs_desc
                 ],
                 # 1 のときだけ assets/logos/<pubkey>.webp が存在する
                 **({"lg": 1} if p.pubkey in logos else {}),
@@ -152,7 +191,13 @@ def _fetch_snapshot(env) -> dict:
         )
 
     rows.sort(key=lambda r: (r["n"] or "￿").lower())
-    env.log(f"IBRL: {len(rows)} of {len(profiles)} SFDP validators have a score this epoch")
+    env.log(f"{len(rows)} of {len(profiles)} SFDP validators have a slot duration this epoch")
+
+    # 比較用のネットワーク中央値は SFDP に限らず Trillium 全件から出す
+    # （表と同じ指標・同じ epoch でないと並べる意味がない）
+    all_medians = sorted(d.median for d in durations[epoch].values())
+    network["slot_ms"] = round(statistics.median(all_medians), 1) if all_medians else 0.0
+    network["slot_validators"] = len(all_medians)
 
     return {
         "dashboard": SLUG,
@@ -162,7 +207,8 @@ def _fetch_snapshot(env) -> dict:
         "history": history,
         "network": network,
         "weights": bam.WEIGHTS,
-        "coverage": {"sfdp": len(profiles), "scored": len(rows), "unscored": len(profiles) - len(rows)},
+        "slow_ms": SLOW_MS,
+        "coverage": {"sfdp": len(profiles), "measured": len(rows), "unmeasured": len(profiles) - len(rows)},
         "validators": rows,
     }
 
@@ -196,37 +242,44 @@ def _context(snapshot: dict) -> dict:
         "history": snapshot["history"],
         "cluster": snapshot["cluster"],
         "participant_states": snapshot["participant_states"],
-        "scored": f"{cov['scored']:,}",
-        "unscored": f"{cov['unscored']:,}",
+        "measured": f"{cov['measured']:,}",
+        "unmeasured": f"{cov['unmeasured']:,}",
         "sfdp_total": f"{cov['sfdp']:,}",
-        "network_score": f"{net['ibrl_score']:.2f}",
-        "network_validators": f"{net['active_validators']:,}",
+        "network_ms": _ms(net.get("slot_ms", 0.0)),
+        "network_validators": f"{net.get('slot_validators', 0):,}",
+        "slow_ms": _ms(SLOW_MS),
         # 鮮度バッジに出す「何をどこまで見ているか」の 1 行
-        "coverage": f"Epoch {snapshot['epoch']} · {cov['scored']:,} of {cov['sfdp']:,} SFDP validators scored",
+        "coverage": f"Epoch {snapshot['epoch']} · {cov['measured']:,} of {cov['sfdp']:,} SFDP validators measured",
         # lede から ibrl.wtf の実ページへ 1 件リンクして出典を辿れるようにする
         "sample_pubkey": validators[0]["p"] if validators else "",
     }
 
 
+def _ms(value: float) -> str:
+    """`403.0` -> `403`、`420.5` -> `420.5`。中央値なので .5 が出る。"""
+    return f"{value:.1f}".removesuffix(".0")
+
+
 def _stats(snapshot: dict) -> list[tuple[str, str]]:
     rows = snapshot["validators"]
     if not rows:
-        return [("0", "validators scored")]
-    scores = sorted(r["i"] for r in rows)
-    below = sum(1 for s in scores if s < 85.0)
+        return [("0", "validators measured")]
+    times = sorted(r["m"] for r in rows)
+    slow = sum(1 for ms in times if ms > SLOW_MS)
     return [
-        (f"{len(rows):,}", "validators scored"),
-        (f"{statistics.median(scores):.1f}", "median IBRL score"),
-        (f"{below:,}", "scoring below 85"),
+        (f"{len(rows):,}", "validators measured"),
+        (f"{_ms(statistics.median(times))} ms", "median slot time"),
+        (f"{slow:,}", f"slower than {_ms(SLOW_MS)} ms"),
     ]
 
 
 DASHBOARD = Dashboard(
     slug=SLUG,
     title="IBRL Criteria",
-    tagline="IBRL score and its slot time / packing components for every Solana Foundation Delegation Program validator.",
+    tagline="Median slot time of every Solana Foundation Delegation Program validator, slowest first.",
     description=(
-        "IBRL score and its slot time / packing components for every Solana Foundation Delegation Program validator."
+        "Median slot time of every Solana Foundation Delegation Program validator, "
+        "with the IBRL slot time and packing component scores alongside it."
     ),
     template="ibrl_criteria.html",
     footer_template="ibrl_criteria_footer.html",

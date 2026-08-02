@@ -7,7 +7,7 @@ Dashboards published by DawnLabs on top of public Solana data, plus the generato
 | Dashboard | What it shows |
 |---|---|
 | [SFDP Criteria Miss Rate](https://nagumo-dawnlabs.github.io/sfdp-monitor/criteria-miss/) | What share of the last X epochs each SFDP validator failed to meet program criteria |
-| [IBRL Criteria](https://nagumo-dawnlabs.github.io/sfdp-monitor/ibrl-criteria/) | The IBRL score of each SFDP validator, with its slot time and packing components |
+| [IBRL Criteria](https://nagumo-dawnlabs.github.io/sfdp-monitor/ibrl-criteria/) | Median slot time of each SFDP validator, slowest first, with its client and IBRL component scores |
 
 No runtime dependencies (Python 3.10+ standard library only). The pages themselves load nothing from
 third parties either — validator logos are fetched at build time and served from the same origin, so a
@@ -31,6 +31,9 @@ sfdp_status.py              ad-hoc reporting CLI (writes CSV / Markdown / JSON)
 solanaorg/                  data access for api.solana.org
   client.py                   ApiClient: rate limiting + disk cache + retries (shared by bam/ too)
   sfdp.py                     SFDP endpoints, state definitions, state-string assembly
+
+trillium/                   data access for api.trillium.so
+  rewards.py                  slot_duration_median per validator per epoch
 
 bam/                        data access for Jito's BAM APIs (what ibrl.wtf calls)
   ibrl.py                     IBRL score endpoints and score definitions (explorer.bam.dev)
@@ -80,10 +83,11 @@ tests/                      pytest (never touches the API)
   other in a comment). The CLI and the dashboard cannot structurally disagree on a number. The IBRL
   page does the same with `summarize()` / `score_class()`, and `tests/test_ibrl.py` additionally
   asserts that the JS colour thresholds still match the Python ones.
-- **Data sources are packages, dashboards are pages.** `solanaorg/` and `bam/` only know how to fetch
-  and shape data; `dashboards/` decides what a page means. A dashboard may read from both — the IBRL
-  page takes scores from `bam/` and validator names, logos and stake from `solanaorg/`, joining them
-  on the identity pubkey. `solanaorg/client.py` is the generic HTTP layer (rate limiting, disk cache,
+- **Data sources are packages, dashboards are pages.** `solanaorg/`, `bam/`, `trillium/` and
+  `solanarpc/` only know how to fetch and shape data; `dashboards/` decides what a page means. A
+  dashboard may read from several — the IBRL page takes its ranking metric from `trillium/`, component
+  scores from `bam/`, the client from `solanarpc/`, and validator names, logos and stake from
+  `solanaorg/`, joining them all on the identity pubkey for one common epoch. `solanaorg/client.py` is the generic HTTP layer (rate limiting, disk cache,
   retries) and is used for both hosts; `BuildEnv.make_client(base_url)` hands out a client that
   inherits the build's rate and cache settings.
 - **Shared assets.** One copy of each lands in `docs/assets/` and every page references it with
@@ -169,9 +173,11 @@ changed, commits and pushes `docs/` (Pages redeploys on its own).
   (5–10 minutes).
 - **The IBRL page moves every day, not every epoch.** Its current-epoch scores are still accumulating
   while the epoch runs, so unlike the SFDP page it will normally produce a commit each day.
-- The IBRL dashboard adds only about 30 requests (one per epoch of history), two more for the client
-  column (`getClusterNodes` and the BAM roster), plus a re-read of the validator details that
-  `criteria-miss` already pulled into `.cache/` earlier in the same job.
+- The IBRL dashboard adds 15 Trillium requests (one per epoch of history, ~6MB each — the bulk of its
+  build time), one IBRL request, two more for the client column (`getClusterNodes` and the BAM roster),
+  plus a re-read of the validator details that `criteria-miss` already pulled into `.cache/` earlier in
+  the same job. Raising `HISTORY` raises the Trillium transfer linearly, so treat it as a real cost
+  borne by someone else's free API rather than a free knob.
 - If the public Solana RPC turns out to be unreliable from the runner, set a `SOLANA_RPC_URL` secret
   and pass it through as an environment variable — no code change needed. Until then a failure there
   only empties the Client column.
@@ -257,38 +263,56 @@ exactly one place, `solanaorg/sfdp.py`.
 
 ---
 
-## How the IBRL score is measured
+## How median slot time is measured
 
-The score is not computed here — it is published by [ibrl.wtf](https://ibrl.wtf/), a community tool from
-Jito that watches leader behaviour block by block. This site reads it and joins it to the SFDP validator
-set. The definition, from [ibrl.wtf/methodology](https://ibrl.wtf/methodology/):
+The ranking axis is **`slot_duration_median` from [Trillium](https://trillium.so/)** — the median time
+the validator's slots actually took during the epoch, in milliseconds. The page sorts by it descending,
+slowest first: a validator that is consistently slow holds up the whole leader rotation, and that is what
+the page exists to surface.
+
+- **Avg** is the mean of that median over the last `HISTORY` epochs, skipping epochs with no record. A
+  single epoch bounces around, so the average is the steadier read.
+- **Δ** is computed here from the embedded history (`this epoch − previous epoch`), **not** taken from an
+  API field. A positive Δ means the validator got *slower*, so it is coloured like a regression — the
+  opposite sign convention from a score.
+- **Trend** plots the same epochs, newest on the left. Bar height is the slot time itself, so a **taller
+  bar means a slower epoch**; this is the reverse of a score sparkline, which is why the column tooltip
+  and the page notes both spell it out.
+- Colour tiers are green ≤400ms, plain ≤420, yellow ≤440, orange ≤470, red beyond. **400ms is not an
+  arbitrary round number** — it is the allowance IBRL's methodology gives a continuation slot for a
+  perfect slot time score, and the validators fall into two visible groups either side of it.
+  `MS_TIERS` in `dashboards/ibrl_criteria.py` is mirrored in `templates/assets/ibrl_criteria.js`, and a
+  test fails if the two drift apart.
+- A median over very few blocks swings a lot, which is what the **≥ 32 blocks** filter is for.
+
+### The component scores alongside it
+
+The three score columns are published by [ibrl.wtf](https://ibrl.wtf/), a community tool from Jito that
+watches leader behaviour block by block. They are the components of its IBRL score, kept as context for
+*why* a validator is slow. **The composite IBRL score itself is not displayed** (it is still in the
+snapshot JSON). From [ibrl.wtf/methodology](https://ibrl.wtf/methodology/):
 
 ```
 IBRL = 0.40 x Slot Time + 0.15 x Vote Packing + 0.45 x Non-Vote Packing
 ```
 
-| Component | Weight | Field in the API | What earns a perfect score |
+| Column | Weight in IBRL | Field in the API | What earns a perfect score |
 |---|---|---|---|
-| Slot Time | 40% | `build_time_score` | 550ms or less on a handoff slot, 400ms on a continuation slot. Past that it decays exponentially |
-| Vote Packing | 15% | `vote_packing_score` | 90% of vote transactions inside the first 48 PoH ticks. Including no votes at all scores 0 |
-| Non-Vote Packing | 45% | `non_vote_packing_score` | Half from spending 50% of the block's compute in the first 32 ticks, half from an even compute distribution across the 64 ticks (Gini coefficient) |
+| Slot score | 40% | `build_time_score` | 550ms or less on a handoff slot, 400ms on a continuation slot. Past that it decays exponentially |
+| Vote pack | 15% | `vote_packing_score` | 90% of vote transactions inside the first 48 PoH ticks. Including no votes at all scores 0 |
+| Non-vote | 45% | `non_vote_packing_score` | Half from spending 50% of the block's compute in the first 32 ticks, half from an even compute distribution across the 64 ticks (Gini coefficient) |
 
-Naming: what the page and the site call **Slot Time Score** is `build_time_score` in the API, and
-**Median Block Build** is `median_block_build_ms` (verified against live validator pages).
+**Two different medians exist and they are not the same number.** IBRL publishes `median_block_build_ms`
+and Trillium publishes `slot_duration_median`; they measure the same idea differently and usually agree
+within a few ms, but not always (up to ~40ms apart at epoch 1009). Only Trillium's is displayed. IBRL's
+is kept in the snapshot as `mb` so the two can be compared without refetching.
 
-- Only validators that **produced at least one block** in the epoch appear in the IBRL data. SFDP
-  validators with no blocks that epoch are left out of the table rather than shown as a zero, and the
-  count is stated in the page's notes. At epoch 1009 that was 9 of 369.
-- `epoch_trend` is the API's own change-from-previous-epoch and is shown as **Δ**; it is not
-  recomputed here.
-- **Avg** is the mean over the last 30 epochs, skipping epochs with no blocks. 30 epochs of history are
-  embedded per validator so the browser can draw the trend without another request; one epoch costs one
-  request, so the depth is cheap to change (`HISTORY` in `dashboards/ibrl_criteria.py`).
-- Scores are coloured green at 95, plain at 90, yellow at 80, orange at 70 and red below that.
-  `SCORE_TIERS` is defined in `dashboards/ibrl_criteria.py` and mirrored in
-  `templates/assets/ibrl_criteria.js`; a test fails if the two drift apart.
-- A score built from very few blocks swings a lot between epochs, which is what the **≥ 32 blocks**
-  filter is for.
+- Every source is read **for the same epoch** — the one IBRL reports as its latest settled epoch — so no
+  column describes a different point in time from its neighbours.
+- Validators with no slot duration for the epoch are left out of the table rather than shown as a zero,
+  and the count is stated in the page's notes. At epoch 1010 that was 11 of 369.
+- Scores are coloured green at 95, plain at 90, yellow at 80, orange at 70 and red below (`SCORE_TIERS`,
+  mirrored in JS the same way).
 
 ### The Client column
 
@@ -321,6 +345,10 @@ themselves, which do abort the build.
     Retired 3,477 / Rejected 6,985
 - Validator detail: `GET https://api.solana.org/api/validators/<pubkey>?cacheStatus=enable`
   (used internally by solana.org; outside the official docs)
+- Median slot time: `GET https://api.trillium.so/validator_rewards/<epoch>` — `slot_duration_median`
+  (ms, as a string) per `identity_pubkey`, one request per epoch. **Roughly 6MB per epoch**, of which
+  this site uses a handful of the 279 fields; that cost is why `HISTORY` is 15 rather than 30. The
+  `epoch_validators_slim` route is far smaller but carries no slot duration, so it is not usable here.
 - IBRL scores, all validators for one epoch:
   `GET https://explorer.bam.dev/api/v1/ibrl_validators[?epoch=<n>]` — one request covers every
   validator, and history reaches back to roughly epoch 906

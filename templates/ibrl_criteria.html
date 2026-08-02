@@ -1,8 +1,7 @@
 <p class="lede">
-The <strong>IBRL score</strong> of every SFDP validator for epoch {{ epoch }} — how fast it builds blocks and how
-evenly it packs them, as measured by
-<a href="https://ibrl.wtf/validator/{{ sample_pubkey }}/" target="_blank" rel="noopener">ibrl.wtf</a>.
-Network average across all {{ network_validators }} scored validators is {{ network_score }}.
+<strong>Median slot time</strong> of every SFDP validator for epoch {{ epoch }}, slowest first — how long its slots
+actually took, as measured by <a href="https://trillium.so/" target="_blank" rel="noopener">Trillium</a>. The
+network median across all {{ network_validators }} measured validators is {{ network_ms }} ms.
 </p>
 
 <div class="stats" id="stats"></div>
@@ -13,8 +12,8 @@ Network average across all {{ network_validators }} scored validators is {{ netw
     <input type="text" id="q" placeholder="Syndica, mXv18..." autocomplete="off">
   </div>
   <div class="field">
-    <label for="maxscore">Score at most</label>
-    <input type="number" id="maxscore" min="0" max="100" step="1" placeholder="100">
+    <label for="slowerthan">Slower than (ms)</label>
+    <input type="number" id="slowerthan" min="0" max="5000" step="10" placeholder="{{ slow_ms }}">
   </div>
   <div class="field">
     <label for="client">Client</label>
@@ -33,11 +32,11 @@ Network average across all {{ network_validators }} scored validators is {{ netw
 <div class="meta">
   <div id="count"></div>
   <div class="legend">
-    <span title="95 and above"><i class="lg-hi"></i>95+</span>
-    <span title="90 to 95"><i class="lg-good"></i>90+</span>
-    <span title="80 to 90"><i class="lg-mid"></i>80+</span>
-    <span title="70 to 80"><i class="lg-low"></i>70+</span>
-    <span title="Below 70"><i class="lg-bad"></i>&lt;70</span>
+    <span title="400 ms or less — within IBRL's allowance for a perfect slot time score"><i class="lg-hi"></i>≤400ms</span>
+    <span title="400 to 420 ms"><i class="lg-good"></i>≤420ms</span>
+    <span title="420 to 440 ms"><i class="lg-mid"></i>≤440ms</span>
+    <span title="440 to 470 ms"><i class="lg-low"></i>≤470ms</span>
+    <span title="Slower than 470 ms"><i class="lg-bad"></i>&gt;470ms</span>
   </div>
 </div>
 
@@ -53,25 +52,41 @@ Network average across all {{ network_validators }} scored validators is {{ netw
 <details class="notes">
 <summary>How this is measured</summary>
 <p>
-The IBRL score is published by <a href="https://ibrl.wtf/" target="_blank" rel="noopener">ibrl.wtf</a>, a community
-tool from Jito that analyses leader behaviour block by block. It combines three independent components:
+<strong>Slot time</strong> is <code>slot_duration_median</code> from
+<a href="https://trillium.so/" target="_blank" rel="noopener">Trillium</a>: the median time the validator's slots
+actually took during the epoch, in milliseconds. It is the axis this page sorts on, slowest first, because a
+validator that is consistently slow is holding up the whole leader rotation.
+</p>
+<p>
+<strong>Avg {{ history }}e</strong> is the mean of that median over the last {{ history }} epochs, skipping epochs
+with no record — a single epoch moves around, so the average is the steadier read. <strong>Δ</strong> is the change
+from the previous epoch, where a positive number means it got <em>slower</em>. <strong>Trend</strong> plots the same
+{{ history }} epochs, newest on the left, and a taller bar means a slower epoch; a gap means no record.
+</p>
+<p>
+Colours follow the same thresholds throughout: <span class="v-hi">400 ms or less</span>,
+<span class="v-good">up to 420</span>, <span class="v-mid">up to 440</span>, <span class="v-low">up to 470</span>
+and <span class="v-bad">slower than 470</span>. The 400 ms boundary is not arbitrary — it is the allowance IBRL's
+methodology gives a continuation slot for a perfect slot time score, and the validators split into two clear groups
+either side of it.
+</p>
+<p>
+The three score columns come from <a href="https://ibrl.wtf/" target="_blank" rel="noopener">ibrl.wtf</a>, a
+community tool from Jito that analyses leader behaviour block by block. They are the components of its IBRL score,
+kept here as context for <em>why</em> a validator is slow rather than as the ranking itself:
 </p>
 <table>
-<thead><tr><th>Component</th><th>Weight</th><th>What it rewards</th></tr></thead>
+<thead><tr><th>Component</th><th>Weight in IBRL</th><th>What it rewards</th></tr></thead>
 <tbody>
-<tr><td>Slot Time</td><td>40%</td><td>Building blocks quickly — a perfect score needs 550ms or less on a handoff slot, 400ms on a continuation slot. Past that the score decays exponentially.</td></tr>
-<tr><td>Vote Packing</td><td>15%</td><td>Processing votes early — a perfect score needs 90% of vote transactions inside the first 48 PoH ticks. Including no votes at all scores 0.</td></tr>
-<tr><td>Non-Vote Packing</td><td>45%</td><td>Spreading work across the block — half from using 50% of compute in the first 32 ticks, half from an even compute distribution across the 64 ticks (Gini coefficient).</td></tr>
+<tr><td>Slot score</td><td>40%</td><td>Building blocks quickly — a perfect score needs 550ms or less on a handoff slot, 400ms on a continuation slot. Past that the score decays exponentially.</td></tr>
+<tr><td>Vote pack</td><td>15%</td><td>Processing votes early — a perfect score needs 90% of vote transactions inside the first 48 PoH ticks. Including no votes at all scores 0.</td></tr>
+<tr><td>Non-vote</td><td>45%</td><td>Spreading work across the block — half from using 50% of compute in the first 32 ticks, half from an even compute distribution across the 64 ticks (Gini coefficient).</td></tr>
 </tbody>
 </table>
 <p>
-<strong>IBRL</strong> = 0.40 × Slot Time + 0.15 × Vote Packing + 0.45 × Non-Vote Packing.
-<strong>Avg</strong> is the mean IBRL score over the last {{ history }} epochs, skipping epochs where the validator
-produced no blocks. <strong>Δ</strong> is the change from the previous epoch. <strong>Trend</strong> plots the same
-{{ history }} epochs, newest on the left; a gap means no blocks that epoch.
-Scores of 95 or above are shown in <span class="v-hi">green</span>, 90 to 95 <span class="v-good">plain</span>,
-80 to 90 in <span class="v-mid">yellow</span>, 70 to 80 in <span class="v-low">orange</span> and below 70 in
-<span class="v-bad">red</span>.
+Note that IBRL publishes its own median block build time, measured differently from Trillium's slot duration. The
+two usually agree within a few milliseconds but not always, and this page deliberately shows only Trillium's. Both
+are kept in the snapshot below if you want to compare them.
 </p>
 <p>
 <strong>Client</strong> is what the validator advertises over gossip (<code>getClusterNodes</code>), with the version
@@ -83,12 +98,13 @@ otherwise. Anything still unrecognised is left as its raw <code>Unknown(n)</code
 </p>
 <p>
 This page covers the {{ sfdp_total }} validators in SFDP <code>{{ participant_states }}</code> state.
-{{ scored }} of them have a score for epoch {{ epoch }}; the remaining {{ unscored }} produced no blocks in this
+{{ measured }} of them have a slot time for epoch {{ epoch }}; the remaining {{ unmeasured }} have no record for this
 epoch, so there is nothing to measure and they are left out of the table rather than shown as a zero. Validator
-names, logos and stake come from the Solana Foundation API and are matched to IBRL on the identity pubkey.
+names, logos and stake come from the Solana Foundation API. Every source is joined on the identity pubkey and read
+for the same epoch, so no column is describing a different point in time from its neighbours.
 </p>
 <p>
-A score built from a handful of blocks moves a lot epoch to epoch. The <strong>≥ 32 blocks</strong> filter drops
+A median taken over a handful of blocks moves a lot epoch to epoch. The <strong>≥ 32 blocks</strong> filter drops
 those rows when you want a steadier read.
 </p>
 <p>

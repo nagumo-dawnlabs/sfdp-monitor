@@ -12,7 +12,7 @@ from pathlib import Path
 
 import pytest
 
-from dashboards.ibrl_criteria import SCORE_TIERS, score_class, summarize
+from dashboards.ibrl_criteria import MS_TIERS, SCORE_TIERS, ms_class, score_class, summarize
 from solanarpc import Node, client_label
 
 JS = Path(__file__).resolve().parent.parent / "templates" / "assets" / "ibrl_criteria.js"
@@ -82,6 +82,45 @@ def test_js_carries_the_same_fallback_class():
     source = JS.read_text(encoding="utf-8")
     assert "return 'v-bad';" in source
     assert score_class(0.0) == "v-bad"
+
+
+# --- median slot time の色分け（低いほど良い） ------------------------------
+
+
+@pytest.mark.parametrize(
+    ("ms", "expected"),
+    [
+        (300.0, "v-hi"),
+        (400.0, "v-hi"),  # IBRL が継続スロットで満点とする許容値。ここまでは緑
+        (400.1, "v-good"),
+        (420.0, "v-good"),
+        (420.5, "v-mid"),
+        (440.0, "v-mid"),
+        (440.5, "v-low"),
+        (470.0, "v-low"),
+        (470.5, "v-bad"),
+        (4290.0, "v-bad"),
+    ],
+)
+def test_ms_class_thresholds(ms, expected):
+    assert ms_class(ms) == expected
+
+
+def test_ms_class_is_the_opposite_direction_from_scores():
+    """スコアは高いほど良く、slot time は低いほど良い。取り違えると色が全部逆になる。"""
+    assert ms_class(360.0) == "v-hi"
+    assert score_class(360.0) == "v-hi"  # スコアは上限 100 なので 360 は当然「良い」
+    assert ms_class(500.0) == "v-bad"
+    assert score_class(50.0) == "v-bad"
+
+
+def test_js_ms_tiers_match_python():
+    """JS 側の MS_TIERS が Python と同じしきい値・同じクラス名を持つこと。"""
+    source = JS.read_text(encoding="utf-8")
+    block = re.search(r"const MS_TIERS = \[(.*?)\];", source, re.S)
+    assert block, "ibrl_criteria.js に MS_TIERS が見つからない"
+    found = [(float(n), cls) for n, cls in re.findall(r"\[(\d+(?:\.\d+)?), '([\w-]+)'\]", block.group(1))]
+    assert found == [(t, c) for t, c in MS_TIERS]
 
 
 # --- クライアント種別の判定 -------------------------------------------------
