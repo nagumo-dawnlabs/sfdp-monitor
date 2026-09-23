@@ -17,11 +17,11 @@
  "slow_ms": 420.0,
  "validators": [
   {
-   "b": null,
+   "b": 100.0,
    "bp": 72,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 49739,
+   "f": 51681,
    "h": [
     252.0,
     274.0,
@@ -39,22 +39,22 @@
     305.0,
     307.0
    ],
-   "i": null,
-   "k": 96442,
+   "i": 91.16,
+   "k": 98245,
    "lg": 1,
    "m": 252.0,
    "n": "0% Fees | Easy 2 Stake | Jito MEV",
-   "nv": null,
+   "nv": 86.84,
    "p": "2jS8AX38m8F9C5juToW1FmTufEbb1DfDzZJj9HSJcWwo",
    "t": "Approved",
-   "v": null
+   "v": 80.55
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 60,
    "c": "Jito",
    "cv": "4.3.0",
-   "f": 40725,
+   "f": 39645,
    "h": [
     257.5,
     258.0,
@@ -72,23 +72,23 @@
     306.5,
     307.0
    ],
-   "i": null,
-   "k": 58811,
+   "i": 95.3,
+   "k": 57735,
    "lag": 1,
    "lg": 1,
    "m": 257.5,
    "n": "01node",
-   "nv": null,
+   "nv": 95.98,
    "p": "3KNGMiXwhy2CAWVNpLoUt25sNngFnX1mZpaiEeVccBA6",
    "t": "Approved",
-   "v": null
+   "v": 80.75
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 324,
    "c": "HarmonicFiredancer",
    "cv": "26.8.5",
-   "f": 80186,
+   "f": 79932,
    "h": [
     260.0,
     259.0,
@@ -106,23 +106,23 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 231441,
+   "i": 81.15,
+   "k": 231180,
    "lag": 1,
    "lg": 1,
    "m": 260.0,
    "n": "0base.vc 🇰🇷 | MEV 🔥",
-   "nv": null,
+   "nv": 90.9,
    "p": "zeroT6PTAEjipvZuACTh1mbGCqTHgA6i1ped9DcuidX",
    "t": "Approved",
-   "v": null
+   "v": 1.6
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 120,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 62372,
+   "f": 61270,
    "h": [
     258.0,
     263.0,
@@ -140,23 +140,23 @@
     304.0,
     305.5
    ],
-   "i": null,
-   "k": 125181,
+   "i": 90.83,
+   "k": 123942,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "0node.io",
-   "nv": null,
+   "nv": 85.86,
    "p": "6NDen7aDi65apHo8m1Vea4nuS6LyjQeM6pDNqcW4Q5Pg",
    "t": "Approved",
-   "v": null
+   "v": 81.31
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 168,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 79133,
+   "f": 78878,
    "h": [
     257.0,
     268.0,
@@ -174,23 +174,23 @@
     304.0,
     305.0
    ],
-   "i": null,
-   "k": 185689,
+   "i": 89.17,
+   "k": 185295,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "1000X.sh",
-   "nv": null,
+   "nv": 86.96,
    "p": "1KXvrkPXwkGF6NK1zyzVuJqbXfpenPVPP6hoiK9bsK3",
    "t": "Approved",
-   "v": null
+   "v": 66.94
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 168,
    "c": "Frankendancer",
    "cv": "0.1204.40300",
-   "f": 76667,
+   "f": 76331,
    "h": [
     209.0,
     208.0,
@@ -208,22 +208,22 @@
     254.0,
     255.5
    ],
-   "i": null,
-   "k": 168791,
+   "i": 96.79,
+   "k": 168471,
    "lg": 1,
    "m": 209.0,
    "n": "11ama Validator",
-   "nv": null,
+   "nv": 94.5,
    "p": "11AMA4mnNbsrPQeuoNN7uiZVJZtqEzQHrTfa5vnbcjk",
    "t": "Approved",
-   "v": null
+   "v": 95.14
   },
   {
-   "b": null,
+   "b": 99.95,
    "bp": 324,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 78374,
+   "f": 78121,
    "h": [
     253.0,
     255.0,
@@ -241,22 +241,22 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 352941,
+   "i": 82.81,
+   "k": 352831,
    "lg": 1,
    "m": 253.0,
    "n": "1dad | Solfege",
-   "nv": null,
+   "nv": 86.77,
    "p": "FyrwfMaomErzqrFUXMjCJ7mA4u81DsiDdrzC3MJD6d4j",
    "t": "Approved",
-   "v": null
+   "v": 25.21
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 120,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 47845,
+   "f": 46781,
    "h": [
     281.5,
     281.5,
@@ -274,22 +274,22 @@
     306.0,
     305.0
    ],
-   "i": null,
-   "k": 80407,
+   "i": 87.81,
+   "k": 79201,
    "lag": 1,
    "m": 281.5,
    "n": "3SDK",
-   "nv": null,
+   "nv": 89.14,
    "p": "Fy7RCjDdFLG8wLn7TBKbccaKwYX1FetdSoVDREdUHf5o",
    "t": "Approved",
-   "v": null
+   "v": 51.34
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 92,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 56498,
+   "f": 55562,
    "h": [
     282.0,
     282.5,
@@ -307,23 +307,23 @@
     304.5,
     306.0
    ],
-   "i": null,
-   "k": 106819,
+   "i": 86.0,
+   "k": 105745,
    "lag": 1,
    "lg": 1,
    "m": 282.0,
    "n": "4CRYPTO",
-   "nv": null,
+   "nv": 86.49,
    "p": "9dH6wfdJVgnDcbCUjT8rkmejAzTnGQaFarmLfvBYXANK",
    "t": "Approved",
-   "v": null
+   "v": 47.17
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 68,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 57718,
+   "f": 57198,
    "h": [
     253.5,
     253.5,
@@ -341,22 +341,22 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 111300,
+   "i": 89.57,
+   "k": 110662,
    "lg": 1,
    "m": 253.5,
    "n": "[NODERS]",
-   "nv": null,
+   "nv": 89.2,
    "p": "3Pfubj3ytkRxFAGwFb5vtacuZJUxko5Du39xie9MBXuC",
    "t": "Approved",
-   "v": null
+   "v": 62.85
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 192,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 79185,
+   "f": 78982,
    "h": [
     255.0,
     274.0,
@@ -374,22 +374,22 @@
     306.0,
     307.0
    ],
-   "i": null,
-   "k": 194282,
+   "i": 92.21,
+   "k": 193951,
    "lg": 1,
    "m": 255.0,
    "n": "A Unicorn Julia",
-   "nv": null,
+   "nv": 88.37,
    "p": "Hj2jzpAp57KyM3SmnYwJbDVrQ8tTWizMon2hhzYzwxet",
    "t": "Approved",
-   "v": null
+   "v": 82.95
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 100,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 51227,
+   "f": 50754,
    "h": [
     268.5,
     267.0,
@@ -407,23 +407,23 @@
     308.5,
     308.5
    ],
-   "i": null,
-   "k": 92601,
+   "i": 92.41,
+   "k": 92216,
    "lag": 1,
    "lg": 1,
    "m": 268.5,
    "n": "Abacus",
-   "nv": null,
+   "nv": 89.96,
    "p": "BR1aTt4ZZUCwWJDkSYf1hqkYJjo7Mb7Ar8iVTkeSwUB8",
    "t": "Approved",
-   "v": null
+   "v": 79.5
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 88,
    "c": "Jito",
    "cv": "4.3.0-rc.0",
-   "f": 42784,
+   "f": 44488,
    "h": [
     256.0,
     254.5,
@@ -441,22 +441,22 @@
     309.0,
     304.0
    ],
-   "i": null,
-   "k": 74443,
+   "i": 87.71,
+   "k": 76152,
    "lag": 1,
    "m": 256.0,
    "n": "ABREU Foundation",
-   "nv": null,
+   "nv": 97.69,
    "p": "ABREU5YkQcfpDZymoQ97iGUgQcfgjctWUUxEMfumiPdV",
    "t": "Approved",
-   "v": null
+   "v": 24.99
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 288,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80353,
+   "f": 80099,
    "h": [
     256.0,
     257.0,
@@ -474,23 +474,23 @@
     303.0,
     303.0
    ],
-   "i": null,
-   "k": 302042,
+   "i": 93.64,
+   "k": 299476,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "Absolute Guard",
-   "nv": null,
+   "nv": 86.81,
    "p": "3WDh9HgusCujDmXCVhophLrHvoKHQd1Sd4uFHz1Awo35",
    "t": "Approved",
-   "v": null
+   "v": 97.14
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 76,
    "c": "Frankendancer",
-   "cv": "0.1106.40201",
-   "f": 43576,
+   "cv": "0.1204.40300",
+   "f": 42574,
    "h": [
     202.0,
     210.0,
@@ -508,22 +508,22 @@
     260.0,
     252.5
    ],
-   "i": null,
-   "k": 67569,
+   "i": 96.85,
+   "k": 66573,
    "lg": 1,
    "m": 202.0,
    "n": "Accretion | r0bre",
-   "nv": null,
+   "nv": 94.79,
    "p": "AccReGBNBdUCEJ7ZyP231jw7uVJ3eF9u4cLBFAyqQuWm",
    "t": "Approved",
-   "v": null
+   "v": 94.61
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 168,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 80455,
+   "f": 80201,
    "h": [
     257.0,
     257.0,
@@ -541,23 +541,23 @@
     306.0,
     305.0
    ],
-   "i": null,
-   "k": 261398,
+   "i": 90.07,
+   "k": 261243,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "Adrastea Validator",
-   "nv": null,
+   "nv": 89.15,
    "p": "adramSYKBv1yHoZTub4kepcmF5LybPxwyJcsz4fpfi7",
    "t": "Approved",
-   "v": null
+   "v": 66.36
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 64,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 48141,
+   "f": 47180,
    "h": [
     264.5,
     266.0,
@@ -575,23 +575,23 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 81476,
+   "i": 90.5,
+   "k": 80374,
    "lag": 1,
    "lg": 1,
    "m": 264.5,
    "n": "Aepalizage",
-   "nv": null,
+   "nv": 86.55,
    "p": "KAoSp3EudGqUBXv46tQoDwbZxSm3iXa9wM2aF4ySbJJ",
    "t": "Approved",
-   "v": null
+   "v": 77.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 100,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 57244,
+   "f": 56069,
    "h": [
     268.5,
     270.5,
@@ -609,23 +609,23 @@
     305.0,
     306.0
    ],
-   "i": null,
-   "k": 108529,
+   "i": 89.91,
+   "k": 107219,
    "lag": 1,
    "lg": 1,
    "m": 268.5,
    "n": "AiSol",
-   "nv": null,
+   "nv": 85.9,
    "p": "EPFZFVrXuveEQar9LaEkt5kDRPMnbvK54qu5FwCxpkcy",
    "t": "Approved",
-   "v": null
+   "v": 75.04
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 248,
    "c": "Jito",
-   "cv": "4.3.0-rc.1",
-   "f": 80492,
+   "cv": "4.3.0",
+   "f": 80238,
    "h": [
     255.0,
     255.0,
@@ -643,21 +643,21 @@
     309.0,
     307.0
    ],
-   "i": null,
-   "k": 278469,
+   "i": 97.93,
+   "k": 278249,
    "m": 255.0,
    "n": "Albert is Great",
-   "nv": null,
+   "nv": 96.36,
    "p": "rsbp8zMHbGCpLoRktmsjspYv77VcjxAzH1KxPCD9BiU",
    "t": "Approved",
-   "v": null
+   "v": 97.16
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 240,
    "c": "Jito",
    "cv": "4.3.0",
-   "f": 80270,
+   "f": 80016,
    "h": [
     255.0,
     256.0,
@@ -675,22 +675,22 @@
     304.0,
     306.0
    ],
-   "i": null,
-   "k": 224558,
+   "i": 97.01,
+   "k": 224318,
    "lg": 1,
    "m": 255.0,
    "n": "algo|stake",
-   "nv": null,
+   "nv": 96.16,
    "p": "ABC1U4cf9DZMwqy8ktEr4WJj8VHmVBQibbC57gEJthwY",
    "t": "Approved",
-   "v": null
+   "v": 91.58
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 108,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 52426,
+   "cv": "4.3.0",
+   "f": 51716,
    "h": [
     264.5,
     271.0,
@@ -708,22 +708,22 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 95320,
+   "i": 89.98,
+   "k": 94973,
    "lag": 1,
    "lg": 1,
    "m": 264.5,
    "n": "Allied Validator",
-   "nv": null,
+   "nv": 86.07,
    "p": "5zm9g3zgAPWzX3wmUB2JtTkcwCqe74NWsTmt5wLFwCKK",
    "t": "Approved",
-   "v": null
+   "v": 75.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 196,
    "c": "Jito",
-   "cv": "4.2.1",
+   "cv": "4.3.0",
    "f": 0,
    "h": [
     258.0,
@@ -742,23 +742,23 @@
     306.0,
     305.0
    ],
-   "i": null,
-   "k": 192241,
+   "i": 94.54,
+   "k": 189680,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "Alpha Waves",
-   "nv": null,
+   "nv": 95.27,
    "p": "LFGGGJtnBLvq78DyMz1gTeedM6f8owck76qHThDABBC",
    "t": "Approved",
-   "v": null
+   "v": 77.82
   },
   {
-   "b": null,
+   "b": 95.7,
    "bp": 244,
    "c": "HarmonicFrankendancer",
    "cv": "0.1106.40201",
-   "f": 80480,
+   "f": 80227,
    "h": [
     309.0,
     309.0,
@@ -776,23 +776,23 @@
     356.0,
     356.0
    ],
-   "i": null,
-   "k": 197725,
+   "i": 80.43,
+   "k": 196889,
    "lag": 1,
    "lg": 1,
    "m": 309.0,
    "n": "anarcheuz",
-   "nv": null,
+   "nv": 93.67,
    "p": "97jbhVBYcSmwGXjrx5PPWXucDsVBqwyoQ6rzP3B6eeMt",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 776,
    "c": "Jito",
-   "cv": "4.2.2",
-   "f": 80496,
+   "cv": "4.3.0",
+   "f": 80242,
    "h": [
     257.0,
     257.0,
@@ -810,23 +810,23 @@
     303.0,
     304.0
    ],
-   "i": null,
-   "k": 739918,
+   "i": 93.05,
+   "k": 739993,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "Anchorage Digital",
-   "nv": null,
+   "nv": 94.41,
    "p": "ANC1u9sY36q3mi2MyVhtz71un8yLgTsFBUuyLcSPzKsk",
    "t": "Approved",
-   "v": null
+   "v": 70.44
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 160,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 59264,
+   "cv": "4.3.0",
+   "f": 58613,
    "h": [
     254.5,
     266.0,
@@ -844,22 +844,22 @@
     304.0,
     303.0
    ],
-   "i": null,
-   "k": 117430,
+   "i": 89.79,
+   "k": 116444,
    "lg": 1,
    "m": 254.5,
    "n": "AndrewInUA",
-   "nv": null,
+   "nv": 86.9,
    "p": "Av8EnYrPBnSJHK5e2wmTdnCpSy7nzmBgyFaUKSyLnBfe",
    "t": "Approved",
-   "v": null
+   "v": 71.27
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 72,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 50997,
+   "cv": "4.3.0",
+   "f": 50007,
    "h": [
     263.0,
     294.0,
@@ -877,23 +877,23 @@
     307.0,
     307.5
    ],
-   "i": null,
-   "k": 92613,
+   "i": 83.98,
+   "k": 91484,
    "lag": 1,
    "lg": 1,
    "m": 263.0,
    "n": "Anode ⚡️ Beta",
-   "nv": null,
+   "nv": 79.58,
    "p": "6Rk694kh1QTyQkirdb1uDZmS5xqG9bNaYtxx8d311Mr7",
    "t": "Approved",
-   "v": null
+   "v": 54.49
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 536,
    "c": "Jito",
    "cv": "4.3.0-rc.0",
-   "f": 80495,
+   "f": 80241,
    "h": [
     258.5,
     258.0,
@@ -911,23 +911,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 547186,
+   "i": 98.14,
+   "k": 547016,
    "lag": 1,
    "lg": 1,
    "m": 258.5,
    "n": "Anza",
-   "nv": null,
+   "nv": 96.92,
    "p": "anza1rXDVhy1NfVNtsbT3kSBh2jgB1BGZUKuUibSAJd",
    "t": "Approved",
-   "v": null
+   "v": 96.81
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 320,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 79523,
+   "cv": "4.3.0",
+   "f": 79269,
    "h": [
     264.0,
     266.0,
@@ -945,22 +945,22 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 347037,
+   "i": 92.31,
+   "k": 346682,
    "lag": 1,
    "m": 264.0,
    "n": "Appleyello",
-   "nv": null,
+   "nv": 86.77,
    "p": "5VrW7YNBccVnhnZVmooCePdLFcs2UjfxRT3hoY9mN8Ec",
    "t": "Approved",
-   "v": null
+   "v": 88.39
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 220,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 79209,
+   "f": 78955,
    "h": [
     257.0,
     261.5,
@@ -978,23 +978,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 218894,
+   "i": 93.5,
+   "k": 217026,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "ART3MIS.CLOUD ☘️",
-   "nv": null,
+   "nv": 87.4,
    "p": "GwHH8ciFhR8vejWCqmg8FWZUCNtubPY2esALvy5tBvji",
    "t": "Approved",
-   "v": null
+   "v": 94.45
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 144,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 68408,
+   "cv": "4.3.0",
+   "f": 67931,
    "h": [
     262.5,
     266.0,
@@ -1012,23 +1012,23 @@
     305.0,
     304.0
    ],
-   "i": null,
-   "k": 143598,
+   "i": 86.14,
+   "k": 142987,
    "lag": 1,
    "lg": 1,
    "m": 262.5,
    "n": "Aurora Validator",
-   "nv": null,
+   "nv": 78.12,
    "p": "3V2xaccDpFib4DbTksdiveNDmiwpXBqSWyjSof3w1Bg7",
    "t": "Approved",
-   "v": null
+   "v": 73.21
   },
   {
-   "b": null,
+   "b": 99.99,
    "bp": 412,
    "c": "HarmonicAgave",
    "cv": "4.2.2",
-   "f": 80488,
+   "f": 80234,
    "h": [
     251.0,
     250.0,
@@ -1046,22 +1046,22 @@
     304.0,
     303.0
    ],
-   "i": null,
-   "k": 361938,
+   "i": 80.75,
+   "k": 361734,
    "lg": 1,
    "m": 251.0,
    "n": "Aursen",
-   "nv": null,
+   "nv": 90.55,
    "p": "AurseT3W3tk1dATBWAXtWR6oubBgECqintfcvP74teU3",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 172,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 68596,
+   "f": 67966,
    "h": [
     260.5,
     256.0,
@@ -1079,23 +1079,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 143871,
+   "i": 90.69,
+   "k": 143107,
    "lag": 1,
    "lg": 1,
    "m": 260.5,
    "n": "AVNU",
-   "nv": null,
+   "nv": 90.79,
    "p": "avnujiRNoSRe9PcET42DPKznyfYnb2LRaZAsqv6REZo",
    "t": "Approved",
-   "v": null
+   "v": 65.6
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 172,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 78122,
+   "cv": "4.3.0",
+   "f": 77800,
    "h": [
     275.0,
     264.0,
@@ -1113,23 +1113,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 173214,
+   "i": 90.68,
+   "k": 172892,
    "lag": 1,
    "lg": 1,
    "m": 275.0,
    "n": "Axis",
-   "nv": null,
+   "nv": 87.75,
    "p": "GHQsq6bAdgooi998uKhwdzFubsJ7R3SuhTE9gJ83gctU",
    "t": "Approved",
-   "v": null
+   "v": 74.62
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 28,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 35666,
+   "f": 36816,
    "h": [
     266.0,
     269.0,
@@ -1147,22 +1147,22 @@
     304.5,
     305.0
    ],
-   "i": null,
-   "k": 50605,
+   "i": 90.64,
+   "k": 51758,
    "lag": 1,
    "m": 266.0,
    "n": "Banana Business (BB)",
-   "nv": null,
+   "nv": 87.78,
    "p": "3YX7PQuESmR2h95FDgjahEQjyCBhmY1Ts2MsrM1Kg9DS",
    "t": "Approved",
-   "v": null
+   "v": 74.26
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 104,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 58490,
+   "f": 57620,
    "h": [
     266.0,
     258.5,
@@ -1180,23 +1180,23 @@
     305.0,
     304.0
    ],
-   "i": null,
-   "k": 112851,
+   "i": 88.76,
+   "k": 111848,
    "lag": 1,
    "lg": 1,
    "m": 266.0,
    "n": "Bay3",
-   "nv": null,
+   "nv": 85.98,
    "p": "bay3wXfJsu9ds1zQBoQQ4DUwFGs3NP6q4gca9WM5G1z",
    "t": "Approved",
-   "v": null
+   "v": 67.11
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 148,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 72866,
+   "f": 72745,
    "h": [
     281.0,
     278.5,
@@ -1214,23 +1214,23 @@
     329.0,
     304.0
    ],
-   "i": null,
-   "k": 157962,
+   "i": 87.07,
+   "k": 156851,
    "lag": 1,
    "lg": 1,
    "m": 281.0,
    "n": "Bernardo Beacon",
-   "nv": null,
+   "nv": 81.47,
    "p": "EydLxzdWfD434DDxZYXkTcajvK5VKH7p6CofEDCRUkJ4",
    "t": "Approved",
-   "v": null
+   "v": 69.41
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 152,
    "c": "BAM",
    "cv": "4.3.0-rc.1",
-   "f": 73763,
+   "f": 73268,
    "h": [
     254.0,
     256.0,
@@ -1248,22 +1248,22 @@
     305.5,
     309.0
    ],
-   "i": null,
-   "k": 160208,
+   "i": 88.12,
+   "k": 159580,
    "lg": 1,
    "m": 254.0,
    "n": "Black Sea Gold",
-   "nv": null,
+   "nv": 75.64,
    "p": "BSGMRbK97DcgLe4u4kfNQnmTVZGVnwdtKQBJqWRBTZxU",
    "t": "Approved",
-   "v": null
+   "v": 93.91
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 220,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80373,
+   "f": 80161,
    "h": [
     270.0,
     279.5,
@@ -1281,23 +1281,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 245704,
+   "i": 89.32,
+   "k": 245373,
    "lag": 1,
    "lg": 1,
    "m": 270.0,
    "n": "Block Parliament 🦉",
-   "nv": null,
+   "nv": 88.19,
    "p": "mD1afZhSisoXfJLT8nYwSFANqjr1KPoDUEpYTEfFX1e",
    "t": "Approved",
-   "v": null
+   "v": 64.24
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 252,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80449,
+   "f": 80195,
    "h": [
     254.0,
     266.0,
@@ -1315,22 +1315,22 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 247469,
+   "i": 90.37,
+   "k": 247095,
    "lg": 1,
    "m": 254.0,
    "n": "BLOCKSIZE",
-   "nv": null,
+   "nv": 85.77,
    "p": "7VZM7YHcX73TpGoXDeBu61g4QKC86GwAEnew8dA7Y2xn",
    "t": "Approved",
-   "v": null
+   "v": 78.52
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 164,
    "c": "Jito",
-   "cv": "4.2.2",
-   "f": 66857,
+   "cv": "4.3.0",
+   "f": 66254,
    "h": [
     257.0,
     257.0,
@@ -1348,23 +1348,23 @@
     307.0,
     304.0
    ],
-   "i": null,
-   "k": 138911,
+   "i": 94.96,
+   "k": 136420,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "Blossom",
-   "nv": null,
+   "nv": 95.88,
    "p": "5fSQdv4zsAJNx6RKpGho6sL6rY6a8nziaqcmwaRJB9NE",
    "t": "Approved",
-   "v": null
+   "v": 78.76
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 124,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 63771,
+   "f": 63207,
    "h": [
     269.5,
     262.0,
@@ -1382,23 +1382,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 129405,
+   "i": 90.8,
+   "k": 128852,
    "lag": 1,
    "lg": 1,
    "m": 269.5,
    "n": "bloXroute EU",
-   "nv": null,
+   "nv": 89.41,
    "p": "bxrAptB5ZpZBhoLedJpoGWY5hBjjt3zvVBr2323Rrq6",
    "t": "Approved",
-   "v": null
+   "v": 70.42
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 156,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80368,
+   "f": 80017,
    "h": [
     255.0,
     257.0,
@@ -1416,22 +1416,22 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 180009,
+   "i": 86.25,
+   "k": 177678,
    "lg": 1,
    "m": 255.0,
    "n": "Blue Sky",
-   "nv": null,
+   "nv": 88.37,
    "p": "b1ueZK9bWTywN2587zsScyLTaH18wfRfN5W15XnkiqF",
    "t": "Approved",
-   "v": null
+   "v": 43.21
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 180,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 69516,
+   "cv": "4.3.0",
+   "f": 68904,
    "h": [
     262.0,
     265.0,
@@ -1449,23 +1449,23 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 146705,
+   "i": 90.96,
+   "k": 145960,
    "lag": 1,
    "lg": 1,
    "m": 262.0,
    "n": "BlueLotus 👩‍💻",
-   "nv": null,
+   "nv": 87.06,
    "p": "PAD9aPiKJGcbGxuVLbc8o4Vf65GPq3fJQ7PkHWuX6a8",
    "t": "Approved",
-   "v": null
+   "v": 78.58
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 280,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80270,
+   "f": 80016,
    "h": [
     272.5,
     276.5,
@@ -1483,23 +1483,23 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 285838,
+   "i": 90.18,
+   "k": 285472,
    "lag": 1,
    "lg": 1,
    "m": 272.5,
    "n": "BONK",
-   "nv": null,
+   "nv": 86.79,
    "p": "BoNKmNCGvoHS4CkKvYRnF21iEpUP827pZjhFGdA4t5as",
    "t": "Approved",
-   "v": null
+   "v": 74.18
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 52,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 48832,
+   "f": 47784,
    "h": [
     265.0,
     269.5,
@@ -1517,23 +1517,23 @@
     305.0,
     304.5
    ],
-   "i": null,
-   "k": 83350,
+   "i": 91.53,
+   "k": 82161,
    "lag": 1,
    "lg": 1,
    "m": 265.0,
    "n": "BOOP Wizard",
-   "nv": null,
+   "nv": 89.36,
    "p": "SWiz7QwnYPm61pWWUUkMhj4r5pZLP1SvYibdHcB2cov",
    "t": "Approved",
-   "v": null
+   "v": 75.45
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 160,
    "c": "Jito",
    "cv": "4.3.0",
-   "f": 80434,
+   "f": 80179,
    "h": [
     255.0,
     254.0,
@@ -1551,22 +1551,22 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 247782,
+   "i": 94.72,
+   "k": 247558,
    "lg": 1,
    "m": 255.0,
    "n": "BrewlabsHQ",
-   "nv": null,
+   "nv": 92.89,
    "p": "icex1C6pnZxznQWiHZZANjGU8nZ8kNquFnjyY7XXrXE",
    "t": "Approved",
-   "v": null
+   "v": 86.15
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 208,
    "c": "HarmonicAgave",
    "cv": "4.2.2",
-   "f": 80487,
+   "f": 80233,
    "h": [
     252.5,
     254.0,
@@ -1584,22 +1584,22 @@
     303.0,
     304.0
    ],
-   "i": null,
-   "k": 185713,
+   "i": 81.76,
+   "k": 185478,
    "lg": 1,
    "m": 252.5,
    "n": "Bubbles",
-   "nv": null,
+   "nv": 92.8,
    "p": "H9ENbtmy2tWFtAJNmpC8xQtbcr1NTp4FXLdphRaG8L2T",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 68,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 47788,
+   "f": 46722,
    "h": [
     268.5,
     261.0,
@@ -1617,23 +1617,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 80211,
+   "i": 90.47,
+   "k": 79003,
    "lag": 1,
    "lg": 1,
    "m": 268.5,
    "n": "Buffalo Steve",
-   "nv": null,
+   "nv": 88.35,
    "p": "DupN8puwoPdFo9EYm8AXemEn9cMsore1QmZzfPaxyUG4",
    "t": "Approved",
-   "v": null
+   "v": 71.44
   },
   {
-   "b": null,
+   "b": 98.72,
    "bp": 448,
    "c": "Jito",
-   "cv": "4.2.2",
-   "f": 62029,
+   "cv": "4.3.0",
+   "f": 70660,
    "h": [
     261.0,
     262.0,
@@ -1651,23 +1651,23 @@
     309.0,
     310.0
    ],
-   "i": null,
-   "k": 472159,
+   "i": 93.03,
+   "k": 480860,
    "lag": 1,
    "lg": 1,
    "m": 261.0,
    "n": "Calypso",
-   "nv": null,
+   "nv": 92.07,
    "p": "3YVoK8UN62dyiPZnGBzBTkGdwsVmmK1MpRoLcxNRs9BE",
    "t": "Approved",
-   "v": null
+   "v": 80.74
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 148,
    "c": "Jito",
-   "cv": "4.3.0-rc.1",
-   "f": 74405,
+   "cv": "4.3.0",
+   "f": 74015,
    "h": [
     254.0,
     257.5,
@@ -1685,21 +1685,21 @@
     307.0,
     306.5
    ],
-   "i": null,
-   "k": 161850,
+   "i": 87.54,
+   "k": 161475,
    "m": 254.0,
    "n": "capy",
-   "nv": null,
+   "nv": 96.32,
    "p": "capyS1jerxhFp1RehdWRG6kbWi8bnWF3fkEG2RGLsQf",
    "t": "Approved",
-   "v": null
+   "v": 28.01
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 272,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80083,
+   "f": 79881,
    "h": [
     255.0,
     261.0,
@@ -1717,22 +1717,22 @@
     303.0,
     303.0
    ],
-   "i": null,
-   "k": 221817,
+   "i": 90.43,
+   "k": 220562,
    "lg": 1,
    "m": 255.0,
    "n": "CatalystX - Innovation OnChain",
-   "nv": null,
+   "nv": 85.62,
    "p": "BNtHBLo1L2vAG7PBQ6mJvWz7GqVPxBnioXsY2Gjtubrg",
    "t": "Approved",
-   "v": null
+   "v": 79.37
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 764,
    "c": "HarmonicFiredancer",
    "cv": "26.8.2",
-   "f": 80495,
+   "f": 80241,
    "h": [
     261.0,
     261.0,
@@ -1750,22 +1750,22 @@
     311.0,
     302.0
    ],
-   "i": null,
-   "k": 801122,
+   "i": 81.47,
+   "k": 800979,
    "lag": 1,
    "lg": 1,
    "m": 261.0,
    "n": "Cavey Cool",
-   "nv": null,
+   "nv": 92.15,
    "p": "6YY2VS44RP1sBosdEsvSaiw7gETDNx3tmg5mM5wHpTqM",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 1024,
    "c": "BAM",
-   "cv": "4.2.2",
+   "cv": "4.3.0",
    "f": 0,
    "h": [
     261.5,
@@ -1784,23 +1784,23 @@
     303.0,
     303.0
    ],
-   "i": null,
-   "k": 1036587,
+   "i": 91.2,
+   "k": 1036617,
    "lag": 1,
    "lg": 1,
    "m": 261.5,
    "n": "Certora Validator",
-   "nv": null,
+   "nv": 86.83,
    "p": "5essVpBYvocZkQnkrWsMDfRPwtp4BeihJRaweKLR4dRn",
    "t": "Approved",
-   "v": null
+   "v": 80.82
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 104,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 53491,
+   "f": 52528,
    "h": [
     286.5,
     289.0,
@@ -1818,23 +1818,23 @@
     308.0,
     306.0
    ],
-   "i": null,
-   "k": 98706,
+   "i": 88.64,
+   "k": 95837,
    "lag": 1,
    "lg": 1,
    "m": 286.5,
    "n": "CH Dev",
-   "nv": null,
+   "nv": 85.61,
    "p": "chdvWr6T14nqGRFD37KY36dsvhkCtDaufW5rpu3AfHe",
    "t": "Approved",
-   "v": null
+   "v": 67.43
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 668,
    "c": "FireBAM",
    "cv": "26.8.5",
-   "f": 80494,
+   "f": 80240,
    "h": [
     258.0,
     258.0,
@@ -1852,22 +1852,22 @@
     256.0,
     255.0
    ],
-   "i": null,
-   "k": 610899,
+   "i": 97.3,
+   "k": 611019,
    "lag": 1,
    "m": 258.0,
    "n": "Chainflow",
-   "nv": null,
+   "nv": 95.87,
    "p": "2mMGsb5uy1Q4Dvezr8HK2E8SJoChcb2X7b61tJPaVHHd",
    "t": "Approved",
-   "v": null
+   "v": 94.42
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 436,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80460,
+   "f": 80205,
    "h": [
     259.0,
     261.0,
@@ -1885,23 +1885,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 397602,
+   "i": 90.49,
+   "k": 397088,
    "lag": 1,
    "lg": 1,
    "m": 259.0,
    "n": "Chainode Tech & MEV(0% Fee)",
-   "nv": null,
+   "nv": 86.93,
    "p": "3RXKQBRv7xKTQeNdLSPhCiD4QcUfxEQ12rtgUkMf5LnS",
    "t": "Approved",
-   "v": null
+   "v": 75.82
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 164,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 59094,
+   "f": 59104,
    "h": [
     257.5,
     266.0,
@@ -1919,23 +1919,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 116379,
+   "i": 91.35,
+   "k": 116254,
    "lag": 1,
    "lg": 1,
    "m": 257.5,
    "n": "Charity Soul",
-   "nv": null,
+   "nv": 92.42,
    "p": "chrtyETASKQhsndRM9pr6qC3gAHG5MuRwCgXSNVqnJL",
    "t": "Approved",
-   "v": null
+   "v": 65.1
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 80,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 59414,
+   "f": 59425,
    "h": [
     257.5,
     257.0,
@@ -1953,23 +1953,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 117356,
+   "i": 91.01,
+   "k": 117229,
    "lag": 1,
    "lg": 1,
    "m": 257.5,
    "n": "Choplet Studios",
-   "nv": null,
+   "nv": 93.21,
    "p": "chopskqnudaeCTENWzUjfFCBSLcxprqbdMoCAucAwfb",
    "t": "Approved",
-   "v": null
+   "v": 60.45
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 136,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 61035,
+   "f": 60229,
    "h": [
     256.0,
     258.0,
@@ -1987,23 +1987,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 120917,
+   "i": 87.49,
+   "k": 118187,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "Citizen Node",
-   "nv": null,
+   "nv": 90.54,
    "p": "CtzN7ysR5rX69qd168Aosbuc83mPozhi81bEHbG7ecNP",
    "t": "Approved",
-   "v": null
+   "v": 44.95
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 32,
    "c": "Jito",
    "cv": "4.3.0-rc.0",
-   "f": 32285,
+   "f": 40189,
    "h": [
     254.5,
     256.0,
@@ -2021,22 +2021,22 @@
     309.0,
     306.0
    ],
-   "i": null,
-   "k": 69182,
+   "i": 87.11,
+   "k": 77039,
    "lg": 1,
    "m": 254.5,
    "n": "Cloak",
-   "nv": null,
+   "nv": 96.31,
    "p": "CARBN9PY1Qej1aCg4885pfoYH8EHfjWuMy59pVa48ky",
    "t": "Approved",
-   "v": null
+   "v": 25.12
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 220,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 79102,
+   "cv": "4.3.0",
+   "f": 78901,
    "h": [
     273.0,
     260.0,
@@ -2054,23 +2054,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 222008,
+   "i": 88.84,
+   "k": 221685,
    "lag": 1,
    "lg": 1,
    "m": 273.0,
    "n": "Code-Breader",
-   "nv": null,
+   "nv": 83.35,
    "p": "DViARWAWKkxAzp4UCgbw5B9pLSrBY3PaztFErcwgVUKX",
    "t": "Approved",
-   "v": null
+   "v": 75.59
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 136,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 69094,
+   "cv": "4.3.0",
+   "f": 68732,
    "h": [
     257.5,
     262.0,
@@ -2088,23 +2088,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 146216,
+   "i": 89.88,
+   "k": 145720,
    "lag": 1,
    "lg": 1,
    "m": 257.5,
    "n": "Cointelegraph Decentralization Guardians",
-   "nv": null,
+   "nv": 87.29,
    "p": "CTDGxTK789ZvhgyHZHtSnxTtysbyY1mrywXEJiYYqXxC",
    "t": "Approved",
-   "v": null
+   "v": 70.65
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 112,
    "c": "BAM",
    "cv": "4.3.0-rc.0",
-   "f": 77218,
+   "f": 76825,
    "h": [
     255.5,
     255.0,
@@ -2122,23 +2122,23 @@
     303.0,
     303.0
    ],
-   "i": null,
-   "k": 172012,
+   "i": 87.42,
+   "k": 171487,
    "lag": 1,
    "lg": 1,
    "m": 255.5,
    "n": "Coverlet+MEV | 0% ALL FEES ✅",
-   "nv": null,
+   "nv": 75.43,
    "p": "CVRr5oHCAAooVbYze7CvXtRp4FUtkMCSqBZU7MVu8v8e",
    "t": "Approved",
-   "v": null
+   "v": 89.86
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 100,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 61124,
+   "cv": "4.3.0",
+   "f": 60374,
    "h": [
     279.0,
     280.5,
@@ -2156,23 +2156,23 @@
     305.0,
     305.5
    ],
-   "i": null,
-   "k": 121080,
+   "i": 90.2,
+   "k": 120194,
    "lag": 1,
    "lg": 1,
    "m": 279.0,
    "n": "cp0x_by_STAKRspace",
-   "nv": null,
+   "nv": 89.26,
    "p": "E9hD3ikumJx1GVswDjnpCt6Uu4WG5mz1PDWCqdE5uhmo",
    "t": "Approved",
-   "v": null
+   "v": 66.88
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 44,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 32604,
+   "f": 31387,
    "h": [
     278.5,
     286.5,
@@ -2190,23 +2190,23 @@
     325.0,
     305.5
    ],
-   "i": null,
-   "k": 34028,
+   "i": 88.76,
+   "k": 32811,
    "lag": 1,
    "lg": 1,
    "m": 278.5,
    "n": "crypto-jack-sparrow",
-   "nv": null,
+   "nv": 86.22,
    "p": "AdSHK6vpQnwHRSw7jXUwjMEytmhFwnynZSENhvpAxL1y",
    "t": "Approved",
-   "v": null
+   "v": 66.42
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 76,
    "c": "BAM",
-   "cv": "4.3.0-rc.1",
-   "f": 65633,
+   "cv": "4.3.0",
+   "f": 64968,
    "h": [
     253.0,
     253.5,
@@ -2224,22 +2224,22 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 137843,
+   "i": 81.88,
+   "k": 137047,
    "lg": 1,
    "m": 253.0,
    "n": "CryptoVik",
-   "nv": null,
+   "nv": 85.0,
    "p": "CTwsruptUccEtZGNxBDbuusHYxkBX3P6ndrxVjSG213y",
    "t": "Approved",
-   "v": null
+   "v": 24.22
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 84,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 56074,
+   "f": 55165,
    "h": [
     255.0,
     258.0,
@@ -2257,22 +2257,22 @@
     305.0,
     304.5
    ],
-   "i": null,
-   "k": 105718,
+   "i": 88.59,
+   "k": 104671,
    "lg": 1,
    "m": 255.0,
    "n": "CyberAlex 👑 MEV",
-   "nv": null,
+   "nv": 89.76,
    "p": "cybi55ebub37HZW9YmRaLh59Lh3kqaLTsEBQwW6vFkC",
    "t": "Approved",
-   "v": null
+   "v": 54.66
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 92,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 51229,
+   "cv": "4.3.0",
+   "f": 50335,
    "h": [
     267.5,
     268.0,
@@ -2290,23 +2290,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 91475,
+   "i": 90.68,
+   "k": 90469,
    "lag": 1,
    "lg": 1,
    "m": 267.5,
    "n": "CyberVillage",
-   "nv": null,
+   "nv": 87.42,
    "p": "HMWXfjaeSHhww1wvdBhqhHVP9v96mFB4LJ9xP2MXbDGH",
    "t": "Approved",
-   "v": null
+   "v": 75.64
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 184,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 74075,
+   "cv": "4.3.0",
+   "f": 74363,
    "h": [
     267.5,
     257.5,
@@ -2324,23 +2324,23 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 163144,
+   "i": 89.14,
+   "k": 184512,
    "lag": 1,
    "lg": 1,
    "m": 267.5,
    "n": "Daiko",
-   "nv": null,
+   "nv": 91.2,
    "p": "5aD6KB8g4MPt3xJafmMmun86hHMDnoFiGbd5gYiMFZw7",
    "t": "Approved",
-   "v": null
+   "v": 53.99
   },
   {
-   "b": null,
+   "b": 99.79,
    "bp": 116,
-   "c": "Rakurai",
-   "cv": "4.2.2",
-   "f": 54284,
+   "c": "Jito",
+   "cv": "4.3.0",
+   "f": 53432,
    "h": [
     264.0,
     261.0,
@@ -2358,23 +2358,23 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 100265,
+   "i": 93.93,
+   "k": 99417,
    "lag": 1,
    "lg": 1,
    "m": 264.0,
    "n": "DarkTower",
-   "nv": null,
+   "nv": 95.42,
    "p": "5ghoFEVrsXeAPB6SUmBpZ2xq3KvHEjNMeSaBnxEBXkHV",
    "t": "Approved",
-   "v": null
+   "v": 73.83
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 96,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 52657,
+   "f": 51737,
    "h": [
     264.5,
     260.0,
@@ -2392,23 +2392,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 95201,
+   "i": 89.56,
+   "k": 94143,
    "lag": 1,
    "lg": 1,
    "m": 264.5,
    "n": "DataHive AI | Missions",
-   "nv": null,
+   "nv": 85.84,
    "p": "7CR6whiYULVf1Knj4J5PxUS37opdk8UAx2WnDzBQKiVe",
    "t": "Approved",
-   "v": null
+   "v": 72.89
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 308,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 80283,
+   "cv": "4.3.0",
+   "f": 80028,
    "h": [
     259.0,
     264.0,
@@ -2426,23 +2426,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 318327,
+   "i": 89.44,
+   "k": 318252,
    "lag": 1,
    "lg": 1,
    "m": 259.0,
    "n": "Dawn Labs",
-   "nv": null,
+   "nv": 86.09,
    "p": "4k6wgP5WPBKQpsFGtzuXNrjcTE2fKWLj17nDvFeG5zSF",
    "t": "Approved",
-   "v": null
+   "v": 71.31
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 180,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 80283,
+   "f": 80027,
    "h": [
     257.0,
     256.0,
@@ -2460,23 +2460,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 202387,
+   "i": 91.15,
+   "k": 202009,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "Decentra",
-   "nv": null,
+   "nv": 91.84,
    "p": "dcntruDNP5SEcGV4RxnsqXFURdDZGT3DTQv68Q8H7Vu",
    "t": "Approved",
-   "v": null
+   "v": 65.49
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 116,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 60239,
+   "f": 59412,
    "h": [
     256.0,
     278.5,
@@ -2494,23 +2494,23 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 118262,
+   "i": 86.91,
+   "k": 115539,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "Ded Monkes",
-   "nv": null,
+   "nv": 83.81,
    "p": "dmMwc4RazLHkvDZYrWAfbHQ6cViAvNa5szCJKaiun8S",
    "t": "Approved",
-   "v": null
+   "v": 61.29
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 116,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 54714,
+   "cv": "4.3.0",
+   "f": 53757,
    "h": [
     267.0,
     264.5,
@@ -2528,23 +2528,23 @@
     305.0,
     304.0
    ],
-   "i": null,
-   "k": 101306,
+   "i": 91.25,
+   "k": 97363,
    "lag": 1,
    "lg": 1,
    "m": 267.0,
    "n": "DePitch Academy",
-   "nv": null,
+   "nv": 87.45,
    "p": "pitch9cMruwjDtAnisNS4mwZUPhMsBztNEGu2weMg55",
    "t": "Approved",
-   "v": null
+   "v": 79.33
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 68,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 54090,
+   "f": 53130,
    "h": [
     274.5,
     289.5,
@@ -2562,23 +2562,23 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 99573,
+   "i": 87.44,
+   "k": 97093,
    "lag": 1,
    "lg": 1,
    "m": 274.5,
    "n": "Dicky",
-   "nv": null,
+   "nv": 87.74,
    "p": "DCKyEmMENQMtLXgbmUoHRmgP9XdJ9HsR5WxrKnSDCzKA",
    "t": "Approved",
-   "v": null
+   "v": 53.04
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 104,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 64800,
+   "f": 64095,
    "h": [
     271.5,
     267.0,
@@ -2596,23 +2596,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 133566,
+   "i": 90.78,
+   "k": 132729,
    "lag": 1,
    "lg": 1,
    "m": 271.5,
    "n": "DICS - Degen Infrastructure Core Services",
-   "nv": null,
+   "nv": 87.92,
    "p": "CpNnGGhgVATJAbzHUXdrcGfpPiGuZyPka4QUmH7YgavX",
    "t": "Approved",
-   "v": null
+   "v": 74.81
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 280,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80429,
+   "f": 80175,
    "h": [
     254.0,
     253.0,
@@ -2630,22 +2630,22 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 296073,
+   "i": 82.12,
+   "k": 296252,
    "lg": 1,
    "m": 254.0,
    "n": "Digital Energy",
-   "nv": null,
+   "nv": 84.47,
    "p": "AfZTWYoFQbzqCMmUBTD7XwxFvjob1FVyCvkaXRryxtKc",
    "t": "Approved",
-   "v": null
+   "v": 27.39
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 348,
-   "c": "Unknown(50266)",
+   "c": "Unknown(12881)",
    "cv": "4.2.2",
-   "f": 80445,
+   "f": 80242,
    "h": [
     236.0,
     239.0,
@@ -2663,22 +2663,22 @@
     289.5,
     289.0
    ],
-   "i": null,
-   "k": 336737,
+   "i": 95.94,
+   "k": 336715,
    "lg": 1,
    "m": 236.0,
    "n": "diman",
-   "nv": null,
+   "nv": 94.83,
    "p": "Diman2GphWLwECE3swjrAEAJniezpYLxK1edUydiDZau",
    "t": "Approved",
-   "v": null
+   "v": 88.42
   },
   {
-   "b": null,
+   "b": 99.55,
    "bp": 222,
    "c": "Jito",
    "cv": "4.2.2",
-   "f": 80143,
+   "f": 79889,
    "h": [
     259.5,
     258.0,
@@ -2696,23 +2696,23 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 241396,
+   "i": 95.85,
+   "k": 241169,
    "lag": 1,
    "lg": 1,
    "m": 259.5,
    "n": "Dosirak 🇰🇷",
-   "nv": null,
+   "nv": 96.77,
    "p": "yJeahQNRHNWtL9Z1SqPX3SBwTYXr5ECMYYVK4uYVwxt",
    "t": "Approved",
-   "v": null
+   "v": 83.21
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 92,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 49063,
+   "f": 47994,
    "h": [
     267.5,
     262.0,
@@ -2730,23 +2730,23 @@
     305.0,
     303.0
    ],
-   "i": null,
-   "k": 83999,
+   "i": 88.29,
+   "k": 82792,
    "lag": 1,
    "lg": 1,
    "m": 267.5,
    "n": "Dragon Trust Stake",
-   "nv": null,
+   "nv": 83.85,
    "p": "3BeharBd3j4sKQp7Qze27JLQLd9AEEwGTX9TC7dXYSNw",
    "t": "Approved",
-   "v": null
+   "v": 70.37
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 104,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 55321,
+   "f": 54377,
    "h": [
     256.5,
     256.0,
@@ -2764,23 +2764,23 @@
     305.0,
     304.5
    ],
-   "i": null,
-   "k": 103207,
+   "i": 87.47,
+   "k": 102124,
    "lag": 1,
    "lg": 1,
    "m": 256.5,
    "n": "DSM-01",
-   "nv": null,
+   "nv": 91.16,
    "p": "ExCHWgfeJyKRzpfryiQn4W6aYaWhbSAEnsoUnBGNqjWD",
    "t": "Approved",
-   "v": null
+   "v": 42.95
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 116,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 52514,
+   "f": 51527,
    "h": [
     289.0,
     283.0,
@@ -2798,23 +2798,23 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 94837,
+   "i": 90.72,
+   "k": 93711,
    "lag": 1,
    "lg": 1,
    "m": 289.0,
    "n": "Dust Eleven",
-   "nv": null,
+   "nv": 89.39,
    "p": "dst2u7mXMyDvb14cSErRNA1mxH1d5VXbSXgZ3DKE9xH",
    "t": "Approved",
-   "v": null
+   "v": 69.97
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 72,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 54212,
+   "f": 53244,
    "h": [
     260.0,
     252.0,
@@ -2832,23 +2832,23 @@
     303.0,
     295.0
    ],
-   "i": null,
-   "k": 100024,
+   "i": 90.53,
+   "k": 98917,
    "lag": 1,
    "lg": 1,
    "m": 260.0,
    "n": "Easytoken.me",
-   "nv": null,
+   "nv": 89.33,
    "p": "FjYEr2UCeFzNfAKiFrbhG34Zv8LxbmfHYAFhAfc7SLQL",
    "t": "Approved",
-   "v": null
+   "v": 68.88
   },
   {
-   "b": null,
+   "b": 98.95,
    "bp": 92,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 53764,
+   "f": 53119,
    "h": [
     253.5,
     255.5,
@@ -2866,22 +2866,22 @@
     304.0,
     306.5
    ],
-   "i": null,
-   "k": 99037,
+   "i": 85.0,
+   "k": 97997,
    "lg": 1,
    "m": 253.5,
    "n": "EAT TRIBE",
-   "nv": null,
+   "nv": 84.09,
    "p": "EATpCzQNs8BzZh1mx1hXMAJm3o1MLXakTXr4UEmcsY7f",
    "t": "Approved",
-   "v": null
+   "v": 50.51
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 104,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 57327,
+   "f": 56430,
    "h": [
     267.0,
     282.5,
@@ -2899,23 +2899,23 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 109321,
+   "i": 87.18,
+   "k": 105423,
    "lag": 1,
    "lg": 1,
    "m": 267.0,
    "n": "Epoch.Day",
-   "nv": null,
+   "nv": 85.56,
    "p": "nateKhsYkrVc992UuTfAhEEFQqr2zQfpGg9RafNkxdC",
    "t": "Approved",
-   "v": null
+   "v": 57.86
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 52,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 42122,
+   "f": 41064,
    "h": [
     280.0,
     264.5,
@@ -2933,23 +2933,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 63083,
+   "i": 84.53,
+   "k": 62029,
    "lag": 1,
    "lg": 1,
    "m": 280.0,
    "n": "EvasMainnet",
-   "nv": null,
+   "nv": 84.82,
    "p": "2Eq6YD8P8QXTeoz9h6JHjgZ55t8RSxNdx4waMDCoPmQU",
    "t": "Approved",
-   "v": null
+   "v": 42.39
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 52,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 48490,
+   "cv": "4.3.0",
+   "f": 47553,
    "h": [
     263.5,
     263.5,
@@ -2967,23 +2967,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 82586,
+   "i": 84.92,
+   "k": 81507,
    "lag": 1,
    "lg": 1,
    "m": 263.5,
    "n": "ex1arey",
-   "nv": null,
+   "nv": 76.2,
    "p": "FphFJA451qptiGyCeCN3xvrDi8cApGAnyR5vw2KxxQ1q",
    "t": "Approved",
-   "v": null
+   "v": 70.88
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 528,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80217,
+   "f": 80014,
    "h": [
     255.0,
     256.0,
@@ -3001,22 +3001,22 @@
     306.0,
     305.0
    ],
-   "i": null,
-   "k": 577631,
+   "i": 87.63,
+   "k": 577366,
    "lg": 1,
    "m": 255.0,
    "n": "Exo Tech",
-   "nv": null,
+   "nv": 85.88,
    "p": "mineL1YNwcRnxN93B2sX6q22R11WfRqxnY4NBV8KfFY",
    "t": "Approved",
-   "v": null
+   "v": 59.89
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 96,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 58379,
+   "f": 57519,
    "h": [
     256.5,
     276.0,
@@ -3034,22 +3034,22 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 113586,
+   "i": 85.21,
+   "k": 110555,
    "lag": 1,
    "m": 256.5,
    "n": "Eyenotion",
-   "nv": null,
+   "nv": 87.95,
    "p": "eyeYaqg9e2L6xw7YwsSLm27eWJfhLNAm6ETQm8TXNoK",
    "t": "Approved",
-   "v": null
+   "v": 37.51
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 108,
    "c": "Jito",
    "cv": "4.3.0-rc.0",
-   "f": 48324,
+   "f": 47772,
    "h": [
     255.0,
     259.0,
@@ -3067,22 +3067,22 @@
     307.0,
     307.5
    ],
-   "i": null,
-   "k": 82824,
+   "i": 87.36,
+   "k": 82278,
    "lg": 1,
    "m": 255.0,
    "n": "Famous Foxes",
-   "nv": null,
+   "nv": 96.93,
    "p": "FoXyHJXdQGK2eHoTjSAzHq4hzxWdJvpGgyzrtPS9eAk",
    "t": "Approved",
-   "v": null
+   "v": 24.93
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 132,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 64646,
+   "f": 64254,
    "h": [
     273.0,
     275.5,
@@ -3100,23 +3100,23 @@
     324.5,
     303.0
    ],
-   "i": null,
-   "k": 132656,
+   "i": 88.51,
+   "k": 132395,
    "lag": 1,
    "lg": 1,
    "m": 273.0,
    "n": "Fast Runner",
-   "nv": null,
+   "nv": 83.77,
    "p": "6qwYjs5vCSEKaTMBbHinnW8fvdGj1r8cpzPoAV1EHKsw",
    "t": "Approved",
-   "v": null
+   "v": 72.08
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 204,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 77611,
+   "f": 77085,
    "h": [
     262.5,
     267.0,
@@ -3134,23 +3134,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 172047,
+   "i": 89.44,
+   "k": 168591,
    "lag": 1,
    "lg": 1,
    "m": 262.5,
    "n": "fat tails lab",
-   "nv": null,
+   "nv": 85.88,
    "p": "HVXXmNKkmDZbZwj74iL2Y9Wu4SyrchBoxAfFYVAktLrG",
    "t": "Approved",
-   "v": null
+   "v": 71.99
   },
   {
-   "b": null,
+   "b": 99.95,
    "bp": 220,
-   "c": "HarmonicFrankendancer",
-   "cv": "0.1106.40201",
-   "f": 80462,
+   "c": "HarmonicFiredancer",
+   "cv": "26.8.5",
+   "f": 80208,
    "h": [
     264.0,
     263.0,
@@ -3168,23 +3168,23 @@
     309.0,
     309.0
    ],
-   "i": null,
-   "k": 189091,
+   "i": 81.76,
+   "k": 188855,
    "lag": 1,
    "lg": 1,
    "m": 264.0,
    "n": "fd1.zip 📦",
-   "nv": null,
+   "nv": 92.83,
    "p": "fdzip81euDS8jEZHx5H1mn27zGVMLzkgpQuzYRBfBYG",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 184,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 80462,
+   "f": 80209,
    "h": [
     280.5,
     274.0,
@@ -3202,23 +3202,23 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 185659,
+   "i": 87.15,
+   "k": 185423,
    "lag": 1,
    "lg": 1,
    "m": 280.5,
    "n": "Fidelity Center for Applied Technology (FCAT®)",
-   "nv": null,
+   "nv": 87.0,
    "p": "dxa6QFqLcByyHykLCAW5tv1VYNVQFV3v6oovM2h8inH",
    "t": "Approved",
-   "v": null
+   "v": 53.34
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 140,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 56075,
+   "f": 55149,
    "h": [
     273.0,
     264.5,
@@ -3236,23 +3236,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 105538,
+   "i": 91.29,
+   "k": 104474,
    "lag": 1,
    "lg": 1,
    "m": 273.0,
    "n": "Firstset",
-   "nv": null,
+   "nv": 89.31,
    "p": "BhNnboEZb3mKkVADMH11cYGWCqefAfmhzx5rU4eRTKGY",
    "t": "Approved",
-   "v": null
+   "v": 74.02
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 244,
    "c": "Jito",
    "cv": "4.2.2",
-   "f": 80413,
+   "f": 80212,
    "h": [
     257.0,
     259.0,
@@ -3270,23 +3270,23 @@
     308.0,
     306.0
    ],
-   "i": null,
-   "k": 225532,
+   "i": 94.38,
+   "k": 225355,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "Forbole",
-   "nv": null,
+   "nv": 95.66,
    "p": "forb5u56XgvzxiKfRt4FVNFQKJrd2LWAfNCsCqL6P7q",
    "t": "Approved",
-   "v": null
+   "v": 75.57
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 104,
    "c": "BAM",
    "cv": "4.3.0-beta.3",
-   "f": 50847,
+   "f": 49932,
    "h": [
     256.0,
     262.0,
@@ -3304,23 +3304,23 @@
     304.0,
     303.0
    ],
-   "i": null,
-   "k": 89696,
+   "i": 94.82,
+   "k": 88788,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "Fountainhead 🌱 Funding Dev WITH max APY",
-   "nv": null,
+   "nv": 89.3,
    "p": "fhsM2sxME8cHrrk3qvtMsRRDv5AoLFja7NjNnHeYZxe",
    "t": "Approved",
-   "v": null
+   "v": 97.58
   },
   {
-   "b": null,
+   "b": 98.91,
    "bp": 91,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 54141,
+   "f": 53185,
    "h": [
     260.0,
     272.5,
@@ -3338,23 +3338,23 @@
     305.5,
     305.0
    ],
-   "i": null,
-   "k": 100207,
+   "i": 86.03,
+   "k": 99111,
    "lag": 1,
    "lg": 1,
    "m": 260.0,
    "n": "FREEZZ",
-   "nv": null,
+   "nv": 84.85,
    "p": "G4GT8z4AKWNoy3x6nuzxW83UfFXLXzrwn7DZQt4GvWdU",
    "t": "Approved",
-   "v": null
+   "v": 55.22
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 140,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 79726,
+   "f": 79471,
    "h": [
     260.5,
     268.5,
@@ -3372,23 +3372,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 181406,
+   "i": 90.16,
+   "k": 180979,
    "lag": 1,
    "lg": 1,
    "m": 260.5,
    "n": "GateOmega | SolCircl.app",
-   "nv": null,
+   "nv": 86.13,
    "p": "BPKAfGkkzF5u1QRjjB1nWYYbPMUCMPJe1xZPmwEMNMCT",
    "t": "Approved",
-   "v": null
+   "v": 76.03
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 128,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 50810,
+   "f": 49820,
    "h": [
     288.5,
     288.5,
@@ -3406,23 +3406,23 @@
     320.0,
     308.0
    ],
-   "i": null,
-   "k": 92530,
+   "i": 91.07,
+   "k": 91402,
    "lag": 1,
    "lg": 1,
    "m": 288.5,
    "n": "Gaxx Validator",
-   "nv": null,
+   "nv": 91.06,
    "p": "3Rv6ZVGUuRczP76322LyhTTYw2iM4avV4B5xFJocQJer",
    "t": "Approved",
-   "v": null
+   "v": 67.32
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 68,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 46604,
+   "cv": "4.3.0",
+   "f": 45566,
    "h": [
     254.0,
     252.5,
@@ -3440,22 +3440,22 @@
     308.0,
     310.5
    ],
-   "i": null,
-   "k": 80177,
+   "i": 90.57,
+   "k": 78998,
    "lg": 1,
    "m": 254.0,
    "n": "GERSIA",
-   "nv": null,
+   "nv": 89.83,
    "p": "7HMHSdQkjDwz9Q5zAhEy83uzW3XHJchjdpMYapKXcKt5",
    "t": "Approved",
-   "v": null
+   "v": 67.65
   },
   {
-   "b": null,
+   "b": 99.99,
    "bp": 644,
    "c": "Jito",
-   "cv": "4.2.2",
-   "f": 80470,
+   "cv": "4.3.0",
+   "f": 80216,
    "h": [
     256.0,
     257.0,
@@ -3473,23 +3473,23 @@
     304.0,
     303.0
    ],
-   "i": null,
-   "k": 632321,
+   "i": 89.85,
+   "k": 632162,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "Ghost",
-   "nv": null,
+   "nv": 96.79,
    "p": "3cZSHGfNdaULpFAvGbWbxpVwzXB4gHdk8NFucPNR5pgA",
    "t": "Approved",
-   "v": null
+   "v": 42.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 112,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 57388,
+   "f": 56493,
    "h": [
     258.0,
     255.0,
@@ -3507,23 +3507,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 109523,
+   "i": 86.04,
+   "k": 106501,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "Gleam",
-   "nv": null,
+   "nv": 88.52,
    "p": "G1eAmANVWf6ZeoxG4aMbS1APauyEDHqLxHFytzk5hZqN",
    "t": "Approved",
-   "v": null
+   "v": 41.37
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 64,
    "c": "Rakurai",
    "cv": "4.2.2",
-   "f": 48895,
+   "f": 48314,
    "h": [
     257.5,
     259.0,
@@ -3541,23 +3541,23 @@
     309.0,
     308.5
    ],
-   "i": null,
-   "k": 84625,
+   "i": 94.13,
+   "k": 84051,
    "lag": 1,
    "lg": 1,
    "m": 257.5,
    "n": "Glory to Ukraine",
-   "nv": null,
+   "nv": 95.65,
    "p": "4W3jdXyqhLCjzA3Liu8ZNjViwrc6N9YjSB7obbxfjcKE",
    "t": "Approved",
-   "v": null
+   "v": 73.96
   },
   {
-   "b": null,
+   "b": 99.34,
    "bp": 144,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 64730,
+   "f": 64008,
    "h": [
     255.0,
     255.0,
@@ -3575,22 +3575,22 @@
     304.0,
     307.0
    ],
-   "i": null,
-   "k": 131988,
+   "i": 85.61,
+   "k": 129422,
    "lg": 1,
    "m": 255.0,
    "n": "Gojira",
-   "nv": null,
+   "nv": 88.03,
    "p": "gojir4WnhS7VS1JdbnanJMzaMfr4UD7KeX1ixWAHEmw",
    "t": "Approved",
-   "v": null
+   "v": 41.76
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 120,
    "c": "Jito",
-   "cv": "4.3.0-rc.1",
-   "f": 57537,
+   "cv": "4.3.0",
+   "f": 59978,
    "h": [
     253.0,
     254.0,
@@ -3608,22 +3608,22 @@
     309.0,
     307.0
    ],
-   "i": null,
-   "k": 122100,
+   "i": 98.35,
+   "k": 124553,
    "lg": 1,
    "m": 253.0,
    "n": "Golden Tower Staking",
-   "nv": null,
+   "nv": 96.46,
    "p": "9PRr9k87HjjdLMRkxtxygidjxVta9VQ1kAsqgLBWXKdQ",
    "t": "Approved",
-   "v": null
+   "v": 99.63
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 56,
    "c": "Jito",
-   "cv": "4.2.2",
-   "f": 37267,
+   "cv": "4.3.0",
+   "f": 38530,
    "h": [
     256.0,
     256.5,
@@ -3641,23 +3641,23 @@
     315.0,
     309.5
    ],
-   "i": null,
-   "k": 55919,
+   "i": 90.13,
+   "k": 57186,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "Goldsand",
-   "nv": null,
+   "nv": 96.77,
    "p": "SANDCxXBbQhvbUqNtiLqKdFEY1uQhVo1UgUACaS4mXU",
    "t": "Approved",
-   "v": null
+   "v": 43.88
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 188,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 74639,
+   "cv": "4.3.0",
+   "f": 74153,
    "h": [
     257.5,
     258.0,
@@ -3675,23 +3675,23 @@
     305.0,
     304.0
    ],
-   "i": null,
-   "k": 162425,
+   "i": 89.99,
+   "k": 161812,
    "lag": 1,
    "lg": 1,
    "m": 257.5,
    "n": "GooseFX - 0% Fees",
-   "nv": null,
+   "nv": 86.26,
    "p": "GFXVa19rX6iwfs3sLS5UvX9Exu2usRsG4V5MRMDRo23V",
    "t": "Approved",
-   "v": null
+   "v": 74.49
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 92,
    "c": "Jito",
    "cv": "4.3.0-rc.0",
-   "f": 32314,
+   "f": 40245,
    "h": [
     256.0,
     261.0,
@@ -3709,23 +3709,23 @@
     307.5,
     306.0
    ],
-   "i": null,
-   "k": 69383,
+   "i": 87.48,
+   "k": 77270,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "Gotas",
-   "nv": null,
+   "nv": 97.18,
    "p": "gotasRuLTuJNZDtLHmaDJpEUjCWZqkHcuwbLhkgCwCX",
    "t": "Approved",
-   "v": null
+   "v": 24.97
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 168,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 78816,
+   "f": 78562,
    "h": [
     264.0,
     269.0,
@@ -3743,23 +3743,23 @@
     306.0,
     307.0
    ],
-   "i": null,
-   "k": 198127,
+   "i": 88.91,
+   "k": 197750,
    "lag": 1,
    "lg": 1,
    "m": 264.0,
    "n": "Grassets Tech | Jito-BAM | IBRL",
-   "nv": null,
+   "nv": 83.08,
    "p": "9FXD1NXrK6xFU8i4gLAgjj2iMEWTqJhSuQN8tQuDfm2e",
    "t": "Approved",
-   "v": null
+   "v": 76.82
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 514,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 80153,
+   "cv": "4.3.0",
+   "f": 79899,
    "h": [
     256.0,
     262.5,
@@ -3777,23 +3777,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 546530,
+   "i": 87.77,
+   "k": 545992,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "GREED Academy - funding education",
-   "nv": null,
+   "nv": 90.02,
    "p": "GREEDkgav1ox1jYyd9Anv6exLqKV2vYnxMw5prGwmNKc",
    "t": "Approved",
-   "v": null
+   "v": 48.44
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 288,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80457,
+   "f": 80203,
    "h": [
     255.5,
     258.0,
@@ -3811,23 +3811,23 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 267509,
+   "i": 87.67,
+   "k": 265294,
    "lag": 1,
    "lg": 1,
    "m": 255.5,
    "n": "Grid Systems",
-   "nv": null,
+   "nv": 90.2,
    "p": "gridqZmeBcsUKT2Mv4M9YFHFN3tVLFb2TCtTcLD1cAd",
    "t": "Approved",
-   "v": null
+   "v": 47.23
   },
   {
-   "b": null,
+   "b": 96.83,
    "bp": 200,
    "c": "HarmonicFiredancer",
    "cv": "26.9.3",
-   "f": 80491,
+   "f": 80237,
    "h": [
     308.0,
     309.0,
@@ -3845,23 +3845,23 @@
     358.0,
     357.0
    ],
-   "i": null,
-   "k": 245665,
+   "i": 80.49,
+   "k": 244122,
    "lag": 1,
    "lg": 1,
    "m": 308.0,
    "n": "gripto",
-   "nv": null,
+   "nv": 92.8,
    "p": "grptonHnt7YSmJokGK9TJJTBXDT8ca4LSWMHCCfzzPa",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 152,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 71254,
+   "f": 70687,
    "h": [
     260.0,
     255.0,
@@ -3879,23 +3879,23 @@
     306.5,
     305.0
    ],
-   "i": null,
-   "k": 152204,
+   "i": 89.11,
+   "k": 151500,
    "lag": 1,
    "lg": 1,
    "m": 260.0,
    "n": "Guardian Validator",
-   "nv": null,
+   "nv": 89.76,
    "p": "gVALrRd3xq4D62KJNGDCpMMGz976w2x1Vo79mSNn4bh",
    "t": "Approved",
-   "v": null
+   "v": 58.14
   },
   {
-   "b": null,
+   "b": 99.92,
    "bp": 228,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 80412,
+   "cv": "4.3.0",
+   "f": 80156,
    "h": [
     269.0,
     267.0,
@@ -3913,23 +3913,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 182060,
+   "i": 90.14,
+   "k": 181662,
    "lag": 1,
    "lg": 1,
    "m": 269.0,
    "n": "H2O Nodes💧",
-   "nv": null,
+   "nv": 86.73,
    "p": "9pBHfuE19q7PRbupJf8CZAMwv6RHjasdyMN9U9du7Nx2",
    "t": "Approved",
-   "v": null
+   "v": 74.29
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 904,
    "c": "Jito",
    "cv": "4.3.0",
-   "f": 80269,
+   "f": 80015,
    "h": [
     254.0,
     254.0,
@@ -3947,22 +3947,22 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 899319,
+   "i": 93.19,
+   "k": 899189,
    "lg": 1,
    "m": 254.0,
    "n": "Ha1iad3",
-   "nv": null,
+   "nv": 88.6,
    "p": "Ha1iade1AH3B12K9SccfWoPdFtQKKQsj2ZyWwxcjqJJU",
    "t": "Approved",
-   "v": null
+   "v": 88.78
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 212,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 80384,
+   "f": 80130,
    "h": [
     266.0,
     263.0,
@@ -3980,23 +3980,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 194439,
+   "i": 90.38,
+   "k": 194049,
    "lag": 1,
    "lg": 1,
    "m": 266.0,
    "n": "HAKUHODO KEY3",
-   "nv": null,
+   "nv": 87.36,
    "p": "2N7v8pDKDYhtBUJBQUgxvysUjgM9s4ULPCmeEiPWTf6Z",
    "t": "Approved",
-   "v": null
+   "v": 73.79
   },
   {
-   "b": null,
+   "b": 99.24,
    "bp": 332,
    "c": "HarmonicAgave",
    "cv": "4.2.2",
-   "f": 80494,
+   "f": 80240,
    "h": [
     295.0,
     294.0,
@@ -4014,23 +4014,23 @@
     343.0,
     343.0
    ],
-   "i": null,
-   "k": 339579,
+   "i": 81.9,
+   "k": 339736,
    "lag": 1,
    "lg": 1,
    "m": 295.0,
    "n": "Hanabi Staking 🎆 | Staking Champions | DoubleZero | ❌BAM",
-   "nv": null,
+   "nv": 93.79,
    "p": "mint13XHZSSxtgHuTSM9qPDEJSbWktpmpM4CZxeLB8f",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 692,
    "c": "HarmonicAgave",
    "cv": "4.3.0",
-   "f": 80495,
+   "f": 80241,
    "h": [
     253.0,
     253.0,
@@ -4048,22 +4048,22 @@
     303.0,
     306.0
    ],
-   "i": null,
-   "k": 732428,
+   "i": 81.52,
+   "k": 732443,
    "lg": 1,
    "m": 253.0,
    "n": "Hello Moon",
-   "nv": null,
+   "nv": 92.27,
    "p": "HM1KjNaXa4w8K4gCXbieoMh5gUTNeUhg9fvdXMKeBW3L",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 172,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 76428,
+   "cv": "4.3.0",
+   "f": 78128,
    "h": [
     270.0,
     268.0,
@@ -4081,23 +4081,23 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 177507,
+   "i": 89.75,
+   "k": 179072,
    "lag": 1,
    "lg": 1,
    "m": 270.0,
    "n": "Hive Validator",
-   "nv": null,
+   "nv": 86.78,
    "p": "8hAYbagNt7CMBooFfqVJhBgLqLffpjXTWJMk8yybjJsN",
    "t": "Approved",
-   "v": null
+   "v": 71.34
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 92,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 53612,
+   "f": 52651,
    "h": [
     262.5,
     269.5,
@@ -4115,23 +4115,23 @@
     308.0,
     306.0
    ],
-   "i": null,
-   "k": 99197,
+   "i": 89.91,
+   "k": 96510,
    "lag": 1,
    "lg": 1,
    "m": 262.5,
    "n": "Hodl & Hodl LLLP",
-   "nv": null,
+   "nv": 88.95,
    "p": "hnhCMmnrmod4rcyc3QRKkLEC9XnPTvYJ2gBvjgFiV4o",
    "t": "Approved",
-   "v": null
+   "v": 65.89
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 168,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 73397,
+   "f": 73135,
    "h": [
     256.0,
     255.0,
@@ -4149,23 +4149,23 @@
     305.0,
     306.0
    ],
-   "i": null,
-   "k": 159098,
+   "i": 67.65,
+   "k": 158530,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "Hubra",
-   "nv": null,
+   "nv": 45.1,
    "p": "RAuSNo4DRjo83uGhdgg4fPqYBVszi1KsrQGpqcPHK1D",
    "t": "Approved",
-   "v": null
+   "v": 49.06
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 180,
    "c": "Firedancer",
    "cv": "26.8.2",
-   "f": 80396,
+   "f": 80142,
    "h": [
     208.0,
     208.0,
@@ -4183,22 +4183,22 @@
     255.0,
     256.0
    ],
-   "i": null,
-   "k": 201732,
+   "i": 86.97,
+   "k": 201499,
    "lg": 1,
    "m": 208.0,
    "n": "huglester",
-   "nv": null,
+   "nv": 95.76,
    "p": "Fudp7uPDYNYQRxoq1Q4JiwJnzyxhVz37bGqRki3PBzS",
    "t": "Approved",
-   "v": null
+   "v": 25.88
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 124,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 58920,
+   "cv": "4.3.0-rc.1",
+   "f": 58062,
    "h": [
     254.5,
     252.5,
@@ -4216,22 +4216,22 @@
     305.0,
     304.0
    ],
-   "i": null,
-   "k": 114201,
+   "i": 89.0,
+   "k": 113207,
    "lg": 1,
    "m": 254.5,
    "n": "Huisky Staking",
-   "nv": null,
+   "nv": 85.28,
    "p": "huinBRP3muBuqZLMW8ARjdn4mBnEmFFcxiBzrkQz553",
    "t": "Approved",
-   "v": null
+   "v": 70.81
   },
   {
-   "b": null,
+   "b": 99.83,
    "bp": 588,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80427,
+   "f": 80173,
    "h": [
     255.0,
     258.0,
@@ -4249,22 +4249,22 @@
     306.5,
     306.0
    ],
-   "i": null,
-   "k": 533488,
+   "i": 86.22,
+   "k": 540042,
    "lg": 1,
    "m": 255.0,
    "n": "Hylo",
-   "nv": null,
+   "nv": 88.96,
    "p": "hy1oMaD3ViyJ8i6w1xjP79zAWBBaRd1zWdTW8zYXnwu",
    "t": "Approved",
-   "v": null
+   "v": 41.66
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 88,
    "c": "HarmonicAgave",
    "cv": "4.3.0",
-   "f": 0,
+   "f": 36066,
    "h": [
     251.0,
     252.5,
@@ -4282,22 +4282,22 @@
     302.0,
     304.0
    ],
-   "i": null,
-   "k": 91755,
+   "i": 81.35,
+   "k": 127836,
    "lg": 1,
    "m": 251.0,
    "n": "Hypo Nyms",
-   "nv": null,
+   "nv": 91.9,
    "p": "nymsGg7ZXcYBwGYKZL8qEHk9PQ8sAkKvnXgUNLPyGDV",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 184,
    "c": "Jito",
    "cv": "4.3.0",
-   "f": 79602,
+   "f": 79335,
    "h": [
     257.0,
     261.0,
@@ -4315,23 +4315,23 @@
     312.0,
     313.0
    ],
-   "i": null,
-   "k": 177781,
+   "i": 95.86,
+   "k": 177531,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "Iggyz",
-   "nv": null,
+   "nv": 97.29,
    "p": "1ggyZGbYtEo1WrV1kmXfnvhPeSPxrYAXoDBeApnszLT",
    "t": "Approved",
-   "v": null
+   "v": 80.52
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 96,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 59706,
+   "f": 58989,
    "h": [
     285.0,
     287.0,
@@ -4349,23 +4349,23 @@
     305.5,
     305.0
    ],
-   "i": null,
-   "k": 116842,
+   "i": 89.93,
+   "k": 116123,
    "lag": 1,
    "lg": 1,
    "m": 285.0,
    "n": "ILY♡ Validator ➕ Firedancer🔥 ||neochibi culture X:@ILY_validator",
-   "nv": null,
+   "nv": 89.25,
    "p": "ByszyWdqC3rVMWy8f6jwK5cmwkpwYdwsr7UL58xS5vnm",
    "t": "Approved",
-   "v": null
+   "v": 65.12
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 108,
    "c": "Jito",
    "cv": "4.2.2",
-   "f": 70610,
+   "f": 70441,
    "h": [
     260.5,
     262.0,
@@ -4383,23 +4383,23 @@
     309.0,
     309.5
    ],
-   "i": null,
-   "k": 150842,
+   "i": 90.7,
+   "k": 150666,
    "lag": 1,
    "lg": 1,
    "m": 260.5,
    "n": "Jaguar",
-   "nv": null,
+   "nv": 97.06,
    "p": "jagBNeXYncnn1hzwSq1JJ16XhWTgQ7DCFVqndSJZ6vT",
    "t": "Approved",
-   "v": null
+   "v": 46.79
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 112,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 53092,
+   "f": 52115,
    "h": [
     278.0,
     282.5,
@@ -4417,23 +4417,23 @@
     306.5,
     306.0
    ],
-   "i": null,
-   "k": 96541,
+   "i": 87.25,
+   "k": 95425,
    "lag": 1,
    "lg": 1,
    "m": 278.0,
    "n": "Janitor",
-   "nv": null,
+   "nv": 84.65,
    "p": "jntr1vkzvSujfckGR6ANmFmirVoPBMNr5XJGKP5uDQA",
    "t": "Approved",
-   "v": null
+   "v": 61.07
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 120,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 61777,
+   "cv": "4.3.0",
+   "f": 60931,
    "h": [
     260.5,
     264.0,
@@ -4451,23 +4451,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 123076,
+   "i": 91.01,
+   "k": 122094,
    "lag": 1,
    "lg": 1,
    "m": 260.5,
    "n": "JDO Mainnet Validator",
-   "nv": null,
+   "nv": 89.73,
    "p": "9q16BB7WGmBxf1nJTdxH5zPnBUhtHqdqXqRFjSjuM4k7",
    "t": "Approved",
-   "v": null
+   "v": 70.87
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 168,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 79795,
+   "f": 79541,
    "h": [
     258.0,
     269.5,
@@ -4485,23 +4485,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 186083,
+   "i": 92.05,
+   "k": 185700,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "johndoe",
-   "nv": null,
+   "nv": 87.08,
    "p": "9ppJrpsbbuGNjiMhhD52Ueco4KXUzVfrtNQ6tAcDab4f",
    "t": "Approved",
-   "v": null
+   "v": 85.76
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 312,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 80117,
+   "cv": "4.3.0",
+   "f": 79862,
    "h": [
     263.0,
     263.0,
@@ -4519,23 +4519,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 259804,
+   "i": 89.05,
+   "k": 259335,
    "lag": 1,
    "lg": 1,
    "m": 263.0,
    "n": "JStaking: 0% fee · top returns",
-   "nv": null,
+   "nv": 84.64,
    "p": "8yjHdsCgx3bp2zEwGiWSMgwpFaCSzfYAHT1vk7KJBqhN",
    "t": "Approved",
-   "v": null
+   "v": 73.1
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 104,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 47961,
+   "f": 46997,
    "h": [
     257.0,
     261.5,
@@ -4553,23 +4553,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 80927,
+   "i": 91.01,
+   "k": 79821,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "Kawil",
-   "nv": null,
+   "nv": 87.01,
    "p": "KAW1LjxH73tRBd1XsaqsRsgeERFkg4WpdXUSqR4QjkW",
    "t": "Approved",
-   "v": null
+   "v": 79.05
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 176,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 80003,
+   "cv": "4.3.0",
+   "f": 79748,
    "h": [
     267.0,
     265.5,
@@ -4587,23 +4587,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 184390,
+   "i": 90.4,
+   "k": 179012,
    "lag": 1,
    "lg": 1,
    "m": 267.0,
    "n": "Kevred",
-   "nv": null,
+   "nv": 87.37,
    "p": "2t53LvZfskcpXkdwLaBnfZLbNgyVHPu2BNFpcRBaEBhM",
    "t": "Approved",
-   "v": null
+   "v": 73.88
   },
   {
-   "b": null,
+   "b": 99.89,
    "bp": 152,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 57576,
+   "f": 56694,
    "h": [
     255.5,
     258.0,
@@ -4621,23 +4621,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 110871,
+   "i": 86.36,
+   "k": 109854,
    "lag": 1,
    "lg": 1,
    "m": 255.5,
    "n": "Kisetsu Stake",
-   "nv": null,
+   "nv": 89.36,
    "p": "NATsUSZGohWw8xtLdxG4yus21UCkaes4FLfM2eqKbRk",
    "t": "Approved",
-   "v": null
+   "v": 41.29
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 128,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 58058,
+   "f": 57178,
    "h": [
     267.5,
     282.5,
@@ -4655,23 +4655,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 111530,
+   "i": 90.11,
+   "k": 110512,
    "lag": 1,
    "lg": 1,
    "m": 267.5,
    "n": "Kyzzen",
-   "nv": null,
+   "nv": 91.13,
    "p": "kyzzzgRymGpePUsLyr48kQHt53kh5CSfRH1qfvz1xgj",
    "t": "Approved",
-   "v": null
+   "v": 60.7
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 128,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 58558,
+   "cv": "4.3.0",
+   "f": 57680,
    "h": [
     261.5,
     272.0,
@@ -4689,23 +4689,23 @@
     304.0,
     305.0
    ],
-   "i": null,
-   "k": 113122,
+   "i": 86.25,
+   "k": 112107,
    "lag": 1,
    "lg": 1,
    "m": 261.5,
    "n": "L0vd 0% fee +MEV",
-   "nv": null,
+   "nv": 77.6,
    "p": "8aySXUFrqJz5kath6aVijrkBH8ZtxMWJGhYXwYBpKmHK",
    "t": "Approved",
-   "v": null
+   "v": 75.51
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 188,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80462,
+   "f": 80208,
    "h": [
     265.5,
     270.5,
@@ -4723,23 +4723,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 277825,
+   "i": 87.84,
+   "k": 277322,
    "lag": 1,
    "lg": 1,
    "m": 265.5,
    "n": "LakeStake",
-   "nv": null,
+   "nv": 84.4,
    "p": "Lake8NXDThihebhxS3Js7mFnj9fthmus93zEdsFNrsL",
    "t": "Approved",
-   "v": null
+   "v": 65.73
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 292,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80299,
+   "f": 80045,
    "h": [
     255.0,
     253.0,
@@ -4757,22 +4757,22 @@
     303.0,
     304.0
    ],
-   "i": null,
-   "k": 285895,
+   "i": 82.08,
+   "k": 286206,
    "lg": 1,
    "m": 255.0,
    "n": "Lantern",
-   "nv": null,
+   "nv": 85.09,
    "p": "FACb6bbTDRBHCK999V8ox8jga5JBnt1r3vvzmAYAMv2o",
    "t": "Approved",
-   "v": null
+   "v": 25.27
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 144,
    "c": "Jito",
    "cv": "4.2.2",
-   "f": 61698,
+   "f": 61340,
    "h": [
     260.0,
     262.0,
@@ -4790,23 +4790,23 @@
     307.5,
     307.0
    ],
-   "i": null,
-   "k": 123559,
+   "i": 90.93,
+   "k": 123213,
    "lag": 1,
    "lg": 1,
    "m": 260.0,
    "n": "Latitude.sh",
-   "nv": null,
+   "nv": 97.15,
    "p": "c3rtoMCHSbFrLRTAdw4iRowKSn4BrDtvSPbuyJwkHwx",
    "t": "Approved",
-   "v": null
+   "v": 48.1
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 62,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 49139,
+   "f": 48214,
    "h": [
     274.0,
     285.0,
@@ -4824,23 +4824,23 @@
     305.5,
     306.0
    ],
-   "i": null,
-   "k": 84775,
+   "i": 85.05,
+   "k": 83711,
    "lag": 1,
    "lg": 1,
    "m": 274.0,
    "n": "LEVMA - 0% fee",
-   "nv": null,
+   "nv": 88.73,
    "p": "5ysfTZ42VT1TjnjzQShZSrix7wdVtjXwssocSeYKDs5d",
    "t": "Approved",
-   "v": null
+   "v": 34.17
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 96,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 53454,
+   "f": 52518,
    "h": [
     255.5,
     256.5,
@@ -4858,23 +4858,23 @@
     305.5,
     304.0
    ],
-   "i": null,
-   "k": 97528,
+   "i": 90.9,
+   "k": 96454,
    "lag": 1,
    "lg": 1,
    "m": 255.5,
    "n": "LI.FI",
-   "nv": null,
+   "nv": 91.64,
    "p": "LiFiDJwJjW98MB8wxcnXpafKYsuz1hwpUkuszkERiX6",
    "t": "Approved",
-   "v": null
+   "v": 64.4
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 212,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 80213,
+   "cv": "4.3.0",
+   "f": 79959,
    "h": [
     260.5,
     265.0,
@@ -4892,23 +4892,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 259460,
+   "i": 89.8,
+   "k": 259091,
    "lag": 1,
    "lg": 1,
    "m": 260.5,
    "n": "Lifetime 0% fee + full MEV payout | Alphasearch",
-   "nv": null,
+   "nv": 86.72,
    "p": "ALPHA6rdHZkx1om79xp47vX1iZXcbM3qfEwLyttZ1T7R",
    "t": "Approved",
-   "v": null
+   "v": 71.84
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 108,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 63882,
+   "f": 63160,
    "h": [
     254.5,
     265.5,
@@ -4926,22 +4926,22 @@
     308.0,
     307.0
    ],
-   "i": null,
-   "k": 132261,
+   "i": 92.19,
+   "k": 131405,
    "lg": 1,
    "m": 254.5,
    "n": "Lifinity Protocol",
-   "nv": null,
+   "nv": 87.18,
    "p": "RoYFUUD7QD9aQ34UCMcwfye8dC5YvJeXz2J3mmoy5S4",
    "t": "Approved",
-   "v": null
+   "v": 86.41
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 100,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 49588,
+   "f": 48619,
    "h": [
     253.0,
     253.0,
@@ -4959,21 +4959,21 @@
     304.5,
     304.0
    ],
-   "i": null,
-   "k": 85786,
+   "i": 90.53,
+   "k": 84669,
    "m": 253.0,
    "n": "LightNode",
-   "nv": null,
+   "nv": 81.02,
    "p": "VicAQ3U2GjjAuF3tPCtEQZdZKnpAAxkr5Q3zjDKmdo7",
    "t": "Approved",
-   "v": null
+   "v": 93.84
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 52,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 54192,
+   "f": 53233,
    "h": [
     279.0,
     285.0,
@@ -4991,23 +4991,23 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 99917,
+   "i": 88.58,
+   "k": 97076,
    "lag": 1,
    "lg": 1,
    "m": 279.0,
    "n": "Lilith",
-   "nv": null,
+   "nv": 88.47,
    "p": "1i1yPyh843bTfi5qPgqozTbDcEX65rUNEFcUT2KAs2i",
    "t": "Approved",
-   "v": null
+   "v": 58.5
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 108,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 64542,
+   "cv": "4.3.0",
+   "f": 63816,
    "h": [
     267.0,
     271.0,
@@ -5025,23 +5025,23 @@
     306.0,
     305.0
    ],
-   "i": null,
-   "k": 131470,
+   "i": 85.39,
+   "k": 130608,
    "lag": 1,
    "lg": 1,
    "m": 267.0,
    "n": "LimeChain",
-   "nv": null,
+   "nv": 76.5,
    "p": "LimeA3gMLb2SjxrKbP7NsWk1UwTZrw4B6Ctc9dmVU6E",
    "t": "Approved",
-   "v": null
+   "v": 73.08
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 60,
-   "c": "Rakurai",
-   "cv": "4.2.2",
-   "f": 53122,
+   "c": "Jito",
+   "cv": "4.3.0",
+   "f": 52609,
    "h": [
     258.0,
     259.0,
@@ -5059,23 +5059,23 @@
     311.0,
     304.0
    ],
-   "i": null,
-   "k": 97386,
+   "i": 93.98,
+   "k": 96893,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "livechanger",
-   "nv": null,
+   "nv": 95.83,
    "p": "7Nn8qBJey7vXtVFMNBbbuN8UkujU8Y6nWzbHVGuf49yV",
    "t": "Approved",
-   "v": null
+   "v": 72.37
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 228,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 80341,
+   "cv": "4.3.0",
+   "f": 80088,
    "h": [
     254.5,
     257.0,
@@ -5093,22 +5093,22 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 203551,
+   "i": 88.44,
+   "k": 203544,
    "lg": 1,
    "m": 254.5,
    "n": "LootGo",
-   "nv": null,
+   "nv": 92.01,
    "p": "DeXsDvvZzKhVux4YfDFE6p4acJLGzr8yKt5pSTjzZB8t",
    "t": "Approved",
-   "v": null
+   "v": 46.91
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 116,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 52995,
+   "f": 53359,
    "h": [
     285.0,
     295.5,
@@ -5126,23 +5126,23 @@
     308.5,
     307.5
    ],
-   "i": null,
-   "k": 99592,
+   "i": 86.82,
+   "k": 99817,
    "lag": 1,
    "lg": 1,
    "m": 285.0,
    "n": "Lua Sol Foundation",
-   "nv": null,
+   "nv": 87.8,
    "p": "Lua1fxRRHCnjVAYdfGyv2GbUsRHGM2DN2wgpWuF2WSb",
    "t": "Approved",
-   "v": null
+   "v": 48.73
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 76,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 46242,
+   "f": 45277,
    "h": [
     271.5,
     275.0,
@@ -5160,23 +5160,23 @@
     302.0,
     302.5
    ],
-   "i": null,
-   "k": 75703,
+   "i": 86.78,
+   "k": 74983,
    "lag": 1,
    "lg": 1,
    "m": 271.5,
    "n": "Luke",
-   "nv": null,
+   "nv": 80.24,
    "p": "ArMBx6veRq33ffEP9sxHafiPRgrtzww4XvbwZbSMfXiM",
    "t": "Approved",
-   "v": null
+   "v": 71.18
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 140,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 63620,
+   "f": 62878,
    "h": [
     256.0,
     257.0,
@@ -5194,23 +5194,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 129019,
+   "i": 88.18,
+   "k": 128143,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "LumLabs",
-   "nv": null,
+   "nv": 90.21,
    "p": "9Wmaz9VPpEnH67ZqrvYd9bcH66DtsGaEKcSQE1ac5wkf",
    "t": "Approved",
-   "v": null
+   "v": 50.6
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 108,
    "c": "BAM",
    "cv": "4.3.0-rc.1",
-   "f": 65967,
+   "f": 68781,
    "h": [
     250.0,
     251.5,
@@ -5228,22 +5228,22 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 149130,
+   "i": 92.64,
+   "k": 151397,
    "lg": 1,
    "m": 250.0,
    "n": "Lumos Maxima",
-   "nv": null,
+   "nv": 83.93,
    "p": "8uPW9msN75rfaKiwy8y8NxEX5zSk2WejtVv5YhZr3jCo",
    "t": "Approved",
-   "v": null
+   "v": 99.11
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 144,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 63269,
+   "f": 62514,
    "h": [
     262.0,
     261.5,
@@ -5261,23 +5261,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 127508,
+   "i": 88.3,
+   "k": 126617,
    "lag": 1,
    "lg": 1,
    "m": 262.0,
    "n": "Luna Labs",
-   "nv": null,
+   "nv": 85.98,
    "p": "2UBhtRuyr9nvWsUnrbWrvJiYWEU8TVBD4PLYQJKiRa9H",
    "t": "Approved",
-   "v": null
+   "v": 64.05
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 152,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 73975,
+   "f": 73473,
    "h": [
     266.5,
     286.0,
@@ -5295,23 +5295,23 @@
     311.5,
     311.5
    ],
-   "i": null,
-   "k": 160378,
+   "i": 91.12,
+   "k": 159676,
    "lag": 1,
    "lg": 1,
    "m": 266.5,
    "n": "LunaNova",
-   "nv": null,
+   "nv": 86.42,
    "p": "LunaowJnt875WWoqDkhHhE93SNYHa6tfFNVn1rqc57c",
    "t": "Approved",
-   "v": null
+   "v": 81.54
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 172,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 69826,
+   "f": 69135,
    "h": [
     279.0,
     277.0,
@@ -5329,23 +5329,23 @@
     302.0,
     303.0
    ],
-   "i": null,
-   "k": 150087,
+   "i": 89.18,
+   "k": 148070,
    "lag": 1,
    "lg": 1,
    "m": 279.0,
    "n": "LuSOL +MEV",
-   "nv": null,
+   "nv": 84.59,
    "p": "6xUK9Nbonr4eoJNtHGoUEMmYKoPz5mipKzyDBv6deX4d",
    "t": "Approved",
-   "v": null
+   "v": 74.13
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 284,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 78970,
+   "cv": "4.3.0",
+   "f": 78716,
    "h": [
     267.5,
     266.0,
@@ -5363,23 +5363,23 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 297276,
+   "i": 88.97,
+   "k": 297240,
    "lag": 1,
    "lg": 1,
    "m": 267.5,
    "n": "LUX8 Validator",
-   "nv": null,
+   "nv": 84.71,
    "p": "9gFxqsXbFyrKXUkqpAatonn47uYZ7sEZSnMxhzQoXrUJ",
    "t": "Approved",
-   "v": null
+   "v": 72.34
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 152,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 70814,
+   "f": 70239,
    "h": [
     256.0,
     256.0,
@@ -5397,23 +5397,23 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 150825,
+   "i": 86.59,
+   "k": 148166,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "Magic Eden Validator",
-   "nv": null,
+   "nv": 89.46,
    "p": "MagiCBYNPD9iTBXqiFybAFCREQzG6MSM4LmFLXQZxuV",
    "t": "Approved",
-   "v": null
+   "v": 42.22
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 88,
    "c": "Jito",
    "cv": "4.3.0-rc.0",
-   "f": 52215,
+   "f": 51695,
    "h": [
     256.5,
     257.5,
@@ -5431,23 +5431,23 @@
     305.5,
     306.5
    ],
-   "i": null,
-   "k": 94619,
+   "i": 87.52,
+   "k": 95980,
    "lag": 1,
    "lg": 1,
    "m": 256.5,
    "n": "mallow",
-   "nv": null,
+   "nv": 97.23,
    "p": "mALL2W6DUgDDtcyurC9v5YTF2CMMeuRwPBkf6tEoG3y",
    "t": "Approved",
-   "v": null
+   "v": 25.09
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 84,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 58293,
+   "f": 57414,
    "h": [
     253.5,
     262.5,
@@ -5465,22 +5465,22 @@
     305.0,
     304.0
    ],
-   "i": null,
-   "k": 112270,
+   "i": 89.48,
+   "k": 111254,
    "lg": 1,
    "m": 253.5,
    "n": "Marco Polo 0% Fee +MEV",
-   "nv": null,
+   "nv": 85.33,
    "p": "2VKu11f8zc3huqDQUN6WJTFpX32PgHpXXjf72P6YvYMd",
    "t": "Approved",
-   "v": null
+   "v": 73.86
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 224,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 80434,
+   "f": 80231,
    "h": [
     255.0,
     264.0,
@@ -5498,22 +5498,22 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 203743,
+   "i": 90.64,
+   "k": 203410,
    "lg": 1,
    "m": 255.0,
    "n": "MARVEL+MEV!",
-   "nv": null,
+   "nv": 87.22,
    "p": "5marvipGzf98hxnoJFXsZbGHSXcEQ3yRGJ4ps7D3V4ou",
    "t": "Approved",
-   "v": null
+   "v": 75.94
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 192,
    "c": "Frankendancer",
    "cv": "0.1106.40201",
-   "f": 80484,
+   "f": 80230,
    "h": [
     206.0,
     206.0,
@@ -5531,22 +5531,22 @@
     256.0,
     256.5
    ],
-   "i": null,
-   "k": 210597,
+   "i": 86.5,
+   "k": 210368,
    "lg": 1,
    "m": 206.0,
    "n": "MAS DeFi",
-   "nv": null,
+   "nv": 94.7,
    "p": "mastWEbKEMjvBCd1uaUBpNjWcfSPhXMWnH9tTrgzn1g",
    "t": "Approved",
-   "v": null
+   "v": 25.92
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 124,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 60146,
+   "f": 59371,
    "h": [
     255.0,
     254.5,
@@ -5564,22 +5564,22 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 118074,
+   "i": 86.49,
+   "k": 117166,
    "lg": 1,
    "m": 255.0,
    "n": "MAVAN Infrastructure",
-   "nv": null,
+   "nv": 84.04,
    "p": "38zm5bBgDaNRSQBDUAL72kMH3RsX4UKmZiNmmrjuTq8W",
    "t": "Approved",
-   "v": null
+   "v": 57.83
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 148,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 79725,
+   "cv": "4.3.0",
+   "f": 79471,
    "h": [
     264.5,
     265.0,
@@ -5597,23 +5597,23 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 185615,
+   "i": 91.51,
+   "k": 185232,
    "lag": 1,
    "lg": 1,
    "m": 264.5,
    "n": "maxfillipov",
-   "nv": null,
+   "nv": 86.95,
    "p": "FCWkGAHDWK41ANjiaoPudkCZRkvTecaEkoZQugezUnpr",
    "t": "Approved",
-   "v": null
+   "v": 82.55
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 216,
    "c": "BAM",
    "cv": "4.3.0-rc.1",
-   "f": 80453,
+   "f": 80199,
    "h": [
     256.0,
     253.0,
@@ -5631,23 +5631,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 188448,
+   "i": 81.96,
+   "k": 188105,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "MCF",
-   "nv": null,
+   "nv": 85.69,
    "p": "MCFmmmXdzTKjBEoMggi8JGFJmd856uYSowuH2sCU5kx",
    "t": "Approved",
-   "v": null
+   "v": 22.7
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 124,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 59451,
+   "f": 58606,
    "h": [
     255.5,
     254.0,
@@ -5665,23 +5665,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 115876,
+   "i": 85.92,
+   "k": 113003,
    "lag": 1,
    "lg": 1,
    "m": 255.5,
    "n": "Mellow Yellow",
-   "nv": null,
+   "nv": 88.6,
    "p": "YE11a5nVJtUNqsojkphYuWc7StqBzbCeFH6BjhAAUEV",
    "t": "Approved",
-   "v": null
+   "v": 40.34
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 228,
    "c": "Jito",
    "cv": "4.3.0",
-   "f": 80495,
+   "f": 80241,
    "h": [
     257.0,
     260.0,
@@ -5699,22 +5699,22 @@
     308.0,
     310.0
    ],
-   "i": null,
-   "k": 239895,
+   "i": 95.12,
+   "k": 239807,
    "lag": 1,
    "m": 257.0,
    "n": "Meria",
-   "nv": null,
+   "nv": 95.99,
    "p": "8BwBBt23a6v8HgNsFybpLFiBKLV8vWko2Vft3D2DxGvR",
    "t": "Approved",
-   "v": null
+   "v": 79.49
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 100,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 57072,
+   "f": 56204,
    "h": [
     253.0,
     250.0,
@@ -5732,22 +5732,22 @@
     306.5,
     307.0
    ],
-   "i": null,
-   "k": 108827,
+   "i": 90.97,
+   "k": 107814,
    "lg": 1,
    "m": 253.0,
    "n": "Mesh Validator",
-   "nv": null,
+   "nv": 82.56,
    "p": "meshRrDTME9cL2FSQ9E56EncfkZ7vL8apwcCFsw3o6Y",
    "t": "Approved",
-   "v": null
+   "v": 92.15
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 96,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 54058,
+   "f": 53211,
    "h": [
     251.5,
     252.5,
@@ -5765,22 +5765,22 @@
     302.0,
     302.0
    ],
-   "i": null,
-   "k": 99529,
+   "i": 85.9,
+   "k": 98543,
    "lg": 1,
    "m": 251.5,
    "n": "MeshMap",
-   "nv": null,
+   "nv": 90.22,
    "p": "AWZhUiQjrjtxL8MEMWsCFbMausFQKkdTnDsFW2i411hN",
    "t": "Approved",
-   "v": null
+   "v": 35.36
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 104,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 54033,
+   "f": 53074,
    "h": [
     266.5,
     270.5,
@@ -5798,23 +5798,23 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 99624,
+   "i": 88.9,
+   "k": 97042,
    "lag": 1,
    "lg": 1,
    "m": 266.5,
    "n": "Mice Stakin'",
-   "nv": null,
+   "nv": 87.59,
    "p": "D8xKNftHzFcCekENuTEcFC1eoL9y8wNHEg4Q5z57KK4e",
    "t": "Approved",
-   "v": null
+   "v": 63.24
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 268,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 80416,
+   "f": 80213,
    "h": [
     260.0,
     269.5,
@@ -5832,23 +5832,23 @@
     305.0,
     304.0
    ],
-   "i": null,
-   "k": 217136,
+   "i": 90.11,
+   "k": 216810,
    "lag": 1,
    "lg": 1,
    "m": 260.0,
    "n": "Michigan Blockchain",
-   "nv": null,
+   "nv": 87.24,
    "p": "8W8v28d1fBZE1fkaaHbowJM4hGZGnVHWNK1NyhUsob6Z",
    "t": "Approved",
-   "v": null
+   "v": 72.32
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 68,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 53222,
+   "f": 52246,
    "h": [
     255.0,
     259.5,
@@ -5866,21 +5866,21 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 96846,
+   "i": 91.96,
+   "k": 95730,
    "m": 255.0,
    "n": "MICOBO",
-   "nv": null,
+   "nv": 86.36,
    "p": "MicoB9cA9R6jsicdhzWFjwd9HMkV8FA4o3WxYU6Z2yz",
    "t": "Approved",
-   "v": null
+   "v": 87.33
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 72,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 53245,
+   "f": 52288,
    "h": [
     257.5,
     255.5,
@@ -5898,23 +5898,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 96875,
+   "i": 88.85,
+   "k": 95779,
    "lag": 1,
    "lg": 1,
    "m": 257.5,
    "n": "Mira Validator",
-   "nv": null,
+   "nv": 84.39,
    "p": "6gL3uHvuUjaPp9mTBf2VZ4tpKiYhbWyPrAPboGByzEHd",
    "t": "Approved",
-   "v": null
+   "v": 72.5
   },
   {
-   "b": null,
+   "b": 99.84,
    "bp": 576,
    "c": "Jito",
    "cv": "4.3.0",
-   "f": 79392,
+   "f": 79139,
    "h": [
     258.0,
     258.0,
@@ -5932,23 +5932,23 @@
     303.0,
     305.0
    ],
-   "i": null,
-   "k": 553987,
+   "i": 94.35,
+   "k": 553714,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "Moise",
-   "nv": null,
+   "nv": 95.54,
    "p": "HW4zorvt6xDwhU36RqjcWNwU8YMj9tiqnAafBKW4cqV",
    "t": "Approved",
-   "v": null
+   "v": 76.16
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 192,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 80491,
+   "f": 80237,
    "h": [
     270.0,
     269.5,
@@ -5966,23 +5966,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 216561,
+   "i": 90.9,
+   "k": 216346,
    "lag": 1,
    "lg": 1,
    "m": 270.0,
    "n": "MonkeDAO",
-   "nv": null,
+   "nv": 88.85,
    "p": "GiYSnFRrXrmkJMC54A1j3K4xT6ZMfx1NSThEe5X2WpDe",
    "t": "Approved",
-   "v": null
+   "v": 72.78
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 176,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 78392,
+   "f": 78000,
    "h": [
     260.0,
     261.0,
@@ -6000,23 +6000,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 174379,
+   "i": 89.25,
+   "k": 173858,
    "lag": 1,
    "lg": 1,
    "m": 260.0,
    "n": "Moonlet",
-   "nv": null,
+   "nv": 85.6,
    "p": "5XKJwdKB2Hs7pkEXzifAysjSk6q7Rt6k5KfHwmAMPtoQ",
    "t": "Approved",
-   "v": null
+   "v": 71.52
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 196,
    "c": "Jito",
    "cv": "4.3.0-rc.0",
-   "f": 80493,
+   "f": 80240,
    "h": [
     259.0,
     257.5,
@@ -6034,23 +6034,23 @@
     311.5,
     312.0
    ],
-   "i": null,
-   "k": 206984,
+   "i": 98.22,
+   "k": 206752,
    "lag": 1,
    "lg": 1,
    "m": 259.0,
    "n": "MX Validator",
-   "nv": null,
+   "nv": 97.24,
    "p": "mXv18ov8qCiQGs3ieoen981LdgZzYJjJak6reK6fpNC",
    "t": "Approved",
-   "v": null
+   "v": 96.43
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 212,
    "c": "Jito",
    "cv": "4.2.2",
-   "f": 78598,
+   "f": 78308,
    "h": [
     255.0,
     255.0,
@@ -6068,21 +6068,21 @@
     255.0,
     256.0
    ],
-   "i": null,
-   "k": 174727,
+   "i": 90.05,
+   "k": 177538,
    "m": 255.0,
    "n": "myhauz",
-   "nv": null,
+   "nv": 96.68,
    "p": "AmhQFcGvH2hjkucP78rn6GMKSbstYwyFpCDVKZUwBGrG",
    "t": "Approved",
-   "v": null
+   "v": 43.61
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 136,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 60015,
+   "f": 59191,
    "h": [
     263.0,
     269.5,
@@ -6100,23 +6100,23 @@
     304.0,
     305.0
    ],
-   "i": null,
-   "k": 118233,
+   "i": 86.55,
+   "k": 116051,
    "lag": 1,
    "lg": 1,
    "m": 263.0,
    "n": "Mythx",
-   "nv": null,
+   "nv": 87.99,
    "p": "mythxvB89eT3C1TKwwhsvdHfYq2aoCt2es8vLoDFYyk",
    "t": "Approved",
-   "v": null
+   "v": 46.37
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 92,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 53219,
+   "f": 52337,
    "h": [
     255.5,
     264.0,
@@ -6134,23 +6134,23 @@
     305.5,
     309.0
    ],
-   "i": null,
-   "k": 99840,
+   "i": 91.24,
+   "k": 99135,
    "lag": 1,
    "lg": 1,
    "m": 255.5,
    "n": "Nam-dok-mai 🤑 stake-earn-repeat",
-   "nv": null,
+   "nv": 87.65,
    "p": "GQiWnDYrzHMALWG9avt5FCu1wisAQHjGY5ve7GMBiPEe",
    "t": "Approved",
-   "v": null
+   "v": 78.64
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 108,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 61113,
+   "f": 62103,
    "h": [
     252.0,
     253.0,
@@ -6168,21 +6168,21 @@
     306.0,
     305.0
    ],
-   "i": null,
-   "k": 126709,
+   "i": 91.76,
+   "k": 127576,
    "m": 252.0,
    "n": "NCValidator",
-   "nv": null,
+   "nv": 83.31,
    "p": "ECNnK4VjcKTsABiw8FAp3JCE6tCmYyrEJthYVyMazmxi",
    "t": "Approved",
-   "v": null
+   "v": 95.14
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 120,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 63578,
+   "f": 62882,
    "h": [
     258.0,
     263.0,
@@ -6200,23 +6200,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 128558,
+   "i": 90.08,
+   "k": 127731,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "Nebula Node",
-   "nv": null,
+   "nv": 88.67,
    "p": "nebu15XQKGpxzhhckADBX9PgvGN5qk9RRJCFLKc118w",
    "t": "Approved",
-   "v": null
+   "v": 67.85
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 200,
    "c": "Jito",
    "cv": "4.3.0-rc.0",
-   "f": 80488,
+   "f": 80234,
    "h": [
     255.5,
     256.0,
@@ -6234,23 +6234,23 @@
     304.0,
     305.0
    ],
-   "i": null,
-   "k": 182805,
+   "i": 97.56,
+   "k": 182536,
    "lag": 1,
    "lg": 1,
    "m": 255.5,
    "n": "Neodyme",
-   "nv": null,
+   "nv": 95.96,
    "p": "NdMV1C3XMCRqSBwBtNmoUNnKctYh95Ug4xb6FSTcAWr",
    "t": "Approved",
-   "v": null
+   "v": 95.84
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 92,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 48409,
+   "f": 47357,
    "h": [
     288.0,
     288.5,
@@ -6268,23 +6268,23 @@
     305.5,
     307.5
    ],
-   "i": null,
-   "k": 82436,
+   "i": 87.48,
+   "k": 81243,
    "lag": 1,
    "lg": 1,
    "m": 288.0,
    "n": "Nodance 💃 00",
-   "nv": null,
+   "nv": 92.4,
    "p": "7PpXQgDb9eCHN1Uudgi77Wm89cRz4T85YgDw83qvaJXd",
    "t": "Approved",
-   "v": null
+   "v": 39.33
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 72,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 45687,
+   "f": 46604,
    "h": [
     268.5,
     266.0,
@@ -6302,23 +6302,23 @@
     306.0,
     306.5
    ],
-   "i": null,
-   "k": 79849,
+   "i": 88.88,
+   "k": 80624,
    "lag": 1,
    "lg": 1,
    "m": 268.5,
    "n": "Node Integration",
-   "nv": null,
+   "nv": 82.71,
    "p": "nodeEgRVkbYLAQePtMx2zCN7CGw7qRgzKMCBtjMfN1D",
    "t": "Approved",
-   "v": null
+   "v": 77.71
   },
   {
-   "b": null,
+   "b": 99.57,
    "bp": 36,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 34509,
+   "f": 33327,
    "h": [
     251.5,
     279.5,
@@ -6336,21 +6336,21 @@
     304.5,
     307.0
    ],
-   "i": null,
-   "k": 39847,
+   "i": 87.14,
+   "k": 38666,
    "m": 251.5,
    "n": "Nodit",
-   "nv": null,
+   "nv": 87.44,
    "p": "NoditgWLFbgnbPjfHP8QQrjxvuhCayTZWHw9pM4EJpu",
    "t": "Approved",
-   "v": null
+   "v": 53.07
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 160,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 69338,
+   "f": 68729,
    "h": [
     266.0,
     271.0,
@@ -6368,23 +6368,23 @@
     305.0,
     304.0
    ],
-   "i": null,
-   "k": 146354,
+   "i": 91.66,
+   "k": 145612,
    "lag": 1,
    "lg": 1,
    "m": 266.0,
    "n": "nodtech",
-   "nv": null,
+   "nv": 87.64,
    "p": "AiBEt9kE8yZ4CnaLfTCGMp7Fg2wCtqhPTfvJ8D3zrLfu",
    "t": "Approved",
-   "v": null
+   "v": 81.5
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 212,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 78789,
+   "f": 78534,
    "h": [
     261.0,
     264.0,
@@ -6402,23 +6402,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 240438,
+   "i": 91.16,
+   "k": 238693,
    "lag": 1,
    "lg": 1,
    "m": 261.0,
    "n": "Nordic Staking 0% fee top APY 3+ years",
-   "nv": null,
+   "nv": 87.23,
    "p": "AsMpvJ3DZ2Ydu1WTRMAyMH4QjSLiUG39rKzfzvtE1bWr",
    "t": "Approved",
-   "v": null
+   "v": 79.33
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 168,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 78833,
+   "cv": "4.3.0",
+   "f": 78579,
    "h": [
     252.5,
     262.5,
@@ -6436,22 +6436,22 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 192589,
+   "i": 86.77,
+   "k": 192540,
    "lg": 1,
    "m": 252.5,
    "n": "nordstar ⭐ reliable staking +MEV",
-   "nv": null,
+   "nv": 78.58,
    "p": "NordEHiwa6wT5TCjdeWJzpsA7DSmWQPqfSS7m2b6cv3",
    "t": "Approved",
-   "v": null
+   "v": 76.06
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 184,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 77211,
+   "f": 77405,
    "h": [
     255.0,
     266.5,
@@ -6469,22 +6469,22 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 171933,
+   "i": 91.31,
+   "k": 172217,
    "lg": 1,
    "m": 255.0,
    "n": "Nova Consortium",
-   "nv": null,
+   "nv": 91.78,
    "p": "novaeuhY2JH2WHhc9KVTHDx2cyJZdXJC6faf4CtARZn",
    "t": "Approved",
-   "v": null
+   "v": 66.73
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 172,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 78481,
+   "cv": "4.3.0",
+   "f": 79275,
    "h": [
     266.0,
     269.5,
@@ -6502,23 +6502,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 190556,
+   "i": 89.77,
+   "k": 191218,
    "lag": 1,
    "lg": 1,
    "m": 266.0,
    "n": "NTT DOCOMO GLOBAL",
-   "nv": null,
+   "nv": 87.01,
    "p": "AmjX7CerZbHrU814UeBp2gJC7gANNG3KrP4c3RyD7TSD",
    "t": "Approved",
-   "v": null
+   "v": 70.8
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 224,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 78659,
+   "f": 78405,
    "h": [
     257.5,
     260.5,
@@ -6536,23 +6536,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 240437,
+   "i": 87.78,
+   "k": 235519,
    "lag": 1,
    "lg": 1,
    "m": 257.5,
    "n": "NuFi",
-   "nv": null,
+   "nv": 81.77,
    "p": "2gDeeRa3mwPPtw1CMWPkEhRWo9v5izNBBfEXanr8uibX",
    "t": "Approved",
-   "v": null
+   "v": 73.24
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 112,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 59331,
+   "f": 59341,
    "h": [
     258.0,
     259.0,
@@ -6570,23 +6570,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 117281,
+   "i": 91.34,
+   "k": 117156,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "Odyssey",
-   "nv": null,
+   "nv": 91.93,
    "p": "odcvDWH5wHVKz9XtmGGxTj5ZsmawTjCCty3nyBKDGzS",
    "t": "Approved",
-   "v": null
+   "v": 66.49
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 100,
    "c": "HarmonicAgave",
-   "cv": "4.2.2",
-   "f": 46724,
+   "cv": "4.3.0",
+   "f": 45682,
    "h": [
     254.0,
     254.0,
@@ -6604,22 +6604,22 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 77002,
+   "i": 80.43,
+   "k": 75964,
    "lg": 1,
    "m": 254.0,
    "n": "Omakase",
-   "nv": null,
+   "nv": 89.84,
    "p": "CZanBzZHFzrGY5qKzaX3CNhJ5smHEMTWFFnoeUi4J6dr",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 36,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 36954,
+   "f": 36151,
    "h": [
     254.5,
     252.5,
@@ -6637,22 +6637,22 @@
     null,
     305.0
    ],
-   "i": null,
-   "k": 47986,
+   "i": 93.45,
+   "k": 47185,
    "lg": 1,
    "m": 254.5,
    "n": "OmegaNode Validator",
-   "nv": null,
+   "nv": 86.53,
    "p": "omeg2wsojzB7tfyAxsFhp8npxHL8yxVnaf51poXCwSd",
    "t": "Approved",
-   "v": null
+   "v": 96.72
   },
   {
-   "b": null,
+   "b": 99.22,
    "bp": 124,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 66474,
+   "f": 59638,
    "h": [
     268.0,
     269.5,
@@ -6670,23 +6670,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 124988,
+   "i": 87.62,
+   "k": 117902,
    "lag": 1,
    "lg": 1,
    "m": 268.0,
    "n": "Onchain Divers",
-   "nv": null,
+   "nv": 82.58,
    "p": "DiveRaPKviyDnQyiiMFdV4rujsCBJzMNvPjKfvGNLGvL",
    "t": "Approved",
-   "v": null
+   "v": 71.8
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 88,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 48020,
+   "f": 46903,
    "h": [
     269.5,
     266.0,
@@ -6704,23 +6704,23 @@
     304.0,
     305.0
    ],
-   "i": null,
-   "k": 80756,
+   "i": 90.11,
+   "k": 79476,
    "lag": 1,
    "lg": 1,
    "m": 269.5,
    "n": "OneLink Solutions",
-   "nv": null,
+   "nv": 86.38,
    "p": "1Link6hB1NpkCwJt3ZtpQKZszKauhEcKgiWjaU8PRDG",
    "t": "Approved",
-   "v": null
+   "v": 74.95
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 80,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 60640,
+   "cv": "4.3.0",
+   "f": 59854,
    "h": [
     261.5,
     271.0,
@@ -6738,23 +6738,23 @@
     306.0,
     305.0
    ],
-   "i": null,
-   "k": 122307,
+   "i": 86.54,
+   "k": 121133,
    "lag": 1,
    "lg": 1,
    "m": 261.5,
    "n": "OranG3cluB",
-   "nv": null,
+   "nv": 90.61,
    "p": "nSGZ3tv2UhskkPqiB666yDVj7PTi9qKgDqvjHyw5JgM",
    "t": "Approved",
-   "v": null
+   "v": 38.42
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 668,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80435,
+   "f": 80234,
    "h": [
     254.0,
     254.0,
@@ -6772,22 +6772,22 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 657599,
+   "i": 91.53,
+   "k": 657622,
    "lg": 1,
    "m": 254.0,
    "n": "Orangefin by SOL Strategies",
-   "nv": null,
+   "nv": 83.03,
    "p": "STKEsvUSpD38eDxkAJN6cENMYfjVxieajVpmVVkgd1t",
    "t": "Approved",
-   "v": null
+   "v": 94.48
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 172,
-   "c": "Firedancer",
+   "c": "FireBAM",
    "cv": "26.8.5",
-   "f": 77342,
+   "f": 77524,
    "h": [
     207.0,
     207.0,
@@ -6805,22 +6805,22 @@
     255.0,
     258.0
    ],
-   "i": null,
-   "k": 172238,
+   "i": 97.37,
+   "k": 172372,
    "lg": 1,
    "m": 207.0,
    "n": "Orca",
-   "nv": null,
+   "nv": 94.34,
    "p": "ECZx4Dfyn2o55KTYbM9r3Dt4VZRcrdfdrst7sUbWgrdU",
    "t": "Approved",
-   "v": null
+   "v": 99.47
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 152,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 79888,
+   "cv": "4.3.0",
+   "f": 79634,
    "h": [
     273.5,
     279.5,
@@ -6838,23 +6838,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 184720,
+   "i": 85.8,
+   "k": 184338,
    "lag": 1,
    "lg": 1,
    "m": 273.5,
    "n": "P-OPS Team",
-   "nv": null,
+   "nv": 85.84,
    "p": "popscoyTKVksa4TyTXw488b3vvFxM7qQEyTBeMQopKu",
    "t": "Approved",
-   "v": null
+   "v": 47.83
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 188,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 80331,
+   "f": 80077,
    "h": [
     269.0,
     267.0,
@@ -6872,23 +6872,23 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 182520,
+   "i": 90.55,
+   "k": 182132,
    "lag": 1,
    "lg": 1,
    "m": 269.0,
    "n": "Pacific Meta",
-   "nv": null,
+   "nv": 87.89,
    "p": "GWJyUxzcVwRRtpLuLiu1mpiUQsZ4onYFAYfCjQnuLmz5",
    "t": "Approved",
-   "v": null
+   "v": 73.35
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 136,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 66319,
+   "f": 69174,
    "h": [
     251.0,
     253.5,
@@ -6906,22 +6906,22 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 150362,
+   "i": 88.6,
+   "k": 153084,
    "lg": 1,
    "m": 251.0,
    "n": "ParaFi Technologies",
-   "nv": null,
+   "nv": 88.35,
    "p": "parafiUS6h6oLhCFwhjvEmQJKw8pF1iXsxMJdTq46dS",
    "t": "Approved",
-   "v": null
+   "v": 58.92
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 220,
    "c": "FireBAM",
    "cv": "26.8.5",
-   "f": 75586,
+   "f": 77798,
    "h": [
     257.0,
     256.0,
@@ -6939,23 +6939,23 @@
     257.0,
     257.0
    ],
-   "i": null,
-   "k": 219481,
+   "i": 87.09,
+   "k": 221764,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "Paragon",
-   "nv": null,
+   "nv": 97.13,
    "p": "PRGNnb8DxVcP2WjSHfVRGgc8SkA5u6dbMwoTVV1BGKN",
    "t": "Approved",
-   "v": null
+   "v": 22.56
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 248,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 80120,
+   "f": 79866,
    "h": [
     254.0,
     254.0,
@@ -6973,22 +6973,22 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 252062,
+   "i": 91.89,
+   "k": 252799,
    "lg": 1,
    "m": 254.0,
    "n": "Paws🐾 0% Fee/MEV",
-   "nv": null,
+   "nv": 86.03,
    "p": "PAWsME7oYbjt5TRNc11mBa33JhKnQr9AYherdr9YAZ6",
    "t": "Approved",
-   "v": null
+   "v": 87.86
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 116,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 57438,
+   "f": 56687,
    "h": [
     254.0,
     255.0,
@@ -7006,22 +7006,22 @@
     313.0,
     312.0
    ],
-   "i": null,
-   "k": 109908,
+   "i": 88.87,
+   "k": 109020,
    "lg": 1,
    "m": 254.0,
    "n": "PENGU Validator",
-   "nv": null,
+   "nv": 78.57,
    "p": "peNgUgnzs1jGogUPW8SThXMvzNpzKSNf3om78xVPAYx",
    "t": "Approved",
-   "v": null
+   "v": 90.07
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 108,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 60399,
+   "f": 59574,
    "h": [
     271.5,
     293.5,
@@ -7039,23 +7039,23 @@
     310.5,
     308.0
    ],
-   "i": null,
-   "k": 118715,
+   "i": 88.23,
+   "k": 117736,
    "lag": 1,
    "lg": 1,
    "m": 271.5,
    "n": "Pesky Penguins 🔥💃 NOOT NOOT",
-   "nv": null,
+   "nv": 86.88,
    "p": "ppppoqHcHVzigV6SK4856BAsNxhTAi32hqQQWrziyHE",
    "t": "Approved",
-   "v": null
+   "v": 60.89
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 144,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80470,
+   "f": 80216,
    "h": [
     258.5,
     269.5,
@@ -7073,23 +7073,23 @@
     306.0,
     305.0
    ],
-   "i": null,
-   "k": 188057,
+   "i": 90.13,
+   "k": 187685,
    "lag": 1,
    "lg": 1,
    "m": 258.5,
    "n": "Phase Stake",
-   "nv": null,
+   "nv": 84.62,
    "p": "ciTyjzN9iyobidMycjyqRRM7vXAHXkFzH3m8vEr6cQj",
    "t": "Approved",
-   "v": null
+   "v": 80.34
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 64,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 42701,
+   "f": 44276,
    "h": [
     259.5,
     260.0,
@@ -7107,23 +7107,23 @@
     306.5,
     307.0
    ],
-   "i": null,
-   "k": 73643,
+   "i": 88.6,
+   "k": 75229,
    "lag": 1,
    "lg": 1,
    "m": 259.5,
    "n": "pico🙄.sol",
-   "nv": null,
+   "nv": 85.23,
    "p": "D3htsc6iRQJLqCNWcC2xcZgUuvcd1JT8zoYNqraNcTQz",
    "t": "Approved",
-   "v": null
+   "v": 68.29
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 176,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 80111,
+   "f": 79857,
    "h": [
     279.0,
     287.0,
@@ -7141,23 +7141,23 @@
     303.0,
     303.0
    ],
-   "i": null,
-   "k": 241481,
+   "i": 87.5,
+   "k": 240653,
    "lag": 1,
    "lg": 1,
    "m": 279.0,
    "n": "Pigs in Blankets",
-   "nv": null,
+   "nv": 81.67,
    "p": "61QB1Evn9E3noQtpJm4auFYyHSXS5FPgqKtPgwJJfEQk",
    "t": "Approved",
-   "v": null
+   "v": 71.69
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 116,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 58634,
+   "f": 57770,
    "h": [
     270.5,
     286.5,
@@ -7175,23 +7175,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 113353,
+   "i": 86.69,
+   "k": 112353,
    "lag": 1,
    "lg": 1,
    "m": 270.5,
    "n": "Pine Analytics",
-   "nv": null,
+   "nv": 85.44,
    "p": "pineXRUnbaLNFMxaM3zBmFfTiKgQMGqT9jYHXZWq2Fw",
    "t": "Approved",
-   "v": null
+   "v": 54.96
   },
   {
-   "b": null,
+   "b": 99.98,
    "bp": 192,
    "c": "Jito",
    "cv": "4.3.0-rc.0",
-   "f": 80471,
+   "f": 80217,
    "h": [
     258.0,
     256.0,
@@ -7209,23 +7209,23 @@
     309.0,
     308.5
    ],
-   "i": null,
-   "k": 197218,
+   "i": 87.19,
+   "k": 197747,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "Pine Stake",
-   "nv": null,
+   "nv": 96.52,
    "p": "Pid6HQnMCFb9izqX9i7X6ePdUPieGmjHoPxC1Jfooix",
    "t": "Approved",
-   "v": null
+   "v": 25.11
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 196,
    "c": "Frankendancer",
    "cv": "0.1202.0-beta.40302",
-   "f": 75289,
+   "f": 74920,
    "h": [
     205.0,
     207.0,
@@ -7243,22 +7243,22 @@
     254.0,
     254.0
    ],
-   "i": null,
-   "k": 164556,
+   "i": 97.62,
+   "k": 164202,
    "lg": 1,
    "m": 205.0,
    "n": "PK",
-   "nv": null,
+   "nv": 95.25,
    "p": "PKdLMugp1Mf88Ji1GkdqRDBewaUh2cqg79CBEo6eJoQ",
    "t": "Approved",
-   "v": null
+   "v": 98.38
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 176,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 74715,
+   "f": 74317,
    "h": [
     251.0,
     253.0,
@@ -7276,22 +7276,22 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 162892,
+   "i": 91.82,
+   "k": 162369,
    "lg": 1,
    "m": 251.0,
    "n": "polkachu.com",
-   "nv": null,
+   "nv": 82.53,
    "p": "vaoJKVZYPAsqc52T2nNQhABR1gU6Cy2koDKfCQaEiva",
    "t": "Approved",
-   "v": null
+   "v": 97.89
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 84,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 60900,
+   "f": 60187,
    "h": [
     273.5,
     267.5,
@@ -7309,23 +7309,23 @@
     308.0,
     306.0
    ],
-   "i": null,
-   "k": 120451,
+   "i": 89.57,
+   "k": 119722,
    "lag": 1,
    "lg": 1,
    "m": 273.5,
    "n": "Project Super",
-   "nv": null,
+   "nv": 92.01,
    "p": "E99w1XfS4UNM1xUKXWEuDmj8Mduy7u65jm2NCULTspSV",
    "t": "Approved",
-   "v": null
+   "v": 54.46
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 252,
    "c": "HarmonicAgave",
    "cv": "4.3.0",
-   "f": 80302,
+   "f": 80048,
    "h": [
     254.0,
     253.0,
@@ -7343,22 +7343,22 @@
     306.5,
     305.0
    ],
-   "i": null,
-   "k": 252144,
+   "i": 81.57,
+   "k": 251780,
    "lg": 1,
    "m": 254.0,
    "n": "Prompt Logic",
-   "nv": null,
+   "nv": 92.38,
    "p": "FwnWx7x99rGwLmipzz8ii15NqcHkKRo2oS1Y7j6LivgZ",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 640,
    "c": "Rakurai",
    "cv": "4.2.2",
-   "f": 80441,
+   "f": 80239,
    "h": [
     262.0,
     263.0,
@@ -7376,23 +7376,23 @@
     311.0,
     309.5
    ],
-   "i": null,
-   "k": 617330,
+   "i": 92.09,
+   "k": 617184,
    "lag": 1,
    "lg": 1,
    "m": 262.0,
    "n": "ProStaking",
-   "nv": null,
+   "nv": 95.21,
    "p": "juigBT2qetpYpf1iwgjaiWTjryKkY3uUTVAnRFKkqY6",
    "t": "Approved",
-   "v": null
+   "v": 61.65
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 232,
    "c": "Frankendancer",
    "cv": "0.1106.40201",
-   "f": 80235,
+   "f": 79980,
    "h": [
     252.0,
     250.5,
@@ -7410,22 +7410,22 @@
     298.5,
     298.0
    ],
-   "i": null,
-   "k": 214699,
+   "i": 85.59,
+   "k": 215148,
    "lg": 1,
    "m": 252.0,
    "n": "Puffin",
-   "nv": null,
+   "nv": 69.37,
    "p": "puffinQSvKFriPbyE5atyx1ptfnyytovbzxybr1jsyy",
    "t": "Approved",
-   "v": null
+   "v": 95.86
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 136,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 69793,
+   "f": 68667,
    "h": [
     254.0,
     260.0,
@@ -7443,22 +7443,22 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 146514,
+   "i": 91.05,
+   "k": 138616,
    "lg": 1,
    "m": 254.0,
    "n": "Quantix",
-   "nv": null,
+   "nv": 87.02,
    "p": "N43JWBg42ZoUFMkHsRUVbP7wGVdxaHKanqaF9BBNiFC",
    "t": "Approved",
-   "v": null
+   "v": 79.25
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 580,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 80468,
+   "cv": "4.3.0",
+   "f": 80214,
    "h": [
     285.0,
     285.0,
@@ -7476,23 +7476,23 @@
     308.0,
     308.0
    ],
-   "i": null,
-   "k": 657619,
+   "i": 90.25,
+   "k": 657239,
    "lag": 1,
    "lg": 1,
    "m": 285.0,
    "n": "Quicknode",
-   "nv": null,
+   "nv": 89.32,
    "p": "4SsMncJdtKiUcDtukkX15mqei7WiuQ9yvRtQrQW4reWC",
    "t": "Approved",
-   "v": null
+   "v": 67.02
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 204,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80430,
+   "f": 80176,
    "h": [
     257.0,
     260.0,
@@ -7510,23 +7510,23 @@
     306.5,
     306.0
    ],
-   "i": null,
-   "k": 257900,
+   "i": 85.86,
+   "k": 255910,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "Radiants",
-   "nv": null,
+   "nv": 88.55,
    "p": "radM7PKUpZwJ9bYPAJ7V8FXHeUmH1zim6iaXUKkftP9",
    "t": "Approved",
-   "v": null
+   "v": 40.11
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 340,
    "c": "Raiku",
    "cv": "4.3.0-rc.0",
-   "f": 80438,
+   "f": 80238,
    "h": [
     265.0,
     263.5,
@@ -7544,23 +7544,23 @@
     324.0,
     306.0
    ],
-   "i": null,
-   "k": 376417,
+   "i": 98.45,
+   "k": 376382,
    "lag": 1,
    "lg": 1,
    "m": 265.0,
    "n": "Raiku",
-   "nv": null,
+   "nv": 96.91,
    "p": "9xcXe4WRAfbVoVgQmFD5xgFHioL9dD7c74pQZ7PeczT",
    "t": "Approved",
-   "v": null
+   "v": 98.95
   },
   {
-   "b": null,
+   "b": 99.74,
    "bp": 212,
    "c": "Rakurai",
-   "cv": "4.2.2",
-   "f": 80073,
+   "cv": "4.3.0",
+   "f": 79819,
    "h": [
     261.0,
     261.0,
@@ -7578,23 +7578,23 @@
     306.0,
     305.5
    ],
-   "i": null,
-   "k": 203777,
+   "i": 92.72,
+   "k": 203550,
    "lag": 1,
    "lg": 1,
    "m": 261.0,
    "n": "Rakurai | High TPS | High rewards",
-   "nv": null,
+   "nv": 91.9,
    "p": "Ed9WjPnZfAXsPttcqxMwj94qsuXVRyBsyXnDkxFva2Zv",
    "t": "Approved",
-   "v": null
+   "v": 76.46
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 96,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 57368,
+   "f": 57294,
    "h": [
     265.5,
     255.5,
@@ -7612,23 +7612,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 111095,
+   "i": 92.19,
+   "k": 110884,
    "lag": 1,
    "lg": 1,
    "m": 265.5,
    "n": "Range",
-   "nv": null,
+   "nv": 93.43,
    "p": "sCANXAaS1a7yB8jz3USvGNLfd8DSc9r7TNzNSKKPkfY",
    "t": "Approved",
-   "v": null
+   "v": 67.64
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 136,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 55778,
+   "f": 54856,
    "h": [
     256.0,
     256.0,
@@ -7646,23 +7646,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 105577,
+   "i": 86.6,
+   "k": 102480,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "Raposa Coffee",
-   "nv": null,
+   "nv": 89.65,
    "p": "rapXHroUoGG3KvZ3qwjvGMdA7siWXwXpiNC1bYarvSC",
    "t": "Approved",
-   "v": null
+   "v": 41.68
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 144,
    "c": "Jito",
    "cv": "4.3.0-rc.0",
-   "f": 67085,
+   "f": 64162,
    "h": [
     256.0,
     254.5,
@@ -7680,23 +7680,23 @@
     307.5,
     305.0
    ],
-   "i": null,
-   "k": 134649,
+   "i": 87.26,
+   "k": 131718,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "ReFi Hub",
-   "nv": null,
+   "nv": 97.03,
    "p": "ReFiqMfGnc7tW8WQtFFcJRPZSDAWDBnAsdoFYF2QnfR",
    "t": "Approved",
-   "v": null
+   "v": 23.95
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 120,
    "c": "BAM",
    "cv": "4.3.0-rc.0",
-   "f": 53826,
+   "f": 52880,
    "h": [
     259.5,
     258.5,
@@ -7714,23 +7714,23 @@
     306.0,
     305.0
    ],
-   "i": null,
-   "k": 101500,
+   "i": 92.42,
+   "k": 100415,
    "lag": 1,
    "lg": 1,
    "m": 259.5,
    "n": "rossi-mainnet",
-   "nv": null,
+   "nv": 85.33,
    "p": "BJvrWSfonXnS2Km8iA9KLY6D6vS3GcsaUwUNPFBumTca",
    "t": "Approved",
-   "v": null
+   "v": 93.43
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 112,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 53957,
+   "f": 52995,
    "h": [
     258.0,
     270.0,
@@ -7748,23 +7748,23 @@
     307.0,
     307.5
    ],
-   "i": null,
-   "k": 99273,
+   "i": 89.18,
+   "k": 96247,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "Royal",
-   "nv": null,
+   "nv": 89.24,
    "p": "RoYLttggWwa2st3KAGEjnPhsq4NPD5QwaNVyyR8pTz4",
    "t": "Approved",
-   "v": null
+   "v": 60.18
   },
   {
-   "b": null,
+   "b": 99.54,
    "bp": 200,
-   "c": "BAM",
-   "cv": "4.3.0-rc.0",
-   "f": 80470,
+   "c": "Jito",
+   "cv": "4.3.0",
+   "f": 80215,
    "h": [
     256.0,
     256.0,
@@ -7782,23 +7782,23 @@
     304.0,
     303.0
    ],
-   "i": null,
-   "k": 216219,
+   "i": 90.01,
+   "k": 216146,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "Rustiq Technology",
-   "nv": null,
+   "nv": 78.64,
    "p": "8pyp3vfVPRziYdAYEyqkwytdBbdVbQmHqfQAVDcRV3w",
    "t": "Approved",
-   "v": null
+   "v": 98.75
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 264,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 79677,
+   "f": 79423,
    "h": [
     254.0,
     260.0,
@@ -7816,22 +7816,22 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 272314,
+   "i": 91.57,
+   "k": 271947,
    "lg": 1,
    "m": 254.0,
    "n": "S4Mar",
-   "nv": null,
+   "nv": 85.61,
    "p": "2mDrrmhSzpSyaF12izGk8hnFjtKCGeCFPwQHpRiJDby2",
    "t": "Approved",
-   "v": null
+   "v": 86.99
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 128,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 69469,
+   "f": 68869,
    "h": [
     280.5,
     285.5,
@@ -7849,23 +7849,23 @@
     306.0,
     307.0
    ],
-   "i": null,
-   "k": 146609,
+   "i": 91.48,
+   "k": 145884,
    "lag": 1,
    "lg": 1,
    "m": 280.5,
    "n": "Saga DAO",
-   "nv": null,
+   "nv": 91.56,
    "p": "SaGAgdkowooXBrHihpmE8gsjf1dUG7n5SqnyJxYFnXJ",
    "t": "Approved",
-   "v": null
+   "v": 68.55
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 60,
    "c": "Jito",
    "cv": "4.3.0-rc.0",
-   "f": 44556,
+   "f": 44378,
    "h": [
     255.0,
     256.0,
@@ -7883,22 +7883,22 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 72193,
+   "i": 87.63,
+   "k": 72020,
    "lg": 1,
    "m": 255.0,
    "n": "Salmon Wallet",
-   "nv": null,
+   "nv": 96.98,
    "p": "SA1LFXr4os2P4VKGUyRv84uFfuUYgcQkFh2uA4SmRcr",
    "t": "Approved",
-   "v": null
+   "v": 26.57
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 148,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 66807,
+   "cv": "4.3.0",
+   "f": 66151,
    "h": [
     256.5,
     258.0,
@@ -7916,23 +7916,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 139235,
+   "i": 91.14,
+   "k": 137261,
    "lag": 1,
    "lg": 1,
    "m": 256.5,
    "n": "Sec3",
-   "nv": null,
+   "nv": 88.29,
    "p": "DP9iBgK9c7tJYb83KhxQMFNc1LXYu7nE7EhWpEzQnjmg",
    "t": "Approved",
-   "v": null
+   "v": 76.04
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 56,
    "c": "BAM",
    "cv": "4.3.0-rc.0",
-   "f": 48907,
+   "f": 47865,
    "h": [
     256.0,
     262.0,
@@ -7950,23 +7950,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 83610,
+   "i": 84.31,
+   "k": 82428,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "Sextant",
-   "nv": null,
+   "nv": 90.37,
    "p": "777idJ8gG2cZXjc5Wvcq7RBtkvcU1TJ8WoLQSHaU8nN2",
    "t": "Approved",
-   "v": null
+   "v": 24.29
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 112,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 70738,
+   "f": 70172,
    "h": [
     265.0,
     283.5,
@@ -7984,23 +7984,23 @@
     307.0,
     309.5
    ],
-   "i": null,
-   "k": 151497,
+   "i": 87.71,
+   "k": 150448,
    "lag": 1,
    "lg": 1,
    "m": 265.0,
    "n": "Sign Labs 🤟",
-   "nv": null,
+   "nv": 89.63,
    "p": "6k1YkmTKwPRUhChnxA9ryJmbtuQMbro4xFTL6mL9jycB",
    "t": "Approved",
-   "v": null
+   "v": 49.2
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 144,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 68152,
+   "f": 68310,
    "h": [
     261.0,
     268.5,
@@ -8018,23 +8018,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 144607,
+   "i": 91.78,
+   "k": 144781,
    "lag": 1,
    "lg": 1,
    "m": 261.0,
    "n": "Simpdigit",
-   "nv": null,
+   "nv": 88.43,
    "p": "simpRo1FrQYGa1moicfgnPDp6KyE38d4gYrZzhjXYJb",
    "t": "Approved",
-   "v": null
+   "v": 79.94
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 256,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 80278,
+   "cv": "4.3.0",
+   "f": 80024,
    "h": [
     267.5,
     265.0,
@@ -8052,23 +8052,23 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 181751,
+   "i": 89.99,
+   "k": 181387,
    "lag": 1,
    "lg": 1,
    "m": 267.5,
    "n": "Sol Hack3rs",
-   "nv": null,
+   "nv": 86.01,
    "p": "5HYjArGt81naevDdwMaEx8yeGNw9jYBSDJa8YavT9Mp4",
    "t": "Approved",
-   "v": null
+   "v": 75.24
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 316,
    "c": "FireBAM",
    "cv": "0.1202.0-beta.40302",
-   "f": 80252,
+   "f": 80049,
    "h": [
     258.0,
     258.0,
@@ -8086,23 +8086,23 @@
     311.0,
     311.0
    ],
-   "i": null,
-   "k": 310399,
+   "i": 95.17,
+   "k": 310089,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "SOL Strategies",
-   "nv": null,
+   "nv": 92.15,
    "p": "SSmBEooM7RkmyuXxuKgAhTvhQZ36Z3G2WsmLGJKoQLY",
    "t": "Approved",
-   "v": null
+   "v": 91.37
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 176,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80468,
+   "f": 80214,
    "h": [
     255.0,
     255.0,
@@ -8120,21 +8120,21 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 189147,
+   "i": 89.17,
+   "k": 188760,
    "m": 255.0,
    "n": "Solana Japan Validator🇯🇵",
-   "nv": null,
+   "nv": 91.24,
    "p": "5zuNci3TV79w6zLoJZzbZujMvkVZb2FcSPhgv9aT24AK",
    "t": "Approved",
-   "v": null
+   "v": 54.07
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 676,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80363,
+   "f": 80162,
    "h": [
     254.0,
     255.0,
@@ -8152,22 +8152,22 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 741052,
+   "i": 92.35,
+   "k": 741373,
    "lg": 1,
    "m": 254.0,
    "n": "Solana Mobile Validator",
-   "nv": null,
+   "nv": 84.32,
    "p": "6XKqyUVUcpe3CNucjF6gk5zonJDqNGvob6kaTy4Ps1U",
    "t": "Approved",
-   "v": null
+   "v": 96.04
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 112,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 57581,
+   "f": 56649,
    "h": [
     280.5,
     275.0,
@@ -8185,23 +8185,23 @@
     305.0,
     306.0
    ],
-   "i": null,
-   "k": 110164,
+   "i": 86.71,
+   "k": 109305,
    "lag": 1,
    "lg": 1,
    "m": 280.5,
    "n": "Solana Qubits",
-   "nv": null,
+   "nv": 91.64,
    "p": "EAW9vxqogvdPNapq7QTDpiVTHK6o7begUhPVnf854VTc",
    "t": "Approved",
-   "v": null
+   "v": 36.45
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 88,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 54403,
+   "f": 53254,
    "h": [
     252.0,
     254.0,
@@ -8219,21 +8219,21 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 99952,
+   "i": 89.39,
+   "k": 99123,
    "m": 252.0,
    "n": "Solana Ukraine 🇺🇦",
-   "nv": null,
+   "nv": 77.54,
    "p": "FdH9QEQBxPQfaF2JpcjgdfcMnDb7rjZkCDRCWLRjTQwj",
    "t": "Approved",
-   "v": null
+   "v": 96.62
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 176,
    "c": "FireBAM",
    "cv": "26.8.5",
-   "f": 80494,
+   "f": 80241,
    "h": [
     258.0,
     258.5,
@@ -8251,23 +8251,23 @@
     307.5,
     307.5
    ],
-   "i": null,
-   "k": 202895,
+   "i": 96.46,
+   "k": 202975,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "Solana Vibe Station",
-   "nv": null,
+   "nv": 94.05,
    "p": "svsD6T44XJnuXQWB15sy1pBxxruzrFy8rR7gXy8Jsj3",
    "t": "Approved",
-   "v": null
+   "v": 94.27
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 148,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 60965,
+   "f": 59630,
    "h": [
     281.5,
     285.0,
@@ -8285,23 +8285,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 119418,
+   "i": 89.67,
+   "k": 117969,
    "lag": 1,
    "lg": 1,
    "m": 281.5,
    "n": "SolanaBull 🚀",
-   "nv": null,
+   "nv": 87.94,
    "p": "CtvdyHYt8cMuGVHFarV2RADfoCdnrbd8e9jAsB225uMW",
    "t": "Approved",
-   "v": null
+   "v": 67.31
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 124,
    "c": "BAM",
    "cv": "4.3.0-beta.3",
-   "f": 69608,
+   "f": 69002,
    "h": [
     257.0,
     257.5,
@@ -8319,23 +8319,23 @@
     303.0,
     304.0
    ],
-   "i": null,
-   "k": 146932,
+   "i": 93.62,
+   "k": 146198,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "Solar | Empowering Youth | 0% Fee + MEV Rewards",
-   "nv": null,
+   "nv": 87.25,
    "p": "7nzTzRZzezmugqE5ZjHRMxarhXunpwZ2PUdjV7uYzt7A",
    "t": "Approved",
-   "v": null
+   "v": 95.71
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 84,
    "c": "Jito",
-   "cv": "4.2.2",
-   "f": 62482,
+   "cv": "4.3.0",
+   "f": 62262,
    "h": [
     258.0,
     256.5,
@@ -8353,23 +8353,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 126641,
+   "i": 95.3,
+   "k": 127618,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "Solarius☀️",
-   "nv": null,
+   "nv": 96.12,
    "p": "BuonuQoAR74GoMwCFhxKWVWWSGGt2wfbNmQ3cizaJ97G",
    "t": "Approved",
-   "v": null
+   "v": 80.33
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 228,
    "c": "FireBAM",
    "cv": "26.8.5",
-   "f": 80344,
+   "f": 80143,
    "h": [
     258.0,
     258.0,
@@ -8387,23 +8387,23 @@
     306.0,
     305.0
    ],
-   "i": null,
-   "k": 250084,
+   "i": 97.36,
+   "k": 249766,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "SolBrothers",
-   "nv": null,
+   "nv": 95.55,
    "p": "Ey3DkEVbfBxfWmkTsG7Hqj7jshYf5Zx9H8462Zjjkykf",
    "t": "Approved",
-   "v": null
+   "v": 95.74
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 96,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 52474,
+   "f": 51493,
    "h": [
     255.5,
     274.0,
@@ -8421,23 +8421,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 97148,
+   "i": 85.37,
+   "k": 96027,
    "lag": 1,
    "lg": 1,
    "m": 255.5,
    "n": "Soldea Kitchen",
-   "nv": null,
+   "nv": 77.11,
    "p": "2XmhZKHmfjku3T3nC9xKhgr5bm1CAmWXqNsNt49mo82C",
    "t": "Approved",
-   "v": null
+   "v": 71.15
   },
   {
-   "b": null,
+   "b": 99.93,
    "bp": 248,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 80489,
+   "f": 80235,
    "h": [
     302.0,
     304.0,
@@ -8455,23 +8455,23 @@
     330.0,
     330.5
    ],
-   "i": null,
-   "k": 250679,
+   "i": 87.74,
+   "k": 250300,
    "lag": 1,
    "lg": 1,
    "m": 302.0,
    "n": "Solend",
-   "nv": null,
+   "nv": 89.92,
    "p": "SLNDCSGTEsA6KHpgR32MBt9UAurZnVSJGUtW2tRpdU2",
    "t": "Approved",
-   "v": null
+   "v": 48.68
   },
   {
-   "b": null,
+   "b": 99.72,
    "bp": 324,
    "c": "Jito",
    "cv": "4.3.0",
-   "f": 73260,
+   "f": 76573,
    "h": [
     249.0,
     248.0,
@@ -8489,22 +8489,22 @@
     301.0,
     301.0
    ],
-   "i": null,
-   "k": 330709,
+   "i": 96.76,
+   "k": 333990,
    "lg": 1,
    "m": 249.0,
    "n": "SolGuardian",
-   "nv": null,
+   "nv": 95.53,
    "p": "HcZvwZ83PfjrQDiq3GLHxisTs17aGURs6bJ2LwtmL4qv",
    "t": "Approved",
-   "v": null
+   "v": 92.58
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 136,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 51986,
+   "f": 50989,
    "h": [
     286.0,
     281.0,
@@ -8522,23 +8522,23 @@
     303.5,
     304.5
    ],
-   "i": null,
-   "k": 93009,
+   "i": 83.27,
+   "k": 91872,
    "lag": 1,
    "lg": 1,
    "m": 286.0,
    "n": "Solid State Nodes",
-   "nv": null,
+   "nv": 83.02,
    "p": "3CKKAoVi94EnfX8QcVxEmk8CAvZTc6nAYzXp1WkSUofX",
    "t": "Approved",
-   "v": null
+   "v": 39.44
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 104,
    "c": "Jito",
    "cv": "4.2.2",
-   "f": 68205,
+   "f": 67663,
    "h": [
     257.5,
     256.0,
@@ -8556,22 +8556,22 @@
     305.0,
     306.0
    ],
-   "i": null,
-   "k": 142821,
+   "i": 93.77,
+   "k": 142291,
    "lag": 1,
    "m": 257.5,
    "n": "SoLove",
-   "nv": null,
+   "nv": 97.24,
    "p": "4aRPyjsqqFsf5488a9QAaHJLQJMGwoL5P6wRtLmroe2d",
    "t": "Approved",
-   "v": null
+   "v": 66.78
   },
   {
-   "b": null,
+   "b": 98.69,
    "bp": 200,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 0,
+   "cv": "4.3.0",
+   "f": 14532,
    "h": [
     257.0,
     266.5,
@@ -8589,23 +8589,23 @@
     307.0,
     308.0
    ],
-   "i": null,
-   "k": 206463,
+   "i": 91.81,
+   "k": 221028,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "Solstice",
-   "nv": null,
+   "nv": 88.46,
    "p": "5pZvwjSpGYCxpJeySwSbSAji7kZe4YntL7rQvXM3YcNT",
    "t": "Approved",
-   "v": null
+   "v": 83.54
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 112,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 51889,
+   "f": 52144,
    "h": [
     258.5,
     255.9,
@@ -8623,23 +8623,23 @@
     305.0,
     306.0
    ],
-   "i": null,
-   "k": 95906,
+   "i": 88.73,
+   "k": 96022,
    "lag": 1,
    "lg": 1,
    "m": 258.5,
    "n": "soltop.sh",
-   "nv": null,
+   "nv": 90.8,
    "p": "sfvTq7ojrEc5WdXcHijz676eX1pc5MgoLxbkYSdRDAB",
    "t": "Approved",
-   "v": null
+   "v": 52.44
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 120,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 67616,
+   "cv": "4.3.0",
+   "f": 66967,
    "h": [
     260.5,
     277.0,
@@ -8657,23 +8657,23 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 141293,
+   "i": 88.01,
+   "k": 140513,
    "lag": 1,
    "lg": 1,
    "m": 260.5,
    "n": "Solya",
-   "nv": null,
+   "nv": 91.1,
    "p": "HwN6eoEe9N3kwHi66hpQDBMFPk6ASQGthWKPX5MZmisp",
    "t": "Approved",
-   "v": null
+   "v": 46.75
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 136,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 61677,
+   "f": 61725,
    "h": [
     257.0,
     255.5,
@@ -8691,23 +8691,23 @@
     307.0,
     308.0
    ],
-   "i": null,
-   "k": 126748,
+   "i": 91.79,
+   "k": 126731,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "SoLyrae",
-   "nv": null,
+   "nv": 81.79,
    "p": "7Nu9ckgtjobZ3MkbadGFKEvRymYuah9HmcxiUJKMM9NB",
    "t": "Approved",
-   "v": null
+   "v": 99.89
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 216,
    "c": "Jito",
-   "cv": "4.3.0-rc.0",
-   "f": 79116,
+   "cv": "4.3.0",
+   "f": 78837,
    "h": [
     255.0,
     256.0,
@@ -8725,21 +8725,21 @@
     308.5,
     308.0
    ],
-   "i": null,
-   "k": 176291,
+   "i": 98.77,
+   "k": 176029,
    "m": 255.0,
    "n": "some name",
-   "nv": null,
+   "nv": 97.34,
    "p": "5AsoSeQtLoN8eLsf3wKrR3LwxHME4sTBGR6dpTCP1k3H",
    "t": "Approved",
-   "v": null
+   "v": 99.77
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 124,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 64980,
+   "f": 64273,
    "h": [
     254.0,
     259.5,
@@ -8757,22 +8757,22 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 133429,
+   "i": 84.17,
+   "k": 130433,
    "lg": 1,
    "m": 254.0,
    "n": "Somos Validator",
-   "nv": null,
+   "nv": 86.52,
    "p": "axy3tCRL3wmFMVG4c69rYurcf4fXhBo2RcuBj9ADnJ4",
    "t": "Approved",
-   "v": null
+   "v": 34.93
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 84,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 57823,
+   "f": 59175,
    "h": [
     266.5,
     258.0,
@@ -8790,23 +8790,23 @@
     304.0,
     303.0
    ],
-   "i": null,
-   "k": 118590,
+   "i": 90.45,
+   "k": 118882,
    "lag": 1,
    "lg": 1,
    "m": 266.5,
    "n": "Sora Validator",
-   "nv": null,
+   "nv": 87.04,
    "p": "3tm92VTxwyZ5MDhGoYR4tVTkwWYkzfam6hwBjauUACCk",
    "t": "Approved",
-   "v": null
+   "v": 75.18
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 144,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 78203,
+   "f": 79083,
    "h": [
     269.5,
     274.0,
@@ -8824,23 +8824,23 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 184545,
+   "i": 90.1,
+   "k": 185126,
    "lag": 1,
    "lg": 1,
    "m": 269.5,
    "n": "South",
-   "nv": null,
+   "nv": 86.38,
    "p": "8Nvaxzif1NrdvxNkRetjT8xJvd33EHkKVrfL8EDkgaNy",
    "t": "Approved",
-   "v": null
+   "v": 74.86
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 248,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 78623,
+   "f": 78369,
    "h": [
     260.5,
     260.0,
@@ -8858,23 +8858,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 267035,
+   "i": 88.2,
+   "k": 266831,
    "lag": 1,
    "lg": 1,
    "m": 260.5,
    "n": "Spectrum Staking",
-   "nv": null,
+   "nv": 81.45,
    "p": "qZMH9GWnnBkx7aM1h98iKSv2Lz5N78nwNSocAxDQrbP",
    "t": "Approved",
-   "v": null
+   "v": 76.96
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 160,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 64165,
+   "f": 63564,
    "h": [
     261.0,
     264.0,
@@ -8892,23 +8892,23 @@
     307.0,
     309.0
    ],
-   "i": null,
-   "k": 131588,
+   "i": 92.19,
+   "k": 130873,
    "lag": 1,
    "lg": 1,
    "m": 261.0,
    "n": "Squads",
-   "nv": null,
+   "nv": 84.14,
    "p": "SQDS9iwyWvT2mQbSZzuNKGoxuBug5jRHouF6SuMRBkA",
    "t": "Approved",
-   "v": null
+   "v": 95.53
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 160,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 64717,
+   "f": 64016,
    "h": [
     259.0,
     284.5,
@@ -8926,23 +8926,23 @@
     308.0,
     307.0
    ],
-   "i": null,
-   "k": 134748,
+   "i": 92.23,
+   "k": 133925,
    "lag": 1,
    "lg": 1,
    "m": 259.0,
    "n": "Stake.Cake",
-   "nv": null,
+   "nv": 88.82,
    "p": "8augxYLUge2iWmitQMwbcBL5VQEpsM6aJdRofhwpnzyw",
    "t": "Approved",
-   "v": null
+   "v": 81.71
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 108,
    "c": "Rakurai",
    "cv": "4.2.2",
-   "f": 80462,
+   "f": 80208,
    "h": [
     258.0,
     258.0,
@@ -8960,23 +8960,23 @@
     304.0,
     305.0
    ],
-   "i": null,
-   "k": 194844,
+   "i": 94.01,
+   "k": 194609,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "Stake.org",
-   "nv": null,
+   "nv": 96.0,
    "p": "Stakex4B2tpDHPWGvV1dninfiaYCGdakgTknpzPitLh",
    "t": "Approved",
-   "v": null
+   "v": 72.08
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 120,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 68919,
+   "f": 68340,
    "h": [
     270.5,
     281.0,
@@ -8994,23 +8994,23 @@
     306.0,
     305.0
    ],
-   "i": null,
-   "k": 146497,
+   "i": 91.13,
+   "k": 145787,
    "lag": 1,
    "lg": 1,
    "m": 270.5,
    "n": "stake.systems",
-   "nv": null,
+   "nv": 87.73,
    "p": "8ebFZA8NPLBZD91CwsG1HWQsa2B5Ludgdyf5Hi3sYhhs",
    "t": "Approved",
-   "v": null
+   "v": 77.65
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 184,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 79110,
+   "f": 78856,
    "h": [
     263.0,
     260.5,
@@ -9028,23 +9028,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 207003,
+   "i": 90.99,
+   "k": 206770,
    "lag": 1,
    "lg": 1,
    "m": 263.0,
    "n": "Stakeconomy 🚀 Jito MEV + Triton.One",
-   "nv": null,
+   "nv": 86.58,
    "p": "4QNekaDqrLmUENqkVhGCJrgHziPxkX9kridbKwunx9su",
    "t": "Approved",
-   "v": null
+   "v": 80.19
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 260,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 80345,
+   "f": 80144,
    "h": [
     276.0,
     257.0,
@@ -9062,23 +9062,23 @@
     301.5,
     302.0
    ],
-   "i": null,
-   "k": 283287,
+   "i": 91.52,
+   "k": 251209,
    "lag": 1,
    "lg": 1,
    "m": 276.0,
    "n": "StakeCraft",
-   "nv": null,
+   "nv": 90.91,
    "p": "WUNoB9YQXmXXRcJsjY1G8PfVag5aAfnyGmFd6YwJVwp",
    "t": "Approved",
-   "v": null
+   "v": 70.71
   },
   {
-   "b": null,
+   "b": 99.64,
    "bp": 464,
    "c": "HarmonicAgave",
-   "cv": "4.2.2",
-   "f": 80484,
+   "cv": "4.3.0",
+   "f": 80230,
    "h": [
     256.0,
     256.0,
@@ -9096,23 +9096,23 @@
     306.0,
     308.0
    ],
-   "i": null,
-   "k": 506165,
+   "i": 79.36,
+   "k": 506263,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "stakefish 🐟",
-   "nv": null,
+   "nv": 87.78,
    "p": "fishfishrD9BwrQQiAcG6YeYZVUYVJf3tb9QGQPMJqF",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 68,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 56657,
+   "cv": "4.3.0",
+   "f": 53670,
    "h": [
     271.5,
     258.5,
@@ -9130,23 +9130,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 103041,
+   "i": 90.5,
+   "k": 100066,
    "lag": 1,
    "lg": 1,
    "m": 271.5,
    "n": "StakeITeasy🚀High APY + 0% fee✅ + MEV🔥",
-   "nv": null,
+   "nv": 88.17,
    "p": "vahMVcSS3v6uwyFormV7FDAUbQSHwmy6vUedp1P7L42",
    "t": "Approved",
-   "v": null
+   "v": 72.16
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 104,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 70283,
+   "cv": "4.3.0",
+   "f": 69693,
    "h": [
     260.5,
     285.0,
@@ -9164,23 +9164,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 149051,
+   "i": 92.28,
+   "k": 148095,
    "lag": 1,
    "lg": 1,
    "m": 260.5,
    "n": "Stakely | 0% fee",
-   "nv": null,
+   "nv": 90.48,
    "p": "2X7WoaXX9KPqNrNfvguhnwo3rjFPNsfw2t75fGjWRthz",
    "t": "Approved",
-   "v": null
+   "v": 77.13
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 120,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 50964,
+   "cv": "4.3.0",
+   "f": 50074,
    "h": [
     277.5,
     285.5,
@@ -9198,23 +9198,23 @@
     304.5,
     308.0
    ],
-   "i": null,
-   "k": 92338,
+   "i": 86.89,
+   "k": 91450,
    "lag": 1,
    "lg": 1,
    "m": 277.5,
    "n": "StakeNode777",
-   "nv": null,
+   "nv": 85.56,
    "p": "Ee8dX3qtwrDRnxYK6NGQfmMeKT3Qpp2QZHpxiAiw23W9",
    "t": "Approved",
-   "v": null
+   "v": 55.91
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 196,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 78627,
+   "f": 78373,
    "h": [
     254.0,
     253.5,
@@ -9232,22 +9232,22 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 225271,
+   "i": 91.84,
+   "k": 224963,
    "lg": 1,
    "m": 254.0,
    "n": "Staker Space",
-   "nv": null,
+   "nv": 83.9,
    "p": "spcti6GQVvinbtHU9UAkbXhjTcBJaba1NVx4tmK4M5F",
    "t": "Approved",
-   "v": null
+   "v": 93.94
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 104,
    "c": "BAM",
    "cv": "4.3.0-rc.0",
-   "f": 66044,
+   "f": 65355,
    "h": [
     255.5,
     259.0,
@@ -9265,22 +9265,22 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 136089,
+   "i": 93.68,
+   "k": 135264,
    "lag": 1,
    "m": 255.5,
    "n": "StakeThat +MEV",
-   "nv": null,
+   "nv": 86.19,
    "p": "3rqEEEGjHRyndHuduBcjkf17rX3hgmGACpYTQYeZ5Ltk",
    "t": "Approved",
-   "v": null
+   "v": 99.31
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 296,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 79753,
+   "f": 79499,
    "h": [
     268.0,
     274.5,
@@ -9298,23 +9298,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 247526,
+   "i": 90.54,
+   "k": 247155,
    "lag": 1,
    "lg": 1,
    "m": 268.0,
    "n": "stakeware.xyz | ferric",
-   "nv": null,
+   "nv": 86.4,
    "p": "ETcW7iuVraMKLMJayNCCsr9bLvKrJPDczy1CMVMPmXTc",
    "t": "Approved",
-   "v": null
+   "v": 77.72
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 736,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 80418,
+   "f": 80217,
    "h": [
     265.0,
     261.5,
@@ -9332,23 +9332,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 801980,
+   "i": 89.64,
+   "k": 802056,
    "lag": 1,
    "lg": 1,
    "m": 265.0,
    "n": "Stakin by The Tie",
-   "nv": null,
+   "nv": 86.38,
    "p": "23SUe5fzmLws1M58AnGnvnUBRUKJmzCpnFQwv4M4b9Er",
    "t": "Approved",
-   "v": null
+   "v": 71.81
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 188,
    "c": "HarmonicFiredancer",
    "cv": "26.8.5",
-   "f": 80479,
+   "f": 80225,
    "h": [
     262.0,
     261.0,
@@ -9366,23 +9366,23 @@
     308.0,
     307.0
    ],
-   "i": null,
-   "k": 181121,
+   "i": 78.4,
+   "k": 180862,
    "lag": 1,
    "lg": 1,
    "m": 262.0,
    "n": "Staking Fund",
-   "nv": null,
+   "nv": 85.33,
    "p": "SFundNVpuWk89g211WKUZGkuu4BsKSp7PbnmRsPZLos",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 172,
    "c": "HarmonicAgave",
-   "cv": "4.2.2",
-   "f": 71205,
+   "cv": "4.3.0",
+   "f": 71687,
    "h": [
     252.0,
     252.0,
@@ -9400,22 +9400,22 @@
     303.0,
     303.0
    ],
-   "i": null,
-   "k": 155010,
+   "i": 81.74,
+   "k": 155509,
    "lg": 1,
    "m": 252.0,
    "n": "Staking Kiwi",
-   "nv": null,
+   "nv": 92.75,
    "p": "3x9nibnhgBHWKMRiGnsXJELRBjviQpKyigfrXtKW27KJ",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 84,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 51692,
+   "f": 50734,
    "h": [
     255.0,
     265.0,
@@ -9433,22 +9433,22 @@
     308.0,
     308.0
    ],
-   "i": null,
-   "k": 95461,
+   "i": 88.44,
+   "k": 94364,
    "lg": 1,
    "m": 255.0,
    "n": "Stand With Ukraine",
-   "nv": null,
+   "nv": 88.67,
    "p": "3DaPk6TdeGnEBwTR8fEyZSLkdayk6vZXrqGZhAgYK8BV",
    "t": "Approved",
-   "v": null
+   "v": 56.95
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 508,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 78567,
+   "cv": "4.3.0",
+   "f": 78313,
    "h": [
     266.0,
     266.0,
@@ -9466,23 +9466,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 490374,
+   "i": 86.99,
+   "k": 490402,
    "lag": 1,
    "lg": 1,
    "m": 266.0,
    "n": "Stardust Staking - 0% fee forever + MEV 0% fee",
-   "nv": null,
+   "nv": 80.48,
    "p": "Cu9Ls6dsTL6cxFHZdStHwVSh1uy2ynXz8qPJMS5FRq86",
    "t": "Approved",
-   "v": null
+   "v": 71.85
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 184,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80463,
+   "f": 80208,
    "h": [
     289.5,
     281.0,
@@ -9500,23 +9500,23 @@
     309.0,
     308.0
    ],
-   "i": null,
-   "k": 216646,
+   "i": 84.06,
+   "k": 216202,
    "lag": 1,
    "lg": 1,
    "m": 289.5,
    "n": "Starke Finance",
-   "nv": null,
+   "nv": 77.48,
    "p": "3s97yjq2MhoPVPC3U9VeE3Z5S643Pweovg88ysvrQPw5",
    "t": "Approved",
-   "v": null
+   "v": 61.27
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 232,
    "c": "Jito",
    "cv": "4.2.2",
-   "f": 80240,
+   "f": 79987,
    "h": [
     255.0,
     256.0,
@@ -9534,22 +9534,22 @@
     303.0,
     303.0
    ],
-   "i": null,
-   "k": 219963,
+   "i": 94.66,
+   "k": 219852,
    "lg": 1,
    "m": 255.0,
    "n": "STEAK.NET 🥩",
-   "nv": null,
+   "nv": 96.81,
    "p": "sTEAKPk59EtPPbixCweyv6oRLNCDEE8pnnef6gUfbiW",
    "t": "Approved",
-   "v": null
+   "v": 73.94
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 76,
    "c": "BAM",
    "cv": "4.3.0-rc.1",
-   "f": 48436,
+   "f": 50312,
    "h": [
     255.0,
     259.5,
@@ -9567,22 +9567,22 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 92233,
+   "i": 92.53,
+   "k": 93992,
    "lg": 1,
    "m": 255.0,
    "n": "SteakStache",
-   "nv": null,
+   "nv": 84.24,
    "p": "5t4shVsKnUqgjmhK3fFNsvyju2E6Rd7cc4S5pmqqEVEW",
    "t": "Approved",
-   "v": null
+   "v": 97.49
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 96,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 57598,
+   "f": 56958,
    "h": [
     254.0,
     267.0,
@@ -9600,22 +9600,22 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 110735,
+   "i": 92.61,
+   "k": 109995,
    "lg": 1,
    "m": 254.0,
    "n": "STEALTH",
-   "nv": null,
+   "nv": 88.12,
    "p": "93Q99nhdKjuSe6WNXgMBbC3s8QVQEAoHKt91PNRkUkMn",
    "t": "Approved",
-   "v": null
+   "v": 86.41
   },
   {
-   "b": null,
+   "b": 99.96,
    "bp": 132,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 69103,
+   "cv": "4.3.0-rc.1",
+   "f": 68486,
    "h": [
     254.4,
     258.5,
@@ -9633,22 +9633,22 @@
     304.0,
     304.5
    ],
-   "i": null,
-   "k": 145409,
+   "i": 89.45,
+   "k": 144658,
    "lg": 1,
    "m": 254.4,
    "n": "Stellium",
-   "nv": null,
+   "nv": 85.68,
    "p": "Ste1115xFGdAYK5jaWA3dEFcUc1S5jEbVvD8e327zty",
    "t": "Approved",
-   "v": null
+   "v": 72.73
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 192,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80460,
+   "f": 80206,
    "h": [
     272.5,
     266.5,
@@ -9666,23 +9666,23 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 206081,
+   "i": 87.89,
+   "k": 205704,
    "lag": 1,
    "lg": 1,
    "m": 272.5,
    "n": "Step Finance",
-   "nv": null,
+   "nv": 90.72,
    "p": "sTepQGoReJq2tBKStL19DT6nnGHcGiAvFjyYaokLyuM",
    "t": "Approved",
-   "v": null
+   "v": 47.12
   },
   {
-   "b": null,
+   "b": 99.85,
    "bp": 124,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 54043,
+   "f": 53081,
    "h": [
     262.5,
     288.5,
@@ -9700,23 +9700,23 @@
     306.0,
     307.5
    ],
-   "i": null,
-   "k": 99418,
+   "i": 91.31,
+   "k": 96645,
    "lag": 1,
    "lg": 1,
    "m": 262.5,
    "n": "STEVE",
-   "nv": null,
+   "nv": 91.09,
    "p": "sTEVErNNwF2qPnV6DuNPkWpEyCt4UU6k2Y3Hyn7WUFu",
    "t": "Approved",
-   "v": null
+   "v": 69.18
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 204,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 80486,
+   "f": 80232,
    "h": [
     270.0,
     263.0,
@@ -9734,23 +9734,23 @@
     303.0,
     303.0
    ],
-   "i": null,
-   "k": 202502,
+   "i": 90.22,
+   "k": 202142,
    "lag": 1,
    "lg": 1,
    "m": 270.0,
    "n": "Stronghold",
-   "nv": null,
+   "nv": 86.94,
    "p": "91oPXTs2oq8VvJpQ5TnvXakFGnnJSpEB6HFWDtSctwMt",
    "t": "Approved",
-   "v": null
+   "v": 73.99
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 144,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 77694,
+   "cv": "4.3.0",
+   "f": 77293,
    "h": [
     266.0,
     264.5,
@@ -9768,23 +9768,23 @@
     306.0,
     306.5
    ],
-   "i": null,
-   "k": 171772,
+   "i": 89.92,
+   "k": 171259,
    "lag": 1,
    "lg": 1,
    "m": 266.0,
    "n": "StudentSOL",
-   "nv": null,
+   "nv": 85.89,
    "p": "8T8AJfUCXwPFwEMmjca8gCRSktPrqbUBVa6ggNyhLhFJ",
    "t": "Approved",
-   "v": null
+   "v": 75.13
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 88,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 57609,
+   "cv": "4.3.0",
+   "f": 57057,
    "h": [
     275.5,
     292.0,
@@ -9802,23 +9802,23 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 112954,
+   "i": 86.55,
+   "k": 113811,
    "lag": 1,
    "lg": 1,
    "m": 275.5,
    "n": "Sunshine",
-   "nv": null,
+   "nv": 90.91,
    "p": "2P9ZYA4vBoBBr56hrEFTmrd5ctuz3r7wtvRYmbgk6jRL",
    "t": "Approved",
-   "v": null
+   "v": 37.59
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 136,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 57424,
+   "f": 56708,
    "h": [
     254.0,
     266.0,
@@ -9836,22 +9836,22 @@
     305.0,
     304.0
    ],
-   "i": null,
-   "k": 110827,
+   "i": 91.33,
+   "k": 109768,
    "lg": 1,
    "m": 254.0,
    "n": "SunshineVR",
-   "nv": null,
+   "nv": 88.95,
    "p": "EN5F2BU5juUEWr9zRNNqKuQMi9zBUY1YLPHV5EyMrvnW",
    "t": "Approved",
-   "v": null
+   "v": 75.39
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 156,
    "c": "Jito",
    "cv": "4.3.0-rc.0",
-   "f": 59435,
+   "f": 61348,
    "h": [
     256.5,
     256.0,
@@ -9869,22 +9869,22 @@
     308.0,
     311.0
    ],
-   "i": null,
-   "k": 125578,
+   "i": 87.22,
+   "k": 127444,
    "lag": 1,
    "m": 256.5,
    "n": "Superteam Brazil",
-   "nv": null,
+   "nv": 96.6,
    "p": "BRAZAtTTzR2Es8c98hJvcngerTEyRGSdgkHU59n4A6GT",
    "t": "Approved",
-   "v": null
+   "v": 24.99
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 148,
    "c": "HarmonicFiredancer",
    "cv": "26.8.5",
-   "f": 73260,
+   "f": 76573,
    "h": [
     260.0,
     259.0,
@@ -9902,23 +9902,23 @@
     307.0,
     309.0
    ],
-   "i": null,
-   "k": 190163,
+   "i": 82.26,
+   "k": 193472,
    "lag": 1,
    "lg": 1,
    "m": 260.0,
    "n": "SuperteamDE x Staking Facilities | Public Goods Validator",
-   "nv": null,
+   "nv": 93.29,
    "p": "73hojLdq1vZDSxeVQEqVFJ4iwLngdvEJPEpEHkSdv6BZ",
    "t": "Approved",
-   "v": null
+   "v": 1.9
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 160,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 61464,
+   "f": 60678,
    "h": [
     264.5,
     287.0,
@@ -9936,19 +9936,19 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 123055,
+   "i": 88.21,
+   "k": 119773,
    "lag": 1,
    "lg": 1,
    "m": 264.5,
    "n": "Suzuko Stake",
-   "nv": null,
+   "nv": 87.49,
    "p": "hxMhrsuGPDmkLJ4mTxEjyeMST3VGhTiwJvS9XgHwePj",
    "t": "Approved",
-   "v": null
+   "v": 58.89
   },
   {
-   "b": null,
+   "b": 99.79,
    "bp": 720,
    "c": "Jito",
    "cv": "4.2.2",
@@ -9970,22 +9970,22 @@
     308.0,
     308.0
    ],
-   "i": null,
-   "k": 0,
+   "i": 96.01,
+   "k": 671485,
    "lag": 1,
    "m": 259.0,
    "n": "Sygnum Validators",
-   "nv": null,
+   "nv": 96.1,
    "p": "8o8wWCYNwPRSCAasp8rYvWuo3Ku1R1i6SEo9j9B6fe5i",
    "t": "Approved",
-   "v": null
+   "v": 85.63
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 152,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 76070,
+   "f": 75727,
    "h": [
     261.0,
     265.5,
@@ -10003,23 +10003,23 @@
     304.0,
     303.0
    ],
-   "i": null,
-   "k": 167861,
+   "i": 89.22,
+   "k": 175747,
    "lag": 1,
    "lg": 1,
    "m": 261.0,
    "n": "Syncnode | 0% Fees  | Genesis Validator",
-   "nv": null,
+   "nv": 84.79,
    "p": "8GLRbAstsabZuZUx73AoyfGi1FRCWSUhRgMugFyofEz7",
    "t": "Approved",
-   "v": null
+   "v": 73.77
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 56,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 55626,
+   "f": 54689,
    "h": [
     256.0,
     255.0,
@@ -10037,23 +10037,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 104193,
+   "i": 86.83,
+   "k": 103120,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "Systems",
-   "nv": null,
+   "nv": 91.46,
    "p": "adre1Xia7ekGsEqNgHeFc7MYwkfzTQNeJgQmZ2agAKZ",
    "t": "Approved",
-   "v": null
+   "v": 37.8
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 104,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 63746,
+   "f": 63278,
    "h": [
     256.0,
     265.5,
@@ -10071,23 +10071,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 131928,
+   "i": 91.86,
+   "k": 126984,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "T-STAKE Systems",
-   "nv": null,
+   "nv": 87.31,
    "p": "NLMSHTjmSiRxGJPs3uaqtsFBC2dTGYwK41U18Nmw5kH",
    "t": "Approved",
-   "v": null
+   "v": 83.79
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 164,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80453,
+   "f": 80196,
    "h": [
     264.5,
     265.5,
@@ -10105,23 +10105,23 @@
     306.5,
     306.0
    ],
-   "i": null,
-   "k": 186815,
+   "i": 90.84,
+   "k": 199460,
    "lag": 1,
    "lg": 1,
    "m": 264.5,
    "n": "Tane",
-   "nv": null,
+   "nv": 89.49,
    "p": "DnQBmTJyLbBMgJYQLJDqJz25AJModNkyexL5LdVRGnG4",
    "t": "Approved",
-   "v": null
+   "v": 70.49
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 64,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 37830,
+   "f": 36702,
    "h": [
     262.0,
     273.5,
@@ -10139,23 +10139,23 @@
     310.0,
     306.0
    ],
-   "i": null,
-   "k": 49978,
+   "i": 91.38,
+   "k": 48853,
    "lag": 1,
    "lg": 1,
    "m": 262.0,
    "n": "Tapedrive",
-   "nv": null,
+   "nv": 87.36,
    "p": "tapeQbu7YwpMuJNA2oSKBJkfBdic5QJ9bCZt27Q4PVf",
    "t": "Approved",
-   "v": null
+   "v": 80.45
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 100,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 49199,
+   "f": 48168,
    "h": [
     290.5,
     286.5,
@@ -10173,23 +10173,23 @@
     306.0,
     305.0
    ],
-   "i": null,
-   "k": 84519,
+   "i": 91.86,
+   "k": 83324,
    "lag": 1,
    "lg": 1,
    "m": 290.5,
    "n": "TdrSys",
-   "nv": null,
+   "nv": 90.31,
    "p": "6xFDLX751L7H9d5fQT9sf2SM5RWWE9LDgqz25pPDbWoJ",
    "t": "Approved",
-   "v": null
+   "v": 74.77
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 144,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 55564,
+   "f": 54626,
    "h": [
     255.9,
     266.5,
@@ -10207,23 +10207,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 103978,
+   "i": 86.51,
+   "k": 100750,
    "lag": 1,
    "lg": 1,
    "m": 255.9,
    "n": "Telemetry",
-   "nv": null,
+   "nv": 89.01,
    "p": "te1ee9rGf369wxYQkuxkvuvMuTJ9cksgZySmNUF8rNY",
    "t": "Approved",
-   "v": null
+   "v": 43.03
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 132,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 58642,
+   "f": 59113,
    "h": [
     256.5,
     255.0,
@@ -10241,23 +10241,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 117631,
+   "i": 88.23,
+   "k": 117967,
    "lag": 1,
    "lg": 1,
    "m": 256.5,
    "n": "The Chimpions",
-   "nv": null,
+   "nv": 90.7,
    "p": "2AKKnirWVZMhnzuwqpizw9SwfZjGpRFLx2zCCNtPWpbc",
    "t": "Approved",
-   "v": null
+   "v": 49.45
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 140,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 66479,
+   "f": 65802,
    "h": [
     276.5,
     265.0,
@@ -10275,23 +10275,23 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 137783,
+   "i": 88.37,
+   "k": 136967,
    "lag": 1,
    "lg": 1,
    "m": 276.5,
    "n": "The Library",
-   "nv": null,
+   "nv": 91.94,
    "p": "bookoVmqw4QjVj5BbkFacouadx9M7816wyRkfM7A5Lo",
    "t": "Approved",
-   "v": null
+   "v": 46.64
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 96,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 55786,
+   "f": 54870,
    "h": [
     281.5,
     266.0,
@@ -10309,23 +10309,23 @@
     305.0,
     304.0
    ],
-   "i": null,
-   "k": 104639,
+   "i": 90.59,
+   "k": 103583,
    "lag": 1,
    "lg": 1,
    "m": 281.5,
    "n": "The Lode (Sentries)",
-   "nv": null,
+   "nv": 91.03,
    "p": "LodeuWMHPiPj2PUHUyca2bkpFv9HyzR3gaDBmGJ9TSS",
    "t": "Approved",
-   "v": null
+   "v": 64.18
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 56,
    "c": "Jito",
    "cv": "4.3.0-rc.0",
-   "f": 47295,
+   "f": 46595,
    "h": [
     258.0,
     258.0,
@@ -10343,23 +10343,23 @@
     309.0,
     306.5
    ],
-   "i": null,
-   "k": 79421,
+   "i": 87.28,
+   "k": 78727,
    "lag": 1,
    "lg": 1,
    "m": 258.0,
    "n": "The Mindfolk",
-   "nv": null,
+   "nv": 96.77,
    "p": "MFLKSo4XDfrBf4FByx76zYM2dXSWcigag7ec2bCHTR4",
    "t": "Approved",
-   "v": null
+   "v": 24.91
   },
   {
-   "b": null,
+   "b": 96.74,
    "bp": 167,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 74200,
+   "cv": "4.3.0",
+   "f": 73674,
    "h": [
     265.0,
     255.0,
@@ -10377,23 +10377,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 160997,
+   "i": 88.92,
+   "k": 160390,
    "lag": 1,
    "lg": 1,
    "m": 265.0,
    "n": "Theta",
-   "nv": null,
+   "nv": 88.22,
    "p": "8AkVj5aAtJ27tYXeq89cnSf68V43NarFHMx2iSDjZv7c",
    "t": "Approved",
-   "v": null
+   "v": 70.21
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 136,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 79755,
+   "f": 79504,
    "h": [
     253.0,
     264.5,
@@ -10411,22 +10411,22 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 178281,
+   "i": 90.9,
+   "k": 191980,
    "lg": 1,
    "m": 253.0,
    "n": "THW Validator",
-   "nv": null,
+   "nv": 82.46,
    "p": "THWsLPufeq9LWs2H9vYPbtFwdxAHbQHvSbT6pztG8x1",
    "t": "Approved",
-   "v": null
+   "v": 91.99
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 320,
    "c": "HarmonicFiredancer",
    "cv": "26.8.5",
-   "f": 80317,
+   "f": 80063,
    "h": [
     262.0,
     262.0,
@@ -10444,23 +10444,23 @@
     308.0,
     308.0
    ],
-   "i": null,
-   "k": 277503,
+   "i": 82.2,
+   "k": 277285,
    "lag": 1,
    "lg": 1,
    "m": 262.0,
    "n": "Tinydancer",
-   "nv": null,
+   "nv": 93.79,
    "p": "8vk6QpG93JSaQCSgnycBsv5qmfQBk4qC9FjNA35E5JhU",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 99.66,
    "bp": 272,
    "c": "HarmonicAgave",
    "cv": "4.3.0",
-   "f": 78933,
+   "f": 78679,
    "h": [
     257.0,
     256.0,
@@ -10478,23 +10478,23 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 302448,
+   "i": 81.81,
+   "k": 300127,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "Titan Analytics",
-   "nv": null,
+   "nv": 93.21,
    "p": "43Am3PKFeo9cACpqYL5Sk95rpVdxLw3Mc22PqRqZXEW2",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 80,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 59061,
+   "cv": "4.3.0",
+   "f": 58212,
    "h": [
     268.5,
     271.5,
@@ -10512,23 +10512,23 @@
     305.0,
     304.5
    ],
-   "i": null,
-   "k": 115122,
+   "i": 92.09,
+   "k": 111904,
    "lag": 1,
    "lg": 1,
    "m": 268.5,
    "n": "Tokamai",
-   "nv": null,
+   "nv": 89.92,
    "p": "tkmaiSoZ3F8MofkQBVWG6JYSCzyN6ioe7ReYXohx3WJ",
    "t": "Approved",
-   "v": null
+   "v": 77.53
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 100,
    "c": "Jito",
-   "cv": "4.2.2",
-   "f": 52440,
+   "cv": "4.3.0",
+   "f": 51553,
    "h": [
     254.0,
     254.0,
@@ -10546,22 +10546,22 @@
     304.0,
     304.5
    ],
-   "i": null,
-   "k": 94619,
+   "i": 93.4,
+   "k": 93726,
    "lg": 1,
    "m": 254.0,
    "n": "TomYum",
-   "nv": null,
+   "nv": 89.63,
    "p": "BCJN2vZFAHDYmufBDcbD5UAQHSyerXfc6UQkgX3mSWuh",
    "t": "Approved",
-   "v": null
+   "v": 87.09
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 236,
-   "c": "HarmonicFrankendancer",
-   "cv": "0.1106.40201",
-   "f": 80492,
+   "c": "HarmonicFiredancer",
+   "cv": "26.8.5",
+   "f": 80239,
    "h": [
     263.0,
     263.0,
@@ -10579,23 +10579,23 @@
     310.0,
     310.0
    ],
-   "i": null,
-   "k": 217158,
+   "i": 82.03,
+   "k": 216928,
    "lag": 1,
    "lg": 1,
    "m": 263.0,
    "n": "Tree Validator",
-   "nv": null,
+   "nv": 93.41,
    "p": "TREEir31FswHK7JZBS5oFQteS72dobi6inpmQha88dA",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 256,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80463,
+   "f": 80209,
    "h": [
     253.0,
     254.0,
@@ -10613,22 +10613,22 @@
     305.0,
     304.0
    ],
-   "i": null,
-   "k": 252092,
+   "i": 91.29,
+   "k": 251657,
    "lg": 1,
    "m": 253.0,
    "n": "Trillium",
-   "nv": null,
+   "nv": 82.94,
    "p": "Tri1F8B6YtjkBztGCwBNSLEZib1EAqMUEUM7dTT7ZG3",
    "t": "Approved",
-   "v": null
+   "v": 93.11
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 172,
    "c": "HarmonicAgave",
    "cv": "4.2.2",
-   "f": 80494,
+   "f": 80240,
    "h": [
     253.0,
     253.0,
@@ -10646,21 +10646,21 @@
     305.0,
     304.0
    ],
-   "i": null,
-   "k": 194593,
+   "i": 81.59,
+   "k": 200341,
    "m": 253.0,
    "n": "TruFin by Twinstake",
-   "nv": null,
+   "nv": 92.43,
    "p": "3tzpLMWRkWucvTRWU5PjgKzN1iwJuV69yCCjmuuo4gTk",
    "t": "Approved",
-   "v": null
+   "v": 0.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 328,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 79552,
+   "cv": "4.3.0",
+   "f": 79298,
    "h": [
     263.0,
     264.5,
@@ -10678,23 +10678,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 307482,
+   "i": 89.25,
+   "k": 307111,
    "lag": 1,
    "lg": 1,
    "m": 263.0,
    "n": "Ubik Capital - 0% Fee, MEV",
-   "nv": null,
+   "nv": 85.94,
    "p": "4XspXDcJy3DWZsVdaXrt8pE1xhcLpXDKkhj9XyjmWWNy",
    "t": "Approved",
-   "v": null
+   "v": 70.49
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 232,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80442,
+   "f": 80188,
    "h": [
     256.0,
     255.0,
@@ -10712,23 +10712,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 252925,
+   "i": 86.68,
+   "k": 253119,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "Unruggable",
-   "nv": null,
+   "nv": 88.32,
    "p": "UNrgBLmc8JT6A3dxXY9DWeHvDezt2DZQbhg1KPQfqEL",
    "t": "Approved",
-   "v": null
+   "v": 46.24
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 188,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80458,
+   "f": 80203,
    "h": [
     266.5,
     263.0,
@@ -10746,23 +10746,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 208496,
+   "i": 90.02,
+   "k": 208497,
    "lag": 1,
    "lg": 1,
    "m": 266.5,
    "n": "Valid Blocks",
-   "nv": null,
+   "nv": 86.07,
    "p": "JC7bH7HSZoDhwggBXtRF31cVt71WiizY2J6YDDQfG5er",
    "t": "Approved",
-   "v": null
+   "v": 75.22
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 132,
    "c": "BAM",
-   "cv": "4.3.0-rc.1",
-   "f": 72486,
+   "cv": "4.3.0",
+   "f": 71948,
    "h": [
     251.5,
     253.0,
@@ -10780,22 +10780,22 @@
     308.0,
     308.0
    ],
-   "i": null,
-   "k": 155787,
+   "i": 90.48,
+   "k": 155086,
    "lg": 1,
    "m": 251.5,
    "n": "Validation Cloud",
-   "nv": null,
+   "nv": 79.07,
    "p": "h3ZXAE168mNxsszYYrUfkMVSCWx6DU2Uvrx97Kb1Nch",
    "t": "Approved",
-   "v": null
+   "v": 99.31
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 368,
    "c": "HarmonicFiredancer",
    "cv": "26.8.5",
-   "f": 73260,
+   "f": 76573,
    "h": [
     261.0,
     261.0,
@@ -10813,23 +10813,23 @@
     308.0,
     308.0
    ],
-   "i": null,
-   "k": 390782,
+   "i": 80.36,
+   "k": 393964,
    "lag": 1,
    "lg": 1,
    "m": 261.0,
    "n": "Validator 1",
-   "nv": null,
+   "nv": 87.39,
    "p": "EUDis6LJeJzDHTEBgfHGQyjHp63XZkGkx4E69xunC2Ej",
    "t": "Approved",
-   "v": null
+   "v": 6.91
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 616,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 79951,
+   "f": 79697,
    "h": [
     264.5,
     263.0,
@@ -10847,23 +10847,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 618640,
+   "i": 89.71,
+   "k": 618314,
    "lag": 1,
    "lg": 1,
    "m": 264.5,
    "n": "validator.com",
-   "nv": null,
+   "nv": 86.48,
    "p": "Va1idLRtYEtVFJFsvz8vtt1uCJgea4Q1zi2Rh3eraJh",
    "t": "Approved",
-   "v": null
+   "v": 72.0
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 348,
    "c": "Jito",
    "cv": "4.2.2",
-   "f": 80442,
+   "f": 80241,
    "h": [
     260.5,
     258.0,
@@ -10881,22 +10881,22 @@
     304.0,
     305.0
    ],
-   "i": null,
-   "k": 307986,
+   "i": 93.43,
+   "k": 307824,
    "lag": 1,
    "m": 260.5,
    "n": "Validatore",
-   "nv": null,
+   "nv": 94.39,
    "p": "D2RV1q6FgePVVjrMa7AMzVbvvAeg5oS7TAV7qdNKSDsX",
    "t": "Approved",
-   "v": null
+   "v": 73.03
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 260,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80241,
+   "f": 79987,
    "h": [
     254.0,
     263.0,
@@ -10914,22 +10914,22 @@
     305.0,
     305.5
    ],
-   "i": null,
-   "k": 244090,
+   "i": 90.68,
+   "k": 243797,
    "lg": 1,
    "m": 254.0,
    "n": "Valigator Open",
-   "nv": null,
+   "nv": 84.56,
    "p": "vALigXFg9wnnhVHN16vNxHxXtAXiBv5QjAE6udoniBY",
    "t": "Approved",
-   "v": null
+   "v": 84.21
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 128,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 55417,
+   "f": 54476,
    "h": [
     274.0,
     278.0,
@@ -10947,23 +10947,23 @@
     306.0,
     307.0
    ],
-   "i": null,
-   "k": 103545,
+   "i": 88.61,
+   "k": 102467,
    "lag": 1,
    "lg": 1,
    "m": 274.0,
    "n": "Vandal",
-   "nv": null,
+   "nv": 87.39,
    "p": "vnd1Ps8w3fsi54qUMJxBhUWARES34Qw7JQXDZxvbysd",
    "t": "Approved",
-   "v": null
+   "v": 61.89
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 184,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 80266,
+   "cv": "4.3.0",
+   "f": 80012,
    "h": [
     267.5,
     270.5,
@@ -10981,23 +10981,23 @@
     306.5,
     306.0
    ],
-   "i": null,
-   "k": 188260,
+   "i": 90.86,
+   "k": 187869,
    "lag": 1,
    "lg": 1,
    "m": 267.5,
    "n": "Vault",
-   "nv": null,
+   "nv": 89.47,
    "p": "CLsFr1KZVbAyz16iFpwg2e4hiekR1unpwyxfNdjBMaoE",
    "t": "Approved",
-   "v": null
+   "v": 70.65
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 180,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 79758,
+   "f": 78109,
    "h": [
     255.0,
     258.0,
@@ -11015,22 +11015,22 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 175678,
+   "i": 90.14,
+   "k": 173892,
    "lg": 1,
    "m": 255.0,
    "n": "Vault X | 0% fee +MEV",
-   "nv": null,
+   "nv": 83.31,
    "p": "4VrjyXQT61WFSjuG3ehgqZUK1jqvYqB46veQbXLotq3n",
    "t": "Approved",
-   "v": null
+   "v": 84.34
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 156,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 70293,
+   "cv": "4.3.0",
+   "f": 69710,
    "h": [
     280.5,
     287.5,
@@ -11048,23 +11048,23 @@
     306.0,
     307.0
    ],
-   "i": null,
-   "k": 149586,
+   "i": 91.6,
+   "k": 148874,
    "lag": 1,
    "lg": 1,
    "m": 280.5,
    "n": "vladika",
-   "nv": null,
+   "nv": 87.28,
    "p": "A23LfQn6khffj2hGhGfXr6P52W2pxrVcCaHVQLYQgiX2",
    "t": "Approved",
-   "v": null
+   "v": 82.16
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 188,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 68316,
+   "f": 67681,
    "h": [
     256.5,
     257.0,
@@ -11082,23 +11082,23 @@
     305.0,
     305.0
    ],
-   "i": null,
-   "k": 143056,
+   "i": 88.07,
+   "k": 142288,
    "lag": 1,
    "lg": 1,
    "m": 256.5,
    "n": "Vybe Validator",
-   "nv": null,
+   "nv": 91.44,
    "p": "GvfaiJUhNCRZGVGumsEF1eHDb8JpAeFAyHSrTifyhrbt",
    "t": "Approved",
-   "v": null
+   "v": 46.15
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 988,
    "c": "HarmonicFiredancer",
    "cv": "26.8.5",
-   "f": 73260,
+   "f": 76573,
    "h": [
     261.0,
     261.0,
@@ -11116,23 +11116,23 @@
     311.0,
     311.0
    ],
-   "i": null,
-   "k": 887807,
+   "i": 81.49,
+   "k": 891123,
    "lag": 1,
    "lg": 1,
    "m": 261.0,
    "n": "Watchtower",
-   "nv": null,
+   "nv": 91.23,
    "p": "6yFGGAgYpBxgYPuHW4rv7hJmhKrUiXKyHkpVGaYtKrwE",
    "t": "Approved",
-   "v": null
+   "v": 2.93
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 84,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 51665,
+   "f": 50673,
    "h": [
     263.0,
     259.5,
@@ -11150,23 +11150,23 @@
     303.0,
     304.0
    ],
-   "i": null,
-   "k": 92877,
+   "i": 89.61,
+   "k": 91745,
    "lag": 1,
    "lg": 1,
    "m": 263.0,
    "n": "Wave",
-   "nv": null,
+   "nv": 87.16,
    "p": "By8MseMKtZQQaQjMHJiyetmc5AC8RZZv8C2ss33ktrHt",
    "t": "Approved",
-   "v": null
+   "v": 69.23
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 160,
    "c": "FireBAM",
    "cv": "0.1202.0-beta.40302",
-   "f": 76665,
+   "f": 76227,
    "h": [
     256.0,
     256.0,
@@ -11184,23 +11184,23 @@
     303.0,
     303.0
    ],
-   "i": null,
-   "k": 168606,
+   "i": 97.35,
+   "k": 168036,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "WEB34EVER ∞ POSTHUMAN",
-   "nv": null,
+   "nv": 95.16,
    "p": "7MTjmteQHhthwwTZhUzsc2dP4NBvGNRqj8jzdqNxHFGE",
    "t": "Approved",
-   "v": null
+   "v": 96.83
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 96,
    "c": "BAM",
    "cv": "4.2.2",
-   "f": 51337,
+   "f": 50364,
    "h": [
     272.5,
     268.0,
@@ -11218,23 +11218,23 @@
     304.0,
     304.0
    ],
-   "i": null,
-   "k": 93030,
+   "i": 91.75,
+   "k": 91917,
    "lag": 1,
    "lg": 1,
    "m": 272.5,
    "n": "WestSide 🖖",
-   "nv": null,
+   "nv": 89.71,
    "p": "CpgSfd6QUoBw1267rTtJoZhELqC5q7isKLojBifSbNEE",
    "t": "Approved",
-   "v": null
+   "v": 75.89
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 204,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 79773,
+   "f": 79987,
    "h": [
     270.5,
     268.0,
@@ -11252,23 +11252,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 191121,
+   "i": 89.94,
+   "k": 191247,
    "lag": 1,
    "lg": 1,
    "m": 270.5,
    "n": "Windfall",
-   "nv": null,
+   "nv": 89.54,
    "p": "4uH4G6YiD5G8rU3mtPg73C2Uqamrqedy3FboTZcZrh6x",
    "t": "Approved",
-   "v": null
+   "v": 64.32
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 180,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 80404,
+   "cv": "4.3.0",
+   "f": 80150,
    "h": [
     262.5,
     272.5,
@@ -11286,23 +11286,23 @@
     307.0,
     306.0
    ],
-   "i": null,
-   "k": 180949,
+   "i": 90.51,
+   "k": 180565,
    "lag": 1,
    "lg": 1,
    "m": 262.5,
    "n": "WIZE Validator",
-   "nv": null,
+   "nv": 86.04,
    "p": "MBVyz9s72WSfUmbr1S8fgHjDJQkPs1Q4Wxi6A2Mees9",
    "t": "Approved",
-   "v": null
+   "v": 78.63
   },
   {
-   "b": null,
+   "b": 98.75,
    "bp": 212,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80481,
+   "f": 80227,
    "h": [
     253.0,
     253.0,
@@ -11320,22 +11320,22 @@
     311.0,
     313.0
    ],
-   "i": null,
-   "k": 198598,
+   "i": 87.89,
+   "k": 198193,
    "lg": 1,
    "m": 253.0,
    "n": "Xandeum Labs low fee + MEV = 🔥APY %",
-   "nv": null,
+   "nv": 86.63,
    "p": "BitokuDHQiAhpUKrwx1VssAAoW5Rst8zB6gpfoaxM3Kh",
    "t": "Approved",
-   "v": null
+   "v": 62.69
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 248,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 80258,
+   "cv": "4.3.0",
+   "f": 80004,
    "h": [
     262.0,
     262.5,
@@ -11353,23 +11353,23 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 219403,
+   "i": 90.91,
+   "k": 219025,
    "lag": 1,
    "lg": 1,
    "m": 262.0,
    "n": "Y8 Crypto",
-   "nv": null,
+   "nv": 85.34,
    "p": "4DraK9wUrMSpzbGjUbSWTHAhJimMyB49HyKhvfwe6e51",
    "t": "Approved",
-   "v": null
+   "v": 83.37
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 248,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80127,
+   "f": 79872,
    "h": [
     259.0,
     287.0,
@@ -11387,23 +11387,23 @@
     306.0,
     306.0
    ],
-   "i": null,
-   "k": 257405,
+   "i": 88.99,
+   "k": 255154,
    "lag": 1,
    "lg": 1,
    "m": 259.0,
    "n": "YIELD",
-   "nv": null,
+   "nv": 87.92,
    "p": "phz1CRbEsCtFCh2Ro5tjyu588VU1WPMwW9BJS9yFNn2",
    "t": "Approved",
-   "v": null
+   "v": 62.86
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 92,
    "c": "Jito",
    "cv": "4.3.0-rc.0",
-   "f": 46870,
+   "f": 46898,
    "h": [
     260.5,
     256.5,
@@ -11421,23 +11421,23 @@
     305.5,
     307.5
    ],
-   "i": null,
-   "k": 79632,
+   "i": 86.92,
+   "k": 79666,
    "lag": 1,
    "lg": 1,
    "m": 260.5,
    "n": "Yield Lab",
-   "nv": null,
+   "nv": 95.92,
    "p": "DefiihS7gLkj6xLjjhcr87bFuwpVVNYpeNBaBeFe56CY",
    "t": "Approved",
-   "v": null
+   "v": 25.04
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 160,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 63223,
+   "f": 62474,
    "h": [
     264.0,
     256.5,
@@ -11455,23 +11455,23 @@
     298.5,
     304.0
    ],
-   "i": null,
-   "k": 129028,
+   "i": 88.71,
+   "k": 128150,
    "lag": 1,
    "lg": 1,
    "m": 264.0,
    "n": "Yurbason",
-   "nv": null,
+   "nv": 84.25,
    "p": "YuRBAsy9Stw1u46A8dMp7WQVBFweLP1PKuYibzYAMmQ",
    "t": "Approved",
-   "v": null
+   "v": 71.94
   },
   {
-   "b": null,
+   "b": 99.11,
    "bp": 108,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 56826,
+   "f": 55921,
    "h": [
     269.0,
     281.5,
@@ -11489,23 +11489,23 @@
     305.5,
     304.0
    ],
-   "i": null,
-   "k": 107841,
+   "i": 86.16,
+   "k": 106793,
    "lag": 1,
    "lg": 1,
    "m": 269.0,
    "n": "zim.one | 0️⃣0️⃣",
-   "nv": null,
+   "nv": 80.76,
    "p": "2zykwzzo1pd3H2oSj5j5SRLTvmpa9Nr2S2Bh8tTVd5Tq",
    "t": "Approved",
-   "v": null
+   "v": 67.81
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 160,
    "c": "Jito",
    "cv": "4.2.2",
-   "f": 72430,
+   "f": 71231,
    "h": [
     257.0,
     258.0,
@@ -11523,23 +11523,23 @@
     304.0,
     306.0
    ],
-   "i": null,
-   "k": 154277,
+   "i": 95.63,
+   "k": 153096,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "⭐StepByStep⭐ Jito BAM",
-   "nv": null,
+   "nv": 96.51,
    "p": "HnwMGBAw5PxaX56eSYc969MorEy2NzEMPLkmBkdnJmeq",
    "t": "Approved",
-   "v": null
+   "v": 81.34
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 80,
    "c": "Jito",
-   "cv": "4.2.2",
-   "f": 30589,
+   "cv": "4.3.0",
+   "f": 42015,
    "h": [
     262.5,
     259.0,
@@ -11557,23 +11557,23 @@
     309.0,
     307.0
    ],
-   "i": null,
-   "k": 79069,
+   "i": 89.78,
+   "k": 90505,
    "lag": 1,
    "lg": 1,
    "m": 262.5,
    "n": "佛金疯 Solana Chinese Community",
-   "nv": null,
+   "nv": 95.7,
    "p": "EBk678aQvc3cUkfGyoehfw21JQfJXjmWuBeopYc89RSV",
    "t": "Approved",
-   "v": null
+   "v": 44.76
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 136,
    "c": "Firedancer",
    "cv": "26.8.5",
-   "f": 76206,
+   "f": 75860,
    "h": [
     207.0,
     207.0,
@@ -11591,21 +11591,21 @@
     257.0,
     257.0
    ],
-   "i": null,
-   "k": 167553,
+   "i": 97.85,
+   "k": 167223,
    "m": 207.0,
    "n": "",
-   "nv": null,
+   "nv": 96.02,
    "p": "74Xkp2iLXm315h69sFRiCFjmKnaWkMV8W2LgJwPRSgN5",
    "t": "Approved",
-   "v": null
+   "v": 97.63
   },
   {
-   "b": null,
+   "b": 99.65,
    "bp": 268,
    "c": "Jito",
-   "cv": "4.2.2",
-   "f": 80491,
+   "cv": "4.3.0",
+   "f": 80237,
    "h": [
     256.0,
     257.0,
@@ -11623,22 +11623,22 @@
     309.0,
     308.0
    ],
-   "i": null,
-   "k": 268285,
+   "i": 92.83,
+   "k": 268064,
    "lag": 1,
    "m": 256.0,
    "n": "",
-   "nv": null,
+   "nv": 97.33,
    "p": "PuRposE4utktenW49N8DCtVzdVEwYrmsrroboEUram4",
    "t": "Approved",
-   "v": null
+   "v": 61.15
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 184,
    "c": "BAM",
-   "cv": "4.3.0-rc.1",
-   "f": 80451,
+   "cv": "4.3.0",
+   "f": 80196,
    "h": [
     255.0,
     253.0,
@@ -11656,21 +11656,21 @@
     303.0,
     304.0
    ],
-   "i": null,
-   "k": 217996,
+   "i": 82.63,
+   "k": 217618,
    "m": 255.0,
    "n": "",
-   "nv": null,
+   "nv": 86.31,
    "p": "BTGPbq4KuFENn4CKuaKGqkaDd3TJD3TEgtMjSrsZnMLb",
    "t": "Approved",
-   "v": null
+   "v": 25.27
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 204,
    "c": "Firedancer",
    "cv": "26.8.2",
-   "f": 80373,
+   "f": 80119,
    "h": [
     208.0,
     207.5,
@@ -11688,21 +11688,21 @@
     255.0,
     256.0
    ],
-   "i": null,
-   "k": 195583,
+   "i": 86.51,
+   "k": 195349,
    "m": 208.0,
    "n": "",
-   "nv": null,
+   "nv": 94.87,
    "p": "HrpWeJSYnQVtZe3BKxFCBrAEr8GRCmYUbQev4hoGDBs6",
    "t": "Approved",
-   "v": null
+   "v": 25.46
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 180,
    "c": "Jito",
    "cv": "4.2.2",
-   "f": 80488,
+   "f": 80234,
    "h": [
     256.5,
     258.0,
@@ -11720,22 +11720,22 @@
     308.0,
     307.0
    ],
-   "i": null,
-   "k": 193440,
+   "i": 95.55,
+   "k": 193206,
    "lag": 1,
    "m": 256.5,
    "n": "",
-   "nv": null,
+   "nv": 96.12,
    "p": "4vcmYPfLztUckU3c3FvXDwSq8aDNDqwEpvEiqAv97LGJ",
    "t": "Approved",
-   "v": null
+   "v": 81.95
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 104,
    "c": "Jito",
    "cv": "4.2.2",
-   "f": 66844,
+   "f": 66276,
    "h": [
     253.5,
     257.0,
@@ -11753,21 +11753,21 @@
     254.0,
     256.0
    ],
-   "i": null,
-   "k": 138796,
+   "i": 89.92,
+   "k": 138240,
    "m": 253.5,
    "n": "",
-   "nv": null,
+   "nv": 96.88,
    "p": "4Kbcyn7JVPAWLRLPsNGTPmcNMvCkLTw51ZLRhqsUC6jP",
    "t": "Approved",
-   "v": null
+   "v": 42.17
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 436,
    "c": "Jito",
    "cv": "4.3.0",
-   "f": 79126,
+   "f": 78872,
    "h": [
     257.0,
     258.0,
@@ -11785,23 +11785,23 @@
     303.0,
     305.5
    ],
-   "i": null,
-   "k": 475527,
+   "i": 94.33,
+   "k": 475392,
    "lag": 1,
    "lg": 1,
    "m": 257.0,
    "n": "🌸 SOLGirl MEV ⚡️👩‍💻",
-   "nv": null,
+   "nv": 95.73,
    "p": "ALp2GdA1eJV8vZHMHazCtTxNXe3BLUSco9LDASgjDs8R",
    "t": "Approved",
-   "v": null
+   "v": 75.03
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 72,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 49648,
+   "f": 48747,
    "h": [
     254.5,
     269.0,
@@ -11819,22 +11819,22 @@
     307.0,
     307.0
    ],
-   "i": null,
-   "k": 88915,
+   "i": 90.63,
+   "k": 87874,
    "lg": 1,
    "m": 254.5,
    "n": "🍀PADDY - 💰JITO-BAM",
-   "nv": null,
+   "nv": 84.71,
    "p": "2uxEHizFmmnLekKG2LZJwxNabhpymEYfdVCpgDxjt87m",
    "t": "Approved",
-   "v": null
+   "v": 83.41
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 72,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 0,
+   "f": 35354,
    "h": [
     253.0,
     278.5,
@@ -11852,22 +11852,22 @@
     307.5,
     305.0
    ],
-   "i": null,
-   "k": 88718,
+   "i": 90.58,
+   "k": 123330,
    "lg": 1,
    "m": 253.0,
    "n": "💥 InfiniteSOL 💥",
-   "nv": null,
+   "nv": 87.02,
    "p": "ADjyeNzWd8yhEjCVyAqT87eqoyGRbimERQsNhFQcXjop",
    "t": "Approved",
-   "v": null
+   "v": 76.12
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 140,
    "c": "FireBAM",
    "cv": "0.1202.0-beta.40302",
-   "f": 78255,
+   "f": 77957,
    "h": [
     256.0,
     256.0,
@@ -11885,23 +11885,23 @@
     258.0,
     257.0
    ],
-   "i": null,
-   "k": 173658,
+   "i": 96.44,
+   "k": 173378,
    "lag": 1,
    "lg": 1,
    "m": 256.0,
    "n": "🔥💃🇸🇬 CeriumXYZ",
-   "nv": null,
+   "nv": 93.04,
    "p": "idCE5k2BtTpwXdwAC7Var1enT9reut9fWECcxQP7LY7",
    "t": "Approved",
-   "v": null
+   "v": 97.14
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 172,
    "c": "BAM",
    "cv": "4.3.0",
-   "f": 80484,
+   "f": 80230,
    "h": [
     254.0,
     254.0,
@@ -11919,22 +11919,22 @@
     305.0,
     304.5
    ],
-   "i": null,
-   "k": 187271,
+   "i": 91.31,
+   "k": 186890,
    "lg": 1,
    "m": 254.0,
    "n": "🤖 RoboRun.xyz",
-   "nv": null,
+   "nv": 83.27,
    "p": "R2D2imoV8nXk1ngT9v4dEK65We4uLNyUarTBdWbFruq",
    "t": "Approved",
-   "v": null
+   "v": 92.26
   },
   {
-   "b": null,
+   "b": 100.0,
    "bp": 96,
    "c": "BAM",
-   "cv": "4.2.2",
-   "f": 50770,
+   "cv": "4.3.0",
+   "f": 49793,
    "h": [
     295.0,
     285.5,
@@ -11952,16 +11952,16 @@
     306.5,
     307.5
    ],
-   "i": null,
-   "k": 91883,
+   "i": 91.9,
+   "k": 90766,
    "lag": 1,
    "lg": 1,
    "m": 295.0,
    "n": "🪐 To The Stars 🪐",
-   "nv": null,
+   "nv": 90.35,
    "p": "BxkAkLR2W3agWtjMXBNvhxmB8vsn7zhjNQcyfost99KY",
    "t": "Approved",
-   "v": null
+   "v": 74.9
   }
  ],
  "weights": {
